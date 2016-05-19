@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
+		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
 		87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
 		87DABAA11CE7EBF4009DD3B1 /* ProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA01CE7EBF4009DD3B1 /* ProjectsController.swift */; };
 		87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
+		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		87DABA9B1CE7EBF4009DD3B1 /* YarnRequirements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YarnRequirements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87DABAA01CE7EBF4009DD3B1 /* ProjectsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				87DABAAC1CE7EBF4009DD3B1 /* Info.plist */,
 				87DABACE1CE7F7B1009DD3B1 /* WeightCell.swift */,
 				87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */,
+				87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */,
+				87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */,
 			);
 			path = YarnRequirements;
 			sourceTree = "<group>";
@@ -268,8 +274,10 @@
 				87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */,
 				87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */,
 				87DABAA11CE7EBF4009DD3B1 /* ProjectsController.swift in Sources */,
+				87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */,
 				87DABAD11CE821D1009DD3B1 /* YarnWeight.swift in Sources */,
 				87DABACF1CE7F7B1009DD3B1 /* WeightCell.swift in Sources */,
+				87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +504,7 @@
 				87DABAC71CE7EBF4009DD3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87DABAC81CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirementsTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +513,7 @@
 				87DABACA1CE7EBF4009DD3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87DABACB1CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirementsUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +522,7 @@
 				87DABACD1CE7EBF4009DD3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
