@@ -11,17 +11,25 @@ import UIKit
 private let reuseIdentifier = "projectCell"
 
 class ProjectController: UICollectionViewController {
+    
+    // Projects to choose from
+    let projects = [
+        Mittens(name: "Mittens", image: UIImage(named:"Mittens")!),
+        Gloves(name: "Gloves", image: UIImage(named:"Gloves")!),
+        Socks(name: "Socks", image: UIImage(named:"Socks")!),
+        Tam(name: "Tam", image: UIImage(named:"Tam")!),
+        Scarf(name: "Scarf", image: UIImage(named:"Scarf")!),
+        Toque(name: "Toque", image: UIImage(named:"Toque")!),
+        Sweater(name: "Sweater", image: UIImage(named:"Sweater")!),
+        Vest(name: "Vest", image: UIImage(named:"Vest")!),
+        Blanket(name: "Blanket", image: UIImage(named:"Blanket")!)
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.estimatedItemSize = CGSizeMake(108, 117.0);
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,22 +57,24 @@ class ProjectController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 9
+        return projects.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) //as! ProjectCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ProjectCell
 
         // Configure the cell
-        cell.backgroundColor = UIColor.brownColor()
-        //cell.lblName.text = "Name"
+        let project = projects[indexPath.row]
+        cell.image.image = project.ThumbImage
+        cell.backgroundColor = UIColor.clearColor()
+        cell.lblName.text = project.Name
     
         return cell
     }
 
     func collectionView(collectionView : UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
     {
-        let cellSize:CGSize = CGSizeMake(108, 117)
+        let cellSize:CGSize = CGSizeMake(108, 126)
         return cellSize
     }
     // MARK: UICollectionViewDelegate

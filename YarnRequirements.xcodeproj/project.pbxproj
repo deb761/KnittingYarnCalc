@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
+		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
+		8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
+		8763AA771CF2C56500E1B003 /* SweaterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA761CF2C56500E1B003 /* SweaterController.swift */; };
+		8763AA791CF2C90300E1B003 /* GaugePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA781CF2C90300E1B003 /* GaugePicker.swift */; };
+		8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */; };
+		8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */; };
+		8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7E1CF2F6E800E1B003 /* InfoController.swift */; };
 		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
 		87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
@@ -39,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		8763AA721CF2AF3300E1B003 /* Mittens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mittens.swift; sourceTree = "<group>"; };
+		8763AA741CF2B90000E1B003 /* Sweater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sweater.swift; sourceTree = "<group>"; };
+		8763AA761CF2C56500E1B003 /* SweaterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweaterController.swift; sourceTree = "<group>"; };
+		8763AA781CF2C90300E1B003 /* GaugePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugePicker.swift; sourceTree = "<group>"; };
+		8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortLengthPicker.swift; sourceTree = "<group>"; };
+		8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongLengthPicker.swift; sourceTree = "<group>"; };
+		8763AA7E1CF2F6E800E1B003 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
 		87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		87DABA9B1CE7EBF4009DD3B1 /* YarnRequirements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YarnRequirements.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +134,14 @@
 				87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */,
 				87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */,
 				87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */,
+				8763AA701CF2A8DD00E1B003 /* Project.swift */,
+				8763AA721CF2AF3300E1B003 /* Mittens.swift */,
+				8763AA741CF2B90000E1B003 /* Sweater.swift */,
+				8763AA761CF2C56500E1B003 /* SweaterController.swift */,
+				8763AA781CF2C90300E1B003 /* GaugePicker.swift */,
+				8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */,
+				8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */,
+				8763AA7E1CF2F6E800E1B003 /* InfoController.swift */,
 			);
 			path = YarnRequirements;
 			sourceTree = "<group>";
@@ -272,12 +296,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */,
+				8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */,
+				8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */,
 				87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */,
 				87DABAA11CE7EBF4009DD3B1 /* ProjectsController.swift in Sources */,
 				87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */,
 				87DABAD11CE821D1009DD3B1 /* YarnWeight.swift in Sources */,
 				87DABACF1CE7F7B1009DD3B1 /* WeightCell.swift in Sources */,
+				8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */,
+				8763AA791CF2C90300E1B003 /* GaugePicker.swift in Sources */,
+				8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */,
 				87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */,
+				8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */,
+				8763AA771CF2C56500E1B003 /* SweaterController.swift in Sources */,
+				8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
