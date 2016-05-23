@@ -102,64 +102,69 @@
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
         <!--Info-->
-        <scene sceneID="jlt-h1-YDJ">
+        <scene sceneID="0Bl-uW-ePi">
             <objects>
-                <viewController id="vub-vO-QUb" sceneMemberID="viewController">
+                <viewController id="oIM-QC-YfU" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LZr-zA-few"/>
-                        <viewControllerLayoutGuide type="bottom" id="4gh-VR-0PR"/>
+                        <viewControllerLayoutGuide type="top" id="7wu-z0-spm"/>
+                        <viewControllerLayoutGuide type="bottom" id="GYB-Hz-Djl"/>
                     </layoutGuides>
-                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" id="SLg-Ol-4GG" userLabel="Info Stack">
+                    <view key="view" contentMode="scaleToFill" id="5V8-pK-erj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2016" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-gf-iZA" userLabel="copyright">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="101"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweater calculations obtained from ranges on ??" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1W-68-A8R" userLabel="sweater credit">
-                                <rect key="frame" x="0.0" y="111" width="600" height="101"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scarf and blanket calculations derived from data provided by Lucia Lijegren" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6m-K1-8qj" userLabel="scarf and blanket credit">
-                                <rect key="frame" x="0.0" y="222" width="600" height="102"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rVw-xv-TX5" userLabel="Icon Stack">
-                                <rect key="frame" x="0.0" y="334" width="600" height="266"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-rU-tCZ">
+                                <rect key="frame" x="40" y="40" width="520" height="311"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K1-hV-bN6">
-                                        <rect key="frame" x="0.0" y="0.0" width="291" height="266"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2016" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
+                                        <rect key="frame" x="0.0" y="0.0" width="520" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kx-DD-cZk">
-                                        <rect key="frame" x="301" y="0.0" width="300" height="266"/>
-                                        <state key="normal" title="Icon8"/>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sweater calculations obtained from ranges on ??" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0c-Ke-06I" userLabel="sweater credit">
+                                        <rect key="frame" x="0.0" y="87" width="520" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Scarf and blanket calculations derived from data provided by Lucia Lijegren" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-77-ggg" userLabel="scarf and blanket credit">
+                                        <rect key="frame" x="0.0" y="174" width="520" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KmY-ML-HMB" userLabel="Icon Stack">
+                                        <rect key="frame" x="0.0" y="281" width="520" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Icons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-sh-cFH">
+                                                <rect key="frame" x="0.0" y="0.0" width="252" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqS-kz-kIU">
+                                                <rect key="frame" x="262" y="0.0" width="258" height="30"/>
+                                                <state key="normal" title="Icon8"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83137254900000002" green="0.84705882349999995" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0K1-hV-bN6" firstAttribute="top" secondItem="LZr-zA-few" secondAttribute="bottom" constant="314" id="0AM-3E-6Rv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t6m-K1-8qj" secondAttribute="trailing" id="0oH-aV-qwt"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="t6m-K1-8qj" secondAttribute="leading" id="VU6-6l-3Lz"/>
-                            <constraint firstItem="4gh-VR-0PR" firstAttribute="top" secondItem="dDm-gf-iZA" secondAttribute="bottom" constant="450" id="wcg-cF-DQV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YmR-rU-tCZ" secondAttribute="trailing" constant="20" id="ZUZ-qU-CjT"/>
+                            <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="5V8-pK-erj" secondAttribute="topMargin" constant="40" id="d6N-3L-EJu"/>
+                            <constraint firstItem="GYB-Hz-Djl" firstAttribute="top" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="200" id="oFY-po-6JA"/>
+                            <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="5V8-pK-erj" secondAttribute="leadingMargin" constant="20" id="rfP-eC-RkX"/>
                         </constraints>
-                    </stackView>
-                    <tabBarItem key="tabBarItem" title="Info" image="Info" id="4LB-w8-nPR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="Info" selectedImage="Info" id="QTh-kq-zsb"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eCa-8V-9Xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5h7-kl-mYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="1058"/>
+            <point key="canvasLocation" x="356" y="1048"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -174,7 +179,7 @@
                     <connections>
                         <segue destination="YxB-B8-6Hp" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="vub-vO-QUb" kind="relationship" relationship="viewControllers" id="0qE-Lr-MAX"/>
+                        <segue destination="oIM-QC-YfU" kind="relationship" relationship="viewControllers" id="TIZ-N6-IRm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
