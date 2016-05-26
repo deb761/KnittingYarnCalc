@@ -14,15 +14,15 @@ class ProjectController: UICollectionViewController {
     
     // Projects to choose from
     let projects = [
-        Mittens(name: "Mittens", image: UIImage(named:"Mittens")!),
-        Gloves(name: "Gloves", image: UIImage(named:"Gloves")!),
-        Socks(name: "Socks", image: UIImage(named:"Socks")!),
-        Tam(name: "Tam", image: UIImage(named:"Tam")!),
-        Scarf(name: "Scarf", image: UIImage(named:"Scarf")!),
-        Toque(name: "Toque", image: UIImage(named:"Toque")!),
-        Sweater(name: "Sweater", image: UIImage(named:"Sweater")!),
-        Vest(name: "Vest", image: UIImage(named:"Vest")!),
-        Blanket(name: "Blanket", image: UIImage(named:"Blanket")!)
+        Mittens(name: "Mittens", image: UIImage(named:"Mittens")!, segue: "ScarfSegue"),
+        Gloves(name: "Gloves", image: UIImage(named:"Gloves")!, segue: "ScarfSegue"),
+        Socks(name: "Socks", image: UIImage(named:"Socks")!, segue: "ScarfSegue"),
+        Tam(name: "Tam", image: UIImage(named:"Tam")!, segue: "ScarfSegue"),
+        Scarf(name: "Scarf", image: UIImage(named:"Scarf")!, segue: "ScarfSegue"),
+        Toque(name: "Toque", image: UIImage(named:"Toque")!, segue: "ScarfSegue"),
+        Sweater(name: "Sweater", image: UIImage(named:"Sweater")!, segue: "SweaterSegue"),
+        Vest(name: "Vest", image: UIImage(named:"Vest")!, segue: "ScarfSegue"),
+        Blanket(name: "Blanket", image: UIImage(named:"Blanket")!, segue: "ScarfSegue")
     ]
 
     override func viewDidLoad() {
@@ -37,15 +37,14 @@ class ProjectController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        let svc = segue.destinationViewController as! ProjectViewController;
+        svc.project = project
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -54,20 +53,21 @@ class ProjectController: UICollectionViewController {
         return 1
     }
 
-
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return projects.count
     }
+    
+    private var project:Project?
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ProjectCell
 
         // Configure the cell
-        let project = projects[indexPath.row]
-        cell.image.image = project.ThumbImage
+        project = projects[indexPath.row]
+        cell.image.image = project!.ThumbImage
         cell.backgroundColor = UIColor.clearColor()
-        cell.lblName.text = project.Name
+        cell.lblName.text = project!.Name
     
         return cell
     }
@@ -77,6 +77,12 @@ class ProjectController: UICollectionViewController {
         let cellSize:CGSize = CGSizeMake(108, 126)
         return cellSize
     }
+
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
+        project = projects[indexPath.row]
+        self.performSegueWithIdentifier(project!.segue, sender: self)
+    }
+    
     // MARK: UICollectionViewDelegate
 
     /*

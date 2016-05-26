@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SweaterController: UIViewController {
+class SweaterController: ProjectViewController {
 
     @IBOutlet weak var pkGauge: GaugePicker!
     @IBOutlet weak var pkSizeUnits: ShortLengthPicker!
@@ -21,11 +21,13 @@ class SweaterController: UIViewController {
     @IBOutlet weak var txtBallSize: UITextField!
     @IBOutlet weak var txtBallsNeeded: UITextField!
 
-    var sweater = Sweater(name: "Sweater", image: UIImage(named:"Sweater")!)
+    var sweater:Sweater!
 
+    // Set the input items to the current values
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        sweater = project as! Sweater
         // Do any additional setup after loading the view.
         // Connect data:
         pkGauge.loaded(sweater)
@@ -52,7 +54,7 @@ class SweaterController: UIViewController {
         txtBallSize.text = String(sweater.BallSize)
         txtBallsNeeded.text = String(sweater.BallsNeeded)
     }
-    
+    // Update all the units on change
     func UpdateUnits()
     {
         sweater.ChestUnits = ShortLengthUnits(rawValue: pkSizeUnits.selectedRowInComponent(0))!
@@ -64,19 +66,21 @@ class SweaterController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // Recalc and update units when gauge changes
     @IBAction func changeGauge(sender: AnyObject) {
         sweater.Gauge = Double(txtGauge.text!)!
         UpdateUnits()
         sweater.calcYarnRequired()
         UpdateText()
     }
+    // Recalc and update units when size changes
     @IBAction func changeSize(sender: AnyObject) {
         sweater.ChestSize = Double(txtChest.text!)!
         UpdateUnits()
         sweater.calcYarnRequired()
         UpdateText()
     }
+    // Recalc and update units when ball size changes
     @IBAction func changeBallSize(sender: AnyObject) {
         sweater.BallSize = Int(txtBallSize.text!)!
         UpdateUnits()

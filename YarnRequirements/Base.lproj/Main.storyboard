@@ -104,7 +104,7 @@
         <!--Info-->
         <scene sceneID="0Bl-uW-ePi">
             <objects>
-                <viewController id="oIM-QC-YfU" sceneMemberID="viewController">
+                <viewController id="oIM-QC-YfU" customClass="InfoController" customModule="YarnRequirements" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7wu-z0-spm"/>
                         <viewControllerLayoutGuide type="bottom" id="GYB-Hz-Djl"/>
@@ -257,7 +257,6 @@
                                 <connections>
                                     <outlet property="image" destination="MJg-Rc-BTR" id="gTg-vL-ZoH"/>
                                     <outlet property="lblName" destination="2vc-eQ-iFL" id="qJ6-cR-WV1"/>
-                                    <segue destination="hwu-1c-6lr" kind="show" id="hfJ-KQ-lPg"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -269,6 +268,10 @@
                     <navigationItem key="navigationItem" title="Projects" id="C7p-ZW-Yz1">
                         <barButtonItem key="backBarButtonItem" title="Projects" id="JdO-L4-lIo"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="hwu-1c-6lr" kind="show" identifier="SweaterSegue" id="N3s-aD-aN8"/>
+                        <segue destination="VN3-7u-U0A" kind="show" identifier="ScarfSegue" id="VAy-ad-EEC"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duc-c4-FNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -488,10 +491,902 @@
             </objects>
             <point key="canvasLocation" x="2276" y="-320"/>
         </scene>
+        <!--Scarf-->
+        <scene sceneID="WqG-P4-Ezn">
+            <objects>
+                <viewController title="Scarf" id="VN3-7u-U0A" customClass="ScarfController" customModule="YarnRequirements" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kDc-In-Tjc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wma-du-DbT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UTj-Ip-9mO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TCq-Ep-jbY">
+                                <rect key="frame" x="20" y="20" width="560" height="487"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ey-Vf-STv" userLabel="Name and Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="187"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scarf" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yW-IU-Wyq">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="187"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.015686274510000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScarfImg" translatesAutoresizingMaskIntoConstraints="NO" id="t58-8a-4NU">
+                                                <rect key="frame" x="382" y="0.0" width="178" height="187"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="178" id="fTb-B5-hjz"/>
+                                                    <constraint firstAttribute="height" constant="193" id="hz3-ZB-794"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5UK-lK-shl" userLabel="Gauge">
+                                        <rect key="frame" x="0.0" y="197" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gauge:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNt-zP-Zv3">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Rj7-pg-83K"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="82E-mq-2ko" userLabel="txtGauge">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="aub-Qt-dWa"/>
+                                                    <constraint firstAttribute="width" constant="80" id="mvH-SL-Pzs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeGauge:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="iyJ-C4-SNW"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGi-vh-1WI" customClass="GaugePicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5k1-Ng-Ora"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VxL-4M-ftM" userLabel="Yarn Needed">
+                                        <rect key="frame" x="0.0" y="247" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yarn Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAs-ic-hBf">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="861-UF-jyp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Jk4-Sa-ro4" userLabel="txtYarnNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="MU1-RG-ftH"/>
+                                                    <constraint firstAttribute="height" constant="20" id="RdY-78-IUu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oU6-x1-sFn" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qPo-sg-AMg"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JVr-gz-pzt" userLabel="Width">
+                                        <rect key="frame" x="0.0" y="297" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Width:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-W8-YaW">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="yZh-Qk-1U0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-7b-3LD" userLabel="txtWidth">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="bIU-cN-tTs"/>
+                                                    <constraint firstAttribute="width" constant="80" id="nKn-NO-iw6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="IZC-TO-rj6"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9on-uR-r0A" customClass="ShortLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UQD-Hi-fab"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LG1-eQ-Lle" userLabel="Length">
+                                        <rect key="frame" x="0.0" y="347" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBV-Pa-f1u">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="bAd-ai-Iw8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LhA-wH-wsq" userLabel="txtLength">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="VpM-lD-6Yd"/>
+                                                    <constraint firstAttribute="height" constant="20" id="oJb-wa-k1s"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="St4-Ln-Sj1"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIY-v2-hPV" customClass="ShortLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="z5r-JS-aKq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zld-4T-E2M" userLabel="Ball Size">
+                                        <rect key="frame" x="0.0" y="397" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ball Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXt-Qk-Jps">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Kvl-AH-d5e"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="CxY-ti-kCq" userLabel="txtBallSize">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="VV0-TE-D49"/>
+                                                    <constraint firstAttribute="height" constant="20" id="YJZ-DE-gdp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeBallSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="cdO-45-caj"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B12-d0-6fE" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fm0-1H-0K9"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-jr-0ZA" userLabel="Balls Needed">
+                                        <rect key="frame" x="0.0" y="447" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balls Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L59-Db-i8t">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="QOe-FT-Qls"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="vwV-H0-YEI" userLabel="txtBallsNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="PhH-eE-Vxj"/>
+                                                    <constraint firstAttribute="height" constant="20" id="uN0-Cp-948"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6i-u0-CIJ" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bAy-fS-XnA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TCq-Ep-jbY" firstAttribute="leading" secondItem="UTj-Ip-9mO" secondAttribute="leadingMargin" id="D2N-Qb-x0O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TCq-Ep-jbY" secondAttribute="trailing" id="aBp-bH-K87"/>
+                            <constraint firstItem="TCq-Ep-jbY" firstAttribute="top" secondItem="kDc-In-Tjc" secondAttribute="bottom" id="fe3-0A-1jO"/>
+                            <constraint firstItem="Wma-du-DbT" firstAttribute="top" secondItem="TCq-Ep-jbY" secondAttribute="bottom" id="m2d-PP-KOt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballSizePicker" destination="B12-d0-6fE" id="Z5h-rw-19k"/>
+                        <outlet property="ballsNeededPicker" destination="o6i-u0-CIJ" id="wg2-PF-tKN"/>
+                        <outlet property="gaugePicker" destination="JGi-vh-1WI" id="cPC-3a-nVj"/>
+                        <outlet property="lengthPicker" destination="fIY-v2-hPV" id="c7Y-bq-XFp"/>
+                        <outlet property="scarfImg" destination="t58-8a-4NU" id="jxO-nI-mld"/>
+                        <outlet property="txtBallSize" destination="CxY-ti-kCq" id="oUd-Hf-Sn5"/>
+                        <outlet property="txtBallsNeeded" destination="vwV-H0-YEI" id="g8I-Pm-co0"/>
+                        <outlet property="txtGauge" destination="82E-mq-2ko" id="7zB-rB-8J4"/>
+                        <outlet property="txtLength" destination="LhA-wH-wsq" id="2mT-V0-iHb"/>
+                        <outlet property="txtWidth" destination="ShH-7b-3LD" id="nWw-Gw-uP0"/>
+                        <outlet property="txtYarnNeeded" destination="Jk4-Sa-ro4" id="IeR-bX-3oB"/>
+                        <outlet property="widthPicker" destination="9on-uR-r0A" id="0Sn-CV-EAl"/>
+                        <outlet property="yarnNeededPicker" destination="oU6-x1-sFn" id="6YH-8m-KhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QL5-8O-vZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="448"/>
+        </scene>
+        <!--Mittens-->
+        <scene sceneID="YHT-7J-grg">
+            <objects>
+                <viewController title="Scarf" id="YNo-DX-8O6" userLabel="Mittens" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9sk-ql-EKr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ntg-ku-V8T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BF2-cc-vfb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lSu-Ky-b0g">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XT7-qT-ihQ" userLabel="Name and Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="280"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scarf" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYG-mD-dvh">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="280"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.015686274510000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScarfImg" translatesAutoresizingMaskIntoConstraints="NO" id="zZm-YK-nRt">
+                                                <rect key="frame" x="382" y="0.0" width="178" height="280"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="178" id="DPm-xp-kL5"/>
+                                                    <constraint firstAttribute="height" constant="193" id="hUF-oz-aAU"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JgE-S3-esD" userLabel="Gauge">
+                                        <rect key="frame" x="0.0" y="290" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gauge:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-ck-ezO">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="e46-vP-vcJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Q0r-Gj-zQT" userLabel="txtGauge">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="BgZ-4K-OtG"/>
+                                                    <constraint firstAttribute="height" constant="20" id="tMy-Fk-GdR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeGauge:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="Yhw-ej-WmD"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQ8-an-8gJ" customClass="GaugePicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ysv-uU-pkD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EQV-qs-Isr" userLabel="Hand Size">
+                                        <rect key="frame" x="0.0" y="340" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hand Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-AG-IDn">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="GRT-0J-IcR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Z-KV-fQp" userLabel="txtSize">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="VTJ-fp-9AJ"/>
+                                                    <constraint firstAttribute="width" constant="80" id="fzf-vR-FxI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="uMn-re-5cd"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3M-lw-41r" customClass="ShortLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="VX3-QG-Ddf"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zrd-lO-8FC" userLabel="Length">
+                                        <rect key="frame" x="0.0" y="390" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6Q-MA-s9N">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="cdg-Zy-7lG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Qqt-RF-d8N" userLabel="txtLength">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="jrf-zk-xtK"/>
+                                                    <constraint firstAttribute="height" constant="20" id="zUi-y2-NdR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="aPT-M0-NX2"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rB-Cj-zVp" customClass="ShortLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="tZG-h7-Sxu"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="19e-yA-5kz" userLabel="Yarn Needed">
+                                        <rect key="frame" x="0.0" y="440" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yarn Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5H-mq-pBi">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="V0G-oN-PiI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="xuO-Jd-lxW" userLabel="txtYarnNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="MfC-Hl-tft"/>
+                                                    <constraint firstAttribute="width" constant="80" id="uwg-ZN-3xQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXM-wG-3OV" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="pSx-HP-oMH"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-M7-VXf" userLabel="Ball Size">
+                                        <rect key="frame" x="0.0" y="490" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ball Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsh-GK-GKE">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="HfA-Jf-SxQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="d5s-kd-fdI" userLabel="txtBallSize">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="HGB-ZX-21O"/>
+                                                    <constraint firstAttribute="height" constant="20" id="c20-l2-1uR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeBallSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="6rf-2a-SCg"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DD2-cG-AA2" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PLa-ve-l3L"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZEp-DO-Gka" userLabel="Balls Needed">
+                                        <rect key="frame" x="0.0" y="540" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balls Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54L-6q-lEB">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Jba-a0-Chc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GHc-8q-zyo" userLabel="txtBallsNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="BLp-gT-GNc"/>
+                                                    <constraint firstAttribute="width" constant="80" id="Pyb-xT-glo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tm-f6-lf9" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="YHL-S2-ynq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ntg-ku-V8T" firstAttribute="top" secondItem="lSu-Ky-b0g" secondAttribute="bottom" id="Gdy-K7-sTR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lSu-Ky-b0g" secondAttribute="trailing" id="Ixi-vS-5Pj"/>
+                            <constraint firstItem="lSu-Ky-b0g" firstAttribute="top" secondItem="9sk-ql-EKr" secondAttribute="bottom" id="TVI-uL-opk"/>
+                            <constraint firstItem="lSu-Ky-b0g" firstAttribute="leading" secondItem="BF2-cc-vfb" secondAttribute="leadingMargin" id="uez-oY-2tV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aUP-li-gLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="448"/>
+        </scene>
+        <!--Socks-->
+        <scene sceneID="wBG-H8-GfR">
+            <objects>
+                <viewController title="Scarf" id="0Cg-cN-mLv" userLabel="Socks" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csp-BQ-D28"/>
+                        <viewControllerLayoutGuide type="bottom" id="zM7-Em-X2D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5je-9a-74d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a2M-UG-dOS">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEi-MK-GDj" userLabel="Name and Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="330"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scarf" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj4-NI-k6j">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="330"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.015686274510000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ScarfImg" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-z3-FYG">
+                                                <rect key="frame" x="382" y="0.0" width="178" height="330"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="178" id="2hC-6v-HbH"/>
+                                                    <constraint firstAttribute="height" constant="193" id="GiF-t0-cKf"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ffd-f0-jUH" userLabel="Gauge">
+                                        <rect key="frame" x="0.0" y="340" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gauge:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HA7-Ch-tfy">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="92B-6j-ckl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-Nc-C4r" userLabel="txtGauge">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="6st-s9-1OK"/>
+                                                    <constraint firstAttribute="width" constant="80" id="Ljd-xQ-3r4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeGauge:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="e8p-26-Ycq"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5m-ee-tC7" customClass="GaugePicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xc2-z5-08Q"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qNS-Tr-2JZ" userLabel="Foot Size">
+                                        <rect key="frame" x="0.0" y="390" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hand Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-We-2Cy">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Lfc-pq-k5M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-mk-l0y" userLabel="txtSize">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Oa1-e1-ITL"/>
+                                                    <constraint firstAttribute="height" constant="20" id="RnT-EL-mLD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="Smw-lm-x7g"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh5-Mk-N83" customClass="ShortLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="60Z-Hp-7ma"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N7m-Jd-LHy" userLabel="Yarn Needed">
+                                        <rect key="frame" x="0.0" y="440" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yarn Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-My-stz">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="CP8-lm-Zn9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LdQ-rI-vqH" userLabel="txtYarnNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="U7b-GA-nBG"/>
+                                                    <constraint firstAttribute="height" constant="20" id="dJ5-IH-Z7C"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkk-Rz-RF8" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7Q2-sf-bdz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-as-9ok" userLabel="Ball Size">
+                                        <rect key="frame" x="0.0" y="490" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ball Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9X-xd-OWW">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Mm1-6E-aIf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LQv-FR-n7a" userLabel="txtBallSize">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="9AU-Cq-aIn"/>
+                                                    <constraint firstAttribute="height" constant="20" id="iOv-tc-3QC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeBallSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="j2O-dX-a3a"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxS-uy-Jd3" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Sl2-gD-nu1"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="87j-ZT-Tyi" userLabel="Balls Needed">
+                                        <rect key="frame" x="0.0" y="540" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balls Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-cX-rbC">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="gEe-AR-VT5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="huq-dG-F8a" userLabel="txtBallsNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="E9N-CO-JtZ"/>
+                                                    <constraint firstAttribute="width" constant="80" id="b8M-BH-qtX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFA-YA-t6l" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Qvq-OO-9d0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a2M-UG-dOS" firstAttribute="top" secondItem="csp-BQ-D28" secondAttribute="bottom" id="E3M-vz-Nzt"/>
+                            <constraint firstItem="a2M-UG-dOS" firstAttribute="leading" secondItem="5je-9a-74d" secondAttribute="leadingMargin" id="mob-1D-Jjg"/>
+                            <constraint firstItem="zM7-Em-X2D" firstAttribute="top" secondItem="a2M-UG-dOS" secondAttribute="bottom" id="rRU-C0-PfX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a2M-UG-dOS" secondAttribute="trailing" id="vxy-Zh-aHG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTZ-Q1-hqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="448"/>
+        </scene>
+        <!--Toque-->
+        <scene sceneID="B2Q-Vh-Ruh">
+            <objects>
+                <viewController title="Scarf" id="hUg-fz-m7M" userLabel="Toque" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hod-Ar-gqU"/>
+                        <viewControllerLayoutGuide type="bottom" id="WjG-IM-h3J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="48f-JV-kA0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DeU-5m-bJg">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlP-62-u88" userLabel="Name and Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="330"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scarf" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvb-gS-m0T">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="330"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.0078431372550000003" green="0.015686274510000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScarfImg" translatesAutoresizingMaskIntoConstraints="NO" id="7rG-nn-N04">
+                                                <rect key="frame" x="382" y="0.0" width="178" height="330"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="178" id="3Y2-mg-ayb"/>
+                                                    <constraint firstAttribute="height" constant="193" id="Azx-wc-cha"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XQs-Nt-Ivp" userLabel="Gauge">
+                                        <rect key="frame" x="0.0" y="340" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gauge:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-U8-4Uh">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Bkh-1X-DMl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="x8f-0y-rGc" userLabel="txtGauge">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Hc1-N0-JAg"/>
+                                                    <constraint firstAttribute="height" constant="20" id="z5Q-qj-dSN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeGauge:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="59V-Nq-kxu"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-4d-zdU" customClass="GaugePicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1hy-QN-PJT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qen-fg-9EG" userLabel="Head Size">
+                                        <rect key="frame" x="0.0" y="390" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Head Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAO-LA-mCb">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="leS-qt-nm6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="nUG-Sa-oA1" userLabel="txtSize">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="5y5-ot-sII"/>
+                                                    <constraint firstAttribute="width" constant="80" id="BmI-s4-rRx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="mdn-rR-zGP"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlA-qp-Qhl" customClass="ShortLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4Aa-1o-PhT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K6B-QS-ULs" userLabel="Yarn Needed">
+                                        <rect key="frame" x="0.0" y="440" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yarn Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qk9-lK-wuG">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="oeB-UE-MEE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="mSm-fC-3dQ" userLabel="txtYarnNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Rkb-8x-thF"/>
+                                                    <constraint firstAttribute="height" constant="20" id="bpv-OM-pig"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTy-Bj-8wu" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IRy-W5-Py4"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nZC-ZA-2od" userLabel="Ball Size">
+                                        <rect key="frame" x="0.0" y="490" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ball Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROw-Cw-NXb">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="wdz-eW-NO8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="cTs-dK-S9w" userLabel="txtBallSize">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="c2a-qQ-E7w"/>
+                                                    <constraint firstAttribute="width" constant="80" id="iga-jg-QVZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="changeBallSize:" destination="hwu-1c-6lr" eventType="editingDidEnd" id="wFH-Sw-78W"/>
+                                                </connections>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LC5-n5-Ppy" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Zuw-cY-EsN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-Sg-qd6" userLabel="Balls Needed">
+                                        <rect key="frame" x="0.0" y="540" width="560" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balls Needed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25X-CE-taB">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="oY1-p2-dwK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1843137255" green="0.20392156859999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="UNE-wE-hgb" userLabel="txtBallsNeeded">
+                                                <rect key="frame" x="140" y="0.0" width="80" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="FPK-EO-rmT"/>
+                                                    <constraint firstAttribute="height" constant="20" id="pPQ-Hq-bEd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h68-6m-ffJ" customClass="LongLengthPicker" customModule="YarnRequirements" customModuleProvider="target">
+                                                <rect key="frame" x="230" y="0.0" width="330" height="40"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IXW-vK-ngA"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DeU-5m-bJg" secondAttribute="trailing" id="A6X-ac-3wC"/>
+                            <constraint firstItem="DeU-5m-bJg" firstAttribute="top" secondItem="Hod-Ar-gqU" secondAttribute="bottom" id="B1s-YX-gVE"/>
+                            <constraint firstItem="WjG-IM-h3J" firstAttribute="top" secondItem="DeU-5m-bJg" secondAttribute="bottom" id="HkJ-KN-FCA"/>
+                            <constraint firstItem="DeU-5m-bJg" firstAttribute="leading" secondItem="48f-JV-kA0" secondAttribute="leadingMargin" id="fvl-ry-Qfx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bQ-OP-MHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="448"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Home" width="25" height="25"/>
         <image name="Info" width="25" height="25"/>
+        <image name="ScarfImg" width="89" height="96"/>
         <image name="SweaterImg" width="89" height="96"/>
         <image name="Weights" width="25" height="25"/>
     </resources>
