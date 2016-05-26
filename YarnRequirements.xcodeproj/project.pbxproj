@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		875A90AC1CF6585F0084EC06 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AB1CF6585F0084EC06 /* ProjectViewController.swift */; };
-		875A90AE1CF6635F0084EC06 /* ScarfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AD1CF6635F0084EC06 /* ScarfController.swift */; };
+		875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AF1CF6979C0084EC06 /* pickerView.swift */; };
+		875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90B11CF69E820084EC06 /* DimensionRow.swift */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
 		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
 		8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
-		8763AA771CF2C56500E1B003 /* SweaterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA761CF2C56500E1B003 /* SweaterController.swift */; };
+		8763AA771CF2C56500E1B003 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA761CF2C56500E1B003 /* ProjectViewController.swift */; };
 		8763AA791CF2C90300E1B003 /* GaugePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA781CF2C90300E1B003 /* GaugePicker.swift */; };
 		8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */; };
 		8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */; };
@@ -49,12 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		875A90AB1CF6585F0084EC06 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		875A90AD1CF6635F0084EC06 /* ScarfController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScarfController.swift; sourceTree = "<group>"; };
+		875A90AF1CF6979C0084EC06 /* pickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerView.swift; sourceTree = "<group>"; };
+		875A90B11CF69E820084EC06 /* DimensionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionRow.swift; sourceTree = "<group>"; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		8763AA721CF2AF3300E1B003 /* Mittens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mittens.swift; sourceTree = "<group>"; };
 		8763AA741CF2B90000E1B003 /* Sweater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sweater.swift; sourceTree = "<group>"; };
-		8763AA761CF2C56500E1B003 /* SweaterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweaterController.swift; sourceTree = "<group>"; };
+		8763AA761CF2C56500E1B003 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		8763AA781CF2C90300E1B003 /* GaugePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugePicker.swift; sourceTree = "<group>"; };
 		8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortLengthPicker.swift; sourceTree = "<group>"; };
 		8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongLengthPicker.swift; sourceTree = "<group>"; };
@@ -141,13 +141,13 @@
 				8763AA701CF2A8DD00E1B003 /* Project.swift */,
 				8763AA721CF2AF3300E1B003 /* Mittens.swift */,
 				8763AA741CF2B90000E1B003 /* Sweater.swift */,
-				8763AA761CF2C56500E1B003 /* SweaterController.swift */,
+				8763AA761CF2C56500E1B003 /* ProjectViewController.swift */,
 				8763AA781CF2C90300E1B003 /* GaugePicker.swift */,
 				8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */,
 				8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */,
 				8763AA7E1CF2F6E800E1B003 /* InfoController.swift */,
-				875A90AB1CF6585F0084EC06 /* ProjectViewController.swift */,
-				875A90AD1CF6635F0084EC06 /* ScarfController.swift */,
+				875A90AF1CF6979C0084EC06 /* pickerView.swift */,
+				875A90B11CF69E820084EC06 /* DimensionRow.swift */,
 			);
 			path = YarnRequirements;
 			sourceTree = "<group>";
@@ -301,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */,
 				87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */,
 				8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */,
 				8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */,
@@ -309,14 +310,13 @@
 				87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */,
 				87DABAD11CE821D1009DD3B1 /* YarnWeight.swift in Sources */,
 				87DABACF1CE7F7B1009DD3B1 /* WeightCell.swift in Sources */,
-				875A90AE1CF6635F0084EC06 /* ScarfController.swift in Sources */,
 				8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */,
 				8763AA791CF2C90300E1B003 /* GaugePicker.swift in Sources */,
 				8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */,
 				87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */,
-				875A90AC1CF6585F0084EC06 /* ProjectViewController.swift in Sources */,
+				875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */,
 				8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */,
-				8763AA771CF2C56500E1B003 /* SweaterController.swift in Sources */,
+				8763AA771CF2C56500E1B003 /* ProjectViewController.swift in Sources */,
 				8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

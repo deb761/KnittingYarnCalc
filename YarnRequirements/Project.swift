@@ -18,11 +18,13 @@ enum ShortLengthUnits: Int {
 enum LongLengthUnits: Int {
     case Yards = 0, Meters
 }
+// Base class for a project
 class Project {
-    var Name:String = "Project"
+    var name:String = "Project"
     var Gauge:Double = 20.0
     var gaugeUnits:GaugeUnits = GaugeUnits.StsPer4inch
-    var ThumbImage:UIImage = UIImage(named:"Sweater")!
+    var thumb:UIImage = UIImage(named:"Sweater")!
+    var image:UIImage = UIImage(named:"SweaterImg")!
     var segue = "SweaterSegue"
     
     //private  Class<?> aClass;
@@ -33,9 +35,10 @@ class Project {
     var BallsNeeded:Int = 4
 
     // provide a means of defining a project name and image
-    init(name:String, image:UIImage, segue:String) {
-        self.Name = name
-        self.ThumbImage = image
+    init(name:String, thumb:UIImage, image:UIImage, segue:String) {
+        self.name = name
+        self.image = image
+        self.thumb = thumb
         self.segue = segue
     }
 

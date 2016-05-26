@@ -14,15 +14,15 @@ class ProjectController: UICollectionViewController {
     
     // Projects to choose from
     let projects = [
-        Mittens(name: "Mittens", image: UIImage(named:"Mittens")!, segue: "ScarfSegue"),
-        Gloves(name: "Gloves", image: UIImage(named:"Gloves")!, segue: "ScarfSegue"),
-        Socks(name: "Socks", image: UIImage(named:"Socks")!, segue: "ScarfSegue"),
-        Tam(name: "Tam", image: UIImage(named:"Tam")!, segue: "ScarfSegue"),
-        Scarf(name: "Scarf", image: UIImage(named:"Scarf")!, segue: "ScarfSegue"),
-        Toque(name: "Toque", image: UIImage(named:"Toque")!, segue: "ScarfSegue"),
-        Sweater(name: "Sweater", image: UIImage(named:"Sweater")!, segue: "SweaterSegue"),
-        Vest(name: "Vest", image: UIImage(named:"Vest")!, segue: "ScarfSegue"),
-        Blanket(name: "Blanket", image: UIImage(named:"Blanket")!, segue: "ScarfSegue")
+        Mittens(name: "Mittens", thumb:UIImage(named:"Mittens")!, image: UIImage(named:"Mittens")!, segue: "SweaterSegue"),
+        Gloves(name: "Gloves", thumb: UIImage(named:"Gloves")!, image: UIImage(named:"Gloves")!, segue: "SweaterSegue"),
+        Socks(name: "Socks", thumb: UIImage(named:"Socks")!, image: UIImage(named:"Socks")!, segue: "SweaterSegue"),
+        Tam(name: "Tam", thumb: UIImage(named:"Tam")!, image: UIImage(named:"Tam")!, segue: "SweaterSegue"),
+        Scarf(name: "Scarf", thumb: UIImage(named:"Scarf")!, image: UIImage(named:"ScarfImg")!, segue: "SweaterSegue"),
+        Toque(name: "Toque", thumb: UIImage(named:"Toque")!, image: UIImage(named:"Toque")!, segue: "SweaterSegue"),
+        Sweater(name: "Sweater", thumb: UIImage(named:"Sweater")!, image: UIImage(named:"SweaterImg")!, segue: "SweaterSegue"),
+        Vest(name: "Vest", thumb: UIImage(named:"Vest")!, image: UIImage(named:"Vest")!, segue: "SweaterSegue"),
+        Blanket(name: "Blanket", thumb: UIImage(named:"Blanket")!, image: UIImage(named:"Blanket")!, segue: "SweaterSegue")
     ]
 
     override func viewDidLoad() {
@@ -65,9 +65,9 @@ class ProjectController: UICollectionViewController {
 
         // Configure the cell
         project = projects[indexPath.row]
-        cell.image.image = project!.ThumbImage
+        cell.image.image = project!.thumb
         cell.backgroundColor = UIColor.clearColor()
-        cell.lblName.text = project!.Name
+        cell.lblName.text = project!.name
     
         return cell
     }
