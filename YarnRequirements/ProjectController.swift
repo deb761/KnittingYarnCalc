@@ -14,20 +14,24 @@ class ProjectController: UICollectionViewController {
     
     // Projects to choose from
     let projects = [
-        Mittens(name: "Mittens", thumb:UIImage(named:"Mittens")!, image: UIImage(named:"Mittens")!, segue: "SweaterSegue"),
-        Gloves(name: "Gloves", thumb: UIImage(named:"Gloves")!, image: UIImage(named:"Gloves")!, segue: "SweaterSegue"),
-        Socks(name: "Socks", thumb: UIImage(named:"Socks")!, image: UIImage(named:"Socks")!, segue: "SweaterSegue"),
-        Tam(name: "Tam", thumb: UIImage(named:"Tam")!, image: UIImage(named:"Tam")!, segue: "SweaterSegue"),
-        Scarf(name: "Scarf", thumb: UIImage(named:"Scarf")!, image: UIImage(named:"ScarfImg")!, segue: "SweaterSegue"),
-        Toque(name: "Toque", thumb: UIImage(named:"Toque")!, image: UIImage(named:"Toque")!, segue: "SweaterSegue"),
-        Sweater(name: "Sweater", thumb: UIImage(named:"Sweater")!, image: UIImage(named:"SweaterImg")!, segue: "SweaterSegue"),
-        Vest(name: "Vest", thumb: UIImage(named:"Vest")!, image: UIImage(named:"Vest")!, segue: "SweaterSegue"),
-        Blanket(name: "Blanket", thumb: UIImage(named:"Blanket")!, image: UIImage(named:"Blanket")!, segue: "SweaterSegue")
+        Mittens(name: "Mittens", thumb:UIImage(named:"Mittens")!, image: UIImage(named:"Mittens")!, control: "ProjectViewController"),
+        Gloves(name: "Gloves", thumb: UIImage(named:"Gloves")!, image: UIImage(named:"Gloves")!, control: "ProjectViewController"),
+        Socks(name: "Socks", thumb: UIImage(named:"Socks")!, image: UIImage(named:"Socks")!, control: "ProjectViewController"),
+        Tam(name: "Tam", thumb: UIImage(named:"Tam")!, image: UIImage(named:"Tam")!, control: "ProjectViewController"),
+        Scarf(name: "Scarf", thumb: UIImage(named:"Scarf")!, image: UIImage(named:"ScarfImg")!, control: "ProjectViewController"),
+        Toque(name: "Toque", thumb: UIImage(named:"Toque")!, image: UIImage(named:"Toque")!, control: "ProjectViewController"),
+        Sweater(name: "Sweater", thumb: UIImage(named:"Sweater")!, image: UIImage(named:"SweaterImg")!, control: "ProjectViewController"),
+        Vest(name: "Vest", thumb: UIImage(named:"Vest")!, image: UIImage(named:"Vest")!, control: "ProjectViewController"),
+        Blanket(name: "Blanket", thumb: UIImage(named:"Blanket")!, image: UIImage(named:"Blanket")!, control: "ProjectViewController")
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
+        for project in projects {
+            project.controller = storyboard.instantiateViewControllerWithIdentifier(project.controlName!) as! ProjectViewController
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
@@ -80,7 +84,8 @@ class ProjectController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         project = projects[indexPath.row]
-        self.performSegueWithIdentifier(project!.segue, sender: self)
+        project!.controller.project = project
+        showViewController(project!.controller, sender: self)
     }
     
     // MARK: UICollectionViewDelegate

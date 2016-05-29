@@ -96,6 +96,7 @@ class ProjectViewController: UIViewController, UIPickerViewDelegate {
         default: break
         }
         project.calcYarnRequired()
+        UpdateText()
     }
     /*
     // MARK: - Navigation

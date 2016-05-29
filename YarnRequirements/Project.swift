@@ -25,7 +25,8 @@ class Project {
     var gaugeUnits:GaugeUnits = GaugeUnits.StsPer4inch
     var thumb:UIImage = UIImage(named:"Sweater")!
     var image:UIImage = UIImage(named:"SweaterImg")!
-    var segue = "SweaterSegue"
+    var controlName:String?
+    var controller:ProjectViewController!
     
     //private  Class<?> aClass;
     var YarnNeeded:Int = 1000
@@ -35,11 +36,11 @@ class Project {
     var BallsNeeded:Int = 4
 
     // provide a means of defining a project name and image
-    init(name:String, thumb:UIImage, image:UIImage, segue:String) {
+    init(name:String, thumb:UIImage, image:UIImage, control:String) {
         self.name = name
         self.image = image
         self.thumb = thumb
-        self.segue = segue
+        self.controlName = control
     }
 
     let inches2cm:Double = 2.54;
