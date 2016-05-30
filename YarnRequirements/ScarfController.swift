@@ -32,12 +32,12 @@ class ScarfController: BaseProjectController {
         // Add the length row
         lengthRow = DimensionRow(name: "Length", picker: pkLengthUnits, delegate: self)
         txtLength = lengthRow?.txtVal        
-        mainStack?.insertArrangedSubview((lengthRow?.stack)!, atIndex: 3)
+        mainStack?.insertArrangedSubview((lengthRow?.stack)!, atIndex: 2)
         
         // Add the width row
         widthRow = DimensionRow(name: "Width", picker: pkWidthUnits, delegate: self)
         txtWidth = widthRow?.txtVal
-        mainStack?.insertArrangedSubview((widthRow?.stack)!, atIndex: 4)
+        mainStack?.insertArrangedSubview((widthRow?.stack)!, atIndex: 3)
         
         pkLengthUnits.loaded(self, tag: 4)
         pkWidthUnits.loaded(self, tag: 5)

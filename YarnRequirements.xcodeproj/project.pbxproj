@@ -31,6 +31,8 @@
 		87E536CF1CFBA0BA00BE9735 /* BaseProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536CE1CFBA0BA00BE9735 /* BaseProjectController.swift */; };
 		87E536D11CFBE43E00BE9735 /* SweaterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D01CFBE43E00BE9735 /* SweaterController.swift */; };
 		87E536D31CFBECA100BE9735 /* Scarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D21CFBECA100BE9735 /* Scarf.swift */; };
+		87E536D51CFBF2BC00BE9735 /* HandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D41CFBF2BC00BE9735 /* HandController.swift */; };
+		87E536D71CFBF79E00BE9735 /* Vest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D61CFBF79E00BE9735 /* Vest.swift */; };
 		87FC3F501CFB75C600416BE2 /* ScarfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		87E536CE1CFBA0BA00BE9735 /* BaseProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProjectController.swift; sourceTree = "<group>"; };
 		87E536D01CFBE43E00BE9735 /* SweaterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweaterController.swift; sourceTree = "<group>"; };
 		87E536D21CFBECA100BE9735 /* Scarf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scarf.swift; sourceTree = "<group>"; };
+		87E536D41CFBF2BC00BE9735 /* HandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandController.swift; sourceTree = "<group>"; };
+		87E536D61CFBF79E00BE9735 /* Vest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vest.swift; sourceTree = "<group>"; };
 		87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScarfController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +160,9 @@
 				875A90B11CF69E820084EC06 /* DimensionRow.swift */,
 				87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */,
 				87E536D01CFBE43E00BE9735 /* SweaterController.swift */,
+				87E536D41CFBF2BC00BE9735 /* HandController.swift */,
 				87E536D21CFBECA100BE9735 /* Scarf.swift */,
+				87E536D61CFBF79E00BE9735 /* Vest.swift */,
 			);
 			path = YarnRequirements;
 			sourceTree = "<group>";
@@ -329,7 +335,9 @@
 				87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */,
 				875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */,
 				8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */,
+				87E536D51CFBF2BC00BE9735 /* HandController.swift in Sources */,
 				8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */,
+				87E536D71CFBF79E00BE9735 /* Vest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

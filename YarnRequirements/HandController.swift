@@ -1,5 +1,5 @@
 //
-//  SweaterController.swift
+//  HandController.swift
 //  YarnRequirements
 //
 //  Created by Deborah Engelmeyer on 5/29/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SweaterController: BaseProjectController {
+class HandController: BaseProjectController {
     
     // fourth row in the stack, chest size and units
     var sizeRow : DimensionRow?
@@ -16,22 +16,22 @@ class SweaterController: BaseProjectController {
     var pkSizeUnits: ShortLengthPicker! = ShortLengthPicker()
     
     // keep a property for the sweater
-    var sweater:Sweater!
+    var mittens:Mittens!
     
     // Add the Chest Size row to the stack
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        sizeRow = DimensionRow(name: "Chest Size", picker: pkSizeUnits, delegate: self)
+        sizeRow = DimensionRow(name: "Hand Size", picker: pkSizeUnits, delegate: self)
         txtSize = sizeRow?.txtVal
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)
         
         pkSizeUnits.loaded(self, tag: 4)
         
-        sweater = project as! Sweater
-        txtSize.text = String(sweater.ChestSize)
+        mittens = project as! Mittens
+        txtSize.text = String(mittens.size)
         txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
     }
 
@@ -45,7 +45,7 @@ class SweaterController: BaseProjectController {
     {
         switch pickerView.tag {
         case 4:
-            sweater.ChestUnits = ShortLengthUnits(rawValue: row)!
+            mittens.sizeUnits = ShortLengthUnits(rawValue: row)!
         default:
             super.pickerView(pickerView, didSelectRow: row, inComponent: component)
         }
@@ -54,8 +54,8 @@ class SweaterController: BaseProjectController {
     }
 
     // Recalc and update units when ball size changes
-    @IBAction func changeSize(sender: AnyObject) {
-        sweater.ChestSize = Double(txtSize.text!)!
+    func changeSize(sender: AnyObject) {
+        mittens.size = Double(txtSize.text!)!
         project.calcYarnRequired()
         UpdateText()
     }

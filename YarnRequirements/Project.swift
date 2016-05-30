@@ -42,6 +42,7 @@ class Project {
         self.thumb = thumb
         self.controlName = control
         self.controller = BaseProjectController()
+        calcYarnRequired()
     }
 
     let inches2cm:Double = 2.54;
