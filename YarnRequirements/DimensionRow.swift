@@ -42,5 +42,13 @@ class DimensionRow {
         stack.spacing = 10
         stack.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func viewDidLoad() {
+        // Make the txtVal like a textField
+        txtVal.layer.cornerRadius = 5
+        txtVal.layer.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.5).CGColor
+        txtVal.layer.borderWidth = 0.5
+        txtVal.clipsToBounds = true        
+    }
 
 }

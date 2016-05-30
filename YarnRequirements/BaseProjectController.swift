@@ -33,9 +33,9 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     var nBallsRow : DimensionRow?
 
     var txtGauge: UITextField!
-    var txtYarnNeeded: UITextField! = UITextField()
-    var txtBallSize: UITextField! = UITextField()
-    var txtBallsNeeded: UITextField! = UITextField()
+    var txtYarnNeeded: UITextField!
+    var txtBallSize: UITextField!
+    var txtBallsNeeded: UITextField!
 
     var project:Project!
 
@@ -60,19 +60,22 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Create the stack with the Gauge
         gaugeRow = DimensionRow(name: "Gauge", picker: pkGauge, delegate: self)
         txtGauge = gaugeRow!.txtVal
+        txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
 
         // Create the stack with the yarn needed
         yarnRow = DimensionRow(name: "Yarn Needed", picker: pkYarnUnits, delegate: self)
         txtYarnNeeded = yarnRow!.txtVal
+        txtYarnNeeded.userInteractionEnabled = false
         
         // Create the stack with the ball size
         ballRow = DimensionRow(name: "Ball Size", picker: pkBallUnits, delegate: self)
         txtBallSize = ballRow!.txtVal
+        txtBallSize.addTarget(self, action: #selector(BaseProjectController.changeBallSize(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
         
         // Create the stack with the balls needed
         nBallsRow = DimensionRow(name: "Num Balls", picker: UIPickerView(), delegate: self)
         txtBallsNeeded = nBallsRow!.txtVal
-        //txtBallsNeeded.
+        txtBallsNeeded.userInteractionEnabled = false
         
         // Create the main stack
         mainStack = UIStackView(arrangedSubviews: [nameStack!, gaugeRow!.stack, yarnRow!.stack, ballRow!.stack, nBallsRow!.stack])
@@ -111,7 +114,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         pkBallUnits.selectRow(project.BallSizeUnits.rawValue, inComponent: 0, animated: false)
 
         // Set initial values for text fields
-        //UpdateText()
+        UpdateText()
     }
     
     // Set values for text fields
@@ -135,9 +138,9 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Dispose of any resources that can be recreated.
     }
     // Recalc and update units when gauge changes
-    @IBAction func changeGauge(sender: AnyObject) {
+    func changeGauge(sender: UITextField!) {
         project.Gauge = Double(txtGauge.text!)!
-        UpdateUnits()
+        //UpdateUnits()
         project.calcYarnRequired()
         UpdateText()
     }
