@@ -8,6 +8,7 @@
 
 import UIKit
 
+// This class defines a horizontal stack with a label, a textField, and a PickerView
 class DimensionRow {
     
     var stack:UIStackView!
@@ -16,10 +17,12 @@ class DimensionRow {
     var picker:UIPickerView!
     
     init(name:String, picker:UIPickerView, delegate:UITextFieldDelegate) {
+        // Create the label and assign it the input text
         lblName = UILabel()
         lblName.text = name + ":"
         lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 110))
         
+        // Define the txtField with a defined width
         txtVal = UITextField(frame: CGRectMake(10, 10, 80, 20))
         txtVal.font = UIFont.systemFontOfSize(17)
         txtVal.borderStyle = UITextBorderStyle.RoundedRect
@@ -30,12 +33,14 @@ class DimensionRow {
         txtVal.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         txtVal.delegate = delegate
         txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 80))
-//        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
         
+        // Set up the picker
         self.picker = picker
         self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 60))
+        // Create the stackView and add the label, textField, and picker to it
         stack = UIStackView(arrangedSubviews: [lblName, txtVal, self.picker])
         
+        // Set the stackview ash horizontal and define how its elements are arranged
         stack.axis = .Horizontal
         stack.distribution = .FillProportionally
         stack.alignment = .Center

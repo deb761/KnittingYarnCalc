@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// Define a class for yarn weight data
 public class YarnWeight
 {
     var name: String
@@ -20,7 +20,7 @@ public class YarnWeight
     // Density per 50 gm for wool
     var density: String
     
-    
+    // initialize the yarn weight values
     init(name: String, needles: String, gauge: String, wpi: String, density: String)
     {
         self.name = name;

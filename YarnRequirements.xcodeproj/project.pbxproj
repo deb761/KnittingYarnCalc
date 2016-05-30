@@ -33,6 +33,11 @@
 		87E536D31CFBECA100BE9735 /* Scarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D21CFBECA100BE9735 /* Scarf.swift */; };
 		87E536D51CFBF2BC00BE9735 /* HandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D41CFBF2BC00BE9735 /* HandController.swift */; };
 		87E536D71CFBF79E00BE9735 /* Vest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D61CFBF79E00BE9735 /* Vest.swift */; };
+		87E536D91CFBF96D00BE9735 /* HatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D81CFBF96D00BE9735 /* HatController.swift */; };
+		87E536DB1CFBF9EE00BE9735 /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DA1CFBF9EE00BE9735 /* Hat.swift */; };
+		87E536DE1CFBFB6E00BE9735 /* Socks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DD1CFBFB6E00BE9735 /* Socks.swift */; };
+		87E536E01CFBFC4100BE9735 /* ShoeSizePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */; };
+		87E536E21CFC014300BE9735 /* SockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536E11CFC014300BE9735 /* SockController.swift */; };
 		87FC3F501CFB75C600416BE2 /* ScarfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,11 @@
 		87E536D21CFBECA100BE9735 /* Scarf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scarf.swift; sourceTree = "<group>"; };
 		87E536D41CFBF2BC00BE9735 /* HandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandController.swift; sourceTree = "<group>"; };
 		87E536D61CFBF79E00BE9735 /* Vest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vest.swift; sourceTree = "<group>"; };
+		87E536D81CFBF96D00BE9735 /* HatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HatController.swift; sourceTree = "<group>"; };
+		87E536DA1CFBF9EE00BE9735 /* Hat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hat.swift; sourceTree = "<group>"; };
+		87E536DD1CFBFB6E00BE9735 /* Socks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socks.swift; sourceTree = "<group>"; };
+		87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeSizePicker.swift; sourceTree = "<group>"; };
+		87E536E11CFC014300BE9735 /* SockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SockController.swift; sourceTree = "<group>"; };
 		87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScarfController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,11 +158,10 @@
 				87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */,
 				87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */,
 				87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */,
-				8763AA701CF2A8DD00E1B003 /* Project.swift */,
-				8763AA721CF2AF3300E1B003 /* Mittens.swift */,
-				8763AA741CF2B90000E1B003 /* Sweater.swift */,
+				87E536DC1CFBFB4B00BE9735 /* Projects */,
 				87E536CE1CFBA0BA00BE9735 /* BaseProjectController.swift */,
 				8763AA781CF2C90300E1B003 /* GaugePicker.swift */,
+				87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */,
 				8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */,
 				8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */,
 				8763AA7E1CF2F6E800E1B003 /* InfoController.swift */,
@@ -161,8 +170,8 @@
 				87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */,
 				87E536D01CFBE43E00BE9735 /* SweaterController.swift */,
 				87E536D41CFBF2BC00BE9735 /* HandController.swift */,
-				87E536D21CFBECA100BE9735 /* Scarf.swift */,
-				87E536D61CFBF79E00BE9735 /* Vest.swift */,
+				87E536E11CFC014300BE9735 /* SockController.swift */,
+				87E536D81CFBF96D00BE9735 /* HatController.swift */,
 			);
 			path = YarnRequirements;
 			sourceTree = "<group>";
@@ -183,6 +192,20 @@
 				87DABAC21CE7EBF4009DD3B1 /* Info.plist */,
 			);
 			path = YarnRequirementsUITests;
+			sourceTree = "<group>";
+		};
+		87E536DC1CFBFB4B00BE9735 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				8763AA701CF2A8DD00E1B003 /* Project.swift */,
+				8763AA721CF2AF3300E1B003 /* Mittens.swift */,
+				87E536DA1CFBF9EE00BE9735 /* Hat.swift */,
+				8763AA741CF2B90000E1B003 /* Sweater.swift */,
+				87E536D21CFBECA100BE9735 /* Scarf.swift */,
+				87E536D61CFBF79E00BE9735 /* Vest.swift */,
+				87E536DD1CFBFB6E00BE9735 /* Socks.swift */,
+			);
+			name = Projects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,23 +343,28 @@
 				87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */,
 				8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */,
 				87E536CF1CFBA0BA00BE9735 /* BaseProjectController.swift in Sources */,
+				87E536E21CFC014300BE9735 /* SockController.swift in Sources */,
 				87E536D11CFBE43E00BE9735 /* SweaterController.swift in Sources */,
 				8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */,
 				87FC3F501CFB75C600416BE2 /* ScarfController.swift in Sources */,
 				87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */,
 				87DABAA11CE7EBF4009DD3B1 /* ProjectsController.swift in Sources */,
+				87E536DE1CFBFB6E00BE9735 /* Socks.swift in Sources */,
+				87E536DB1CFBF9EE00BE9735 /* Hat.swift in Sources */,
 				87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */,
 				87DABAD11CE821D1009DD3B1 /* YarnWeight.swift in Sources */,
 				87DABACF1CE7F7B1009DD3B1 /* WeightCell.swift in Sources */,
 				8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */,
 				87E536D31CFBECA100BE9735 /* Scarf.swift in Sources */,
 				8763AA791CF2C90300E1B003 /* GaugePicker.swift in Sources */,
+				87E536E01CFBFC4100BE9735 /* ShoeSizePicker.swift in Sources */,
 				8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */,
 				87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */,
 				875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */,
 				8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */,
 				87E536D51CFBF2BC00BE9735 /* HandController.swift in Sources */,
 				8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */,
+				87E536D91CFBF96D00BE9735 /* HatController.swift in Sources */,
 				87E536D71CFBF79E00BE9735 /* Vest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
