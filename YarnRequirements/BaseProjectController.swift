@@ -156,7 +156,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return (pickerView as! PickerView).text[row]
     }
-    // Update the gauge units and recalculate the yarn needed
+    // Update the units and recalculate the yarn needed
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {

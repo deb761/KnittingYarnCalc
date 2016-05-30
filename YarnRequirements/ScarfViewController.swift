@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScarfViewController: ProjectViewController {
+class ScarfViewController: BaseProjectController {
 
     override func viewDidLoad() {
         (self as UIViewController).viewDidLoad()

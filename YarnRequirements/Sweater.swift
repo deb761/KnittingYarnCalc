@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
 // self class defines the parameters and performs the calculations for a sweater project
 class Sweater : Project {
     // Finished size around the chest
@@ -14,6 +16,13 @@ class Sweater : Project {
     // Units for chest size
     var ChestUnits:ShortLengthUnits = ShortLengthUnits.Inches;
     
+    // provide a means of defining a project name and image
+    override init(name:String, thumb:UIImage, image:UIImage, control:String) {
+        super.init(name: name, thumb: thumb, image: image, control: control)
+        controller = SweaterController()
+    }
+    
+    // A class to hold each end of our interpolation table
     class SizeData {
         // Finished size around the chest
         var Chest:Double = 81
@@ -28,11 +37,12 @@ class Sweater : Project {
             self.Sts18 = sts18
         }
     }
-    
+    // Small miss end of the table
     let smallMiss:SizeData = SizeData(chest: 81, sts32: 1500, sts18: 950)
+    // Large miss end of the table
     let largeMiss:SizeData = SizeData(chest: 101, sts32: 1700, sts18: 1200)
     
-    // Calculatet the yarn required for an adult size sweater
+    // Calculate the yarn required for an adult size sweater
     override func calcYarnRequired()
     {
         var gauge:Double = Gauge

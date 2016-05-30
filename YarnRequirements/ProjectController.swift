@@ -20,7 +20,7 @@ class ProjectController: UICollectionViewController {
         Tam(name: "Tam", thumb: UIImage(named:"Tam")!, image: UIImage(named:"Tam")!, control: "ProjectViewController"),
         Scarf(name: "Scarf", thumb: UIImage(named:"Scarf")!, image: UIImage(named:"ScarfImg")!, control: "ScarfViewController"),
         Toque(name: "Toque", thumb: UIImage(named:"Toque")!, image: UIImage(named:"Toque")!, control: "ProjectViewController"),
-        Sweater(name: "Sweater", thumb: UIImage(named:"Sweater")!, image: UIImage(named:"SweaterImg")!, control: "ProjectViewController"),
+        Sweater(name: "Sweater", thumb: UIImage(named:"Sweater")!, image: UIImage(named:"SweaterImg")!, control: "SweaterController"),
         Vest(name: "Vest", thumb: UIImage(named:"Vest")!, image: UIImage(named:"Vest")!, control: "ProjectViewController"),
         Blanket(name: "Blanket", thumb: UIImage(named:"Blanket")!, image: UIImage(named:"Blanket")!, control: "ScarfViewController")
     ]
@@ -29,9 +29,9 @@ class ProjectController: UICollectionViewController {
         super.viewDidLoad()
         //let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-        for project in projects {
-            project.controller = BaseProjectController() as! BaseProjectController
-        }
+//        for project in projects {
+//            project.controller = BaseProjectController() as! BaseProjectController
+//        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
@@ -45,7 +45,7 @@ class ProjectController: UICollectionViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let svc = segue.destinationViewController as! ProjectViewController;
+        let svc = segue.destinationViewController as! BaseProjectController;
         svc.project = project
     }
 

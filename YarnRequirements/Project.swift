@@ -41,6 +41,7 @@ class Project {
         self.image = image
         self.thumb = thumb
         self.controlName = control
+        self.controller = BaseProjectController()
     }
 
     let inches2cm:Double = 2.54;
