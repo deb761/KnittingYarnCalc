@@ -18,6 +18,7 @@ class DimensionRow {
     init(name:String, picker:UIPickerView, delegate:UITextFieldDelegate) {
         lblName = UILabel()
         lblName.text = name + ":"
+        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 110))
         
         txtVal = UITextField(frame: CGRectMake(10, 10, 80, 20))
         txtVal.font = UIFont.systemFontOfSize(17)
@@ -28,12 +29,15 @@ class DimensionRow {
         txtVal.clearButtonMode = UITextFieldViewMode.WhileEditing;
         txtVal.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         txtVal.delegate = delegate
+        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 80))
+//        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
         
         self.picker = picker
+        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 60))
         stack = UIStackView(arrangedSubviews: [lblName, txtVal, self.picker])
         
         stack.axis = .Horizontal
-        stack.distribution = .FillEqually
+        stack.distribution = .FillProportionally
         stack.alignment = .Fill
         stack.spacing = 10
         stack.translatesAutoresizingMaskIntoConstraints = false

@@ -48,12 +48,14 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Create the nameStack
         nameStack = UIStackView(arrangedSubviews: [lblName, projectImg])
         nameStack!.axis = .Horizontal
-        nameStack!.distribution = .FillEqually
+        nameStack!.distribution = .EqualSpacing
         nameStack!.alignment = .Fill
         nameStack!.spacing = 10
         nameStack!.translatesAutoresizingMaskIntoConstraints = false
         lblName.text = project.name
         projectImg.image = project.image
+        projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 178))
+        projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 193))
         
         // Create the stack with the Gauge
         gaugeRow = DimensionRow(name: "Gauge", picker: pkGauge, delegate: self)
@@ -75,9 +77,9 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Create the main stack
         mainStack = UIStackView(arrangedSubviews: [nameStack!, gaugeRow!.stack, yarnRow!.stack, ballRow!.stack, nBallsRow!.stack])
         mainStack!.axis = .Vertical
-        mainStack!.distribution =  UIStackViewDistribution.FillProportionally
+        mainStack!.distribution =  UIStackViewDistribution.EqualSpacing
         mainStack!.alignment = .Fill
-        mainStack!.spacing = 5
+        mainStack!.spacing = 10
         mainStack!.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mainStack!)
         view.backgroundColor = UIColor(red: 212.0/255.0,
@@ -92,7 +94,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
             metrics: nil,
             views: viewsDictionary)
         let stackView_V = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-30-[mainStack]-30-|", //vertical constraint 30 points from top and bottom
+            "V:|-80-[mainStack]-50-|", //vertical constraint 30 points from top and bottom
             options: NSLayoutFormatOptions(rawValue:0),
             metrics: nil,
             views: viewsDictionary)
