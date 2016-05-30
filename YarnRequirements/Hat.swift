@@ -46,7 +46,7 @@ class Tam : Toque {
         {
             width *= inches2cm
         }
-        let length = width * 0.5
+        let length = width * 0.325
         calcYarnRequired(length, siWidth: width)
     }
 }
