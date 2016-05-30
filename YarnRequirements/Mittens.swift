@@ -24,18 +24,6 @@ class Tam : Project {
     
 }
 
-class Scarf : Project {
-    override func calcYarnRequired()
-    {
-        super.calcYarnRequired(100, siWidth: 100)
-    }
-    
-}
-
-class Blanket : Scarf {
-    
-}
-
 class Toque : Project {
     
 }
