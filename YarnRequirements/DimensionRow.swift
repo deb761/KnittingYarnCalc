@@ -38,7 +38,7 @@ class DimensionRow {
         
         stack.axis = .Horizontal
         stack.distribution = .FillProportionally
-        stack.alignment = .Fill
+        stack.alignment = .Center
         stack.spacing = 10
         stack.translatesAutoresizingMaskIntoConstraints = false
     }
