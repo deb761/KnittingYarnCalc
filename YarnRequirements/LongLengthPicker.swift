@@ -11,9 +11,9 @@ import UIKit
 class LongLengthPicker: PickerView {
 
     // Set the delegate and dataSource
-    override func loaded(del:UIPickerViewDelegate)
+    override func loaded(del:UIPickerViewDelegate, tag:Int)
     {
-        super.loaded(del)
+        super.loaded(del, tag:tag)
         text = ["yards", "meters"]
     }
 }

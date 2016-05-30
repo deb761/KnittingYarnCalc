@@ -19,6 +19,7 @@ class ProjectViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var txtBallSize: UITextField!
     @IBOutlet weak var txtBallsNeeded: UITextField!
 
+    @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var projectImg: UIImageView!
 
     var project:Project!
@@ -29,10 +30,11 @@ class ProjectViewController: UIViewController, UIPickerViewDelegate {
 
         // Do any additional setup after loading the view.
         // Connect data:
-        pkGauge.loaded(self)
-        pkYarnUnits.loaded(self)
-        pkBallUnits.loaded(self)
+        pkGauge.loaded(self, tag:1)
+        pkYarnUnits.loaded(self, tag:2)
+        pkBallUnits.loaded(self, tag:3)
         
+        lblName.text = project.name
         projectImg.image = project.image
         
         // Set initial value for pickers

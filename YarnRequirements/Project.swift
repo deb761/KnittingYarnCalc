@@ -26,7 +26,7 @@ class Project {
     var thumb:UIImage = UIImage(named:"Sweater")!
     var image:UIImage = UIImage(named:"SweaterImg")!
     var controlName:String?
-    var controller:ProjectViewController!
+    var controller:BaseProjectController!
     
     //private  Class<?> aClass;
     var YarnNeeded:Int = 1000

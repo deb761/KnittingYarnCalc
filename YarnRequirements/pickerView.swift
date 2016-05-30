@@ -13,10 +13,11 @@ class PickerView: UIPickerView, UIPickerViewDataSource {
     var text = ["inches", "cm"]
     
     // Set the delegate and dataSource
-    func loaded(del:UIPickerViewDelegate)
+    func loaded(del:UIPickerViewDelegate, tag:Int)
     {
         self.dataSource = self
         self.delegate = del
+        self.tag = tag
     }
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

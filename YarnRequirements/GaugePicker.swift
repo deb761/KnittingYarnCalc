@@ -11,9 +11,9 @@ import UIKit
 class GaugePicker: PickerView {
 
     // Set the delegate and dataSource
-    override func loaded(del:UIPickerViewDelegate)
+    override func loaded(del:UIPickerViewDelegate, tag:Int)
     {
-        super.loaded(del)
+        super.loaded(del, tag:tag)
         text = ["sts/inch", "sts/4inch", "sts/10cm"]
     }
     
