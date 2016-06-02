@@ -32,7 +32,7 @@ class SweaterController: BaseProjectController {
         
         sweater = project as! Sweater
         txtSize.text = String(sweater.ChestSize)
-        txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
+        txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
     }
 
     override func didReceiveMemoryWarning() {

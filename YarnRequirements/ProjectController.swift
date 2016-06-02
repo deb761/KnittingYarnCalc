@@ -27,13 +27,6 @@ class ProjectController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-//        for project in projects {
-//            project.controller = BaseProjectController() as! BaseProjectController
-//        }
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
     }
 
     override func didReceiveMemoryWarning() {

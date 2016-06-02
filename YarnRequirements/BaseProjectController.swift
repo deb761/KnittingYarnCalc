@@ -10,6 +10,8 @@ import UIKit
 
 class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
     
+    // A scrollview is needed to move the textviews up when the keyboard would cover them
+    var scrollView:UIScrollView = UIScrollView()
     var mainStack: UIStackView?
 
     // First row in the stack, the project name and image
@@ -53,6 +55,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         nameStack!.spacing = 10
         nameStack!.translatesAutoresizingMaskIntoConstraints = false
         lblName.text = project.name
+        lblName.widthAnchor.constraintEqualToConstant(50)
         projectImg.image = project.image
         projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 178))
         projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 193))
@@ -60,7 +63,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Create the stack with the Gauge
         gaugeRow = DimensionRow(name: "Gauge", picker: pkGauge, delegate: self)
         txtGauge = gaugeRow!.txtVal
-        txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
+        txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
 
         // Create the stack with the yarn needed
         yarnRow = DimensionRow(name: "Yarn Needed", picker: pkYarnUnits, delegate: self)
@@ -70,7 +73,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Create the stack with the ball size
         ballRow = DimensionRow(name: "Ball Size", picker: pkBallUnits, delegate: self)
         txtBallSize = ballRow!.txtVal
-        txtBallSize.addTarget(self, action: #selector(BaseProjectController.changeBallSize(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
+        txtBallSize.addTarget(self, action: #selector(BaseProjectController.changeBallSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
         
         // Create the stack with the balls needed
         nBallsRow = DimensionRow(name: "Num Balls", picker: UIPickerView(), delegate: self)
@@ -84,26 +87,50 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         mainStack!.alignment = .Fill
         mainStack!.spacing = 10
         mainStack!.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(mainStack!)
+        let height = view.bounds.height
+        let width = view.bounds.width
+        scrollView.contentSize.height = height
+        scrollView.contentSize.width = width
+        scrollView.addSubview(mainStack!)
+        
+        // Configure the scrollView
+        scrollView.frame = view.bounds
+        scrollView.scrollEnabled = true
+        scrollView.autoresizingMask = UIViewAutoresizing.FlexibleHeight
+        view.addSubview(scrollView)
         view.backgroundColor = UIColor(red: 212.0/255.0,
                                        green: 216.0/255.0,
                                        blue: 214.0/255.0, alpha: 1.0)
         
-        //autolayout the stack view - pin 30 up 20 left 20 right 30 down
-        let viewsDictionary = ["mainStack":mainStack!]
-        let stackView_H = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-20-[mainStack]-20-|",  //horizontal constraint 20 points from left and right side
+        //autolayout the scroll view - pin 30 up 20 left 20 right 30 down
+        let viewsDictionary = ["scrollView":scrollView]
+        let scrollView_H = NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-20-[scrollView]-20-|",  //horizontal constraint 20 points from left and right side
             options: NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewsDictionary)
-        let stackView_V = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-80-[mainStack]-50-|", //vertical constraint 30 points from top and bottom
+        let scrollView_V = NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-80-[scrollView]-50-|", //vertical constraint 30 points from top and bottom
             options: NSLayoutFormatOptions(rawValue:0),
             metrics: nil,
             views: viewsDictionary)
-        view.addConstraints(stackView_H)
-        view.addConstraints(stackView_V)
+        view.addConstraints(scrollView_H)
+        view.addConstraints(scrollView_V)
         
+        registerForKeyboardNotifications()
+        self.hideKeyboardWhenTappedAround() 
+        
+        // pin the top left of the mainStack to the scrollview
+        // Get the superview's layout
+        let margins = scrollView.layoutMarginsGuide
+        
+        // Pin the leading edge of myView to the margin's leading edge
+        
+        mainStack!.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
+        mainStack!.topAnchor.constraintEqualToAnchor(margins.topAnchor).active = true
+        mainStack!.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
+        mainStack!.bottomAnchor.constraintEqualToAnchor(margins.bottomAnchor).active = true
+
         pkGauge.loaded(self, tag: 1)
         pkYarnUnits.loaded(self, tag: 2)
         pkBallUnits.loaded(self, tag: 3)
@@ -116,7 +143,80 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Set initial values for text fields
         UpdateText()
     }
+    // Add a function to hide the keyboard
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BaseProjectController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
     
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    // Active text field
+    var activeField: UITextField?
+    func registerForKeyboardNotifications()
+    {
+        //Adding notifies on keyboard appearing
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BaseProjectController.keyboardWasShown(_:)),
+                                                         name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BaseProjectController.keyboardWillBeHidden(_:)),
+                                                         name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    
+    func deregisterFromKeyboardNotifications()
+    {
+        //Removing notifies on keyboard appearing
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func keyboardWasShown(notification: NSNotification)
+    {
+        //Need to calculate keyboard exact size due to Apple suggestions
+        self.scrollView.scrollEnabled = true
+        let info : NSDictionary = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+        
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        
+        var aRect : CGRect = self.view.frame
+        aRect.size.height -= keyboardSize!.height
+        if activeField != nil
+        {
+            if (!CGRectContainsPoint(aRect, activeField!.frame.origin))
+            {
+                self.scrollView.scrollRectToVisible(activeField!.frame, animated: true)
+            }
+        }
+        
+        
+    }
+    
+    
+    func keyboardWillBeHidden(notification: NSNotification)
+    {
+        //Once keyboard disappears, restore original positions
+        let info : NSDictionary = notification.userInfo!
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().size
+        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height - 50, 0.0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.view.endEditing(true)
+        //self.scrollView.scrollEnabled = false
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField)
+    {
+        activeField = textField
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField)
+    {
+        activeField = nil
+    }
     // Set values for text fields
     func UpdateText()
     {
@@ -137,16 +237,19 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    // Recalc and update units when gauge changes
+    // Recalc when gauge changes
     func changeGauge(sender: UITextField!) {
-        project.Gauge = Double(txtGauge.text!)!
-        //UpdateUnits()
+        if let gauge = Double(txtGauge.text!) {
+            project.Gauge = gauge
+        }
         project.calcYarnRequired()
         UpdateText()
     }
     // Recalc and update units when ball size changes
     @IBAction func changeBallSize(sender: AnyObject) {
-        project.BallSize = Int(txtBallSize.text!)!
+        if let size = Int(txtBallSize.text!) {
+            project.BallSize = size
+        }
         UpdateUnits()
         project.calcYarnRequired()
         UpdateText()

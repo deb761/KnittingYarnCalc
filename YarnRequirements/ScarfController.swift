@@ -44,10 +44,10 @@ class ScarfController: BaseProjectController {
         
         scarf = project as! Scarf
         txtLength.text = String(scarf.length)
-        txtLength.addTarget(self, action: #selector(ScarfController.changeLength(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
+        txtLength.addTarget(self, action: #selector(ScarfController.changeLength(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
 
         txtWidth.text = String(scarf.width)
-        txtWidth.addTarget(self, action: #selector(ScarfController.changeWidth(_:)), forControlEvents: UIControlEvents.EditingDidEndOnExit)
+        txtWidth.addTarget(self, action: #selector(ScarfController.changeWidth(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
     }
 
     
