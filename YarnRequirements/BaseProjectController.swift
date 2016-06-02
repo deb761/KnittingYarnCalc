@@ -85,7 +85,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         mainStack!.axis = .Vertical
         mainStack!.distribution =  UIStackViewDistribution.EqualSpacing
         mainStack!.alignment = .Fill
-        mainStack!.spacing = 10
+        mainStack!.spacing = 0
         mainStack!.translatesAutoresizingMaskIntoConstraints = false
         let height = view.bounds.height
         let width = view.bounds.width
@@ -170,13 +170,16 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
-    
+    // Hold on to the contentInset of the scrollView before adjusting for the keyboard
+    var insets:UIEdgeInsets!
+    // Move the scrollView content up to account for the keyboard
     func keyboardWasShown(notification: NSNotification)
     {
         //Need to calculate keyboard exact size due to Apple suggestions
         self.scrollView.scrollEnabled = true
         let info : NSDictionary = notification.userInfo!
         let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().size
+        insets = scrollView.contentInset
         let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
         
         self.scrollView.contentInset = contentInsets
@@ -191,21 +194,13 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
                 self.scrollView.scrollRectToVisible(activeField!.frame, animated: true)
             }
         }
-        
-        
     }
     
-    
+    // Restore the contentInsets
     func keyboardWillBeHidden(notification: NSNotification)
     {
-        //Once keyboard disappears, restore original positions
-        let info : NSDictionary = notification.userInfo!
-        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().size
-        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height - 50, 0.0)
-        self.scrollView.contentInset = contentInsets
-        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.scrollView.contentInset = insets//contentInsets
         self.view.endEditing(true)
-        //self.scrollView.scrollEnabled = false
     }
     
     func textFieldDidBeginEditing(textField: UITextField)
