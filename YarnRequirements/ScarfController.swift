@@ -20,7 +20,7 @@ class ScarfController: BaseProjectController {
     var txtWidth: UITextField!
     var pkWidthUnits: ShortLengthPicker! = ShortLengthPicker()
     
-    // keep a property for the sweater
+    // keep a property for the scarf
     var scarf:Scarf!
     
     // Add the length and width rows to the main stack

@@ -32,7 +32,7 @@ class HatController: BaseProjectController {
         
         hat = project as! Toque
         txtSize.text = String(hat.size)
-        txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        txtSize.addTarget(self, action: #selector(HatController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
     }
 
     override func didReceiveMemoryWarning() {

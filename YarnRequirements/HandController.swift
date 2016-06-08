@@ -32,7 +32,7 @@ class HandController: BaseProjectController {
         
         mittens = project as! Mittens
         txtSize.text = String(mittens.size)
-        txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        txtSize.addTarget(self, action: #selector(HandController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
     }
 
     override func didReceiveMemoryWarning() {
