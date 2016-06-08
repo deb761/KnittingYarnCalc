@@ -12,9 +12,9 @@ import Foundation
 // For now, treat mittens as a rectangle wrapped around the hand
 class Mittens : Project {
     
-    // Finished size around the chest
+    // Finished size around the hand
     var size:Double = 8.0;
-    // Units for chest size
+    // Units for hand size
     var sizeUnits:ShortLengthUnits = ShortLengthUnits.Inches;
     
     // provide a means of defining a project name and image
@@ -39,7 +39,7 @@ class Mittens : Project {
 }
 // Gloves are like mittens, except they also wrap around the fingers
 class Gloves : Mittens {
-    // Calculate the yarn required for a pair of mittens, where the length is
+    // Calculate the yarn required for a pair of gloves, where the length is
     // 1.3 * hand circumference
     override func calcYarnRequired()
     {

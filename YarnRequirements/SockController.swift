@@ -15,7 +15,7 @@ class SockController: BaseProjectController {
     var txtSize: UITextField!
     var pkSizeUnits: ShoeSizePicker! = ShoeSizePicker()
     
-    // keep a property for the sweater
+    // keep a property for the socks
     var socks:Socks!
     
     // Add the Chest Size row to the stack

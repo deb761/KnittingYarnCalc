@@ -15,10 +15,10 @@ class HandController: BaseProjectController {
     var txtSize: UITextField!
     var pkSizeUnits: ShortLengthPicker! = ShortLengthPicker()
     
-    // keep a property for the sweater
+    // keep a property for the mittens or gloves
     var mittens:Mittens!
     
-    // Add the Chest Size row to the stack
+    // Add the Hand Size row to the stack
     override func viewDidLoad() {
         super.viewDidLoad()
         

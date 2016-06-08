@@ -15,7 +15,7 @@ class HatController: BaseProjectController {
     var txtSize: UITextField!
     var pkSizeUnits: ShortLengthPicker! = ShortLengthPicker()
     
-    // keep a property for the sweater
+    // keep a property for the hat
     var hat:Toque!
     
     // Add the Chest Size row to the stack

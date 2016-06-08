@@ -16,7 +16,7 @@ class Scarf: Project {
     // Units for length
     var lengthUnits:ShortLengthUnits = ShortLengthUnits.Inches;
     
-    // length of the scarf
+    // width of the scarf
     var width:Double = 12.0;
     // Units for length
     var widthUnits:ShortLengthUnits = ShortLengthUnits.Inches;

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// self class defines the parameters and performs the calculations for a sweater project
+// This class defines the parameters and performs the calculations for a sweater project
 class Sweater : Project {
     // Finished size around the chest
     var ChestSize:Double = 40.0;

@@ -9,7 +9,9 @@
 import UIKit
 import Foundation
 
-// For now, treat mittens as a rectangle wrapped around the hand
+// For now, treat hats as a piece of fabric about like this:
+//  /\
+// |  |
 class Toque : Project {
     
     // Finished size around the head
@@ -23,7 +25,7 @@ class Toque : Project {
         controller = HatController()
     }
     
-    // Calculate the yarn required for a pair of mittens, where the length is
+    // Calculate the yarn required for a toque, where the length is
     // 1.3 * hand circumference
     override func calcYarnRequired()
     {
@@ -36,12 +38,16 @@ class Toque : Project {
         calcYarnRequired(length, siWidth: width)
     }
 }
-// Tams are also hats, so base them off of Toques
+// Tams are also hats, so base them off of Toques.  Toques are this shape:
+//    /\
+//   /  \
+//  |    |   Actually, this diagram is stretched a bit vertically
+//  \____/
 class Tam : Toque {
     // Calculate the yarn required for a tam
     override func calcYarnRequired()
     {
-        var width = size * 1.3; // tams need to have a brim smaller than the head to fit snu
+        var width = size * 1.3; // tams need to have a brim smaller than the head to fit snug
         if (sizeUnits != ShortLengthUnits.CM)
         {
             width *= inches2cm

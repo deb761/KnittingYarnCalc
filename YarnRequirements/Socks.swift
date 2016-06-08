@@ -34,8 +34,9 @@ class Socks: Project {
         controller = SockController()
     }
     
-    // Calculate the yarn required for a pair of mittens, where the length is
-    // 1.3 * hand circumference
+    // Calculate the yarn required for a pair of socks, where the length is
+    // is determined by shoe size in a lookup table, and the width is 0.85
+    // of the foot length
     override func calcYarnRequired()
     {
         var length = 0.0
@@ -86,6 +87,8 @@ class Socks: Project {
     var usWomen = [4:20.8, 5:21.6, 6:22.5, 7:23.5,
                    8:24.1, 9:25.1, 10:25.9, 11:26.7, 12:27.6]
     
+    // Perform a linear interpolation between the input size and the next
+    // highest to get foot length in cm
     func getLength(table:[Int:Double], size:Double) -> Double?
     {
         let lowSized = floor(size)

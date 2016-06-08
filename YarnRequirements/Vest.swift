@@ -12,7 +12,7 @@ import UIKit
 // It is taken off sweater as it has the same size dimension
 class Vest: Sweater {
     // Calculate the yarn required for a vest, where the length is
-    // 1z2 * chest size
+    // 1.2 * chest size
     override func calcYarnRequired()
     {
         var width = ChestSize;
