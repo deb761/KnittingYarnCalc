@@ -32,7 +32,7 @@ class Mittens : Project {
         {
             width *= inches2cm
         }
-        let length = width * 1.3
+        let length = width * 1.5
         width *= 2
         calcYarnRequired(length, siWidth: width)
     }
@@ -48,7 +48,7 @@ class Gloves : Mittens {
         {
             width *= inches2cm
         }
-        let length = width * 1.3
+        let length = width * 1.5
         width *= 2
         calcYarnRequired(length, siWidth: width)
     }

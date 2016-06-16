@@ -39,8 +39,8 @@ class ScarfController: BaseProjectController {
         txtWidth = widthRow?.txtVal
         mainStack?.insertArrangedSubview((widthRow?.stack)!, atIndex: 3)
         
-        pkLengthUnits.loaded(self, tag: 4)
-        pkWidthUnits.loaded(self, tag: 5)
+        pkLengthUnits.loaded(self, tag: 5)
+        pkWidthUnits.loaded(self, tag: 6)
         
         scarf = project as! Scarf
         txtLength.text = String(scarf.length)
@@ -55,9 +55,9 @@ class ScarfController: BaseProjectController {
     override func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {
-        case 4:
-            scarf.lengthUnits = ShortLengthUnits(rawValue: row)!
         case 5:
+            scarf.lengthUnits = ShortLengthUnits(rawValue: row)!
+        case 6:
             scarf.widthUnits = ShortLengthUnits(rawValue: row)!
         default:
             super.pickerView(pickerView, didSelectRow: row, inComponent: component)

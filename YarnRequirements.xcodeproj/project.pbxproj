@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8702D6841D10D09300286909 /* BallPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6831D10D09300286909 /* BallPicker.swift */; };
 		875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AF1CF6979C0084EC06 /* pickerView.swift */; };
 		875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90B11CF69E820084EC06 /* DimensionRow.swift */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8702D6831D10D09300286909 /* BallPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallPicker.swift; sourceTree = "<group>"; };
 		875A90AF1CF6979C0084EC06 /* pickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerView.swift; sourceTree = "<group>"; };
 		875A90B11CF69E820084EC06 /* DimensionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionRow.swift; sourceTree = "<group>"; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -138,6 +140,16 @@
 			name = "Project Controllers";
 			sourceTree = "<group>";
 		};
+		8791477E1D0CB5A400DE5B94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */,
+				87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */,
+				87DABAAC1CE7EBF4009DD3B1 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		87DABA921CE7EBF4009DD3B1 = {
 			isa = PBXGroup;
 			children = (
@@ -165,9 +177,7 @@
 				87DABAA01CE7EBF4009DD3B1 /* ProjectsController.swift */,
 				87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */,
 				87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */,
-				87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */,
-				87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */,
-				87DABAAC1CE7EBF4009DD3B1 /* Info.plist */,
+				8791477E1D0CB5A400DE5B94 /* Resources */,
 				87DABACE1CE7F7B1009DD3B1 /* WeightCell.swift */,
 				87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */,
 				87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */,
@@ -175,6 +185,7 @@
 				87E536DC1CFBFB4B00BE9735 /* Projects */,
 				8788D2E61CFF8D4100432759 /* Project Controllers */,
 				8763AA781CF2C90300E1B003 /* GaugePicker.swift */,
+				8702D6831D10D09300286909 /* BallPicker.swift */,
 				87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */,
 				8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */,
 				8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */,
@@ -351,6 +362,7 @@
 				875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */,
 				87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */,
 				8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */,
+				8702D6841D10D09300286909 /* BallPicker.swift in Sources */,
 				87E536CF1CFBA0BA00BE9735 /* BaseProjectController.swift in Sources */,
 				87E536E21CFC014300BE9735 /* SockController.swift in Sources */,
 				87E536D11CFBE43E00BE9735 /* SweaterController.swift in Sources */,

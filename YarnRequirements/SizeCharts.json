@@ -1,0 +1,546 @@
+{
+    "Charts" :
+    {
+        "Baby" :
+        {
+            "Waist-Hip" : 5,
+            "Waist-Tunic" : 10,
+            "Sizes" :
+            {
+                "3 Months" :
+                {
+                    "Chest": 40.5,
+                    "Neck-to-Cuff": 26.5,
+                    "Back-Waist": 15.5,
+                    "Cross-Back": 18.5,
+                    "Under-Sleeve": 15.5,
+                    "Upper-Arm": 14,
+                    "Armhole": 8.5,
+                    "Waist": 45.5,
+                    "Hips": 48
+                },
+                "6 Months" :
+                {
+                    "Chest": 43,
+                    "Neck-to-Cuff": 29,
+                    "Back-Waist": 17.5,
+                    "Cross-Back": 19.5,
+                    "Under-Sleeve": 16.5,
+                    "Upper-Arm": 15.5,
+                    "Armhole": 9,
+                    "Waist": 48,
+                    "Hips": 50.5
+                },
+                "12 Months" :
+                {
+                    "Chest":45.5,
+                    "Neck-to-Cuff": 31.5,
+                    "Back-Waist": 19,
+                    "Cross-Back": 21,
+                    "Under-Sleeve": 19,
+                    "Upper-Arm":16.5,
+                    "Armhole": 9.5,
+                    "Waist": 50.5,
+                    "Hips": 50.5
+                },
+                "18 Months" :
+                {
+                    "Chest": 48,
+                    "Neck-to-Cuff": 35.5,
+                    "Back-Waist": 20.5,
+                    "Cross-Back": 21.5,
+                    "Under-Sleeve": 20.5,
+                    "Upper-Arm": 17.5,
+                    "Armhole": 10,
+                    "Waist": 52,
+                    "Hips": 53.5
+                },
+                "24 Months" :
+                {
+                    "Chest": 50.5,
+                    "Neck-to-Cuff": 45.5,
+                    "Back-Waist": 21.5,
+                    "Cross-Back": 22,
+                    "Under-Sleeve": 21.5,
+                    "Upper-Arm": 19,
+                    "Armhole": 10.5,
+                    "Waist": 53.5,
+                    "Hips": 56
+                }
+            }
+        },
+        "Child" :
+        {
+            "Waist-Hip" : 5,
+            "Waist-Tunic" : 10,
+            "Sizes" :
+            {
+                "2" :
+                {
+                    "Chest": 53,
+                    "Neck-to-Cuff": 45.5,
+                    "Back-Waist": 21.5,
+                    "Cross-Back": 23.5,
+                    "Under-Sleeve": 21.5,
+                    "Upper-Arm": 17.5,
+                    "Armhole": 10.5,
+                    "Waist": 53.5,
+                    "Hips": 56
+                },
+                "4" :
+                {
+                    "Chest": 58.5,
+                    "Neck-to-Cuff": 49.5,
+                    "Back-Waist": 24,
+                    "Cross-Back": 25,
+                    "Under-Sleeve": 26.5,
+                    "Upper-Arm": 19,
+                    "Armhole": 12,
+                    "Waist": 54.5,
+                    "Hips": 59.5
+                },
+                "6" :
+                {
+                    "Chest": 63.5,
+                    "Neck-to-Cuff": 52,
+                    "Back-Waist": 26.5,
+                    "Cross-Back": 26,
+                    "Under-Sleeve": 29,
+                    "Upper-Arm": 20.5,
+                    "Armhole": 12.5,
+                    "Waist": 57,
+                    "Hips": 63.5
+                },
+                "8" :
+                {
+                    "Chest": 67,
+                    "Neck-to-Cuff": 56,
+                    "Back-Waist": 31.5,
+                    "Cross-Back": 27,
+                    "Under-Sleeve": 31.5,
+                    "Upper-Arm": 21.5,
+                    "Armhole": 14,
+                    "Waist": 59.5,
+                    "Hips": 71
+                },
+                "10" :
+                {
+                    "Chest": 71,
+                    "Neck-to-Cuff": 61,
+                    "Back-Waist": 35.5,
+                    "Cross-Back": 28.5,
+                    "Under-Sleeve": 34.5,
+                    "Upper-Arm": 22,
+                    "Armhole": 15.5,
+                    "Waist": 62,
+                    "Hips": 75
+                }
+            }
+        },
+        "Youth" :
+        {
+            "Waist-Hip" : 10,
+            "Waist-Tunic" : 15,
+            "Sizes" :
+            {
+                "12" :
+                {
+                    "Chest": 76,
+                    "Neck-to-Cuff": 66,
+                    "Back-Waist": 38,
+                    "Cross-Back": 30.5,
+                    "Under-Sleeve": 38,
+                    "Upper-Arm": 23,
+                    "Armhole": 16.5,
+                    "Waist": 63.5,
+                    "Hips": 80
+                },
+                "14" :
+                {
+                    "Chest": 80,
+                    "Neck-to-Cuff": 68.5,
+                    "Back-Waist": 39.5,
+                    "Cross-Back": 31,
+                    "Under-Sleeve": 40.5,
+                    "Upper-Arm": 23.5,
+                    "Armhole": 17.5,
+                    "Waist": 67.5,
+                    "Hips": 83.5
+                },
+                "16" :
+                {
+                    "Chest": 82.5,
+                    "Neck-to-Cuff": 71,
+                    "Back-Waist": 40.5,
+                    "Cross-Back": 33,
+                    "Under-Sleeve": 42,
+                    "Upper-Arm": 24,
+                    "Armhole": 19,
+                    "Waist": 69.5,
+                    "Hips": 90
+                }
+            }
+        },
+        "Woman" :
+        {
+            "Waist-Hip" : 15,
+            "Waist-Tunic" : 28,
+            "Sizes" :
+            {
+                "X-Small-1" :
+                {
+                    "Chest": 71,
+                    "Neck-to-Cuff": 68.5,
+                    "Back-Waist": 42,
+                    "Cross-Back": 35.5,
+                    "Under-Sleeve": 42,
+                    "Upper-Arm": 25,
+                    "Armhole": 15.5,
+                    "Waist": 58.5,
+                    "Hips": 83.5
+                },
+                "X-Small-2" :
+                {
+                    "Chest": 76,
+                    "Neck-to-Cuff": 70,
+                    "Back-Waist": 42,
+                    "Cross-Back": 37,
+                    "Under-Sleeve": 42,
+                    "Upper-Arm": 25,
+                    "Armhole": 16,
+                    "Waist": 61,
+                    "Hips": 86
+                },
+                "Small-1" :
+                {
+                    "Chest": 81,
+                    "Neck-to-Cuff": 71,
+                    "Back-Waist": 43,
+                    "Cross-Back": 37,
+                    "Under-Sleeve": 43,
+                    "Upper-Arm": 26,
+                    "Armhole": 16.5,
+                    "Waist": 63.5,
+                    "Hips": 89
+                },
+                "Small-2" :
+                {
+                    "Chest": 86,
+                    "Neck-to-Cuff": 72.5,
+                    "Back-Waist": 43,
+                    "Cross-Back": 38,
+                    "Under-Sleeve": 43,
+                    "Upper-Arm": 26,
+                    "Armhole": 17.5,
+                    "Waist": 67.5,
+                    "Hips": 91.5
+                },
+                "Medium-1" :
+                {
+                    "Chest": 91.5,
+                    "Neck-to-Cuff": 73.5,
+                    "Back-Waist": 43.5,
+                    "Cross-Back": 40.5,
+                    "Under-Sleeve": 43,
+                    "Upper-Arm": 28,
+                    "Armhole": 17.5,
+                    "Waist": 71,
+                    "Hips": 96.5
+                },
+                "Medium-2" :
+                {
+                    "Chest": 96.5,
+                    "Neck-to-Cuff": 75,
+                    "Back-Waist": 43.5,
+                    "Cross-Back": 42,
+                    "Under-Sleeve": 43,
+                    "Upper-Arm": 28,
+                    "Armhole": 19,
+                    "Waist": 76,
+                    "Hips": 101.5
+                },
+                "Large-1" :
+                {
+                    "Chest": 101.5,
+                    "Neck-to-Cuff": 76,
+                    "Back-Waist": 44.5,
+                    "Cross-Back": 43,
+                    "Under-Sleeve": 44.5,
+                    "Upper-Arm": 30.5,
+                    "Armhole": 19,
+                    "Waist": 81.5,
+                    "Hips": 106.5
+                },
+                "Large-2" :
+                {
+                    "Chest": 106.5,
+                    "Neck-to-Cuff": 77.5,
+                    "Back-Waist": 44.5,
+                    "Cross-Back": 44.5,
+                    "Under-Sleeve": 44.5,
+                    "Upper-Arm": 30.5,
+                    "Armhole": 20.5,
+                    "Waist": 86.5,
+                    "Hips": 111.5
+                },
+                "X-Large-1" :
+                {
+                    "Chest": 111.5,
+                    "Neck-to-Cuff": 78.5,
+                    "Back-Waist": 45,
+                    "Cross-Back": 44.5,
+                    "Under-Sleeve": 44.5,
+                    "Upper-Arm": 34.5,
+                    "Armhole": 20.5,
+                    "Waist": 91.5,
+                    "Hips": 116.5
+                },
+                "X-Large-2" :
+                {
+                    "Chest": 117,
+                    "Neck-to-Cuff": 80,
+                    "Back-Waist": 45,
+                    "Cross-Back": 44.5,
+                    "Under-Sleeve": 44.5,
+                    "Upper-Arm": 34.5,
+                    "Armhole": 21.5,
+                    "Waist": 96.5,
+                    "Hips": 122
+                },
+                "2X-1" :
+                {
+                    "Chest": 122,
+                    "Neck-to-Cuff": 80,
+                    "Back-Waist": 45.5,
+                    "Cross-Back": 45.5,
+                    "Under-Sleeve": 45.5,
+                    "Upper-Arm": 39.5,
+                    "Armhole": 21.5,
+                    "Waist": 101.5,
+                    "Hips": 132
+                },
+                "2X-2" :
+                {
+                    "Chest": 127,
+                    "Neck-to-Cuff": 81.5,
+                    "Back-Waist": 45.5,
+                    "Cross-Back": 45.5,
+                    "Under-Sleeve": 45.5,
+                    "Upper-Arm": 39.5,
+                    "Armhole": 23,
+                    "Waist": 106.5,
+                    "Hips": 134.5
+                },
+                "3X-1" :
+                {
+                    "Chest": 132,
+                    "Neck-to-Cuff": 82.5,
+                    "Back-Waist": 45.5,
+                    "Cross-Back": 45.5,
+                    "Under-Sleeve": 45.5,
+                    "Upper-Arm": 43,
+                    "Armhole": 23,
+                    "Waist": 111.5,
+                    "Hips": 137.5
+                },
+                "3X-2" :
+                {
+                    "Chest": 137,
+                    "Neck-to-Cuff": 84,
+                    "Back-Waist": 45.5,
+                    "Cross-Back": 45.5,
+                    "Under-Sleeve": 45.5,
+                    "Upper-Arm": 43,
+                    "Armhole": 24,
+                    "Waist": 114,
+                    "Hips": 139.5
+                },
+                "4X-1" :
+                {
+                    "Chest": 142,
+                    "Neck-to-Cuff": 84,
+                    "Back-Waist": 47,
+                    "Cross-Back": 47,
+                    "Under-Sleeve": 47,
+                    "Upper-Arm": 47,
+                    "Armhole": 24,
+                    "Waist": 116.5,
+                    "Hips": 142
+                },
+                "4X-2" :
+                {
+                    "Chest": 147,
+                    "Neck-to-Cuff": 84,
+                    "Back-Waist": 47,
+                    "Cross-Back": 47,
+                    "Under-Sleeve": 47,
+                    "Upper-Arm": 47,
+                    "Armhole": 25.5,
+                    "Waist": 119,
+                    "Hips": 144.5
+                },
+                "5X-1" :
+                {
+                    "Chest": 152,
+                    "Neck-to-Cuff": 84,
+                    "Back-Waist": 47,
+                    "Cross-Back": 47,
+                    "Under-Sleeve": 47,
+                    "Upper-Arm": 49.5,
+                    "Armhole": 25.5,
+                    "Waist": 124,
+                    "Hips": 155
+                },
+                "5X-2" :
+                {
+                    "Chest": 158,
+                    "Neck-to-Cuff": 85,
+                    "Back-Waist": 47,
+                    "Cross-Back": 47,
+                    "Under-Sleeve": 47,
+                    "Upper-Arm": 49.5,
+                    "Armhole": 26.5,
+                    "Waist": 127,
+                    "Hips": 157
+                }
+            }
+        },
+        "Man" :
+        {
+            "Waist-Hip" : 5,
+            "Waist-Tunic" : 25,
+            "Sizes" :
+            {
+                "Small-1" :
+                {
+                    "Chest": 86,
+                    "Neck-to-Cuff": 81,
+                    "Back-Hip": 63.5,
+                    "Cross-Back": 39.5,
+                    "Under-Sleeve": 45.5,
+                    "Upper-Arm": 30.5,
+                    "Armhole": 21.5,
+                    "Waist": 71,
+                    "Hips": 89
+                },
+                "Small-2" :
+                {
+                    "Chest": 91.5,
+                    "Neck-to-Cuff": 82.5,
+                    "Back-Hip": 64.5,
+                    "Cross-Back": 40.5,
+                    "Under-Sleeve": 45.5,
+                    "Upper-Arm": 30.5,
+                    "Armhole": 23,
+                    "Waist": 76,
+                    "Hips": 94
+                },
+                "Medium-1" :
+                {
+                    "Chest": 96.5,
+                    "Neck-to-Cuff": 83.5,
+                    "Back-Hip": 67.5,
+                    "Cross-Back": 42,
+                    "Under-Sleeve": 47,
+                    "Upper-Arm": 33,
+                    "Armhole": 23,
+                    "Waist": 81.5,
+                    "Hips": 99
+                },
+                "Medium-2" :
+                {
+                    "Chest": 101.5,
+                    "Neck-to-Cuff": 85,
+                    "Back-Hip": 68,
+                    "Cross-Back": 43,
+                    "Under-Sleeve": 47,
+                    "Upper-Arm": 33,
+                    "Armhole": 24,
+                    "Waist": 86.5,
+                    "Hips": 104
+                },
+                "Large-1" :
+                {
+                    "Chest": 106.5,
+                    "Neck-to-Cuff": 86.5,
+                    "Back-Hip": 68.5,
+                    "Cross-Back": 44.5,
+                    "Under-Sleeve": 49.5,
+                    "Upper-Arm": 38,
+                    "Armhole": 24,
+                    "Waist": 91.5,
+                    "Hips": 109
+                },
+                "Large-2" :
+                {
+                    "Chest": 111.5,
+                    "Neck-to-Cuff": 87.5,
+                    "Back-Hip": 69,
+                    "Cross-Back": 45.5,
+                    "Under-Sleeve": 49.5,
+                    "Upper-Arm": 38,
+                    "Armhole": 25.5,
+                    "Waist": 96.5,
+                    "Hips": 114
+                },
+                "X-Large-1" :
+                {
+                    "Chest": 116.5,
+                    "Neck-to-Cuff": 89,
+                    "Back-Hip": 69.5,
+                    "Cross-Back": 45.5,
+                    "Under-Sleeve": 50.5,
+                    "Upper-Arm": 40.5,
+                    "Armhole": 25.5,
+                    "Waist": 106.5,
+                    "Hips": 119
+                },
+                "X-Large-2" :
+                {
+                    "Chest": 122,
+                    "Neck-to-Cuff": 90,
+                    "Back-Hip": 70.5,
+                    "Cross-Back": 47,
+                    "Under-Sleeve": 50.5,
+                    "Upper-Arm": 40.5,
+                    "Armhole": 26,
+                    "Waist": 112,
+                    "Hips": 124.5
+                },
+                "XX-Large-1" :
+                {
+                    "Chest": 127,
+                    "Neck-to-Cuff": 91.5,
+                    "Back-Hip": 71,
+                    "Cross-Back": 47,
+                    "Under-Sleeve": 52,
+                    "Upper-Arm": 43,
+                    "Armhole": 26.5,
+                    "Waist": 117,
+                    "Hips": 129
+                },
+                "XX-Large-2" :
+                {
+                    "Chest": 132,
+                    "Neck-to-Cuff": 92.5,
+                    "Back-Hip": 72.5,
+                    "Cross-Back": 48,
+                    "Under-Sleeve": 52,
+                    "Upper-Arm": 43,
+                    "Armhole": 28,
+                    "Waist": 122,
+                    "Hips": 134
+                }
+            }
+        }
+    },
+    "Head" :
+    {
+        "Premie"  : 30.5,
+        "Baby"    : 35.5,
+        "Toddler" : 40.5,
+        "Child"   : 45.5,
+        "Woman"   : 53,
+        "Man"     : 58.5
+    }
+}

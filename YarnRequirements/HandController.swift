@@ -28,7 +28,7 @@ class HandController: BaseProjectController {
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)
         
-        pkSizeUnits.loaded(self, tag: 4)
+        pkSizeUnits.loaded(self, tag: 5)
         
         mittens = project as! Mittens
         txtSize.text = String(mittens.size)
@@ -44,7 +44,7 @@ class HandController: BaseProjectController {
     override func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {
-        case 4:
+        case 5:
             mittens.sizeUnits = ShortLengthUnits(rawValue: row)!
         default:
             super.pickerView(pickerView, didSelectRow: row, inComponent: component)

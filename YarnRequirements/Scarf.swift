@@ -29,20 +29,20 @@ class Scarf: Project {
         super.init(name: name, thumb: thumb, image: image, control: control)
         controller = ScarfController()
     }
-    
+    // A blanket is a rectangle, so calculate yarn required using length and width
     override func calcYarnRequired()
     {
-        var _length = length
+        var siLength = length
         if (lengthUnits != ShortLengthUnits.CM)
         {
-            _length = length * inches2cm
+            siLength = length * inches2cm
         }
-        var _width = width
+        var siWidth = width
         if (widthUnits != ShortLengthUnits.CM)
         {
-            _width = width * inches2cm
+            siWidth = width * inches2cm
         }
-        super.calcYarnRequired(_length, siWidth: _width)
+        super.calcYarnRequired(siLength, siWidth: siWidth)
     }
     
 }

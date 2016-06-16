@@ -33,6 +33,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     
     // fifth row in the stack, num balls needed
     var nBallsRow : DimensionRow?
+    var pkBallPartial: BallPicker! = BallPicker()
 
     var txtGauge: UITextField!
     var txtYarnNeeded: UITextField!
@@ -76,7 +77,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         txtBallSize.addTarget(self, action: #selector(BaseProjectController.changeBallSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
         
         // Create the stack with the balls needed
-        nBallsRow = DimensionRow(name: "Num Balls", picker: UIPickerView(), delegate: self)
+        nBallsRow = DimensionRow(name: "Num Balls", picker: pkBallPartial, delegate: self)
         txtBallsNeeded = nBallsRow!.txtVal
         txtBallsNeeded.userInteractionEnabled = false
         
@@ -134,11 +135,13 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         pkGauge.loaded(self, tag: 1)
         pkYarnUnits.loaded(self, tag: 2)
         pkBallUnits.loaded(self, tag: 3)
+        pkBallPartial.loaded(self, tag: 4)
         
         // Set initial value for pickers
         pkGauge.selectRow(project.gaugeUnits.rawValue, inComponent: 0, animated: false)
-        pkYarnUnits.selectRow(project.YarnNeededUnits.rawValue, inComponent: 0, animated: false)
-        pkBallUnits.selectRow(project.BallSizeUnits.rawValue, inComponent: 0, animated: false)
+        pkYarnUnits.selectRow(project.yarnNeededUnits.rawValue, inComponent: 0, animated: false)
+        pkBallUnits.selectRow(project.ballSizeUnits.rawValue, inComponent: 0, animated: false)
+        pkBallPartial.selectRow(Int(project.partialBalls), inComponent: 0, animated: false)
 
         // Set initial values for text fields
         UpdateText()
@@ -215,17 +218,18 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     // Set values for text fields
     func UpdateText()
     {
-        txtGauge.text = String(project.Gauge)
-        txtYarnNeeded.text = String(project.YarnNeeded)
-        txtBallSize.text = String(project.BallSize)
-        txtBallsNeeded.text = String(project.BallsNeeded)
+        txtGauge.text = String(project.gauge)
+        txtYarnNeeded.text = String(project.yarnNeeded)
+        txtBallSize.text = String(project.ballSize)
+        txtBallsNeeded.text = String(format: project.partialBalls ? "%.1f" : "%.0f", project.ballsNeeded)
+        
     }
     // Update all the units on change
     func UpdateUnits()
     {
         project.gaugeUnits = GaugeUnits(rawValue: pkGauge.selectedRowInComponent(0))!
-        project.YarnNeededUnits = LongLengthUnits(rawValue: pkYarnUnits.selectedRowInComponent(0))!
-        project.BallSizeUnits = LongLengthUnits(rawValue: pkBallUnits.selectedRowInComponent(0))!
+        project.yarnNeededUnits = LongLengthUnits(rawValue: pkYarnUnits.selectedRowInComponent(0))!
+        project.ballSizeUnits = LongLengthUnits(rawValue: pkBallUnits.selectedRowInComponent(0))!
     }
 
     override func didReceiveMemoryWarning() {
@@ -235,7 +239,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     // Recalc when gauge changes
     func changeGauge(sender: UITextField!) {
         if let gauge = Double(txtGauge.text!) {
-            project.Gauge = gauge
+            project.gauge = gauge
         }
         project.calcYarnRequired()
         UpdateText()
@@ -243,7 +247,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     // Recalc and update units when ball size changes
     @IBAction func changeBallSize(sender: AnyObject) {
         if let size = Int(txtBallSize.text!) {
-            project.BallSize = size
+            project.ballSize = size
         }
         UpdateUnits()
         project.calcYarnRequired()
@@ -261,9 +265,11 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         case 1:
             project.gaugeUnits = GaugeUnits(rawValue: row)!
         case 2:
-            project.YarnNeededUnits = LongLengthUnits(rawValue: row)!
+            project.yarnNeededUnits = LongLengthUnits(rawValue: row)!
         case 3:
-            project.BallSizeUnits = LongLengthUnits(rawValue: row)!
+            project.ballSizeUnits = LongLengthUnits(rawValue: row)!
+        case 4:
+            project.partialBalls = Bool(row)
         default: break
         }
         project.calcYarnRequired()

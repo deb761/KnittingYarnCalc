@@ -28,7 +28,7 @@ class SockController: BaseProjectController {
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)
         
-        pkSizeUnits.loaded(self, tag: 4)
+        pkSizeUnits.loaded(self, tag: 5)
         
         socks = project as! Socks
         txtSize.text = String(socks.size)
@@ -44,7 +44,7 @@ class SockController: BaseProjectController {
     override func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {
-        case 4:
+        case 5:
             socks.sizeUnits = ShoeSizeUnits(rawValue: row)!
         default:
             super.pickerView(pickerView, didSelectRow: row, inComponent: component)

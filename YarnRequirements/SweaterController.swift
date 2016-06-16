@@ -28,10 +28,10 @@ class SweaterController: BaseProjectController {
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)
         
-        pkSizeUnits.loaded(self, tag: 4)
+        pkSizeUnits.loaded(self, tag: 5)
         
         sweater = project as! Sweater
-        txtSize.text = String(sweater.ChestSize)
+        txtSize.text = String(sweater.chestSize)
         txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
     }
 
@@ -44,8 +44,8 @@ class SweaterController: BaseProjectController {
     override func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {
-        case 4:
-            sweater.ChestUnits = ShortLengthUnits(rawValue: row)!
+        case 5:
+            sweater.chestUnits = ShortLengthUnits(rawValue: row)!
         default:
             super.pickerView(pickerView, didSelectRow: row, inComponent: component)
         }
@@ -55,7 +55,7 @@ class SweaterController: BaseProjectController {
 
     // Recalc and update units when ball size changes
     @IBAction func changeSize(sender: AnyObject) {
-        sweater.ChestSize = Double(txtSize.text!)!
+        sweater.chestSize = Double(txtSize.text!)!
         project.calcYarnRequired()
         UpdateText()
     }

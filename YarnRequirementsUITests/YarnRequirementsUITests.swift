@@ -29,6 +29,26 @@ class YarnRequirementsUITests: XCTestCase {
     }
     
     func testExample() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Mittens"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let element = scrollViewsQuery.childrenMatchingType(.Other).element
+        element.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.TextField).element.tap()
+        
+        let deleteKey = app.keys["Delete"]
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        deleteKey.tap()
+        scrollViewsQuery.otherElements.textFields.containingType(.Button, identifier:"Clear text").element
+        element.childrenMatchingType(.Other).elementBoundByIndex(2).childrenMatchingType(.TextField).element.tap()
+        element.childrenMatchingType(.Other).elementBoundByIndex(3).childrenMatchingType(.TextField).element.tap()
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
