@@ -9,7 +9,7 @@
 import XCTest
 @testable import YarnRequirements
 
-class YarnRequirementsTests: XCTestCase {
+class ProjectTests: XCTestCase {
     
     var project:Project!
     let cmLength = 200.0 // cm
@@ -20,13 +20,20 @@ class YarnRequirementsTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // set project to defaults
-        project = Project(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Blanket")!, control:"")
+        project = Project(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Scarf")!, control:"")
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func testProjectDescriptors() {
+        // Verify the correct project name and images are returned
+        XCTAssertEqual("Base", project.name, "Project name does not match!")
+        XCTAssertEqual(UIImage(named:"Blanket")!, project.thumb, "Thumb image does not match!")
+        XCTAssertEqual(UIImage(named:"Scarf")!, project.image, "Larger image does not match!")
     }
     
     func testCalcAreaGaugeInch() {
@@ -239,7 +246,113 @@ class YarnRequirementsTests: XCTestCase {
             XCTAssertEqualWithAccuracy(project.ballsNeeded, test.balls, accuracy: 0.01, "Balls Needed does not match!")
         }
     }
+    // Verify that balls needed is infinity when ball size is 0
+    func testBallsNeededBallSize0() {
+        // Verify the app doesn't crash with a ball size of 0
+        project.ballSize = 0
+        project.calcballsNeeded()
+        
+        XCTAssertEqual(project.ballsNeeded, Double.infinity, "Balls needed not infinity with ball size 0")
+    }
     
+    // Verify that balls needed is calculated correctly when yarnNeeded and ballSize are both in meters
+    func testBallsNeededMeters() {
+        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.ballSize = 111
+        project.ballSizeUnits = LongLengthUnits.Meters
+       
+        let tests = [0, 1234, 2345, 3456, 7890]
+        
+        for test in tests {
+            project.partialBalls = true
+            project.yarnNeeded = test
+            let balls = Double(test) / Double(project.ballSize)
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+                                       "Balls needed does not match expected")
+            // retest with whole balls
+            project.partialBalls = false
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+                                       "Balls needed does not match expected")
+        }
+    }
+    // Verify that balls needed is calculated correctly when yarnNeeded and ballSize are both in yards
+    func testBallsNeededYards() {
+        project.yarnNeededUnits = LongLengthUnits.Yards
+        project.ballSize = 111
+        project.ballSizeUnits = LongLengthUnits.Yards
+        
+        let tests = [0, 1234, 2345, 3456, 7890]
+        
+        for test in tests {
+            project.partialBalls = true
+            project.yarnNeeded = test
+            let balls = Double(test) / Double(project.ballSize)
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+                                       "Balls needed does not match expected")
+            // retest with whole balls
+            project.partialBalls = false
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+                                       "Balls needed does not match expected")
+        }
+    }
+    // Verify that balls needed is calculated correctly when yarnNeeded is in yards and ballSize is in meters
+    func testBallsNeededMixed() {
+        project.yarnNeededUnits = LongLengthUnits.Yards
+        project.ballSize = 111
+        project.ballSizeUnits = LongLengthUnits.Meters
+        
+        let tests = [0, 1234, 2345, 3456, 7890]
+        
+        for test in tests {
+            project.partialBalls = true
+            project.yarnNeeded = test
+            let balls = Double(test) * project.yards2meters / Double(project.ballSize)
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+                                       "Balls needed does not match expected")
+            // retest with whole balls
+            project.partialBalls = false
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+                                       "Balls needed does not match expected")
+        }
+    }
+    // Verify that balls needed is calculated correctly when yarnNeeded is in meters and ballSize is in yards
+    func testBallsNeededMixed2() {
+        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.ballSize = 123
+        project.ballSizeUnits = LongLengthUnits.Yards
+        
+        let tests = [0, 1234, 2345, 3456, 7890]
+        
+        for test in tests {
+            project.partialBalls = true
+            project.yarnNeeded = test
+            let balls = Double(test) / (Double(project.ballSize) * project.yards2meters)
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+                                       "Balls needed does not match expected")
+            // retest with whole balls
+            project.partialBalls = false
+            project.calcballsNeeded()
+            
+            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+                                       "Balls needed does not match expected")
+        }
+    }
+    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
