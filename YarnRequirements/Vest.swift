@@ -38,7 +38,7 @@ class Vest: Sweater {
         var width = chestSize;
         if (chestUnits != ShortLengthUnits.CM)
         {
-            width *= inches2cm
+            width *= Project.inches2cm
         }
         var length:Double
         if (width < 80.0)

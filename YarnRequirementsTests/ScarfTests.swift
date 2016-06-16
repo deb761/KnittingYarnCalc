@@ -72,7 +72,7 @@ class ScarfTests: XCTestCase {
             // Stitch Mountain, reversible cable scarf
             ScarfParam(gauge: 12, width: 10, length: 51, ballSize: 151, balls: 2),
             // Stitch Mountain, Ruffle scarf, added ruffled edge, about 4" either side
-            ScarfParam(gauge: 20, width: 9, length: 61, ballSize: 120, balls: 4),//
+            ScarfParam(gauge: 20, width: 9, length: 61, ballSize: 120, balls: 4),
             // Stitch Mountain, Diamond Cowl
             ScarfParam(gauge: 12, width: 56, length: 9, ballSize: 229, balls: 2),
             // Creative Knitting, Jan 2007, Beaded Neck Cozy

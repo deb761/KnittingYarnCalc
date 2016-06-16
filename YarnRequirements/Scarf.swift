@@ -35,12 +35,12 @@ class Scarf: Project {
         var siLength = length
         if (lengthUnits != ShortLengthUnits.CM)
         {
-            siLength = length * inches2cm
+            siLength = length * Project.inches2cm
         }
         var siWidth = width
         if (widthUnits != ShortLengthUnits.CM)
         {
-            siWidth = width * inches2cm
+            siWidth = width * Project.inches2cm
         }
         super.calcYarnRequired(siLength, siWidth: siWidth)
     }

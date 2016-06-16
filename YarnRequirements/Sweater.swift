@@ -33,7 +33,7 @@ class Sweater : Project {
     {
         var chest = chestSize
         if (chestUnits == .Inches) {
-            chest *= inches2cm
+            chest *= Project.inches2cm
         }
         let intercept = -5559.8 // cm
         let slope = 162.1 // cm^2

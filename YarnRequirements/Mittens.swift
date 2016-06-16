@@ -30,7 +30,7 @@ class Mittens : Project {
         var width = size;
         if (sizeUnits != ShortLengthUnits.CM)
         {
-            width *= inches2cm
+            width *= Project.inches2cm
         }
         let length = width * 1.5
         width *= 2
@@ -46,7 +46,7 @@ class Gloves : Mittens {
         var width = size * 1.3; // add extra to go around fingers
         if (sizeUnits != ShortLengthUnits.CM)
         {
-            width *= inches2cm
+            width *= Project.inches2cm
         }
         let length = width * 1.5
         width *= 2

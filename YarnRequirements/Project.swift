@@ -51,8 +51,8 @@ class Project {
         calcYarnRequired()
     }
 
-    let inches2cm:Double = 2.54;
-    let yards2meters:Double = 0.9144;
+    static let inches2cm:Double = 2.54;
+    static let yards2meters:Double = 0.9144;
     
     func calcYarnRequired() {}
     
@@ -77,7 +77,7 @@ class Project {
         
         var siballSize:Double = Double(ballSize)
         if (ballSizeUnits == LongLengthUnits.Yards) {
-            siballSize *= yards2meters;
+            siballSize *= Project.yards2meters;
         }
         let stitches:Int = Int(ceil(siGauge * siWidth));
         let rowGauge:Double = siGauge * 1.2;
@@ -97,7 +97,7 @@ class Project {
         
         // Now convert the yarn required into the desired units
         if (yarnNeededUnits != LongLengthUnits.Meters) {
-            yarnNeeded = Int(ceil(meters / yards2meters));
+            yarnNeeded = Int(ceil(meters / Project.yards2meters));
         }
         else {
             yarnNeeded = Int(ceil(meters));
@@ -118,9 +118,9 @@ class Project {
         }
         else {
             let yarn:Double = (yarnNeededUnits == LongLengthUnits.Meters) ? Double(yarnNeeded) :
-                Double(yarnNeeded) * yards2meters
+                Double(yarnNeeded) * Project.yards2meters
             let ballMeters:Double = (ballSizeUnits == LongLengthUnits.Meters) ? Double(ballSize) :
-                Double(ballSize) * yards2meters
+                Double(ballSize) * Project.yards2meters
             ballsNeeded = yarn / ballMeters
         }
 

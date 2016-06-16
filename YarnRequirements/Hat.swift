@@ -32,7 +32,7 @@ class Toque : Project {
         var width = size;
         if (sizeUnits != ShortLengthUnits.CM)
         {
-            width *= inches2cm
+            width *= Project.inches2cm
         }
         let length = width * 0.25
         calcYarnRequired(length, siWidth: width)
@@ -50,7 +50,7 @@ class Tam : Toque {
         var width = size * 1.3; // tams need to have a brim smaller than the head to fit snug
         if (sizeUnits != ShortLengthUnits.CM)
         {
-            width *= inches2cm
+            width *= Project.inches2cm
         }
         let length = width * 0.325
         calcYarnRequired(length, siWidth: width)
