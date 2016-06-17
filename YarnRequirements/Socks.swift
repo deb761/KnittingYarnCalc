@@ -60,9 +60,10 @@ class Socks: Project {
         let slope = 0.6263
         let width = intercept + length * slope
 
-        // We'll approximate the length of the sock as 1.75 times the length of the foot
-        // and there are 2 feet
-        calcYarnRequired(length * 1.74, siWidth: width * 2)
+        // We'll approximate the length of the sock as 1.75 times the length of the foot,
+        // and add 0.5 * width for the the heel turn
+        // and there are 2 feet, so multiply width by 2
+        calcYarnRequired(length * 1.75 + 0.5 * width, siWidth: width * 2)
     }
     var usChild = [
         // Infant sizes

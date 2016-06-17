@@ -20,7 +20,7 @@ class ProjectTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // set project to defaults
-        project = Project(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Scarf")!, control:"")
+        project = Project(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Scarf")!)
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
     }
     

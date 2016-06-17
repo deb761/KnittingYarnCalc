@@ -18,7 +18,7 @@ class ScarfTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        scarf = Scarf(name: "Base", thumb:UIImage(named:"Scarf")!, image:UIImage(named:"Scarf")!, control:"")
+        scarf = Scarf(name: "Base", thumb:UIImage(named:"Scarf")!, image:UIImage(named:"Scarf")!)
     }
     
     override func tearDown() {
@@ -26,7 +26,7 @@ class ScarfTests: XCTestCase {
         super.tearDown()
     }
     
-    func testYardage() {
+    func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
         scarf.gaugeUnits = .StsPerInch
         scarf.lengthUnits = .Inches

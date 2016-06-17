@@ -11,7 +11,7 @@ import XCTest
 
 class SockTests: XCTestCase {
     
-    var socks = Socks(name: "Socks", thumb: UIImage(named:"Socks")!, image: UIImage(named:"Socks")!, control: "ProjectViewController")
+    var socks = Socks(name: "Socks", thumb: UIImage(named:"Socks")!, image: UIImage(named:"Socks")!)
     
     override func setUp() {
         super.setUp()
@@ -23,16 +23,79 @@ class SockTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testYarn() {
+        // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
+        socks.gaugeUnits = .StsPerInch
+        socks.sizeUnits = .Euro
+        socks.yarnNeededUnits = .Yards
+        
+        let tests = [
+            // Rose & Thorn Socks by Ronni Smith
+            PatternInfo(gauge: 8, size: 38, yarn: 350),
+            // Hermione's Everyday Socks by Erica Lueder
+            PatternInfo(gauge: 9, size: 38, yarn: 350),
+            // The Handy Knitter's Guide to Yarn Requirements
+            // 2-4 years
+            PatternInfo(gauge: 5, size: 24, yarn: 96),
+            // 4-8 years
+            PatternInfo(gauge: 5, size: 31, yarn: 138),
+            // 8 years - woman's S
+            PatternInfo(gauge: 5, size: 36, yarn: 188),
+            // Woman's M
+            PatternInfo(gauge: 5, size: 39, yarn: 224),
+            // Woman's L
+            PatternInfo(gauge: 5, size: 42.5, yarn: 252),
+            // Man's S
+            PatternInfo(gauge: 5, size: 45, yarn: 279),
+            // Man's M
+            PatternInfo(gauge: 5, size: 47, yarn: 310),
+            // Man's L
+            PatternInfo(gauge: 5, size: 49, yarn: 348),
+            // 2-4 years
+            PatternInfo(gauge: 9, size: 24, yarn: 180),
+            // 4-8 years
+            PatternInfo(gauge: 9, size: 31, yarn: 260),
+            // 8 years - woman's S
+            PatternInfo(gauge: 9, size: 36, yarn: 353),
+            // Woman's M
+            PatternInfo(gauge: 9, size: 39, yarn: 422),
+            // Woman's L
+            PatternInfo(gauge: 9, size: 42.5, yarn: 475),
+            // Man's S
+            PatternInfo(gauge: 9, size: 45, yarn: 524),
+            // Man's M
+            PatternInfo(gauge: 9, size: 47, yarn: 584),
+            // Man's L
+            PatternInfo(gauge: 9, size: 49, yarn: 654),
+        ]
+        
+        for test in tests {
+            socks.size = test.size
+            socks.gauge = test.gauge
+            socks.calcYarnRequired()
+            
+            XCTAssertGreaterThanOrEqual(socks.yarnNeeded, test.yarn, "Yarn calculated is less than expected")
+            
         }
+    }
+    // Compare calculated number of balls to representative patterns
+    func testBalls() {
+        socks.gaugeUnits = .StsPer4inch
+        socks.sizeUnits = .Euro
+        socks.yarnNeededUnits = .Yards
+        
+        let tests = [
+            PatternInfo(gauge: 32, size: 38, ballSize: 200, balls: 2),
+        ]
+        for test in tests {
+            socks.size = test.size
+            socks.gauge = test.gauge
+            socks.ballSize = test.ballSize
+            socks.calcYarnRequired()
+            
+            XCTAssertGreaterThanOrEqual(Int(socks.ballsNeeded), test.balls, "Yarn calculated is less than expected")
+        }
+        
     }
     
 }

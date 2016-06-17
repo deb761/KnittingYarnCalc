@@ -18,7 +18,7 @@ class BlanketTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        blanket = Blanket(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Blanket")!, control:"")
+        blanket = Blanket(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Blanket")!)
     }
     
     override func tearDown() {
@@ -26,7 +26,7 @@ class BlanketTests: XCTestCase {
         super.tearDown()
     }
     
-    func testYardage() {
+    func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
         blanket.gaugeUnits = .StsPer4inch
         blanket.lengthUnits = .Inches
