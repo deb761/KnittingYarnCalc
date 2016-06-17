@@ -146,8 +146,8 @@ class ProjectTests: XCTestCase {
         // Verify changing the ball size units to yards updates the balls needed when on the edge
         // length and width here are inches
         project.ballSizeUnits = LongLengthUnits.Meters
-        let length = 12 * project.inches2cm
-        let width = 16 * project.inches2cm
+        let length = 12 * Project.inches2cm
+        let width = 16 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqM = project.ballsNeeded
         
@@ -161,8 +161,8 @@ class ProjectTests: XCTestCase {
         // Verify changing the ball size units to meters updates the balls needed when on the edge
         // length and width here are inches
         project.ballSizeUnits = LongLengthUnits.Yards
-        let length = 12 * project.inches2cm
-        let width = 16 * project.inches2cm
+        let length = 12 * Project.inches2cm
+        let width = 16 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqY = project.ballsNeeded
         
@@ -176,8 +176,8 @@ class ProjectTests: XCTestCase {
         // Verify changing the ball size updates the balls needed when on the edge
         // length and width here are inches
         project.ballSizeUnits = LongLengthUnits.Yards
-        let length = 12 * project.inches2cm
-        let width = 16 * project.inches2cm
+        let length = 12 * Project.inches2cm
+        let width = 16 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqY = project.ballsNeeded
         
@@ -239,7 +239,7 @@ class ProjectTests: XCTestCase {
         
         for test in tests {
             project.gauge = test.gauge
-            project.calcYarnRequired(test.length * project.inches2cm, siWidth: test.width * project.inches2cm)
+            project.calcYarnRequired(test.length * Project.inches2cm, siWidth: test.width * Project.inches2cm)
             // Use XCTAssert and related functions to verify your tests produce the correct results.
             XCTAssertEqual(project.yarnNeeded, test.yarn, "Yarn Needed does not match!")
             
@@ -314,7 +314,7 @@ class ProjectTests: XCTestCase {
         for test in tests {
             project.partialBalls = true
             project.yarnNeeded = test
-            let balls = Double(test) * project.yards2meters / Double(project.ballSize)
+            let balls = Double(test) * Project.yards2meters / Double(project.ballSize)
             project.calcballsNeeded()
             
             XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
@@ -338,7 +338,7 @@ class ProjectTests: XCTestCase {
         for test in tests {
             project.partialBalls = true
             project.yarnNeeded = test
-            let balls = Double(test) / (Double(project.ballSize) * project.yards2meters)
+            let balls = Double(test) / (Double(project.ballSize) * Project.yards2meters)
             project.calcballsNeeded()
             
             XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,

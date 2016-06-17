@@ -25,7 +25,7 @@ class Project {
     var gaugeUnits:GaugeUnits = GaugeUnits.StsPer4inch
     var thumb:UIImage = UIImage(named:"Sweater")!
     var image:UIImage = UIImage(named:"SweaterImg")!
-    var controlName:String?
+    //var controlName:String?
     var controller:BaseProjectController!
     
     // The yarn needed using yarnNeededUnits for the project
@@ -42,11 +42,10 @@ class Project {
     var partialBalls:Bool = false
 
     // provide a means of defining a project name and image
-    init(name:String, thumb:UIImage, image:UIImage, control:String) {
+    init(name:String, thumb:UIImage, image:UIImage) {
         self.name = name
         self.image = image
         self.thumb = thumb
-        self.controlName = control
         self.controller = BaseProjectController()
         calcYarnRequired()
     }

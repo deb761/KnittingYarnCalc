@@ -12,6 +12,7 @@ import Foundation
 // For now, treat hats as a piece of fabric about like this:
 //  /\
 // |  |
+//
 class Toque : Project {
     
     // Finished size around the head
@@ -20,8 +21,8 @@ class Toque : Project {
     var sizeUnits:ShortLengthUnits = ShortLengthUnits.Inches;
     
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage, control:String) {
-        super.init(name: name, thumb: thumb, image: image, control: control)
+    override init(name:String, thumb:UIImage, image:UIImage) {
+        super.init(name: name, thumb: thumb, image: image)
         controller = HatController()
     }
     

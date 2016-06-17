@@ -34,21 +34,21 @@ class ScarfTests: XCTestCase {
         scarf.yarnNeededUnits = .Yards
         
         let tests = [
-            ScarfParam(gauge: 3, width: 6, length: 40, yarn: 114),
-            ScarfParam(gauge: 3, width: 10, length: 51, yarn: 162),//159
-         //   ScarfParam(gauge: 5, width: 6, length: 40, yarn: 204),//196
-         //   ScarfParam(gauge: 6, width: 6, length: 40, yarn: 288),//233
-         //   ScarfParam(gauge: 7, width: 6, length: 40, yarn: 317),//271
-            ScarfParam(gauge: 3, width: 10, length: 56, yarn: 265),
-         //   ScarfParam(gauge: 4, width: 10, length: 56, yarn: 376),//362
-         //   ScarfParam(gauge: 5, width: 10, length: 56, yarn: 475),//449
-         //   ScarfParam(gauge: 6, width: 10, length: 56, yarn: 672),
-         //   ScarfParam(gauge: 7, width: 10, length: 56, yarn: 740),//632
-            ScarfParam(gauge: 3, width: 14, length: 70, yarn: 464),
-         //   ScarfParam(gauge: 4, width: 14, length: 70, yarn: 658),//628
-         //   ScarfParam(gauge: 5, width: 14, length: 70, yarn: 831),//791
-         //   ScarfParam(gauge: 6, width: 14, length: 70, yarn: 1176),//945
-         //   ScarfParam(gauge: 7, width: 14, length: 70, yarn: 1294),//1097
+            PatternInfo(gauge: 3, width: 6, length: 40, yarn: 114),
+            PatternInfo(gauge: 3, width: 10, length: 51, yarn: 162),//159
+         //   PatternInfo(gauge: 5, width: 6, length: 40, yarn: 204),//196
+         //   PatternInfo(gauge: 6, width: 6, length: 40, yarn: 288),//233
+         //   PatternInfo(gauge: 7, width: 6, length: 40, yarn: 317),//271
+            PatternInfo(gauge: 3, width: 10, length: 56, yarn: 265),
+         //   PatternInfo(gauge: 4, width: 10, length: 56, yarn: 376),//362
+         //   PatternInfo(gauge: 5, width: 10, length: 56, yarn: 475),//449
+         //   PatternInfo(gauge: 6, width: 10, length: 56, yarn: 672),
+         //   PatternInfo(gauge: 7, width: 10, length: 56, yarn: 740),//632
+            PatternInfo(gauge: 3, width: 14, length: 70, yarn: 464),
+         //   PatternInfo(gauge: 4, width: 14, length: 70, yarn: 658),//628
+         //   PatternInfo(gauge: 5, width: 14, length: 70, yarn: 831),//791
+         //   PatternInfo(gauge: 6, width: 14, length: 70, yarn: 1176),//945
+         //   PatternInfo(gauge: 7, width: 14, length: 70, yarn: 1294),//1097
         ]
         
         for test in tests {
@@ -70,27 +70,27 @@ class ScarfTests: XCTestCase {
         
         let tests = [
             // Stitch Mountain, reversible cable scarf
-            ScarfParam(gauge: 12, width: 10, length: 51, ballSize: 151, balls: 2),
+            PatternInfo(gauge: 12, width: 10, length: 51, ballSize: 151, balls: 2),
             // Stitch Mountain, Ruffle scarf, added ruffled edge, about 4" either side
-            ScarfParam(gauge: 20, width: 9, length: 61, ballSize: 120, balls: 4),
+            PatternInfo(gauge: 20, width: 9, length: 61, ballSize: 120, balls: 4),
             // Stitch Mountain, Diamond Cowl
-            ScarfParam(gauge: 12, width: 56, length: 9, ballSize: 229, balls: 2),
+            PatternInfo(gauge: 12, width: 56, length: 9, ballSize: 229, balls: 2),
             // Creative Knitting, Jan 2007, Beaded Neck Cozy
-            ScarfParam(gauge: 15, width: 7.25, length: 28.5, ballSize: 103, balls: 1),
+            PatternInfo(gauge: 15, width: 7.25, length: 28.5, ballSize: 103, balls: 1),
             // Creative Knitting, Mar 2006, Pure Lux Scarf
-            ScarfParam(gauge: 12.5, width: 9, length: 56, ballSize: 80, balls: 2),
+            PatternInfo(gauge: 12.5, width: 9, length: 56, ballSize: 80, balls: 2),
             // Creative Knitting, Jan 2006, Heley Moley Scarf
-            ScarfParam(gauge: 25, width: 4, length: 59, ballSize: 114, balls: 2),
+            PatternInfo(gauge: 25, width: 4, length: 59, ballSize: 114, balls: 2),
             // Creative Knitting, Jan 2006, To Dye For, pattern includes toque
-            ScarfParam(gauge: 19, width: 8, length: 50, ballSize: 210, balls: 2),
+            PatternInfo(gauge: 19, width: 8, length: 50, ballSize: 210, balls: 2),
             // Creative Knitting, Jul 2007, Plush Pink Scarf
-            ScarfParam(gauge: 8.5, width: 6.5, length: 50, ballSize: 82, balls: 2),
+            PatternInfo(gauge: 8.5, width: 6.5, length: 50, ballSize: 82, balls: 2),
             // Creative Knitting, Jan 2008, Chattahoochee Scarf, has cables
-            ScarfParam(gauge: 12, width: 6, length: 60, ballSize: 155, balls: 2),
+            PatternInfo(gauge: 12, width: 6, length: 60, ballSize: 155, balls: 2),
             // Creative Knitting, Sep 2007, Self-Fringed Scarf, add 1" to width
-            //ScarfParam(gauge: 18, width: 12, length: 55, ballSize: 150, balls: 4),
+            //PatternInfo(gauge: 18, width: 12, length: 55, ballSize: 150, balls: 4),
             // Interweave Knits, Holiday Gifts 2012 Ipswich Scarf
-            ScarfParam(gauge: 28, width: 7, length: 63, ballSize: 200, balls: 2)
+            PatternInfo(gauge: 28, width: 7, length: 63, ballSize: 200, balls: 2)
 
         ]
         for test in tests {
@@ -112,28 +112,4 @@ class ScarfTests: XCTestCase {
         }
     }
     
-}
-// Parameters to use in scarf and blanket tests
-struct ScarfParam {
-    var gauge:Double = 3
-    var width:Double = 6
-    var length:Double = 40
-    var yarn:Int = 0
-    var ballSize = 0
-    var balls:Int = 0
-    // init the structure with certain values
-    init(gauge:Double, width:Double, length:Double, yarn:Int) {
-        self.gauge = gauge
-        self.width = width
-        self.length = length
-        self.yarn = yarn
-    }
-    // init the struct with paremeters for balls check
-    init(gauge:Double, width:Double, length:Double, ballSize:Int, balls:Int) {
-        self.gauge = gauge
-        self.width = width
-        self.length = length
-        self.ballSize = ballSize
-        self.balls = balls
-    }
 }

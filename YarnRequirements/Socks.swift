@@ -22,8 +22,8 @@ class Socks: Project {
     var sizeUnits:ShoeSizeUnits = ShoeSizeUnits.Women
     
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage, control:String) {
-        super.init(name: name, thumb: thumb, image: image, control: control)
+    override init(name:String, thumb:UIImage, image:UIImage) {
+        super.init(name: name, thumb: thumb, image: image)
         
         // socks normally use a finer yarn, so finer gauge
         gauge = 32.0

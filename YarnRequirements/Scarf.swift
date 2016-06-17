@@ -25,8 +25,8 @@ class Scarf: Project {
     var scarf:Scarf?
     
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage, control:String) {
-        super.init(name: name, thumb: thumb, image: image, control: control)
+    override init(name:String, thumb:UIImage, image:UIImage) {
+        super.init(name: name, thumb: thumb, image: image)
         controller = ScarfController()
     }
     // A blanket is a rectangle, so calculate yarn required using length and width
@@ -50,10 +50,16 @@ class Scarf: Project {
 class Blanket : Scarf {
 
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage, control:String) {
-        super.init(name: name, thumb: thumb, image: image, control: control)
+    override init(name:String, thumb:UIImage, image:UIImage) {
+        super.init(name: name, thumb: thumb, image: image)
         width = 60.0;
     }
-    
+    // Blankets consistently need more yarn
+    override func calcYarnRequired() {
+        super.calcYarnRequired()
+        
+        yarnNeeded = Int(1.2 * Double(yarnNeeded)) // Add 20% to estimate
+        calcballsNeeded()
+    }
 }
 

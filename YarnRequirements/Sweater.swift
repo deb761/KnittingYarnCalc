@@ -17,8 +17,8 @@ class Sweater : Project {
     var chestUnits:ShortLengthUnits = ShortLengthUnits.Inches;
     
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage, control:String) {
-        super.init(name: name, thumb: thumb, image: image, control: control)
+    override init(name:String, thumb:UIImage, image:UIImage) {
+        super.init(name: name, thumb: thumb, image: image)
         controller = SweaterController()
     }
     
