@@ -26,16 +26,33 @@ class Toque : Project {
         controller = HatController()
     }
     
-    // Calculate the yarn required for a toque, where the length is
-    // 1.3 * hand circumference
+    // Calculate the yarn required for a toque, where the total length is
+    // 0.5 * head circumference and a cone on the top for the cap that
+    // is 0.1 * head circumference.  Hat circumference is 0.93 of head circumference
+    //
+    // A=πr(r+sqrt(h^2+r^2))
     override func calcYarnRequired()
     {
-        var width = size;
+        let tightness = 0.93
+        let lengthCylF = 0.1
+        let coneheightF = 0.5
+        var width = size
         if (sizeUnits != ShortLengthUnits.CM)
         {
             width *= Project.inches2cm
         }
-        let length = width * 0.25
+        let lengthCyl = width * lengthCylF
+        // apply tightness factor
+        //width *= tightness
+        let rad = width / M_PI / 2.0
+        let coneHeight = coneheightF * width
+        // calculate cone area
+        let coneArea = M_PI * rad * (rad + sqrt(coneHeight * coneHeight + rad * rad))
+        // calculate cylinder area
+        let cylinderArea = lengthCyl * width
+        // calculate relative length
+        let length = (coneArea + cylinderArea) / width
+        // use this relative length to calculate yarn
         calcYarnRequired(length, siWidth: width)
     }
 }

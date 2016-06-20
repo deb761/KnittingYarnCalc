@@ -9,7 +9,8 @@
 import Foundation
 // Parameters to use in pattern comparison tests
 struct PatternInfo {
-    var gauge:Double = 3
+    let name:String
+    let gauge:Double
     var width:Double = 6
     var length:Double = 40
     var size:Double = 0
@@ -18,7 +19,8 @@ struct PatternInfo {
     var balls:Int = 0
 
     // init the structure with values for length & width with yarn needed
-    init(gauge:Double, width:Double, length:Double, yarn:Int) {
+    init(name:String, gauge:Double, width:Double, length:Double, yarn:Int) {
+        self.name = name
         self.gauge = gauge
         self.width = width
         self.length = length
@@ -26,7 +28,8 @@ struct PatternInfo {
     }
 
     // init the struct with paremeters for length & width with balls check
-    init(gauge:Double, width:Double, length:Double, ballSize:Int, balls:Int) {
+    init(name:String, gauge:Double, width:Double, length:Double, ballSize:Int, balls:Int) {
+        self.name = name
         self.gauge = gauge
         self.width = width
         self.length = length
@@ -35,14 +38,16 @@ struct PatternInfo {
     }
 
     // init the structure with values for size with yarn needed
-    init(gauge:Double, size:Double, yarn:Int) {
+    init(name:String, gauge:Double, size:Double, yarn:Int) {
+        self.name = name
         self.gauge = gauge
         self.size = size
         self.yarn = yarn
     }
     
     // init the structure with values for size with balls needed
-    init(gauge:Double, size:Double, ballSize:Int, balls:Int) {
+    init(name:String, gauge:Double, size:Double, ballSize:Int, balls:Int) {
+        self.name = name
         self.gauge = gauge
         self.size = size
         self.ballSize = ballSize

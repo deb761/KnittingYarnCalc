@@ -38,12 +38,13 @@ class Sweater : Project {
         let intercept = -5559.8 // cm
         let slope = 162.1 // cm^2
         let area = intercept + slope * chest
+        // let the sleeves be a trapezoid with max width 0.5 * width, and min width being 0.25 * width
+        // let the length match the body length (which are really long sleeves), and add the average width
+        // of the two sleeves to the body width
         let width = chest * 1.75
         let length = area / width
         
         super.calcYarnRequired(length, siWidth: width)
-    /*  let dim = sqrt(area)
-        super.calcYarnRequired(dim, siWidth: dim) */
     }
 }
 

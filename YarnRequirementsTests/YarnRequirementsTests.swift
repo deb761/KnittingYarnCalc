@@ -143,11 +143,11 @@ class ProjectTests: XCTestCase {
     }
     
     func testCalcAreaBallUnitsYards() {
-        // Verify changing the ball size units to yards updates the balls needed when on the edge
+        // Verify changing the ball size units to yards updates the balls needed for a large project
         // length and width here are inches
         project.ballSizeUnits = LongLengthUnits.Meters
-        let length = 12 * Project.inches2cm
-        let width = 16 * Project.inches2cm
+        let length = 60 * Project.inches2cm
+        let width = 60 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqM = project.ballsNeeded
         
@@ -158,11 +158,11 @@ class ProjectTests: XCTestCase {
     }
     
     func testCalcAreaBallUnitsMeters() {
-        // Verify changing the ball size units to meters updates the balls needed when on the edge
+        // Verify changing the ball size units to meters updates the balls needed for a large project
         // length and width here are inches
         project.ballSizeUnits = LongLengthUnits.Yards
-        let length = 12 * Project.inches2cm
-        let width = 16 * Project.inches2cm
+        let length = 60 * Project.inches2cm
+        let width = 60 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqY = project.ballsNeeded
         
@@ -173,11 +173,11 @@ class ProjectTests: XCTestCase {
     }
     
     func testCalcAreaBallSize() {
-        // Verify changing the ball size updates the balls needed when on the edge
+        // Verify changing the ball size updates the balls needed for a large project
         // length and width here are inches
         project.ballSizeUnits = LongLengthUnits.Yards
-        let length = 12 * Project.inches2cm
-        let width = 16 * Project.inches2cm
+        let length = 60 * Project.inches2cm
+        let width = 60 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqY = project.ballsNeeded
         
@@ -196,15 +196,15 @@ class ProjectTests: XCTestCase {
         project.partialBalls = true
         let tests = [
             CalcVar(gauge:1.0, length: 1.0, width: 1.0, yarn: 2, balls: 0.02),
-            CalcVar(gauge:4.0, length: 100.0, width: 100.0, yarn: 235, balls: 2.35),
-            CalcVar(gauge:6.0, length: 100.0, width: 100.0, yarn: 347, balls: 3.47),
-            CalcVar(gauge:8.0, length: 100.0, width: 100.0, yarn: 459, balls: 4.59),
-            CalcVar(gauge:12.0, length: 100.0, width: 100.0, yarn: 684, balls: 6.84),
-            CalcVar(gauge:16.0, length: 100.0, width: 100.0, yarn: 908, balls: 9.08),
-            CalcVar(gauge:20.0, length: 10.0, width: 10.0, yarn: 13, balls: 0.13),
-            CalcVar(gauge:24.0, length: 100.0, width: 100.0, yarn: 1358, balls: 13.58),
-            CalcVar(gauge:28.0, length: 100.0, width: 100.0, yarn: 1582, balls: 15.82),
-            CalcVar(gauge:38.0, length: 100.0, width: 100.0, yarn: 2144, balls: 21.44),
+            CalcVar(gauge:4.0, length: 100.0, width: 100.0, yarn: 282, balls: 2.82),
+            CalcVar(gauge:6.0, length: 100.0, width: 100.0, yarn: 412, balls: 4.12),
+            CalcVar(gauge:8.5, length: 100.0, width: 100.0, yarn: 581, balls: 5.81),
+            CalcVar(gauge:12.0, length: 100.0, width: 100.0, yarn: 814, balls: 8.14),
+            CalcVar(gauge:16.0, length: 100.0, width: 100.0, yarn: 1086, balls: 10.86),
+            CalcVar(gauge:20.0, length: 10.0, width: 10.0, yarn: 15, balls: 0.15),
+            CalcVar(gauge:24.0, length: 100.0, width: 100.0, yarn: 1618, balls: 16.18),
+            CalcVar(gauge:28.0, length: 100.0, width: 100.0, yarn: 1886, balls: 18.86),
+            CalcVar(gauge:38.0, length: 100.0, width: 100.0, yarn: 2557, balls: 25.57),
             ]
         
         for test in tests {
@@ -226,15 +226,15 @@ class ProjectTests: XCTestCase {
         project.partialBalls = true
         let tests = [
             CalcVar(gauge:1.0, length: 1.0, width: 1.0, yarn: 2, balls: 0.02),
-            CalcVar(gauge:4.0, length: 100.0, width: 100.0, yarn: 1619, balls: 16.19),
-            CalcVar(gauge:6.0, length: 100.0, width: 100.0, yarn: 2415, balls: 24.15),
-            CalcVar(gauge:8.0, length: 100.0, width: 100.0, yarn: 3211, balls: 32.11),
-            CalcVar(gauge:12.0, length: 100.0, width: 100.0, yarn: 4788, balls: 47.88),
-            CalcVar(gauge:16.0, length: 100.0, width: 100.0, yarn: 6380, balls: 63.80),
-            CalcVar(gauge:20.0, length: 10.0, width: 10.0, yarn: 83, balls: 0.83),
-            CalcVar(gauge:24.0, length: 40.0, width: 40.0, yarn: 1536, balls: 15.36),
-            CalcVar(gauge:28.0, length: 40.0, width: 40.0, yarn: 1793, balls: 17.93),
-            CalcVar(gauge:38.0, length: 40.0, width: 40.0, yarn: 2430, balls: 24.3),
+            CalcVar(gauge:4.0, length: 100.0, width: 100.0, yarn: 1932, balls: 19.32),
+            CalcVar(gauge:6.0, length: 100.0, width: 100.0, yarn: 2879, balls: 28.79),
+            CalcVar(gauge:8.0, length: 100.0, width: 100.0, yarn: 3827, balls: 38.27),
+            CalcVar(gauge:12.0, length: 100.0, width: 100.0, yarn: 5715, balls: 57.15),
+            CalcVar(gauge:16.0, length: 100.0, width: 100.0, yarn: 7609, balls: 76.09),
+            CalcVar(gauge:20.0, length: 10.0, width: 10.0, yarn: 99, balls: 0.99),
+            CalcVar(gauge:24.0, length: 40.0, width: 40.0, yarn: 1829, balls: 18.29),
+            CalcVar(gauge:28.0, length: 40.0, width: 40.0, yarn: 2135, balls: 21.35),
+            CalcVar(gauge:38.0, length: 40.0, width: 40.0, yarn: 2897, balls: 28.97),
             ]
         
         for test in tests {

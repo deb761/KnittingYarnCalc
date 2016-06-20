@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YarnRequirements/Project.swift"
-            timestampString = "487872482.158946"
+            timestampString = "487886568.89912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "calcYarnRequired(_:siWidth:)"
             landmarkType = "5">
          </BreakpointContent>

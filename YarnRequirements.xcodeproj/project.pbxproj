@@ -12,6 +12,9 @@
 		8702D6881D13355C00286909 /* BlanketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6871D13355C00286909 /* BlanketTests.swift */; };
 		8702D68A1D1336D800286909 /* PatternInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6891D1336D800286909 /* PatternInfo.swift */; };
 		8702D68C1D14510400286909 /* SockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D68B1D14510400286909 /* SockTests.swift */; };
+		8702D68E1D1465FD00286909 /* SweaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D68D1D1465FD00286909 /* SweaterTests.swift */; };
+		8702D6901D146BF600286909 /* VestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D68F1D146BF600286909 /* VestTests.swift */; };
+		8702D6921D14B8A800286909 /* ToqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6911D14B8A800286909 /* ToqueTests.swift */; };
 		875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AF1CF6979C0084EC06 /* pickerView.swift */; };
 		875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90B11CF69E820084EC06 /* DimensionRow.swift */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
@@ -69,6 +72,9 @@
 		8702D6871D13355C00286909 /* BlanketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlanketTests.swift; sourceTree = "<group>"; };
 		8702D6891D1336D800286909 /* PatternInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternInfo.swift; sourceTree = "<group>"; };
 		8702D68B1D14510400286909 /* SockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SockTests.swift; sourceTree = "<group>"; };
+		8702D68D1D1465FD00286909 /* SweaterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweaterTests.swift; sourceTree = "<group>"; };
+		8702D68F1D146BF600286909 /* VestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VestTests.swift; sourceTree = "<group>"; };
+		8702D6911D14B8A800286909 /* ToqueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToqueTests.swift; sourceTree = "<group>"; };
 		875A90AF1CF6979C0084EC06 /* pickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerView.swift; sourceTree = "<group>"; };
 		875A90B11CF69E820084EC06 /* DimensionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionRow.swift; sourceTree = "<group>"; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -206,7 +212,10 @@
 		87DABAB41CE7EBF4009DD3B1 /* YarnRequirementsTests */ = {
 			isa = PBXGroup;
 			children = (
+				8702D6911D14B8A800286909 /* ToqueTests.swift */,
+				8702D68F1D146BF600286909 /* VestTests.swift */,
 				8702D68B1D14510400286909 /* SockTests.swift */,
+				8702D68D1D1465FD00286909 /* SweaterTests.swift */,
 				8702D6851D124A6700286909 /* ScarfTests.swift */,
 				8702D6871D13355C00286909 /* BlanketTests.swift */,
 				87DABAB51CE7EBF4009DD3B1 /* YarnRequirementsTests.swift */,
@@ -410,7 +419,10 @@
 				8702D68C1D14510400286909 /* SockTests.swift in Sources */,
 				8702D6881D13355C00286909 /* BlanketTests.swift in Sources */,
 				8702D68A1D1336D800286909 /* PatternInfo.swift in Sources */,
+				8702D6921D14B8A800286909 /* ToqueTests.swift in Sources */,
 				8702D6861D124A6700286909 /* ScarfTests.swift in Sources */,
+				8702D6901D146BF600286909 /* VestTests.swift in Sources */,
+				8702D68E1D1465FD00286909 /* SweaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

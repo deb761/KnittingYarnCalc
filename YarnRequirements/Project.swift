@@ -55,8 +55,7 @@ class Project {
     
     func calcYarnRequired() {}
     
-    // Calculations borrowed from http://www.thedietdiary.com/knittingfiend/tools/EstimatingYardageRectangles.html
-    // copyright Lucia Liljegren 2005.
+    // Calculate the yarn required for a piece of knitted fabric with length and width in cm
     func calcYarnRequired(siLength:Double, siWidth:Double) {
         
         guard gauge > 0 else {
@@ -79,20 +78,13 @@ class Project {
             siballSize *= Project.yards2meters;
         }
         let stitches:Int = Int(ceil(siGauge * siWidth));
-        let rowGauge:Double = siGauge * 1.2;
+        let rowGauge:Double = siGauge * 1.5;
         let rows:Int = Int(ceil(rowGauge * siLength));
         
         let totalStitches:Int = stitches * (rows + 2); // 2 for cast on and bind off.
         
-        let cmPerStitch:Double = 1.0 / siGauge;
-        let cmPerRow:Double = 1.0 / rowGauge;
-        
-        let normalizedCm:Double = sqrt(cmPerStitch * cmPerStitch + cmPerRow * cmPerRow);
-        
-        let loopFactor:Double = M_PI * 1.02 * 1.02;
-        var meters:Double = loopFactor * normalizedCm * Double(totalStitches) / 100;
-        // Add 10% for safety
-        meters *= 1.1;
+        // calculate meters and add 20%
+        let meters = getStitchLength(siGauge, cmWidth: siWidth, cmLength: siLength) * Double(totalStitches) * 1.2
         
         // Now convert the yarn required into the desired units
         if (yarnNeededUnits != LongLengthUnits.Meters) {
@@ -107,7 +99,16 @@ class Project {
         if !partialBalls {
             ballsNeeded = ceil(ballsNeeded)
         }
-        
+    }
+    // Compute the length of a stitch in m, treating the row of stitches as a helix
+    private func getStitchLength(cmGauge:Double, cmWidth:Double, cmLength:Double) -> Double {
+        let stitchWidth = 1.0 / cmGauge
+        let stitchCir = M_PI * stitchWidth
+        // The stitch actually goes halfway into the neighboring stitch on each side
+        let span = 2 * stitchWidth
+        // use equation to calculate helical length, where the diameter is the stitchWidth and the
+        // length is twice the stitchWidth, and convert to meters
+        return sqrt(span * span + stitchCir * stitchCir) / 100.0
     }
     // Calculate the number of balls needed, taking into account the selected units
     func calcballsNeeded()
