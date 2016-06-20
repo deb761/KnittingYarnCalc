@@ -32,7 +32,7 @@ class Mittens : Project {
         {
             width *= Project.inches2cm
         }
-        let length = width * 1.5
+        let length = width * 1.33
         width *= 2
         calcYarnRequired(length, siWidth: width)
     }
@@ -43,12 +43,12 @@ class Gloves : Mittens {
     // 1.3 * hand circumference
     override func calcYarnRequired()
     {
-        var width = size * 1.3; // add extra to go around fingers
+        var width = size * 1.05 // add extra to go around fingers
         if (sizeUnits != ShortLengthUnits.CM)
         {
             width *= Project.inches2cm
         }
-        let length = width * 1.5
+        let length = width * 1.2 // gloves fit more snuggly than mittens
         width *= 2
         calcYarnRequired(length, siWidth: width)
     }

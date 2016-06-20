@@ -33,7 +33,7 @@ class Toque : Project {
     // A=πr(r+sqrt(h^2+r^2))
     override func calcYarnRequired()
     {
-        let tightness = 0.93
+        //let tightness = 0.93
         let lengthCylF = 0.1
         let coneheightF = 0.5
         var width = size
@@ -57,20 +57,27 @@ class Toque : Project {
     }
 }
 // Tams are also hats, so base them off of Toques.  Toques are this shape:
-//    /\
-//   /  \
+//
+//   ----
 //  |    |   Actually, this diagram is stretched a bit vertically
-//  \____/
+//   -__-
 class Tam : Toque {
     // Calculate the yarn required for a tam
+    // The size is the actual head size, the band will be smaller to fit snug
+    // The width is bigger than the head to form a disk
     override func calcYarnRequired()
     {
-        var width = size * 1.3; // tams need to have a brim smaller than the head to fit snug
+        var width = size * 1.3
         if (sizeUnits != ShortLengthUnits.CM)
         {
             width *= Project.inches2cm
         }
-        let length = width * 0.325
-        calcYarnRequired(length, siWidth: width)
+        let length = width * 0.25
+        // A tam has a disk top, so add the area of a circle to the top
+        // A = πr^2;  πr = 1/2 width
+        let rad = 0.5 / M_PI
+        let diskArea = M_PI * rad * rad
+        let diskLen = diskArea / width
+        calcYarnRequired(length + diskLen, siWidth: width)
     }
 }

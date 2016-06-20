@@ -38,6 +38,11 @@
                BlueprintName = "YarnRequirementsTests"
                ReferencedContainer = "container:YarnRequirements.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "YamTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">
