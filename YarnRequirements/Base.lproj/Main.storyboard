@@ -146,6 +146,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqS-kz-kIU">
                                                 <rect key="frame" x="262" y="0.0" width="258" height="30"/>
                                                 <state key="normal" title="Icon8"/>
+                                                <connections>
+                                                    <action selector="touchedIcon8:" destination="oIM-QC-YfU" eventType="touchUpInside" id="aas-fT-MqS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

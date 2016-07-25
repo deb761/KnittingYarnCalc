@@ -21,6 +21,9 @@ class InfoController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func touchedIcon8(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string:"http://www.icon8.com/")!)
+    }
 
     /*
     // MARK: - Navigation

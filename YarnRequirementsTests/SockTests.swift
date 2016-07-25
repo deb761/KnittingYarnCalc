@@ -85,7 +85,7 @@ class SockTests: XCTestCase {
             socks.ballSize = test.ballSize
             socks.calcYarnRequired()
             
-            XCTAssertGreaterThanOrEqual(Int(socks.ballsNeeded), test.balls, "\(test.name): Yarn calculated is less than expected")
+            XCTAssertGreaterThanOrEqual(Int(ceil(socks.ballsNeeded)), test.balls, "\(test.name): Yarn calculated is less than expected")
         }
         
     }

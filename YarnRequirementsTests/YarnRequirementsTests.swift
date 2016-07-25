@@ -128,6 +128,8 @@ class ProjectTests: XCTestCase {
     
     func testCalcAreaYarnUnitsMeters() {
         // Verify changing the yarn required units updates the yarn required amount
+        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.calcYarnRequired(cmLength, siWidth: cmWidth)
         let yarnReqM = project.yarnNeeded
         project.yarnNeededUnits = LongLengthUnits.Yards
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
@@ -154,7 +156,7 @@ class ProjectTests: XCTestCase {
         project.ballSizeUnits = LongLengthUnits.Yards
         project.calcYarnRequired(length, siWidth: width)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertNotEqual(project.ballsNeeded, ballsReqM, "Yarn Needed did not change when units changed to yards!")
+        XCTAssertNotEqual(project.ballsNeeded, ballsReqM, "Balls Needed did not change when units changed to yards!")
     }
     
     func testCalcAreaBallUnitsMeters() {
@@ -169,7 +171,7 @@ class ProjectTests: XCTestCase {
         project.ballSizeUnits = LongLengthUnits.Meters
         project.calcYarnRequired(length, siWidth: width)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertNotEqual(project.ballsNeeded, ballsReqY, "Yarn Needed did not change when units changed to meters!")
+        XCTAssertNotEqual(project.ballsNeeded, ballsReqY, "Balls Needed did not change when units changed to meters!")
     }
     
     func testCalcAreaBallSize() {

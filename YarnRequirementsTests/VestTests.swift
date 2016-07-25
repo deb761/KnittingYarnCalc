@@ -26,7 +26,7 @@ class VestTests: XCTestCase {
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
         vest.gaugeUnits = .StsPerInch
-        vest.chestUnits = .Inches
+        vest.sizeUnits = .Inches
         vest.yarnNeededUnits = .Yards
         
         let tests = [
@@ -68,7 +68,7 @@ class VestTests: XCTestCase {
             ]
         
         for test in tests {
-            vest.chestSize = test.size
+            vest.size = test.size
             vest.gauge = test.gauge
             vest.calcYarnRequired()
             
@@ -80,7 +80,7 @@ class VestTests: XCTestCase {
     // Compare calculated number of balls to representative patterns
     func testBalls() {
         vest.gaugeUnits = .StsPer4inch
-        vest.chestUnits = .Inches
+        vest.sizeUnits = .Inches
         vest.yarnNeededUnits = .Yards
         
         let tests = [
@@ -93,7 +93,7 @@ class VestTests: XCTestCase {
             PatternInfo(name: "Design A - V-neck Tank / Vest by Sirdar Spinning Ltd.", gauge: 22, size: 44, ballSize: 184, balls: 6),
         ]
         for test in tests {
-            vest.chestSize = test.size
+            vest.size = test.size
             vest.gauge = test.gauge
             vest.ballSize = test.ballSize
             vest.calcYarnRequired()

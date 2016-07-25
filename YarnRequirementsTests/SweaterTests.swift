@@ -26,7 +26,7 @@ class SweaterTests: XCTestCase {
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
         sweater.gaugeUnits = .StsPerInch
-        sweater.chestUnits = .Inches
+        sweater.sizeUnits = .Inches
         sweater.yarnNeededUnits = .Yards
         
         let tests = [
@@ -74,7 +74,7 @@ class SweaterTests: XCTestCase {
         ]
         
         for test in tests {
-            sweater.chestSize = test.size
+            sweater.size = test.size
             sweater.gauge = test.gauge
             sweater.calcYarnRequired()
             
@@ -85,7 +85,7 @@ class SweaterTests: XCTestCase {
     // Compare calculated number of balls to representative patterns
     func testBalls() {
         sweater.gaugeUnits = .StsPer4inch
-        sweater.chestUnits = .Inches
+        sweater.sizeUnits = .Inches
         sweater.yarnNeededUnits = .Yards
         
         let tests = [
@@ -98,7 +98,7 @@ class SweaterTests: XCTestCase {
             PatternInfo(name: "Catherine Rose by Helen Rose, size 4y", gauge: 26, size: 24, ballSize: 400, balls: 2),
         ]
         for test in tests {
-            sweater.chestSize = test.size
+            sweater.size = test.size
             sweater.gauge = test.gauge
             sweater.ballSize = test.ballSize
             sweater.calcYarnRequired()

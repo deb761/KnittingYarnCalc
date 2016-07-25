@@ -66,17 +66,18 @@ class ScarfTests: XCTestCase {
         scarf.lengthUnits = .Inches
         scarf.widthUnits = .Inches
         scarf.yarnNeededUnits = .Yards
+        scarf.ballSizeUnits = .Yards
         
         let tests = [
-            PatternInfo(name: "Stitch Mountain, reversible cable scarf", gauge: 12, width: 10, length: 51, ballSize: 151, balls: 2),
+            PatternInfo(name: "Stitch Mountain, reversible cable scarf", gauge: 12, width: 13.3, length: 51, ballSize: 151, balls: 2),
             // added ruffled edge, about 4" either side
             PatternInfo(name: "Stitch Mountain, Ruffle scarf", gauge: 20, width: 9, length: 61, ballSize: 120, balls: 4),
             PatternInfo(name: "Stitch Mountain, Diamond Cowl", gauge: 12, width: 56, length: 9, ballSize: 229, balls: 2),
             PatternInfo(name: "Creative Knitting, Jan 2007, Beaded Neck Cozy", gauge: 15, width: 7.25, length: 28.5, ballSize: 103, balls: 1),
-            PatternInfo(name: " Creative Knitting, Mar 2006, Pure Lux Scarf", gauge: 12.5, width: 9, length: 56, ballSize: 80, balls: 2),
+            PatternInfo(name: "Creative Knitting, Mar 2006, Pure Lux Scarf", gauge: 12.5, width: 9, length: 56, ballSize: 80, balls: 2),
             PatternInfo(name: "Creative Knitting, Jan 2006, Heley Moley Scarf", gauge: 25, width: 4, length: 59, ballSize: 114, balls: 2),
-            PatternInfo(name: "Creative Knitting, Jan 2006, To Dye For, pattern includes toque",
-                gauge: 19, width: 8, length: 50, ballSize: 210, balls: 2),
+            PatternInfo(name: "Creative Knitting, Jan 2006, To Dye For, pattern includes toque, added 4in fringe",
+                gauge: 19, width: 8, length: 54, ballSize: 210, balls: 2),
             PatternInfo(name: "Creative Knitting, Jul 2007, Plush Pink Scarf", gauge: 8.5, width: 6.5, length: 50, ballSize: 82, balls: 2),
             PatternInfo(name: "Creative Knitting, Jan 2008, Chattahoochee Scarf, has cables", gauge: 12, width: 6, length: 60, ballSize: 155, balls: 2),
             PatternInfo(name: "Creative Knitting, Sep 2007, Self-Fringed Scarf, add 1inch to width", gauge: 18, width: 12, length: 55, ballSize: 150, balls: 4),
@@ -90,7 +91,7 @@ class ScarfTests: XCTestCase {
             scarf.ballSize = test.ballSize
             scarf.calcYarnRequired()
             
-            XCTAssertGreaterThanOrEqual(Int(scarf.ballsNeeded), test.balls, "\(test.name): Yarn calculated is less than expected")
+            XCTAssertGreaterThanOrEqual(Int(ceil(scarf.ballsNeeded)), test.balls, "\(test.name): Yarn calculated is less than expected")
         }
         
     }

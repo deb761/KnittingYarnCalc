@@ -50,8 +50,8 @@ class ToqueTests: XCTestCase {
             toque.gauge = test.gauge
             toque.calcYarnRequired()
             
-            XCTAssertGreaterThanOrEqual(toque.yarnNeeded, test.yarn, "\(test.name): Yarn calculated is less than expected")
-            //XCTAssertEqualWithAccuracy(Double(toque.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.2, "\(test.name): Yarn calculated is more than 10% off from expected")
+            //XCTAssertGreaterThanOrEqual(toque.yarnNeeded, test.yarn, "\(test.name): Yarn calculated is less than expected")
+            XCTAssertEqualWithAccuracy(Double(toque.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.2, "\(test.name): Yarn calculated is more than 10% off from expected")
             
         }
     }
@@ -62,7 +62,8 @@ class ToqueTests: XCTestCase {
         toque.yarnNeededUnits = .Yards
         
         let tests = [
-            PatternInfo(name: "Stitch Mountain, Variegated Hat", gauge: 17, size: 22, ballSize: 151, balls: 2),
+            // I knitted this one myself, and only needed about about 100 yds (I did not make the pom-pom, but that is < 50 yds
+            PatternInfo(name: "Stitch Mountain, Variegated Hat", gauge: 17, size: 22, ballSize: 151, balls: 1),
             PatternInfo(name: "Stitch Mountain, Ribbed Ski Cap", gauge: 20, size: 21, ballSize: 120, balls: 1),
             PatternInfo(name: "Stitch Mountain, Sparkle Slouchy Hat", gauge: 18, size: 21, ballSize: 153, balls: 1),
             PatternInfo(name: "Interweave Knits, Holiday 2012, Braided Toque", gauge: 37, size: 21, ballSize: 210, balls: 1),
@@ -76,7 +77,7 @@ class ToqueTests: XCTestCase {
             toque.ballSize = test.ballSize
             toque.calcYarnRequired()
             
-            XCTAssertGreaterThanOrEqual(Int(toque.ballsNeeded), test.balls, "\(test.name): Yarn calculated is less than expected")
+            XCTAssertGreaterThanOrEqual(Int(ceil(toque.ballsNeeded)), test.balls, "\(test.name): Yarn calculated is less than expected")
         }
         
     }
