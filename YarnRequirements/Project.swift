@@ -23,65 +23,75 @@ class Project {
     // name of the plist for this project
     var plist:String = "project"
     // settings for the project.
-    var settings:[String:AnyObject] = [:]  //our data
+    var defaults:[String:AnyObject] = [:]  //our data
     // name of the project type shown to the user
     var name:String = "Project"
     var thumb:UIImage = UIImage(named:"Sweater")!
     var image:UIImage = UIImage(named:"SweaterImg")!
     var controller:BaseProjectController!
+    
+    let defs = NSUserDefaults.standardUserDefaults()
 
     // guage of the project
     var gauge:Double {
         get {
-            return settings["gauge"] as! Double
+            return defs.doubleForKey("\(name)-gauge", def: defaults["gauge"])
         }
         set {
-            settings["gauge"] = newValue
+            defs.setDouble(newValue, forKey: "\(name)-gauge")
         }
     }
     // units for the gauge
     var gaugeUnits:GaugeUnits {
         get {
-            return GaugeUnits(rawValue: settings["gaugeUnits"] as! Int)!
+            if let value = defs.objectForKey("\(name)-gaugeUnits") as? Int {
+                return GaugeUnits(rawValue: value)!
+            } else {
+                let value = defaults["gaugeUnits"] as! GaugeUnits
+                defs.setObject(value.rawValue, forKey: "\(name)-gaugeUnits")
+                return value
+            }
         }
         set {
-            settings["gaugeUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-gaugeUnits")
         }
     }
     // The units for yarn needed
     var yarnNeededUnits:LongLengthUnits {
         get {
-            return LongLengthUnits(rawValue: settings["yarnNeededUnits"] as! Int)!
+            return defs.longLengthUnitsForKey("\(name)-yarnNeededUnits",
+                                              def: LongLengthUnits(rawValue: defaults["yarnNeededUnits"] as! Int)!)
         }
         set {
-            settings["yarnNeededUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-yarnNeededUnits")
         }
     }
     // The ball size in ballSizeUnits
     var ballSize:Int {
         get {
-            return settings["ballSize"] as! Int
+            return defs.doubleForKey("\(name)-ballSize", def: defaults["ballSize"] as! Double)
         }
         set {
-            settings["ballSize"] = newValue
+            defs.setInteger(newValue, forKey: "\(name)-ballSize")
         }
     }
     // The units for ball size
     var ballSizeUnits:LongLengthUnits {
         get {
-            return LongLengthUnits(rawValue: settings["ballSizeUnits"] as! Int)!
+            return defs.longLengthUnitsForKey("\(name)-ballSizeUnits",
+                                              def: LongLengthUnits(rawValue: defaults["ballSizeUnits"] as! Int)!)
         }
         set {
-            settings["ballSizeUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-ballSizeUnits")
         }
     }
     // True when the user wants to see whole and partial balls needed
     var partialBalls:Bool {
         get {
-            return settings["partialBalls"] as! Bool
+            return defs.boolForKey("\(name)-partialBalls")
         }
         set {
-            settings["partialBalls"] = newValue
+            defs.setBool(newValue, forKey: "\(name)-partialBalls")
         }
     }
     
@@ -96,7 +106,8 @@ class Project {
         self.image = image
         self.thumb = thumb
         self.controller = BaseProjectController()
-        readPlist()
+        defaults = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
+                     "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]
         calcYarnRequired()
     }
     // Read the plist for this project and fill in the settings
@@ -105,19 +116,12 @@ class Project {
         let plistPath:String? = NSBundle.mainBundle().pathForResource(name, ofType: "plist")!
         let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)!
         do {
-            settings = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)
+            defaults = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)
                 as! [String:AnyObject]
         }
         catch {
             print("Error reading plist: \(error), format: \(format)")
-            settingsToDefault()
         }
-    }
-    
-    // Set all the settings to defaults
-    func settingsToDefault() {
-        settings = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
-                     "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]
     }
 
     static let inches2cm:Double = 2.54;
