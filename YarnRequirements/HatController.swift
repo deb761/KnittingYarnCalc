@@ -33,6 +33,9 @@ class HatController: BaseProjectController {
         hat = project as! Toque
         txtSize.text = String(hat.size)
         txtSize.addTarget(self, action: #selector(HatController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        
+        // Set initial value for pickers
+        pkSizeUnits.selectRow(hat.sizeUnits.rawValue, inComponent: 0, animated: false)
     }
 
     override func didReceiveMemoryWarning() {

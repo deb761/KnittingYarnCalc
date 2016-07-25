@@ -20,26 +20,75 @@ enum LongLengthUnits: Int {
 }
 // Base class for a project
 class Project {
+    // name of the plist for this project
+    var plist:String = "project"
+    // settings for the project.
+    var settings:[String:AnyObject] = [:]  //our data
+    // name of the project type shown to the user
     var name:String = "Project"
-    var gauge:Double = 20.0
-    var gaugeUnits:GaugeUnits = GaugeUnits.StsPer4inch
     var thumb:UIImage = UIImage(named:"Sweater")!
     var image:UIImage = UIImage(named:"SweaterImg")!
-    //var controlName:String?
     var controller:BaseProjectController!
+
+    // guage of the project
+    var gauge:Double {
+        get {
+            return settings["gauge"] as! Double
+        }
+        set {
+            settings["gauge"] = newValue
+        }
+    }
+    // units for the gauge
+    var gaugeUnits:GaugeUnits {
+        get {
+            return GaugeUnits(rawValue: settings["gaugeUnits"] as! Int)!
+        }
+        set {
+            settings["gaugeUnits"] = newValue.rawValue
+        }
+    }
+    // The units for yarn needed
+    var yarnNeededUnits:LongLengthUnits {
+        get {
+            return LongLengthUnits(rawValue: settings["yarnNeededUnits"] as! Int)!
+        }
+        set {
+            settings["yarnNeededUnits"] = newValue.rawValue
+        }
+    }
+    // The ball size in ballSizeUnits
+    var ballSize:Int {
+        get {
+            return settings["ballSize"] as! Int
+        }
+        set {
+            settings["ballSize"] = newValue
+        }
+    }
+    // The units for ball size
+    var ballSizeUnits:LongLengthUnits {
+        get {
+            return LongLengthUnits(rawValue: settings["ballSizeUnits"] as! Int)!
+        }
+        set {
+            settings["ballSizeUnits"] = newValue.rawValue
+        }
+    }
+    // True when the user wants to see whole and partial balls needed
+    var partialBalls:Bool {
+        get {
+            return settings["partialBalls"] as! Bool
+        }
+        set {
+            settings["partialBalls"] = newValue
+        }
+    }
     
     // The yarn needed using yarnNeededUnits for the project
     var yarnNeeded:Int = 1000
-    // The units for yarn needed
-    var yarnNeededUnits:LongLengthUnits = LongLengthUnits.Meters
-    // The ball size in ballSizeUnits
-    var ballSize:Int = 150
-    // The units for ball size
-    var ballSizeUnits:LongLengthUnits = LongLengthUnits.Meters
     // The number of balls needed
     var ballsNeeded:Double = 4
-    // True when the user wants to see whole and partial balls needed
-    var partialBalls:Bool = false
 
     // provide a means of defining a project name and image
     init(name:String, thumb:UIImage, image:UIImage) {
@@ -47,7 +96,28 @@ class Project {
         self.image = image
         self.thumb = thumb
         self.controller = BaseProjectController()
+        readPlist()
         calcYarnRequired()
+    }
+    // Read the plist for this project and fill in the settings
+    func readPlist() {
+        var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
+        let plistPath:String? = NSBundle.mainBundle().pathForResource(name, ofType: "plist")!
+        let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)!
+        do {
+            settings = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)
+                as! [String:AnyObject]
+        }
+        catch {
+            print("Error reading plist: \(error), format: \(format)")
+            settingsToDefault()
+        }
+    }
+    
+    // Set all the settings to defaults
+    func settingsToDefault() {
+        settings = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
+                     "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]
     }
 
     static let inches2cm:Double = 2.54;

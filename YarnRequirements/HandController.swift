@@ -33,6 +33,9 @@ class HandController: BaseProjectController {
         mittens = project as! Mittens
         txtSize.text = String(mittens.size)
         txtSize.addTarget(self, action: #selector(HandController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        
+        // Set initial value for pickers
+        pkSizeUnits.selectRow(mittens.sizeUnits.rawValue, inComponent: 0, animated: false)
     }
 
     override func didReceiveMemoryWarning() {

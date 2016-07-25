@@ -33,6 +33,9 @@ class SockController: BaseProjectController {
         socks = project as! Socks
         txtSize.text = String(socks.size)
         txtSize.addTarget(self, action: #selector(SockController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+
+        // Set initial value for pickers
+        pkSizeUnits.selectRow(socks.sizeUnits.rawValue, inComponent: 0, animated: false)
     }
 
     override func didReceiveMemoryWarning() {

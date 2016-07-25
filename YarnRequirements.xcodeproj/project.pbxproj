@@ -27,6 +27,15 @@
 		8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */; };
 		8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */; };
 		8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7E1CF2F6E800E1B003 /* InfoController.swift */; };
+		879E37DE1D45571E00F17156 /* Sweater.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37DD1D45571E00F17156 /* Sweater.plist */; };
+		879E37E01D455EAB00F17156 /* Vest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37DF1D455EAB00F17156 /* Vest.plist */; };
+		879E37E21D455EF200F17156 /* Scarf.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E11D455EF200F17156 /* Scarf.plist */; };
+		879E37E41D4561FB00F17156 /* Gloves.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E31D4561FB00F17156 /* Gloves.plist */; };
+		879E37E61D45620D00F17156 /* Mittens.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E51D45620D00F17156 /* Mittens.plist */; };
+		879E37E81D45625800F17156 /* Blanket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E71D45625800F17156 /* Blanket.plist */; };
+		879E37EA1D4562C200F17156 /* Socks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E91D4562C200F17156 /* Socks.plist */; };
+		879E37EC1D45641600F17156 /* Toque.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37EB1D45641600F17156 /* Toque.plist */; };
+		879E37EE1D45643F00F17156 /* Tam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37ED1D45643F00F17156 /* Tam.plist */; };
 		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
 		87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
@@ -90,6 +99,15 @@
 		8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortLengthPicker.swift; sourceTree = "<group>"; };
 		8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongLengthPicker.swift; sourceTree = "<group>"; };
 		8763AA7E1CF2F6E800E1B003 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		879E37DD1D45571E00F17156 /* Sweater.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sweater.plist; sourceTree = "<group>"; };
+		879E37DF1D455EAB00F17156 /* Vest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Vest.plist; sourceTree = "<group>"; };
+		879E37E11D455EF200F17156 /* Scarf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scarf.plist; sourceTree = "<group>"; };
+		879E37E31D4561FB00F17156 /* Gloves.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Gloves.plist; sourceTree = "<group>"; };
+		879E37E51D45620D00F17156 /* Mittens.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mittens.plist; sourceTree = "<group>"; };
+		879E37E71D45625800F17156 /* Blanket.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Blanket.plist; sourceTree = "<group>"; };
+		879E37E91D4562C200F17156 /* Socks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Socks.plist; sourceTree = "<group>"; };
+		879E37EB1D45641600F17156 /* Toque.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Toque.plist; sourceTree = "<group>"; };
+		879E37ED1D45643F00F17156 /* Tam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tam.plist; sourceTree = "<group>"; };
 		87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		87DABA9B1CE7EBF4009DD3B1 /* YarnRequirements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YarnRequirements.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +184,15 @@
 				87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */,
 				87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */,
 				87DABAAC1CE7EBF4009DD3B1 /* Info.plist */,
+				879E37DD1D45571E00F17156 /* Sweater.plist */,
+				879E37DF1D455EAB00F17156 /* Vest.plist */,
+				879E37E11D455EF200F17156 /* Scarf.plist */,
+				879E37E71D45625800F17156 /* Blanket.plist */,
+				879E37E51D45620D00F17156 /* Mittens.plist */,
+				879E37EB1D45641600F17156 /* Toque.plist */,
+				879E37ED1D45643F00F17156 /* Tam.plist */,
+				879E37E31D4561FB00F17156 /* Gloves.plist */,
+				879E37E91D4562C200F17156 /* Socks.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -363,8 +390,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				87DABAAB1CE7EBF4009DD3B1 /* LaunchScreen.storyboard in Resources */,
+				879E37E01D455EAB00F17156 /* Vest.plist in Resources */,
 				87DABAA81CE7EBF4009DD3B1 /* Assets.xcassets in Resources */,
+				879E37E41D4561FB00F17156 /* Gloves.plist in Resources */,
+				879E37EC1D45641600F17156 /* Toque.plist in Resources */,
+				879E37EA1D4562C200F17156 /* Socks.plist in Resources */,
+				879E37E61D45620D00F17156 /* Mittens.plist in Resources */,
+				879E37E21D455EF200F17156 /* Scarf.plist in Resources */,
+				879E37DE1D45571E00F17156 /* Sweater.plist in Resources */,
+				879E37EE1D45643F00F17156 /* Tam.plist in Resources */,
 				87DABAA61CE7EBF4009DD3B1 /* Main.storyboard in Resources */,
+				879E37E81D45625800F17156 /* Blanket.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

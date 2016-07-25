@@ -13,14 +13,34 @@ import Foundation
 class Mittens : Project {
     
     // Finished size around the hand
-    var size:Double = 8.0;
+    var size:Double {
+        get {
+            return settings["size"] as! Double
+        }
+        set {
+            settings["size"] = newValue
+        }
+    }
     // Units for hand size
-    var sizeUnits:ShortLengthUnits = ShortLengthUnits.Inches;
+    var sizeUnits:ShortLengthUnits {
+        get {
+            return ShortLengthUnits(rawValue: settings["sizeUnits"] as! Int)!
+        }
+        set {
+            settings["sizeUnits"] = newValue.rawValue
+        }
+    }
     
     // provide a means of defining a project name and image
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = HandController()
+    }
+    // Fill in settings in case there is an error with the plist file
+    override func settingsToDefault() {
+        super.settingsToDefault()
+        settings["size"] = 8.0
+        settings["sizeUnits"] = 0
     }
     
     // Calculate the yarn required for a pair of mittens, where the length is

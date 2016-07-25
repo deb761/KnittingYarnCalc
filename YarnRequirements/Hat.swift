@@ -16,14 +16,34 @@ import Foundation
 class Toque : Project {
     
     // Finished size around the head
-    var size:Double = 23.0;
+    var size:Double {
+        get {
+            return settings["size"] as! Double
+        }
+        set {
+            settings["size"] = newValue
+        }
+    }
     // Units for head size
-    var sizeUnits:ShortLengthUnits = ShortLengthUnits.Inches;
+    var sizeUnits:ShortLengthUnits {
+        get {
+            return ShortLengthUnits(rawValue: settings["sizeUnits"] as! Int)!
+        }
+        set {
+            settings["sizeUnits"] = newValue.rawValue
+        }
+    }
     
     // provide a means of defining a project name and image
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = HatController()
+    }
+    // Fill in settings in case there is an error with the plist file
+    override func settingsToDefault() {
+        super.settingsToDefault()
+        settings["size"] = 23.0
+        settings["sizeUnits"] = 0
     }
     
     // Calculate the yarn required for a toque, where the total length is

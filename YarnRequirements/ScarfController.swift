@@ -48,6 +48,10 @@ class ScarfController: BaseProjectController {
 
         txtWidth.text = String(scarf.width)
         txtWidth.addTarget(self, action: #selector(ScarfController.changeWidth(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+
+        // Set initial value for pickers
+        pkLengthUnits.selectRow(scarf.lengthUnits.rawValue, inComponent: 0, animated: false)
+        pkWidthUnits.selectRow(scarf.widthUnits.rawValue, inComponent: 0, animated: false)
     }
 
     

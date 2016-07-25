@@ -12,14 +12,34 @@ import UIKit
 // This class defines the parameters and performs the calculations for a sweater project
 class Sweater : Project {
     // Finished size around the chest
-    var chestSize:Double = 40.0;
+    var size:Double {
+        get {
+            return settings["size"] as! Double
+        }
+        set {
+            settings["size"] = newValue
+        }
+    }
     // Units for chest size
-    var chestUnits:ShortLengthUnits = ShortLengthUnits.Inches;
+    var sizeUnits:ShortLengthUnits {
+        get {
+            return ShortLengthUnits(rawValue: settings["sizeUnits"] as! Int)!
+        }
+        set {
+            settings["sizeUnits"] = newValue.rawValue
+        }
+    }
     
     // provide a means of defining a project name and image
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = SweaterController()
+    }
+    // Fill in settings in case there is an error with the plist file
+    override func settingsToDefault() {
+        super.settingsToDefault()
+        settings["size"] = 40.0
+        settings["sizeUnits"] = 0
     }
     
     // Calculate the yarn required for an adult size sweater.  Based on calculating the area
@@ -31,8 +51,8 @@ class Sweater : Project {
     // for women.
     override func calcYarnRequired()
     {
-        var chest = chestSize
-        if (chestUnits == .Inches) {
+        var chest = size
+        if (sizeUnits == .Inches) {
             chest *= Project.inches2cm
         }
         let intercept = -5559.8 // cm

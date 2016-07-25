@@ -35,8 +35,8 @@ class Vest: Sweater {
     // 1.2 * chest size
     override func calcYarnRequired()
     {
-        var width = chestSize;
-        if (chestUnits != ShortLengthUnits.CM)
+        var width = size;
+        if (sizeUnits != ShortLengthUnits.CM)
         {
             width *= Project.inches2cm
         }
