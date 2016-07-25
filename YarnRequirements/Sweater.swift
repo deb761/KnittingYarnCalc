@@ -11,22 +11,22 @@ import UIKit
 
 // This class defines the parameters and performs the calculations for a sweater project
 class Sweater : Project {
-    // Finished size around the chest
+    // chest size
     var size:Double {
         get {
-            return settings["size"] as! Double
+            return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
         }
         set {
-            settings["size"] = newValue
+            defs.setDouble(newValue, forKey: "\(name)-size")
         }
     }
     // Units for chest size
     var sizeUnits:ShortLengthUnits {
         get {
-            return ShortLengthUnits(rawValue: settings["sizeUnits"] as! Int)!
+            return defs.shortLengthUnitsForKey("\(name)-sizeUnits", def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
         }
         set {
-            settings["sizeUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
         }
     }
     
@@ -34,14 +34,10 @@ class Sweater : Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = SweaterController()
+        defaults["size"] = 40.0
+        defaults["sizeUnits"] = ShortLengthUnits.Inches.rawValue
     }
-    // Fill in settings in case there is an error with the plist file
-    override func settingsToDefault() {
-        super.settingsToDefault()
-        settings["size"] = 40.0
-        settings["sizeUnits"] = 0
-    }
-    
+
     // Calculate the yarn required for an adult size sweater.  Based on calculating the area
     // of a basic t-shaped sweater using a loose fit and standard body measurements from
     // YarnStandards.com.  The area is fairly linear with respect to finished chest measurement,

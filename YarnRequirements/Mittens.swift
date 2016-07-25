@@ -11,23 +11,23 @@ import Foundation
 
 // For now, treat mittens as a rectangle wrapped around the hand
 class Mittens : Project {
-    
-    // Finished size around the hand
+    // hand size around palm
     var size:Double {
         get {
-            return settings["size"] as! Double
+            return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
         }
         set {
-            settings["size"] = newValue
+            defs.setDouble(newValue, forKey: "\(name)-size")
         }
     }
     // Units for hand size
     var sizeUnits:ShortLengthUnits {
         get {
-            return ShortLengthUnits(rawValue: settings["sizeUnits"] as! Int)!
+            return defs.shortLengthUnitsForKey("\(name)-sizeUnits",
+                                              def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
         }
         set {
-            settings["sizeUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
         }
     }
     
@@ -35,14 +35,10 @@ class Mittens : Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = HandController()
+        defaults["size"] = 8.0
+        defaults["sizeUnits"] = 0
+        calcYarnRequired()
     }
-    // Fill in settings in case there is an error with the plist file
-    override func settingsToDefault() {
-        super.settingsToDefault()
-        settings["size"] = 8.0
-        settings["sizeUnits"] = 0
-    }
-    
     // Calculate the yarn required for a pair of mittens, where the length is
     // 1.3 * hand circumference
     override func calcYarnRequired()

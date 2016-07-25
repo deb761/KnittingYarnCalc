@@ -17,18 +17,35 @@ enum ShoeSizeUnits : Int {
 class Socks: Project {
    
     // Shoe size
-    var size:Double = 8.0;
+    var size:Double {
+        get {
+            return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
+        }
+        set {
+            defs.setDouble(newValue, forKey: "\(name)-size")
+        }
+    }
     // Units for chest size
-    var sizeUnits:ShoeSizeUnits = ShoeSizeUnits.Women
+    var sizeUnits:ShoeSizeUnits {
+        get {
+            return defs.shoeSizeUnitsForKey("\(name)-sizeUnits",
+                                               def: ShoeSizeUnits(rawValue: defaults["sizeUnits"] as! Int)!)
+        }
+        set {
+            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
+        }
+    }
     
     // provide a means of defining a project name and image
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         
         // socks normally use a finer yarn, so finer gauge
-        gauge = 32.0
+        defaults["gauge"] = 32.0
         // longer balls for fingering
-        ballSize = 200
+        defaults["ballSize"] = 200
+        defaults["size"] = 8.0
+        defaults["sizeUnits"] = ShoeSizeUnits.Women.rawValue
         // recalc yarn required with finer yarn
         calcYarnRequired()
         controller = SockController()
@@ -63,7 +80,7 @@ class Socks: Project {
         // We'll approximate the length of the sock as 1.75 times the length of the foot,
         // and add 0.5 * width for the the heel turn
         // and there are 2 feet, so multiply width by 2
-        calcYarnRequired(length * 1.75 + 0.5 * width, siWidth: width * 2)
+        calcYarnRequired(length * 1.75 - 0.5 * width, siWidth: width * 2)
     }
     var usChild = [
         // Infant sizes

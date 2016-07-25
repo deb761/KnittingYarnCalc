@@ -14,39 +14,39 @@ class Scarf: Project {
     // length of the scarf
     var length:Double {
         get {
-            return settings["length"] as! Double
+            return defs.doubleForKey("\(name)-length", def: defaults["length"] as! Double)
         }
         set {
-            settings["length"] = newValue
+            defs.setObject(newValue, forKey: "\(name)-length")
         }
     }
     // Units for length
     //var lengthUnits:ShortLengthUnits = ShortLengthUnits.Inches;
     var lengthUnits:ShortLengthUnits {
         get {
-            return ShortLengthUnits(rawValue: settings["lengthUnits"] as! Int)!
+            return defs.shortLengthUnitsForKey("\(name)-lengthUnits", def: ShortLengthUnits(rawValue: defaults["lengthUnits"] as! Int)!)
         }
         set {
-            settings["lengthUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-lengthUnits")
         }
     }
     
     // width of the scarf
     var width:Double {
         get {
-            return settings["width"] as! Double
+            return defs.doubleForKey("\(name)-width", def: defaults["width"] as! Double)
         }
         set {
-            settings["width"] = newValue
+            defs.setObject(newValue, forKey: "\(name)-width")
         }
     }
     // Units for length
     var widthUnits:ShortLengthUnits {
         get {
-            return ShortLengthUnits(rawValue: settings["widthUnits"] as! Int)!
+            return defs.shortLengthUnitsForKey("\(name)-widthUnits", def: ShortLengthUnits(rawValue: defaults["widthUnits"] as! Int)!)
         }
         set {
-            settings["widthUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-widthUnits")
         }
     }
 
@@ -57,14 +57,10 @@ class Scarf: Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = ScarfController()
-    }
-    // Fill in settings in case there is an error with the plist file
-    override func settingsToDefault() {
-        super.settingsToDefault()
-        settings["length"] = 72.0
-        settings["lengthUnits"] = 0
-        settings["width"] = 12.0
-        settings["widthUnits"] = 0
+        defaults["length"] = 72.0
+        defaults["lengthUnits"] = 0
+        defaults["width"] = 12.0
+        defaults["widthUnits"] = 0
     }
     // A blanket is a rectangle, so calculate yarn required using length and width
     override func calcYarnRequired()
@@ -89,11 +85,7 @@ class Blanket : Scarf {
     // provide a means of defining a project name and image
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
-    }
-    // Fill in settings in case there is an error with the plist file
-    override func settingsToDefault() {
-        super.settingsToDefault()
-        settings["width"] = 60.0
+        defaults["width"] = 60.0
     }
     // Blankets consistently need more yarn
     override func calcYarnRequired() {

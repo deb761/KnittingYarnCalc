@@ -14,23 +14,22 @@ import Foundation
 // |  |
 //
 class Toque : Project {
-    
-    // Finished size around the head
+    // head size around brow
     var size:Double {
         get {
-            return settings["size"] as! Double
+            return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
         }
         set {
-            settings["size"] = newValue
+            defs.setDouble(newValue, forKey: "\(name)-size")
         }
     }
     // Units for head size
     var sizeUnits:ShortLengthUnits {
         get {
-            return ShortLengthUnits(rawValue: settings["sizeUnits"] as! Int)!
+            return defs.shortLengthUnitsForKey("\(name)-sizeUnits", def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
         }
         set {
-            settings["sizeUnits"] = newValue.rawValue
+            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
         }
     }
     
@@ -38,12 +37,8 @@ class Toque : Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = HatController()
-    }
-    // Fill in settings in case there is an error with the plist file
-    override func settingsToDefault() {
-        super.settingsToDefault()
-        settings["size"] = 23.0
-        settings["sizeUnits"] = 0
+        defaults["size"] = 23.0
+        defaults["sizeUnits"] = ShortLengthUnits.Inches.rawValue
     }
     
     // Calculate the yarn required for a toque, where the total length is
@@ -53,7 +48,7 @@ class Toque : Project {
     // A=πr(r+sqrt(h^2+r^2))
     override func calcYarnRequired()
     {
-        //let tightness = 0.93
+        let tightness = 0.93
         let lengthCylF = 0.1
         let coneheightF = 0.5
         var width = size
@@ -63,7 +58,7 @@ class Toque : Project {
         }
         let lengthCyl = width * lengthCylF
         // apply tightness factor
-        //width *= tightness
+        width *= tightness
         let rad = width / M_PI / 2.0
         let coneHeight = coneheightF * width
         // calculate cone area

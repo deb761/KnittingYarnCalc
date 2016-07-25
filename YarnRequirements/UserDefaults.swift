@@ -10,6 +10,14 @@ import Foundation
 import UIKit
 
 extension NSUserDefaults {
+    func gaugeUnitsForKey(key: String, def: GaugeUnits) -> GaugeUnits {
+        if let value = objectForKey(key) as? Int {
+            return GaugeUnits(rawValue: value)!
+        } else {
+            setObject(def.rawValue, forKey: key)
+            return def
+        }
+    }
     func longLengthUnitsForKey(key: String, def: LongLengthUnits) -> LongLengthUnits {
         if let value = objectForKey(key) as? Int {
             return LongLengthUnits(rawValue: value)!
@@ -26,6 +34,14 @@ extension NSUserDefaults {
             return def
         }
     }
+    func shoeSizeUnitsForKey(key: String, def: ShoeSizeUnits) -> ShoeSizeUnits {
+        if let value = objectForKey(key) as? Int {
+            return ShoeSizeUnits(rawValue: value)!
+        } else {
+            setObject(def.rawValue, forKey: key)
+            return def
+        }
+    }
     func doubleForKey(key: String, def: Double) -> Double {
         if let value = objectForKey(key) as? Double {
             return value
@@ -34,7 +50,7 @@ extension NSUserDefaults {
             return def
         }
     }
-    func intForKey(key: String, def: Int) -> Int {
+    func integerForKey(key: String, def: Int) -> Int {
         if let value = objectForKey(key) as? Int {
             return value
         } else {

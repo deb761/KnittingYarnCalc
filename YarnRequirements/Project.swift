@@ -35,7 +35,7 @@ class Project {
     // guage of the project
     var gauge:Double {
         get {
-            return defs.doubleForKey("\(name)-gauge", def: defaults["gauge"])
+            return defs.doubleForKey("\(name)-gauge", def: defaults["gauge"] as! Double)
         }
         set {
             defs.setDouble(newValue, forKey: "\(name)-gauge")
@@ -44,18 +44,13 @@ class Project {
     // units for the gauge
     var gaugeUnits:GaugeUnits {
         get {
-            if let value = defs.objectForKey("\(name)-gaugeUnits") as? Int {
-                return GaugeUnits(rawValue: value)!
-            } else {
-                let value = defaults["gaugeUnits"] as! GaugeUnits
-                defs.setObject(value.rawValue, forKey: "\(name)-gaugeUnits")
-                return value
-            }
+            return defs.gaugeUnitsForKey("\(name)-gaugeUnits", def: GaugeUnits(rawValue: defaults["gaugeUnits"] as! Int)!)
         }
         set {
             defs.setObject(newValue.rawValue, forKey: "\(name)-gaugeUnits")
         }
     }
+    // size is used by most projects
     // The units for yarn needed
     var yarnNeededUnits:LongLengthUnits {
         get {
@@ -69,7 +64,7 @@ class Project {
     // The ball size in ballSizeUnits
     var ballSize:Int {
         get {
-            return defs.doubleForKey("\(name)-ballSize", def: defaults["ballSize"] as! Double)
+            return defs.integerForKey("\(name)-ballSize", def: defaults["ballSize"] as! Int)
         }
         set {
             defs.setInteger(newValue, forKey: "\(name)-ballSize")
@@ -108,7 +103,7 @@ class Project {
         self.controller = BaseProjectController()
         defaults = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
                      "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]
-        calcYarnRequired()
+        //calcYarnRequired()
     }
     // Read the plist for this project and fill in the settings
     func readPlist() {
