@@ -57,6 +57,9 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         nameStack!.translatesAutoresizingMaskIntoConstraints = false
         lblName.text = project.name
         lblName.widthAnchor.constraintEqualToConstant(50)
+        lblName.textColor = DimensionRow.lblColor
+        lblName.font = lblName.font.fontWithSize(20)
+
         projectImg.image = project.image
         projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 178))
         projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 193))
@@ -86,7 +89,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         mainStack!.axis = .Vertical
         mainStack!.distribution =  UIStackViewDistribution.EqualSpacing
         mainStack!.alignment = .Fill
-        mainStack!.spacing = 0
+        //mainStack!.spacing = -5
         mainStack!.translatesAutoresizingMaskIntoConstraints = false
         let height = view.bounds.height
         let width = view.bounds.width

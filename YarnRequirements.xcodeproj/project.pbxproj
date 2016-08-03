@@ -40,7 +40,6 @@
 		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
 		87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
-		87DABAA11CE7EBF4009DD3B1 /* ProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA01CE7EBF4009DD3B1 /* ProjectsController.swift */; };
 		87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */; };
 		87DABAA61CE7EBF4009DD3B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */; };
 		87DABAA81CE7EBF4009DD3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */; };
@@ -114,7 +113,6 @@
 		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		87DABA9B1CE7EBF4009DD3B1 /* YarnRequirements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YarnRequirements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		87DABAA01CE7EBF4009DD3B1 /* ProjectsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsController.swift; sourceTree = "<group>"; };
 		87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsController.swift; sourceTree = "<group>"; };
 		87DABAA51CE7EBF4009DD3B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */,
-				87DABAA01CE7EBF4009DD3B1 /* ProjectsController.swift */,
 				87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */,
 				87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */,
 				8791477E1D0CB5A400DE5B94 /* Resources */,
@@ -439,7 +436,6 @@
 				8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */,
 				87FC3F501CFB75C600416BE2 /* ScarfController.swift in Sources */,
 				87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */,
-				87DABAA11CE7EBF4009DD3B1 /* ProjectsController.swift in Sources */,
 				87E536DE1CFBFB6E00BE9735 /* Socks.swift in Sources */,
 				87E536DB1CFBF9EE00BE9735 /* Hat.swift in Sources */,
 				87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */,

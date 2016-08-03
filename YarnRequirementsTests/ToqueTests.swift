@@ -33,14 +33,16 @@ class ToqueTests: XCTestCase {
             // Lion Brand site yardage estimates
             PatternInfo(name: "Handy preemie, gauge 3", gauge: 3, size: 15, yarn: 38),
             PatternInfo(name: "Handy 0-6 months, gauge 3", gauge: 3, size: 16.5, yarn: 47),
-            PatternInfo(name: "Handy 6-18 months, gauge 3", gauge: 3, size: 18.5, yarn: 68),
-            PatternInfo(name: "Handy 18 months - 4 years, gauge 3", gauge: 3, size: 20, yarn: 88),
-            PatternInfo(name: "Handy 4 years - adult S, gauge 3", gauge: 3, size: 21, yarn: 107),
-            PatternInfo(name: "Handy adult M-L, gauge 3", gauge: 3, size: 23, yarn: 131),
-            PatternInfo(name: "Handy preemie, gauge 9", gauge: 9, size: 15, yarn: 126),
-            PatternInfo(name: "Handy 0-6 months, gauge 9", gauge: 9, size: 16.5, yarn: 158),
-            PatternInfo(name: "Handy 6-18 months, gauge 9", gauge: 9, size: 18.5, yarn: 229),
-            PatternInfo(name: "Handy 18 months - 4 years, gauge 9", gauge: 9, size: 20, yarn: 296),
+            // http://stitcheryprojects.com/2011/03/21/basic-baby-hat/ size 12
+            PatternInfo(name: "Basic baby hat sample, 12 month, gauge 3", gauge: 3, size: 18.5, yarn: 60),
+            // http://stitcheryprojects.com/2011/03/21/basic-baby-hat/ size Toddler
+            PatternInfo(name: "Basic baby hat sample, toddler, gauge 3", gauge: 3, size: 20, yarn: 70),
+            PatternInfo(name: "Basic baby hat sample, youth estimate, gauge 3", gauge: 3, size: 21, yarn: 80),
+            PatternInfo(name: "My Favorite Ribbed Hat, gauge 4.25", gauge: 4.25, size: 24, yarn: 138),
+            PatternInfo(name: "Basic baby hat sample, gauge 9", gauge: 9, size: 12, yarn: 87),
+            //PatternInfo(name: "Handy 0-6 months, gauge 9", gauge: 9, size: 16.5, yarn: 158),
+            //PatternInfo(name: "Handy 6-18 months, gauge 9", gauge: 9, size: 18.5, yarn: 229),
+            //PatternInfo(name: "Handy 18 months - 4 years, gauge 9", gauge: 9, size: 20, yarn: 296),
             //PatternInfo(name: "Handy 4 years - adult S, gauge 9", gauge: 9, size: 21, yarn: 361), //other calculations are greater, most >20% more
             //PatternInfo(name: "Handy adult M-L, gauge 9", gauge: 9, size: 23, yarn: 441), //others calculations are greater
         ]
@@ -50,8 +52,8 @@ class ToqueTests: XCTestCase {
             toque.gauge = test.gauge
             toque.calcYarnRequired()
             
-            //XCTAssertGreaterThanOrEqual(toque.yarnNeeded, test.yarn, "\(test.name): Yarn calculated is less than expected")
-            XCTAssertEqualWithAccuracy(Double(toque.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.2, "\(test.name): Yarn calculated is more than 10% off from expected")
+            XCTAssertGreaterThanOrEqual(toque.yarnNeeded, test.yarn, "\(test.name): Yarn calculated is less than expected")
+            XCTAssertEqualWithAccuracy(Double(toque.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.1, "\(test.name): Yarn calculated is more than 10% off from expected")
             
         }
     }
@@ -77,7 +79,7 @@ class ToqueTests: XCTestCase {
             toque.ballSize = test.ballSize
             toque.calcYarnRequired()
             
-            XCTAssertGreaterThanOrEqual(Int(ceil(toque.ballsNeeded)), test.balls, "\(test.name): Yarn calculated is less than expected")
+            XCTAssertGreaterThanOrEqual(Int(ceil(toque.ballsNeeded)), test.balls, "\(test.name): Balls needed are less than expected")
         }
         
     }

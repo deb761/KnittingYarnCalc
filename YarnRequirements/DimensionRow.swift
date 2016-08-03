@@ -15,11 +15,14 @@ class DimensionRow {
     var lblName:UILabel!
     var txtVal:UITextField!
     var picker:UIPickerView!
+    // 020459
+    static let lblColor = UIColor(colorLiteralRed: 2.0/255.0, green: 4.0/255.0, blue: Float(0x59)/255.0, alpha: 1.0)
     
     init(name:String, picker:UIPickerView, delegate:UITextFieldDelegate) {
         // Create the label and assign it the input text
         lblName = UILabel()
         lblName.text = name + ":"
+        lblName.textColor = DimensionRow.lblColor
         lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 110))
         
         // Define the txtField with a defined width

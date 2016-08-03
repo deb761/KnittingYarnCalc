@@ -48,8 +48,8 @@ class Toque : Project {
     // A=πr(r+sqrt(h^2+r^2))
     override func calcYarnRequired()
     {
-        let tightness = 0.93
-        let lengthCylF = 0.1
+        let tightness = 0.8
+        let lengthCylF = 0.15
         let coneheightF = 0.5
         var width = size
         if (sizeUnits != ShortLengthUnits.CM)
@@ -74,7 +74,7 @@ class Toque : Project {
 // Tams are also hats, so base them off of Toques.  Toques are this shape:
 //
 //   ----
-//  |    |   Actually, this diagram is stretched a bit vertically
+//  |    |
 //   -__-
 class Tam : Toque {
     // Calculate the yarn required for a tam
