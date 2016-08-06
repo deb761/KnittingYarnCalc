@@ -52,6 +52,9 @@ class HandController: BaseProjectController {
         default:
             super.pickerView(pickerView, didSelectRow: row, inComponent: component)
         }
+        txtGauge.endEditing(true)
+        txtSize.endEditing(true)
+        txtBallSize.endEditing(true)
         project.calcYarnRequired()
         UpdateText()
     }

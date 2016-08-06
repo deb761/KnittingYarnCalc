@@ -61,6 +61,8 @@ class Scarf: Project {
         defaults["lengthUnits"] = 0
         defaults["width"] = 12.0
         defaults["widthUnits"] = 0
+        
+        calcYarnRequired()
     }
     // A blanket is a rectangle, so calculate yarn required using length and width
     override func calcYarnRequired()
@@ -86,6 +88,7 @@ class Blanket : Scarf {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         defaults["width"] = 60.0
+        calcYarnRequired()
     }
     // Blankets consistently need more yarn
     override func calcYarnRequired() {

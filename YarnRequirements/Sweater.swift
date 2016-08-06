@@ -36,6 +36,7 @@ class Sweater : Project {
         controller = SweaterController()
         defaults["size"] = 40.0
         defaults["sizeUnits"] = ShortLengthUnits.Inches.rawValue
+        calcYarnRequired()
     }
 
     // Calculate the yarn required for an adult size sweater.  Based on calculating the area

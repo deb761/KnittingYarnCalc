@@ -66,6 +66,10 @@ class ScarfController: BaseProjectController {
         default:
             super.pickerView(pickerView, didSelectRow: row, inComponent: component)
         }
+        txtGauge.endEditing(true)
+        txtLength.endEditing(true)
+        txtWidth.endEditing(true)
+        txtBallSize.endEditing(true)
         project.calcYarnRequired()
         UpdateText()
     }

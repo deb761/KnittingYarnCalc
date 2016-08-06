@@ -28,70 +28,508 @@ class YarnRequirementsUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testMittens() {
-        
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        let app = XCUIApplication()
-        app.collectionViews.images["Mittens"].tap()
-        
-        let scrollViewsQuery = app.scrollViews
-        let element = scrollViewsQuery.childrenMatchingType(.Other).element
-        let gauge = element.childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.TextField).element
-        gauge.tap()
-        
-        let deleteKey = app.keys["Delete"]
-        deleteKey.tap()
-        deleteKey.tap()
-        deleteKey.tap()
-        deleteKey.tap()
-        scrollViewsQuery.otherElements.textFields.containingType(.Button, identifier:"Clear text").element
-        gauge.typeText("6.0")
-        
-        let yarn = element.childrenMatchingType(.Other).elementBoundByIndex(3).childrenMatchingType(.TextField).element
-        yarn.tap()
-        XCTAssertEqual(yarn.value as? String, "251")
-        let balls = element.childrenMatchingType(.Other).elementBoundByIndex(5).childrenMatchingType(.TextField).element
-        XCTAssertEqual(balls.value as? String, "2", "Balls do not match")
-    }
     
-    func testPickers() {
+    func testMittens() {
         
         let app = XCUIApplication()
         app.collectionViews.images["Mittens"].tap()
         
         let scrollViewsQuery = app.scrollViews
         let elementsQuery = scrollViewsQuery.otherElements
-        let sizeUnits = elementsQuery.pickerWheels["sts/inch"]
-        sizeUnits.adjustToPickerWheelValue("sts/4inch")
         
-        XCTAssertEqual(sizeUnits.value as? String, "sts/4inch")
+        XCTAssertNotNil(elementsQuery.staticTexts["Mittens"])
+        XCTAssertNotNil(elementsQuery.images["Mittens"])
         
-        let sts4inchPickerWheel = elementsQuery.pickerWheels["sts/4inch"]
-        sts4inchPickerWheel.tap()
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let sizeUnits = pickerQuery.elementBoundByIndex(1)
+        let yarnUnits = pickerQuery.elementBoundByIndex(2)
+        let ballUnits = pickerQuery.elementBoundByIndex(3)
+        let ballFract = pickerQuery.elementBoundByIndex(4)
+
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let size = textQuery.elementBoundByIndex(1)
+        let yarn = textQuery.elementBoundByIndex(2)
+        let ballSize = textQuery.elementBoundByIndex(3)
+        let balls = textQuery.elementBoundByIndex(4)
+
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
         
-        let sts10cmPickerWheel = elementsQuery.pickerWheels["sts/10cm"]
-        sts10cmPickerWheel.tap()
-        sts10cmPickerWheel.tap()
-        sts4inchPickerWheel.tap()
-        elementsQuery.pickerWheels["inches"].tap()
+        gauge.clearAndEnterText("6.0")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
         
-        let cmPickerWheel = elementsQuery.pickerWheels["cm"]
-        cmPickerWheel.tap()
-        cmPickerWheel.tap()
+        size.clearAndEnterText("22")
+        sizeUnits.adjustToPickerWheelValue("inches")
+        sizeUnits.adjustToPickerWheelValue("cm")
         
-        let element = scrollViewsQuery.childrenMatchingType(.Other).element
-        element.childrenMatchingType(.Other).elementBoundByIndex(3).pickerWheels["yards"].tap()
+        yarnUnits.adjustToPickerWheelValue("meters")
+        yarnUnits.adjustToPickerWheelValue("yards")
+        ballSize.clearAndEnterText("210")
+        ballUnits.adjustToPickerWheelValue("meters")
+        ballUnits.adjustToPickerWheelValue("yards")
         
-        let metersPickerWheel = elementsQuery.pickerWheels["meters"]
-        metersPickerWheel.tap()
-        element.childrenMatchingType(.Other).elementBoundByIndex(4).pickerWheels["yards"].tap()
-        metersPickerWheel.tap()
-        element.tap()
-        elementsQuery.pickerWheels["Whole"].tap()
-        elementsQuery.pickerWheels["Partial"].tap()
+        ballFract.adjustToPickerWheelValue("Partial")
+        ballFract.adjustToPickerWheelValue("Whole")
+        
+        XCTAssertEqual(yarn.value as? String, "64", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "1", "Num Balls do not match")
         
     }
     
+    func testGloves() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Gloves"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Gloves"])
+        XCTAssertNotNil(elementsQuery.images["Gloves"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let sizeUnits = pickerQuery.elementBoundByIndex(1)
+        let yarnUnits = pickerQuery.elementBoundByIndex(2)
+        let ballUnits = pickerQuery.elementBoundByIndex(3)
+        let ballFract = pickerQuery.elementBoundByIndex(4)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let size = textQuery.elementBoundByIndex(1)
+        let yarn = textQuery.elementBoundByIndex(2)
+        let ballSize = textQuery.elementBoundByIndex(3)
+        let balls = textQuery.elementBoundByIndex(4)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("7.25")
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        
+        size.clearAndEnterText("7.0")
+        sizeUnits.adjustToPickerWheelValue("cm")
+        sizeUnits.adjustToPickerWheelValue("inches")
+        
+        yarnUnits.adjustToPickerWheelValue("meters")
+        yarnUnits.adjustToPickerWheelValue("yards")
+        ballSize.clearAndEnterText("200")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "184", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "0.8", "Num Balls do not match")
+    }
+    
+    func testSocks() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Socks"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Socks"])
+        XCTAssertNotNil(elementsQuery.images["Socks"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let sizeUnits = pickerQuery.elementBoundByIndex(1)
+        let yarnUnits = pickerQuery.elementBoundByIndex(2)
+        let ballUnits = pickerQuery.elementBoundByIndex(3)
+        let ballFract = pickerQuery.elementBoundByIndex(4)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let size = textQuery.elementBoundByIndex(1)
+        let yarn = textQuery.elementBoundByIndex(2)
+        let ballSize = textQuery.elementBoundByIndex(3)
+        let balls = textQuery.elementBoundByIndex(4)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("9")
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        
+        size.clearAndEnterText("49")
+        sizeUnits.adjustToPickerWheelValue("US Child")
+        sizeUnits.adjustToPickerWheelValue("US Youth")
+        sizeUnits.adjustToPickerWheelValue("US Women")
+        sizeUnits.adjustToPickerWheelValue("US Men")
+        sizeUnits.adjustToPickerWheelValue("Euro")
+        
+        yarnUnits.adjustToPickerWheelValue("meters")
+        yarnUnits.adjustToPickerWheelValue("yards")
+        ballSize.clearAndEnterText("200")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "574", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "2.6", "Num Balls do not match")
+    }
+    
+    func testTam() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Tam"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Tam"])
+        XCTAssertNotNil(elementsQuery.images["Tam"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let sizeUnits = pickerQuery.elementBoundByIndex(1)
+        let yarnUnits = pickerQuery.elementBoundByIndex(2)
+        let ballUnits = pickerQuery.elementBoundByIndex(3)
+        let ballFract = pickerQuery.elementBoundByIndex(4)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let size = textQuery.elementBoundByIndex(1)
+        let yarn = textQuery.elementBoundByIndex(2)
+        let ballSize = textQuery.elementBoundByIndex(3)
+        let balls = textQuery.elementBoundByIndex(4)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("9")
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        
+        size.clearAndEnterText("22")
+        sizeUnits.adjustToPickerWheelValue("cm")
+        sizeUnits.adjustToPickerWheelValue("inches")
+        
+        yarnUnits.adjustToPickerWheelValue("meters")
+        yarnUnits.adjustToPickerWheelValue("yards")
+        ballSize.clearAndEnterText("210")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "360", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "1.6", "Num Balls do not match")
+    }
+    
+    func testToque() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Toque"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Toque"])
+        XCTAssertNotNil(elementsQuery.images["Toque"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let sizeUnits = pickerQuery.elementBoundByIndex(1)
+        let yarnUnits = pickerQuery.elementBoundByIndex(2)
+        let ballUnits = pickerQuery.elementBoundByIndex(3)
+        let ballFract = pickerQuery.elementBoundByIndex(4)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let size = textQuery.elementBoundByIndex(1)
+        let yarn = textQuery.elementBoundByIndex(2)
+        let ballSize = textQuery.elementBoundByIndex(3)
+        let balls = textQuery.elementBoundByIndex(4)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("9")
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        
+        size.clearAndEnterText("22")
+        sizeUnits.adjustToPickerWheelValue("cm")
+        sizeUnits.adjustToPickerWheelValue("inches")
+        
+        yarnUnits.adjustToPickerWheelValue("meters")
+        yarnUnits.adjustToPickerWheelValue("yards")
+        ballSize.clearAndEnterText("200")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "285", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "1.3", "Num Balls do not match")
+    }
+    
+    func testSweater() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Sweater"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Sweater"])
+        XCTAssertNotNil(elementsQuery.images["Sweater"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let sizeUnits = pickerQuery.elementBoundByIndex(1)
+        let yarnUnits = pickerQuery.elementBoundByIndex(2)
+        let ballUnits = pickerQuery.elementBoundByIndex(3)
+        let ballFract = pickerQuery.elementBoundByIndex(4)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let size = textQuery.elementBoundByIndex(1)
+        let yarn = textQuery.elementBoundByIndex(2)
+        let ballSize = textQuery.elementBoundByIndex(3)
+        let balls = textQuery.elementBoundByIndex(4)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("5")
+        yarn.tap()
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        
+        size.clearAndEnterText("38")
+        sizeUnits.adjustToPickerWheelValue("cm")
+        sizeUnits.adjustToPickerWheelValue("inches")
+        
+        yarnUnits.adjustToPickerWheelValue("meters")
+        yarnUnits.adjustToPickerWheelValue("yards")
+        ballSize.clearAndEnterText("120")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "1504", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "11.5", "Num Balls do not match")
+    }
+    
+    func testVest() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Vest"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Vest"])
+        XCTAssertNotNil(elementsQuery.images["Vest"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let sizeUnits = pickerQuery.elementBoundByIndex(1)
+        let yarnUnits = pickerQuery.elementBoundByIndex(2)
+        let ballUnits = pickerQuery.elementBoundByIndex(3)
+        let ballFract = pickerQuery.elementBoundByIndex(4)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let size = textQuery.elementBoundByIndex(1)
+        let yarn = textQuery.elementBoundByIndex(2)
+        let ballSize = textQuery.elementBoundByIndex(3)
+        let balls = textQuery.elementBoundByIndex(4)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("28")
+        yarn.tap()
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        
+        size.clearAndEnterText("120")
+        sizeUnits.adjustToPickerWheelValue("inches")
+        sizeUnits.adjustToPickerWheelValue("cm")
+        
+        yarnUnits.adjustToPickerWheelValue("yards")
+        yarnUnits.adjustToPickerWheelValue("meters")
+        ballSize.clearAndEnterText("120")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "1561", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "13.0", "Num Balls do not match")
+    }
+    
+    func testScarf() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Scarf"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Scarf"])
+        XCTAssertNotNil(elementsQuery.images["Scarf"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let lengthUnits = pickerQuery.elementBoundByIndex(1)
+        let widthUnits = pickerQuery.elementBoundByIndex(2)
+        let yarnUnits = pickerQuery.elementBoundByIndex(3)
+        let ballUnits = pickerQuery.elementBoundByIndex(4)
+        let ballFract = pickerQuery.elementBoundByIndex(5)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let length = textQuery.elementBoundByIndex(1)
+        let width = textQuery.elementBoundByIndex(2)
+        let yarn = textQuery.elementBoundByIndex(3)
+        let ballSize = textQuery.elementBoundByIndex(4)
+        let balls = textQuery.elementBoundByIndex(5)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("19")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        
+        length.clearAndEnterText("54")
+        lengthUnits.adjustToPickerWheelValue("cm")
+        lengthUnits.adjustToPickerWheelValue("inches")
+        
+        width.clearAndEnterText("8.5")
+        widthUnits.adjustToPickerWheelValue("cm")
+        widthUnits.adjustToPickerWheelValue("inches")
+        
+        yarnUnits.adjustToPickerWheelValue("meters")
+        yarnUnits.adjustToPickerWheelValue("yards")
+        ballSize.clearAndEnterText("120")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "425", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "3.2", "Num Balls do not match")
+    }
+    
+    func testBlanket() {
+        
+        let app = XCUIApplication()
+        app.collectionViews.images["Blanket"].tap()
+        
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        
+        XCTAssertNotNil(elementsQuery.staticTexts["Blanket"])
+        XCTAssertNotNil(elementsQuery.images["Blanket"])
+        
+        let pickerQuery = elementsQuery.pickerWheels
+        let gaugeUnits = pickerQuery.elementBoundByIndex(0)
+        let lengthUnits = pickerQuery.elementBoundByIndex(1)
+        let widthUnits = pickerQuery.elementBoundByIndex(2)
+        let yarnUnits = pickerQuery.elementBoundByIndex(3)
+        let ballUnits = pickerQuery.elementBoundByIndex(4)
+        let ballFract = pickerQuery.elementBoundByIndex(5)
+        
+        let textQuery = elementsQuery.textFields
+        let gauge = textQuery.elementBoundByIndex(0)
+        let length = textQuery.elementBoundByIndex(1)
+        let width = textQuery.elementBoundByIndex(2)
+        let yarn = textQuery.elementBoundByIndex(3)
+        let ballSize = textQuery.elementBoundByIndex(4)
+        let balls = textQuery.elementBoundByIndex(5)
+        
+        XCTAssertNotEqual(yarn.value as? String, "1000", "Yarn not updated")
+        
+        gauge.clearAndEnterText("20")
+        gaugeUnits.adjustToPickerWheelValue("sts/10cm")
+        gaugeUnits.adjustToPickerWheelValue("sts/inch")
+        gaugeUnits.adjustToPickerWheelValue("sts/4inch")
+        
+        length.clearAndEnterText("72")
+        lengthUnits.adjustToPickerWheelValue("cm")
+        lengthUnits.adjustToPickerWheelValue("inches")
+        
+        width.clearAndEnterText("60")
+        widthUnits.adjustToPickerWheelValue("cm")
+        widthUnits.adjustToPickerWheelValue("inches")
+        
+        yarnUnits.adjustToPickerWheelValue("yards")
+        yarnUnits.adjustToPickerWheelValue("meters")
+        ballSize.clearAndEnterText("150")
+        ballUnits.adjustToPickerWheelValue("yards")
+        ballUnits.adjustToPickerWheelValue("meters")
+        
+        ballFract.adjustToPickerWheelValue("Whole")
+        ballFract.adjustToPickerWheelValue("Partial")
+        
+        XCTAssertEqual(yarn.value as? String, "4507", "Yarn does not match")
+        XCTAssertEqual(balls.value as? String, "30.0", "Num Balls do not match")
+    }
+    /* Verify the navigation elements work */
+    func testNavigation() {
+    
+        let app = XCUIApplication()
+        let projectsStaticText = app.navigationBars["Projects"].staticTexts["Projects"]
+        XCTAssertNotNil(projectsStaticText)
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Weights"].tap()
+        XCTAssertNotNil(app.tables.staticTexts["Fingering"])
+
+        tabBarsQuery.buttons["Info"].tap()
+        let copyright = app.staticTexts["© Deborah Engelmeyer, The Inquisitive Introvert, 2016"]
+        XCTAssertNotNil(copyright)
+        
+        tabBarsQuery.buttons["Home"].tap()
+        XCTAssertNotNil(projectsStaticText)
+    
+    }
+    /* This is my attempt at automating verifying the icon8 link on the info page.
+       The test does not work - it gets hung when the app passes to Safari */
+    func testIcons() {
+        
+        let app = XCUIApplication()
+        app.tabBars.buttons["Info"].tap()
+        app.buttons["Icon8"].tap()
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        
+        let url = app.otherElements["URL"]
+        let exists = NSPredicate(format: "exists == true")
+        expectationForPredicate(exists, evaluatedWithObject: url, handler: nil)
+        
+        waitForExpectationsWithTimeout(55, handler: nil)
+
+        XCTAssertEqual(url.value as? String, "ww12.icons8.com", "Wrong URL")
+
+        app.statusBars.buttons["Back to Yarn Reqmts"].tap()
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        XCUIDevice.sharedDevice().orientation = .Portrait
+
+        /*let copyright = app.staticTexts["© Deborah Engelmeyer, The Inquisitive Introvert, 2016"]
+        XCTAssertNotNil(copyright)*/
+        
+    }
 }

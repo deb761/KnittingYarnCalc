@@ -37,6 +37,7 @@
 		879E37EA1D4562C200F17156 /* Socks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E91D4562C200F17156 /* Socks.plist */; };
 		879E37EC1D45641600F17156 /* Toque.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37EB1D45641600F17156 /* Toque.plist */; };
 		879E37EE1D45643F00F17156 /* Tam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37ED1D45643F00F17156 /* Tam.plist */; };
+		87A198D81D56717D00A9046E /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A198D71D56717D00A9046E /* XCUIElement.swift */; };
 		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
 		87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
@@ -109,6 +110,7 @@
 		879E37E91D4562C200F17156 /* Socks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Socks.plist; sourceTree = "<group>"; };
 		879E37EB1D45641600F17156 /* Toque.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Toque.plist; sourceTree = "<group>"; };
 		879E37ED1D45643F00F17156 /* Tam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tam.plist; sourceTree = "<group>"; };
+		87A198D71D56717D00A9046E /* XCUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		87DABA9B1CE7EBF4009DD3B1 /* YarnRequirements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YarnRequirements.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +267,7 @@
 			children = (
 				87DABAC01CE7EBF4009DD3B1 /* YarnRequirementsUITests.swift */,
 				87DABAC21CE7EBF4009DD3B1 /* Info.plist */,
+				87A198D71D56717D00A9046E /* XCUIElement.swift */,
 			);
 			path = YarnRequirementsUITests;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87DABAC11CE7EBF4009DD3B1 /* YarnRequirementsUITests.swift in Sources */,
+				87A198D81D56717D00A9046E /* XCUIElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

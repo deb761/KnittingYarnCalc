@@ -39,6 +39,7 @@ class Toque : Project {
         controller = HatController()
         defaults["size"] = 23.0
         defaults["sizeUnits"] = ShortLengthUnits.Inches.rawValue
+        calcYarnRequired()
     }
     
     // Calculate the yarn required for a toque, where the total length is

@@ -153,6 +153,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BaseProjectController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        view.endEditing(true)
     }
     
     func dismissKeyboard() {
@@ -275,6 +276,8 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
             project.partialBalls = Bool(row)
         default: break
         }
+        txtGauge.endEditing(true)
+        txtBallSize.endEditing(true)
         project.calcYarnRequired()
         UpdateText()
     }
