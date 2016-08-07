@@ -28,7 +28,8 @@ class YarnRequirementsUITests: XCTestCase {
         super.tearDown()
     }
     
-    
+    /* Test the Mittens page to verify that all the pickers work as expected and the correct label
+       and image are shown. */
     func testMittens() {
         
         let app = XCUIApplication()
@@ -79,6 +80,8 @@ class YarnRequirementsUITests: XCTestCase {
         
     }
     
+    /* Test the Gloves page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testGloves() {
         
         let app = XCUIApplication()
@@ -128,6 +131,8 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(balls.value as? String, "0.8", "Num Balls do not match")
     }
     
+    /* Test the Socks page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testSocks() {
         
         let app = XCUIApplication()
@@ -180,6 +185,8 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(balls.value as? String, "2.6", "Num Balls do not match")
     }
     
+    /* Test the Tam page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testTam() {
         
         let app = XCUIApplication()
@@ -229,6 +236,8 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(balls.value as? String, "1.6", "Num Balls do not match")
     }
     
+    /* Test the Toque page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testToque() {
         
         let app = XCUIApplication()
@@ -278,6 +287,8 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(balls.value as? String, "1.3", "Num Balls do not match")
     }
     
+    /* Test the Sweater page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testSweater() {
         
         let app = XCUIApplication()
@@ -328,6 +339,8 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(balls.value as? String, "11.5", "Num Balls do not match")
     }
     
+    /* Test the Vest page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testVest() {
         
         let app = XCUIApplication()
@@ -378,6 +391,8 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(balls.value as? String, "13.0", "Num Balls do not match")
     }
     
+    /* Test the Scarf page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testScarf() {
         
         let app = XCUIApplication()
@@ -433,6 +448,8 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(balls.value as? String, "3.2", "Num Balls do not match")
     }
     
+    /* Test the Blanket page to verify that all the pickers work as expected and the correct label
+     and image are shown. */
     func testBlanket() {
         
         let app = XCUIApplication()
