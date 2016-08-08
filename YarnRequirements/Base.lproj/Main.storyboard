@@ -118,37 +118,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-rU-tCZ">
-                                <rect key="frame" x="40" y="40" width="520" height="311"/>
+                            <stackView opaque="NO" contentMode="top" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-rU-tCZ">
+                                <rect key="frame" x="40" y="40" width="520" height="142"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2016" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2016" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sweater and vest sizing based on Standard Body Measurements published by Craft Yarn Council." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0c-Ke-06I" userLabel="sweater credit">
-                                        <rect key="frame" x="0.0" y="87" width="520" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sweater and vest sizing based on Standard Body Measurements published by Craft Yarn Council." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0c-Ke-06I" userLabel="sweater credit">
+                                        <rect key="frame" x="0.0" y="31" width="520" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Yarn estimates based on calculations by The Inquisitive Introvert." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-77-ggg" userLabel="scarf and blanket credit">
-                                        <rect key="frame" x="0.0" y="194" width="520" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Yarn estimates based on calculations by The Inquisitive Introvert." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-77-ggg" userLabel="scarf and blanket credit">
+                                        <rect key="frame" x="0.0" y="82" width="520" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KmY-ML-HMB" userLabel="Icon Stack">
-                                        <rect key="frame" x="0.0" y="281" width="520" height="30"/>
+                                        <rect key="frame" x="0.0" y="112" width="520" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Icons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-sh-cFH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-sh-cFH">
                                                 <rect key="frame" x="0.0" y="0.0" width="252" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqS-kz-kIU">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqS-kz-kIU">
                                                 <rect key="frame" x="262" y="0.0" width="258" height="30"/>
                                                 <state key="normal" title="Icon8"/>
                                                 <connections>
@@ -164,7 +164,6 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="YmR-rU-tCZ" secondAttribute="trailing" constant="20" id="ZUZ-qU-CjT"/>
                             <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="5V8-pK-erj" secondAttribute="topMargin" constant="40" id="d6N-3L-EJu"/>
-                            <constraint firstItem="GYB-Hz-Djl" firstAttribute="top" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="200" id="oFY-po-6JA"/>
                             <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="5V8-pK-erj" secondAttribute="leadingMargin" constant="20" id="rfP-eC-RkX"/>
                         </constraints>
                     </view>
