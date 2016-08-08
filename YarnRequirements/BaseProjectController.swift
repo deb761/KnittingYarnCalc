@@ -70,7 +70,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
 
         // Create the stack with the yarn needed
-        yarnRow = DimensionRow(name: "Yarn Needed", picker: pkYarnUnits, delegate: self)
+        yarnRow = DimensionRow(name: "Yarn Req", picker: pkYarnUnits, delegate: self)
         txtYarnNeeded = yarnRow!.txtVal
         txtYarnNeeded.userInteractionEnabled = false
         
@@ -87,14 +87,11 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Create the main stack
         mainStack = UIStackView(arrangedSubviews: [nameStack!, gaugeRow!.stack, yarnRow!.stack, ballRow!.stack, nBallsRow!.stack])
         mainStack!.axis = .Vertical
-        mainStack!.distribution =  UIStackViewDistribution.EqualSpacing
+        mainStack!.distribution = .EqualSpacing
+        mainStack!.spacing = 10
         mainStack!.alignment = .Fill
-        //mainStack!.spacing = -5
         mainStack!.translatesAutoresizingMaskIntoConstraints = false
-        let height = view.bounds.height
-        let width = view.bounds.width
-        scrollView.contentSize.height = height
-        scrollView.contentSize.width = width
+
         scrollView.addSubview(mainStack!)
         
         // Configure the scrollView
@@ -102,25 +99,8 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         scrollView.scrollEnabled = true
         scrollView.autoresizingMask = UIViewAutoresizing.FlexibleHeight
         view.addSubview(scrollView)
-        view.backgroundColor = UIColor(red: 212.0/255.0,
-                                       green: 216.0/255.0,
-                                       blue: 214.0/255.0, alpha: 1.0)
-        
-        //autolayout the scroll view - pin 30 up 20 left 20 right 30 down
-        let viewsDictionary = ["scrollView":scrollView]
-        let scrollView_H = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-20-[scrollView]-20-|",  //horizontal constraint 20 points from left and right side
-            options: NSLayoutFormatOptions(rawValue: 0),
-            metrics: nil,
-            views: viewsDictionary)
-        let scrollView_V = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-80-[scrollView]-50-|", //vertical constraint 30 points from top and bottom
-            options: NSLayoutFormatOptions(rawValue:0),
-            metrics: nil,
-            views: viewsDictionary)
-        view.addConstraints(scrollView_H)
-        view.addConstraints(scrollView_V)
-        
+        view.backgroundColor = Colors.background
+
         registerForKeyboardNotifications()
         self.hideKeyboardWhenTappedAround() 
         
@@ -133,7 +113,6 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         mainStack!.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
         mainStack!.topAnchor.constraintEqualToAnchor(margins.topAnchor).active = true
         mainStack!.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
-        mainStack!.bottomAnchor.constraintEqualToAnchor(margins.bottomAnchor).active = true
 
         pkGauge.loaded(self, tag: 1)
         pkYarnUnits.loaded(self, tag: 2)
@@ -149,6 +128,15 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Set initial values for text fields
         UpdateText()
     }
+    // Set the size of the scrollview
+    override func viewWillLayoutSubviews()
+    {
+        super.viewWillLayoutSubviews();
+        
+        self.scrollView.frame = self.view.bounds; // Instead of using auto layout
+        self.scrollView.contentSize.height = self.view.bounds.height
+    }
+
     // Add a function to hide the keyboard
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BaseProjectController.dismissKeyboard))

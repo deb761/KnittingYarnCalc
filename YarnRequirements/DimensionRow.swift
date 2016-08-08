@@ -23,7 +23,7 @@ class DimensionRow {
         lblName = UILabel()
         lblName.text = name + ":"
         lblName.textColor = DimensionRow.lblColor
-        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 105))
+        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 90))
         
         // Define the txtField with a defined width
         txtVal = UITextField(frame: CGRectMake(10, 10, 50, 20))
@@ -35,7 +35,7 @@ class DimensionRow {
         txtVal.clearButtonMode = UITextFieldViewMode.WhileEditing;
         txtVal.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         txtVal.delegate = delegate
-        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 57))
+        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 70))
         
         // Set up the picker
         self.picker = picker
