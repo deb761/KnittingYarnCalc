@@ -23,10 +23,10 @@ class DimensionRow {
         lblName = UILabel()
         lblName.text = name + ":"
         lblName.textColor = DimensionRow.lblColor
-        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 110))
+        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 105))
         
         // Define the txtField with a defined width
-        txtVal = UITextField(frame: CGRectMake(10, 10, 80, 20))
+        txtVal = UITextField(frame: CGRectMake(10, 10, 50, 20))
         txtVal.font = UIFont.systemFontOfSize(17)
         txtVal.borderStyle = UITextBorderStyle.RoundedRect
         txtVal.autocorrectionType = UITextAutocorrectionType.No
@@ -35,19 +35,19 @@ class DimensionRow {
         txtVal.clearButtonMode = UITextFieldViewMode.WhileEditing;
         txtVal.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         txtVal.delegate = delegate
-        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 80))
+        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 57))
         
         // Set up the picker
         self.picker = picker
-        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 60))
+        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 50))
         // Create the stackView and add the label, textField, and picker to it
         stack = UIStackView(arrangedSubviews: [lblName, txtVal, self.picker])
         
-        // Set the stackview ash horizontal and define how its elements are arranged
+        // Set the stackview as horizontal and define how its elements are arranged
         stack.axis = .Horizontal
         stack.distribution = .FillProportionally
         stack.alignment = .Center
-        stack.spacing = 10
+        stack.spacing = 7
         stack.translatesAutoresizingMaskIntoConstraints = false
     }
     
