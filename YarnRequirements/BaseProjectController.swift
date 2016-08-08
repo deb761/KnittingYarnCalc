@@ -92,6 +92,11 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         mainStack!.alignment = .Fill
         mainStack!.translatesAutoresizingMaskIntoConstraints = false
 
+        let height = view.bounds.height + 200
+        let width = view.bounds.width
+        scrollView.contentSize.height = height
+        scrollView.contentSize.width = width
+
         scrollView.addSubview(mainStack!)
         
         // Configure the scrollView
@@ -101,6 +106,21 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         view.addSubview(scrollView)
         view.backgroundColor = Colors.background
 
+        //autolayout the scroll view - pin 30 up 20 left 20 right 30 down
+        let viewsDictionary = ["scrollView":scrollView]
+        let scrollView_H = NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-20-[scrollView]-20-|",  //horizontal constraint 20 points from left and right side
+            options: NSLayoutFormatOptions(rawValue: 0),
+            metrics: nil,
+            views: viewsDictionary)
+        let scrollView_V = NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-80-[scrollView]-50-|", //vertical constraint 30 points from top and bottom
+            options: NSLayoutFormatOptions(rawValue:0),
+            metrics: nil,
+            views: viewsDictionary)
+        view.addConstraints(scrollView_H)
+        view.addConstraints(scrollView_V)
+        
         registerForKeyboardNotifications()
         self.hideKeyboardWhenTappedAround() 
         
@@ -129,13 +149,13 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         UpdateText()
     }
     // Set the size of the scrollview
-    override func viewWillLayoutSubviews()
+    /*override func viewWillLayoutSubviews()
     {
         super.viewWillLayoutSubviews();
         
         self.scrollView.frame = self.view.bounds; // Instead of using auto layout
         self.scrollView.contentSize.height = self.view.bounds.height
-    }
+    }*/
 
     // Add a function to hide the keyboard
     func hideKeyboardWhenTappedAround() {

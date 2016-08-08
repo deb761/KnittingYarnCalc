@@ -35,11 +35,18 @@ class DimensionRow {
         txtVal.clearButtonMode = UITextFieldViewMode.WhileEditing;
         txtVal.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
         txtVal.delegate = delegate
-        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 70))
+        // Set the text field to really wide and set it's comprossion resistance to low so it will shrink to fit on the smaller phones
+        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .GreaterThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 150))
+        txtVal.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: .Horizontal)
+        txtVal.setContentCompressionResistancePriority(UILayoutPriorityDefaultLow, forAxis: .Horizontal)
         
         // Set up the picker
         self.picker = picker
+        // Set the height and width of the picker so that it will not compress on smaller phones nor get much wider on large phones
         self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 50))
+        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 130))
+        picker.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: .Horizontal)
+        picker.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Horizontal)
         // Create the stackView and add the label, textField, and picker to it
         stack = UIStackView(arrangedSubviews: [lblName, txtVal, self.picker])
         
