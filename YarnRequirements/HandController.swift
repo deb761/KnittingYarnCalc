@@ -23,7 +23,8 @@ class HandController: BaseProjectController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        sizeRow = DimensionRow(name: "Hand Size", picker: pkSizeUnits, delegate: self)
+        sizeRow = DimensionRow(name: NSLocalizedString("hand-size", value: "Hand Size", comment: "Measurement around the palm"),
+                               picker: pkSizeUnits, delegate: self)
         txtSize = sizeRow?.txtVal
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)

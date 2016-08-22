@@ -50,7 +50,6 @@ class Project {
             defs.setObject(newValue.rawValue, forKey: "\(name)-gaugeUnits")
         }
     }
-    // size is used by most projects
     // The units for yarn needed
     var yarnNeededUnits:LongLengthUnits {
         get {
@@ -101,14 +100,15 @@ class Project {
         self.image = image
         self.thumb = thumb
         self.controller = BaseProjectController()
-        defaults = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
-                     "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]
-        //calcYarnRequired()
+        /*defaults = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
+                     "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]*/
+        readPlist()
     }
     // Read the plist for this project and fill in the settings
     func readPlist() {
         var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
-        let plistPath:String? = NSBundle.mainBundle().pathForResource(name, ofType: "plist")!
+        let root = name + "-im"
+        let plistPath:String? = NSBundle.mainBundle().pathForResource(NSLocalizedString(name + "-plist", value: root, comment: "Defaults for the project"), ofType: "plist")!
         let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)!
         do {
             defaults = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)

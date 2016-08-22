@@ -14,6 +14,7 @@ class ShortLengthPicker: PickerView {
     override func loaded(del:UIPickerViewDelegate, tag:Int)
     {
         super.loaded(del, tag:tag)
-        text = ["inches", "cm"]
+        text = [NSLocalizedString("inches", value: "inches", comment: "Short string for picker that indicates using inches for units"),
+                NSLocalizedString("cm", value: "cm", comment: "Short string for picker that indicates using cm for units")]
     }
 }

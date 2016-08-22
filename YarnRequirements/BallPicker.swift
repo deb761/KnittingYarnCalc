@@ -16,7 +16,8 @@ class BallPicker: PickerView {
     override func loaded(del:UIPickerViewDelegate, tag:Int)
     {
         super.loaded(del, tag:tag)
-        text = ["Whole", "Partial"]
+        text = [NSLocalizedString("whole", value: "Whole", comment: "A whole ball of yarn"),
+                NSLocalizedString("partial", value: "Partial", comment: "A partial ball of yarn")]
     }
     
 }

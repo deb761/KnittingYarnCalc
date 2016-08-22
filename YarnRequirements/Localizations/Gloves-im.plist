@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>gauge</key>
-	<real>20</real>
+	<integer>24</integer>
 	<key>gaugeUnits</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>yarnNeededUnits</key>
 	<integer>0</integer>
 	<key>ballSize</key>
-	<integer>150</integer>
+	<integer>137</integer>
 	<key>ballSizeUnits</key>
 	<integer>0</integer>
 	<key>partialBalls</key>

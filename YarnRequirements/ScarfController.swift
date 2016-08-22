@@ -30,12 +30,12 @@ class ScarfController: BaseProjectController {
         // Do any additional setup after loading the view.
         
         // Add the length row
-        lengthRow = DimensionRow(name: "Length", picker: pkLengthUnits, delegate: self)
+        lengthRow = DimensionRow(name: NSLocalizedString("length", value: "Length", comment: "Label for length of an item"), picker: pkLengthUnits, delegate: self)
         txtLength = lengthRow?.txtVal        
         mainStack?.insertArrangedSubview((lengthRow?.stack)!, atIndex: 2)
         
         // Add the width row
-        widthRow = DimensionRow(name: "Width", picker: pkWidthUnits, delegate: self)
+        widthRow = DimensionRow(name: NSLocalizedString("width", value: "Width", comment: "Label for width of an item"), picker: pkWidthUnits, delegate: self)
         txtWidth = widthRow?.txtVal
         mainStack?.insertArrangedSubview((widthRow?.stack)!, atIndex: 3)
         
@@ -91,14 +91,5 @@ class ScarfController: BaseProjectController {
         project.calcYarnRequired()
         UpdateText()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

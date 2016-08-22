@@ -23,7 +23,8 @@ class HatController: BaseProjectController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        sizeRow = DimensionRow(name: "Head Size", picker: pkSizeUnits, delegate: self)
+        sizeRow = DimensionRow(name: NSLocalizedString("head-size", value: "Head Size", comment: "Measurement around head for hat size"),
+                               picker: pkSizeUnits, delegate: self)
         txtSize = sizeRow?.txtVal
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)

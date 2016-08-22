@@ -23,7 +23,8 @@ class SweaterController: BaseProjectController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        sizeRow = DimensionRow(name: "Chest Size", picker: pkSizeUnits, delegate: self)
+        sizeRow = DimensionRow(name: NSLocalizedString("chest-size", value: "Chest Size", comment: "Measurement around a sweater at the wearer's chest"),
+                               picker: pkSizeUnits, delegate: self)
         txtSize = sizeRow?.txtVal
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)
@@ -66,14 +67,4 @@ class SweaterController: BaseProjectController {
         UpdateText()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

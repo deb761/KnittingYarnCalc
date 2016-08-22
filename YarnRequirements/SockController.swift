@@ -23,7 +23,8 @@ class SockController: BaseProjectController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        sizeRow = DimensionRow(name: "Shoe Size", picker: pkSizeUnits, delegate: self)
+        sizeRow = DimensionRow(name: NSLocalizedString("shoe-size", value: "Shoe Size", comment: "Wearer shoe size"),
+                               picker: pkSizeUnits, delegate: self)
         txtSize = sizeRow?.txtVal
         
         mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)

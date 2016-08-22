@@ -57,7 +57,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         nameStack!.translatesAutoresizingMaskIntoConstraints = false
         lblName.text = project.name
         lblName.widthAnchor.constraintEqualToConstant(50)
-        lblName.textColor = DimensionRow.lblColor
+        lblName.textColor = Colors.lblColor
         lblName.font = lblName.font.fontWithSize(20)
 
         projectImg.image = project.image
@@ -65,22 +65,26 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 193))
         
         // Create the stack with the Gauge
-        gaugeRow = DimensionRow(name: "Gauge", picker: pkGauge, delegate: self)
+        gaugeRow = DimensionRow(name: NSLocalizedString("gauge", value: "Gauge", comment: "Density of knitted stitches per inch or cm"),
+                                picker: pkGauge, delegate: self)
         txtGauge = gaugeRow!.txtVal
         txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
 
         // Create the stack with the yarn needed
-        yarnRow = DimensionRow(name: "Yarn Req", picker: pkYarnUnits, delegate: self)
+        yarnRow = DimensionRow(name: NSLocalizedString("yarn-req-label", value: "Yarn Req", comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"),
+                               picker: pkYarnUnits, delegate: self)
         txtYarnNeeded = yarnRow!.txtVal
         txtYarnNeeded.userInteractionEnabled = false
         
         // Create the stack with the ball size
-        ballRow = DimensionRow(name: "Ball Size", picker: pkBallUnits, delegate: self)
+        ballRow = DimensionRow(name: NSLocalizedString("ball-size", value: "Ball Size", comment: "Length of yarn in ball"),
+                               picker: pkBallUnits, delegate: self)
         txtBallSize = ballRow!.txtVal
         txtBallSize.addTarget(self, action: #selector(BaseProjectController.changeBallSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
         
         // Create the stack with the balls needed
-        nBallsRow = DimensionRow(name: "Num Balls", picker: pkBallPartial, delegate: self)
+        nBallsRow = DimensionRow(name: NSLocalizedString("num-balls", value: "Num Balls", comment: "Number of balls needed for a project; needs to be short"),
+                                 picker: pkBallPartial, delegate: self)
         txtBallsNeeded = nBallsRow!.txtVal
         txtBallsNeeded.userInteractionEnabled = false
         
@@ -148,14 +152,6 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Set initial values for text fields
         UpdateText()
     }
-    // Set the size of the scrollview
-    /*override func viewWillLayoutSubviews()
-    {
-        super.viewWillLayoutSubviews();
-        
-        self.scrollView.frame = self.view.bounds; // Instead of using auto layout
-        self.scrollView.contentSize.height = self.view.bounds.height
-    }*/
 
     // Add a function to hide the keyboard
     func hideKeyboardWhenTappedAround() {
@@ -289,14 +285,5 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         project.calcYarnRequired()
         UpdateText()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

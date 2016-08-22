@@ -1,0 +1,57 @@
+/* Length of yarn in ball */
+"ball-size" = "Pul Taille";
+
+/* Measurement around a sweater at the wearer's chest */
+"chest-size" = "Taille";
+
+/* Density of knitted stitches per inch or cm */
+"gauge" = "Echantillon";
+
+/* Gloves project name */
+"gloves" = "Des Gants";
+
+/* Measurement around the palm */
+"hand-size" = "Taille";
+
+/* Measurement around head for hat size */
+"head-size" = "Taille";
+
+/* Label for length of an item */
+"length" = "Longueur";
+
+/* Mittens project name */
+"mittens" = "Moufles";
+
+/* Number of balls needed for a project; needs to be short */
+"num-balls" = "Pelotes";
+
+/* Scarf project name */
+"scarf" = "Echarpe";
+
+/* Wearer shoe size */
+"shoe-size" = "Taille";
+
+/* Socks project name */
+"socks" = "Chaussette";
+
+/* Sweater project name */
+"sweater" = "Pull";
+
+/* Tam project name */
+"tam" = "Béret";
+
+/* Toque project name */
+"toque" = "Bonnet";
+
+/* Short string for picker indicating US Child shoe sizes */
+"us-child" = "US Infant";
+
+/* A whole ball of yarn */
+"whole" = "Entier";
+
+/* Label for width of an item */
+"width" = "Largeur";
+
+/* Label next to field showing how much yarn is estimated for a project; needs to be short */
+"yarn-req-label" = "Laine";
+

@@ -1,0 +1,48 @@
+/* Class = "UILabel"; text = "Label"; ObjectID = "2vc-eQ-iFL"; */
+"2vc-eQ-iFL.text" = "Label";
+
+/* Class = "UILabel"; text = "Icons:"; ObjectID = "BU8-sh-cFH"; Note = "credit for icons"; */
+"BU8-sh-cFH.text" = "Icons:";
+
+/* Class = "UINavigationItem"; title = "Projects"; ObjectID = "C7p-ZW-Yz1"; Note = "Group of project types to estimate yarn requirements for"; */
+"C7p-ZW-Yz1.title" = "Projects";
+
+/* Class = "UILabel"; text = "Needles"; ObjectID = "H88-kx-p1E"; */
+"H88-kx-p1E.text" = "Aiguille";
+
+/* Class = "UIBarButtonItem"; title = "Projects"; ObjectID = "JdO-L4-lIo"; */
+"JdO-L4-lIo.title" = "Projets";
+
+/* Class = "UILabel"; text = "Yarn estimates based on calculations by The Inquisitive Introvert."; ObjectID = "Ksa-77-ggg"; Note = "Yarn estimate credits"; */
+"Ksa-77-ggg.text" = "Les estimations de fils à base de calculs effectués par le Inquisitive Introvert.";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "NN5-6X-2fu"; */
+"NN5-6X-2fu.text" = "Name";
+
+/* Class = "UITabBarItem"; title = "Info"; ObjectID = "QTh-kq-zsb"; Note = "application info"; */
+"QTh-kq-zsb.title" = "Info";
+
+/* Class = "UILabel"; text = "© Deborah Engelmeyer, The Inquisitive Introvert, 2016"; ObjectID = "X1H-lQ-QjL"; Note = "copyright line"; */
+"X1H-lQ-QjL.text" = "© Deborah Engelmeyer, The Inquisitive Introvert, 2016";
+
+/* Class = "UILabel"; text = "WPI"; ObjectID = "Y3D-tZ-2Jt"; */
+"Y3D-tZ-2Jt.text" = "WPI";
+
+/* Class = "UILabel"; text = "Gauge"; ObjectID = "ZvN-HQ-k93"; */
+"ZvN-HQ-k93.text" = "Jauge";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "Weights"; ObjectID = "cPa-gy-q4n"; Note = "Table of yarn weights"; */
+"cPa-gy-q4n.title" = "Weights";
+
+/* Class = "UIButton"; normalTitle = "Icon8"; ObjectID = "mqS-kz-kIU"; Note = "link to icon8 web site"; */
+"mqS-kz-kIU.normalTitle" = "Icon8";
+
+/* Class = "UILabel"; text = "Sweater and vest sizing based on Standard Body Measurements published by Craft Yarn Council."; ObjectID = "v0c-Ke-06I"; Note = "Credit for sweaters"; */
+"v0c-Ke-06I.text" = "Pull et gilet dimensionnement basé sur mensurations standard publiées par le Conseil Yarn Craft.";
+
+/* Class = "UILabel"; text = "Density"; ObjectID = "vS7-IK-dM1"; */
+"vS7-IK-dM1.text" = "Densité";
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>gauge</key>
+	<integer>24</integer>
+	<key>gaugeUnits</key>
+	<integer>2</integer>
+	<key>yarnNeededUnits</key>
+	<integer>1</integer>
+	<key>ballSize</key>
+	<integer>125</integer>
+	<key>ballSizeUnits</key>
+	<integer>1</integer>
+	<key>partialBalls</key>
+	<true/>
+	<key>size</key>
+	<integer>20</integer>
+	<key>sizeUnits</key>
+	<integer>1</integer>
+</dict>
+</plist>

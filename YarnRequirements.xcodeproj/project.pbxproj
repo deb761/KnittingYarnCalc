@@ -28,15 +28,6 @@
 		8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */; };
 		8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */; };
 		8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7E1CF2F6E800E1B003 /* InfoController.swift */; };
-		879E37DE1D45571E00F17156 /* Sweater.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37DD1D45571E00F17156 /* Sweater.plist */; };
-		879E37E01D455EAB00F17156 /* Vest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37DF1D455EAB00F17156 /* Vest.plist */; };
-		879E37E21D455EF200F17156 /* Scarf.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E11D455EF200F17156 /* Scarf.plist */; };
-		879E37E41D4561FB00F17156 /* Gloves.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E31D4561FB00F17156 /* Gloves.plist */; };
-		879E37E61D45620D00F17156 /* Mittens.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E51D45620D00F17156 /* Mittens.plist */; };
-		879E37E81D45625800F17156 /* Blanket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E71D45625800F17156 /* Blanket.plist */; };
-		879E37EA1D4562C200F17156 /* Socks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37E91D4562C200F17156 /* Socks.plist */; };
-		879E37EC1D45641600F17156 /* Toque.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37EB1D45641600F17156 /* Toque.plist */; };
-		879E37EE1D45643F00F17156 /* Tam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 879E37ED1D45643F00F17156 /* Tam.plist */; };
 		87A198D81D56717D00A9046E /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A198D71D56717D00A9046E /* XCUIElement.swift */; };
 		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
@@ -60,6 +51,28 @@
 		87E536DE1CFBFB6E00BE9735 /* Socks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DD1CFBFB6E00BE9735 /* Socks.swift */; };
 		87E536E01CFBFC4100BE9735 /* ShoeSizePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */; };
 		87E536E21CFC014300BE9735 /* SockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536E11CFC014300BE9735 /* SockController.swift */; };
+		87EFFA3C1D67C8FC00AAA422 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA3E1D67C8FC00AAA422 /* Localizable.strings */; };
+		87EFFA461D67C9B800AAA422 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA481D67C9B800AAA422 /* InfoPlist.strings */; };
+		87EFFA541D6B8A0700AAA422 /* Mittens-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4B1D6B8A0700AAA422 /* Mittens-si.plist */; };
+		87EFFA551D6B8A0700AAA422 /* Scarf-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4C1D6B8A0700AAA422 /* Scarf-im.plist */; };
+		87EFFA561D6B8A0700AAA422 /* Socks-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4D1D6B8A0700AAA422 /* Socks-im.plist */; };
+		87EFFA571D6B8A0700AAA422 /* Tam-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4E1D6B8A0700AAA422 /* Tam-si.plist */; };
+		87EFFA581D6B8A0700AAA422 /* Toque-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4F1D6B8A0700AAA422 /* Toque-im.plist */; };
+		87EFFA591D6B8A0700AAA422 /* Vest-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA501D6B8A0700AAA422 /* Vest-si.plist */; };
+		87EFFA5A1D6B8A0700AAA422 /* Blanket-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA511D6B8A0700AAA422 /* Blanket-im.plist */; };
+		87EFFA5B1D6B8A0700AAA422 /* Gloves-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA521D6B8A0700AAA422 /* Gloves-im.plist */; };
+		87EFFA5C1D6B8A0700AAA422 /* Sweater-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA531D6B8A0700AAA422 /* Sweater-si.plist */; };
+		87EFFA5E1D6B8CE600AAA422 /* Sweater-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA5D1D6B8CE600AAA422 /* Sweater-im.plist */; };
+		87EFFA621D6B8DAA00AAA422 /* Gloves-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA611D6B8DAA00AAA422 /* Gloves-si.plist */; };
+		87EFFA641D6B8E4200AAA422 /* Blanket-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA631D6B8E4200AAA422 /* Blanket-si.plist */; };
+		87EFFA661D6B8EDE00AAA422 /* Vest-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA651D6B8EDE00AAA422 /* Vest-im.plist */; };
+		87EFFA6A1D6B8F9100AAA422 /* Tam-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA691D6B8F9100AAA422 /* Tam-im.plist */; };
+		87EFFA6E1D6B901300AAA422 /* Scarf-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA6D1D6B901300AAA422 /* Scarf-si.plist */; };
+		87EFFA721D6B94C700AAA422 /* Socks-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */; };
+		87EFFA731D6B94C700AAA422 /* Toque-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA701D6B94C700AAA422 /* Toque-si.plist */; };
+		87EFFA741D6B94C700AAA422 /* Mittens-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA711D6B94C700AAA422 /* Mittens-im.plist */; };
+		87EFFA7B1D6BAB4200AAA422 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA7D1D6BAB4200AAA422 /* InfoPlist.strings */; };
+		87EFFA801D6BAB4200AAA422 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA821D6BAB4200AAA422 /* InfoPlist.strings */; };
 		87FC3F501CFB75C600416BE2 /* ScarfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,15 +115,6 @@
 		8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortLengthPicker.swift; sourceTree = "<group>"; };
 		8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongLengthPicker.swift; sourceTree = "<group>"; };
 		8763AA7E1CF2F6E800E1B003 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
-		879E37DD1D45571E00F17156 /* Sweater.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Sweater.plist; sourceTree = "<group>"; };
-		879E37DF1D455EAB00F17156 /* Vest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Vest.plist; sourceTree = "<group>"; };
-		879E37E11D455EF200F17156 /* Scarf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scarf.plist; sourceTree = "<group>"; };
-		879E37E31D4561FB00F17156 /* Gloves.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Gloves.plist; sourceTree = "<group>"; };
-		879E37E51D45620D00F17156 /* Mittens.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mittens.plist; sourceTree = "<group>"; };
-		879E37E71D45625800F17156 /* Blanket.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Blanket.plist; sourceTree = "<group>"; };
-		879E37E91D4562C200F17156 /* Socks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Socks.plist; sourceTree = "<group>"; };
-		879E37EB1D45641600F17156 /* Toque.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Toque.plist; sourceTree = "<group>"; };
-		879E37ED1D45643F00F17156 /* Tam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tam.plist; sourceTree = "<group>"; };
 		87A198D71D56717D00A9046E /* XCUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
@@ -140,6 +144,36 @@
 		87E536DD1CFBFB6E00BE9735 /* Socks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socks.swift; sourceTree = "<group>"; };
 		87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoeSizePicker.swift; sourceTree = "<group>"; };
 		87E536E11CFC014300BE9735 /* SockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SockController.swift; sourceTree = "<group>"; };
+		87EFFA371D67C78000AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Main.strings; sourceTree = "<group>"; };
+		87EFFA381D67C78000AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		87EFFA3D1D67C8FC00AAA422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87EFFA471D67C9B800AAA422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87EFFA491D67CA1D00AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87EFFA4A1D67CA2400AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87EFFA4B1D6B8A0700AAA422 /* Mittens-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Mittens-si.plist"; path = "Localizations/Mittens-si.plist"; sourceTree = "<group>"; };
+		87EFFA4C1D6B8A0700AAA422 /* Scarf-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Scarf-im.plist"; path = "Localizations/Scarf-im.plist"; sourceTree = "<group>"; };
+		87EFFA4D1D6B8A0700AAA422 /* Socks-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Socks-im.plist"; path = "Localizations/Socks-im.plist"; sourceTree = "<group>"; };
+		87EFFA4E1D6B8A0700AAA422 /* Tam-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Tam-si.plist"; path = "Localizations/Tam-si.plist"; sourceTree = "<group>"; };
+		87EFFA4F1D6B8A0700AAA422 /* Toque-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Toque-im.plist"; path = "Localizations/Toque-im.plist"; sourceTree = "<group>"; };
+		87EFFA501D6B8A0700AAA422 /* Vest-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Vest-si.plist"; path = "Localizations/Vest-si.plist"; sourceTree = "<group>"; };
+		87EFFA511D6B8A0700AAA422 /* Blanket-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Blanket-im.plist"; path = "Localizations/Blanket-im.plist"; sourceTree = "<group>"; };
+		87EFFA521D6B8A0700AAA422 /* Gloves-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Gloves-im.plist"; path = "Localizations/Gloves-im.plist"; sourceTree = "<group>"; };
+		87EFFA531D6B8A0700AAA422 /* Sweater-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Sweater-si.plist"; path = "Localizations/Sweater-si.plist"; sourceTree = "<group>"; };
+		87EFFA5D1D6B8CE600AAA422 /* Sweater-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Sweater-im.plist"; path = "Localizations/Sweater-im.plist"; sourceTree = "<group>"; };
+		87EFFA611D6B8DAA00AAA422 /* Gloves-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Gloves-si.plist"; path = "Localizations/Gloves-si.plist"; sourceTree = "<group>"; };
+		87EFFA631D6B8E4200AAA422 /* Blanket-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Blanket-si.plist"; sourceTree = "<group>"; };
+		87EFFA651D6B8EDE00AAA422 /* Vest-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Vest-im.plist"; path = "Localizations/Vest-im.plist"; sourceTree = "<group>"; };
+		87EFFA691D6B8F9100AAA422 /* Tam-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Tam-im.plist"; path = "Localizations/Tam-im.plist"; sourceTree = "<group>"; };
+		87EFFA6D1D6B901300AAA422 /* Scarf-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Scarf-si.plist"; path = "Localizations/Scarf-si.plist"; sourceTree = "<group>"; };
+		87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Socks-si.plist"; path = "Localizations/Socks-si.plist"; sourceTree = "<group>"; };
+		87EFFA701D6B94C700AAA422 /* Toque-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Toque-si.plist"; path = "Localizations/Toque-si.plist"; sourceTree = "<group>"; };
+		87EFFA711D6B94C700AAA422 /* Mittens-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Mittens-im.plist"; path = "Localizations/Mittens-im.plist"; sourceTree = "<group>"; };
+		87EFFA751D6B97CF00AAA422 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		87EFFA761D6B97CF00AAA422 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		87EFFA771D6B97CF00AAA422 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87EFFA781D6B97CF00AAA422 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87EFFA7C1D6BAB4200AAA422 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87EFFA811D6BAB4200AAA422 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScarfController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,15 +222,6 @@
 				87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */,
 				87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */,
 				87DABAAC1CE7EBF4009DD3B1 /* Info.plist */,
-				879E37DD1D45571E00F17156 /* Sweater.plist */,
-				879E37DF1D455EAB00F17156 /* Vest.plist */,
-				879E37E11D455EF200F17156 /* Scarf.plist */,
-				879E37E71D45625800F17156 /* Blanket.plist */,
-				879E37E51D45620D00F17156 /* Mittens.plist */,
-				879E37EB1D45641600F17156 /* Toque.plist */,
-				879E37ED1D45643F00F17156 /* Tam.plist */,
-				879E37E31D4561FB00F17156 /* Gloves.plist */,
-				879E37E91D4562C200F17156 /* Socks.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -242,6 +267,7 @@
 				8763AA7E1CF2F6E800E1B003 /* InfoController.swift */,
 				875A90AF1CF6979C0084EC06 /* pickerView.swift */,
 				87D078EB1D58EB0400DFBC11 /* Colors.swift */,
+				87EFFA3B1D67C8A100AAA422 /* Localizations */,
 			);
 			path = YarnRequirements;
 			sourceTree = "<group>";
@@ -249,6 +275,7 @@
 		87DABAB41CE7EBF4009DD3B1 /* YarnRequirementsTests */ = {
 			isa = PBXGroup;
 			children = (
+				87EFFA821D6BAB4200AAA422 /* InfoPlist.strings */,
 				871D78C31D1888D6005320A4 /* GlovesTests.swift */,
 				871D78C11D188435005320A4 /* MittensTests.swift */,
 				8702D6931D1866BC00286909 /* TamTests.swift */,
@@ -268,6 +295,7 @@
 		87DABABF1CE7EBF4009DD3B1 /* YarnRequirementsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				87EFFA7D1D6BAB4200AAA422 /* InfoPlist.strings */,
 				87DABAC01CE7EBF4009DD3B1 /* YarnRequirementsUITests.swift */,
 				87DABAC21CE7EBF4009DD3B1 /* Info.plist */,
 				87A198D71D56717D00A9046E /* XCUIElement.swift */,
@@ -288,6 +316,33 @@
 				873A8CE01D46876800B3B287 /* UserDefaults.swift */,
 			);
 			name = Projects;
+			sourceTree = "<group>";
+		};
+		87EFFA3B1D67C8A100AAA422 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				87EFFA4B1D6B8A0700AAA422 /* Mittens-si.plist */,
+				87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */,
+				87EFFA701D6B94C700AAA422 /* Toque-si.plist */,
+				87EFFA711D6B94C700AAA422 /* Mittens-im.plist */,
+				87EFFA4C1D6B8A0700AAA422 /* Scarf-im.plist */,
+				87EFFA6D1D6B901300AAA422 /* Scarf-si.plist */,
+				87EFFA4D1D6B8A0700AAA422 /* Socks-im.plist */,
+				87EFFA4E1D6B8A0700AAA422 /* Tam-si.plist */,
+				87EFFA691D6B8F9100AAA422 /* Tam-im.plist */,
+				87EFFA4F1D6B8A0700AAA422 /* Toque-im.plist */,
+				87EFFA501D6B8A0700AAA422 /* Vest-si.plist */,
+				87EFFA651D6B8EDE00AAA422 /* Vest-im.plist */,
+				87EFFA511D6B8A0700AAA422 /* Blanket-im.plist */,
+				87EFFA631D6B8E4200AAA422 /* Blanket-si.plist */,
+				87EFFA521D6B8A0700AAA422 /* Gloves-im.plist */,
+				87EFFA611D6B8DAA00AAA422 /* Gloves-si.plist */,
+				87EFFA531D6B8A0700AAA422 /* Sweater-si.plist */,
+				87EFFA5D1D6B8CE600AAA422 /* Sweater-im.plist */,
+				87EFFA3E1D67C8FC00AAA422 /* Localizable.strings */,
+				87EFFA481D67C9B800AAA422 /* InfoPlist.strings */,
+			);
+			name = Localizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +432,8 @@
 			knownRegions = (
 				en,
 				Base,
+				lv,
+				fr,
 			);
 			mainGroup = 87DABA921CE7EBF4009DD3B1;
 			productRefGroup = 87DABA9C1CE7EBF4009DD3B1 /* Products */;
@@ -395,18 +452,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87EFFA6E1D6B901300AAA422 /* Scarf-si.plist in Resources */,
+				87EFFA541D6B8A0700AAA422 /* Mittens-si.plist in Resources */,
+				87EFFA641D6B8E4200AAA422 /* Blanket-si.plist in Resources */,
 				87DABAAB1CE7EBF4009DD3B1 /* LaunchScreen.storyboard in Resources */,
-				879E37E01D455EAB00F17156 /* Vest.plist in Resources */,
+				87EFFA461D67C9B800AAA422 /* InfoPlist.strings in Resources */,
+				87EFFA621D6B8DAA00AAA422 /* Gloves-si.plist in Resources */,
+				87EFFA551D6B8A0700AAA422 /* Scarf-im.plist in Resources */,
+				87EFFA561D6B8A0700AAA422 /* Socks-im.plist in Resources */,
+				87EFFA591D6B8A0700AAA422 /* Vest-si.plist in Resources */,
 				87DABAA81CE7EBF4009DD3B1 /* Assets.xcassets in Resources */,
-				879E37E41D4561FB00F17156 /* Gloves.plist in Resources */,
-				879E37EC1D45641600F17156 /* Toque.plist in Resources */,
-				879E37EA1D4562C200F17156 /* Socks.plist in Resources */,
-				879E37E61D45620D00F17156 /* Mittens.plist in Resources */,
-				879E37E21D455EF200F17156 /* Scarf.plist in Resources */,
-				879E37DE1D45571E00F17156 /* Sweater.plist in Resources */,
-				879E37EE1D45643F00F17156 /* Tam.plist in Resources */,
+				87EFFA5E1D6B8CE600AAA422 /* Sweater-im.plist in Resources */,
+				87EFFA6A1D6B8F9100AAA422 /* Tam-im.plist in Resources */,
+				87EFFA581D6B8A0700AAA422 /* Toque-im.plist in Resources */,
+				87EFFA5A1D6B8A0700AAA422 /* Blanket-im.plist in Resources */,
+				87EFFA5C1D6B8A0700AAA422 /* Sweater-si.plist in Resources */,
+				87EFFA661D6B8EDE00AAA422 /* Vest-im.plist in Resources */,
+				87EFFA3C1D67C8FC00AAA422 /* Localizable.strings in Resources */,
+				87EFFA721D6B94C700AAA422 /* Socks-si.plist in Resources */,
+				87EFFA571D6B8A0700AAA422 /* Tam-si.plist in Resources */,
 				87DABAA61CE7EBF4009DD3B1 /* Main.storyboard in Resources */,
-				879E37E81D45625800F17156 /* Blanket.plist in Resources */,
+				87EFFA731D6B94C700AAA422 /* Toque-si.plist in Resources */,
+				87EFFA5B1D6B8A0700AAA422 /* Gloves-im.plist in Resources */,
+				87EFFA741D6B94C700AAA422 /* Mittens-im.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87EFFA801D6BAB4200AAA422 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87EFFA7B1D6BAB4200AAA422 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +580,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				87DABAA51CE7EBF4009DD3B1 /* Base */,
+				87EFFA371D67C78000AAA422 /* lv */,
+				87EFFA751D6B97CF00AAA422 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -518,8 +590,48 @@
 			isa = PBXVariantGroup;
 			children = (
 				87DABAAA1CE7EBF4009DD3B1 /* Base */,
+				87EFFA381D67C78000AAA422 /* lv */,
+				87EFFA761D6B97CF00AAA422 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		87EFFA3E1D67C8FC00AAA422 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87EFFA3D1D67C8FC00AAA422 /* Base */,
+				87EFFA491D67CA1D00AAA422 /* lv */,
+				87EFFA771D6B97CF00AAA422 /* fr */,
+			);
+			name = Localizable.strings;
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		87EFFA481D67C9B800AAA422 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87EFFA471D67C9B800AAA422 /* Base */,
+				87EFFA4A1D67CA2400AAA422 /* lv */,
+				87EFFA781D6B97CF00AAA422 /* fr */,
+			);
+			name = InfoPlist.strings;
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		87EFFA7D1D6BAB4200AAA422 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87EFFA7C1D6BAB4200AAA422 /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		87EFFA821D6BAB4200AAA422 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87EFFA811D6BAB4200AAA422 /* fr */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
