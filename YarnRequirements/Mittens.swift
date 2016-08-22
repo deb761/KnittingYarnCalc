@@ -35,8 +35,8 @@ class Mittens : Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = HandController()
-        defaults["size"] = 8.0
-        defaults["sizeUnits"] = 0
+        defaults["size"] = defaults["size"]
+        defaults["sizeUnits"] = defaults["sizeUnits"]
         calcYarnRequired()
     }
     // Calculate the yarn required for a pair of mittens, where the length is

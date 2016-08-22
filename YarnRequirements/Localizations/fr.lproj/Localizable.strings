@@ -7,9 +7,6 @@
 /* Density of knitted stitches per inch or cm */
 "gauge" = "Echantillon";
 
-/* Gloves project name */
-"gloves" = "Des Gants";
-
 /* Measurement around the palm */
 "hand-size" = "Taille";
 
@@ -19,32 +16,29 @@
 /* Label for length of an item */
 "length" = "Longueur";
 
-/* Mittens project name */
-"mittens" = "Moufles";
-
 /* Number of balls needed for a project; needs to be short */
 "num-balls" = "Pelotes";
-
-/* Scarf project name */
-"scarf" = "Echarpe";
 
 /* Wearer shoe size */
 "shoe-size" = "Taille";
 
-/* Socks project name */
-"socks" = "Chaussette";
+/* Stitches per 4 inches to determine yarn gauge */
+"sts/4inch" = "m/4inch";
 
-/* Sweater project name */
-"sweater" = "Pull";
+/* Stitches per 10 cm to determine yarn gauge */
+"sts/10cm" = "m/10cm";
 
-/* Tam project name */
-"tam" = "Béret";
-
-/* Toque project name */
-"toque" = "Bonnet";
+/* Stitches per inch to determine yarn gauge */
+"sts/inch" = "m/inch";
 
 /* Short string for picker indicating US Child shoe sizes */
 "us-child" = "US Infant";
+
+/* Short string for picker indicating US Women shoe sizes */
+"us-women" = "US Femme";
+
+/* Short string for picker indicating US Youth shoe sizes */
+"us-youth" = "US Jeune";
 
 /* A whole ball of yarn */
 "whole" = "Entier";
@@ -55,3 +49,56 @@
 /* Label next to field showing how much yarn is estimated for a project; needs to be short */
 "yarn-req-label" = "Laine";
 
+/* Sweater project name */
+"sweater" = "Pull";
+
+/* Tam project name */
+"tam" = "Béret";
+
+/* Toque project name */
+"toque" = "Bonnet";
+
+/* Socks project name */
+"socks" = "Chaussette";
+
+/* Scarf project name */
+"scarf" = "Echarpe";
+
+/* Mittens project name */
+"mittens" = "Moufles";
+
+/* Gloves project name */
+"gloves" = "Des Gants";
+
+/* Blanket project name */
+"blanket" = "Couverture";
+
+/* Vest project name */
+"vest" = "Gilet";
+
+/* plist file containing default settings for a sweater */
+"sweater-plist" = "Sweater-si";
+
+/* Tam plist file */
+"tam-plist" = "Tam-si";
+
+/* Toque plist file */
+"toque-plist" = "Toque-si";
+
+/* Socks plist file */
+"socks-plist" = "Socks-si";
+
+/* Scarf plist file */
+"scarf-plist" = "Scarf-si";
+
+/* Mittens plist file */
+"mittens-plist" = "Mittens-si";
+
+/* Gloves plist file */
+"gloves-plist" = "Gloves-si";
+
+/* Blanket plist file */
+"blanket-plist" = "Blanket-si";
+
+/* Vest plist file */
+"vest-plist" = "Vest-si";

@@ -34,8 +34,6 @@ class Sweater : Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = SweaterController()
-        defaults["size"] = 40.0
-        defaults["sizeUnits"] = ShortLengthUnits.Inches.rawValue
         calcYarnRequired()
     }
 

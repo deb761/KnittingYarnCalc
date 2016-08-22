@@ -55,7 +55,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         nameStack!.alignment = .Fill
         nameStack!.spacing = 10
         nameStack!.translatesAutoresizingMaskIntoConstraints = false
-        lblName.text = project.name
+        lblName.text = NSLocalizedString(project.name.lowercaseString, value: project.name, comment: "Project name")
         lblName.widthAnchor.constraintEqualToConstant(50)
         lblName.textColor = Colors.lblColor
         lblName.font = lblName.font.fontWithSize(20)

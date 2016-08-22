@@ -57,10 +57,6 @@ class Scarf: Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = ScarfController()
-        defaults["length"] = 72.0
-        defaults["lengthUnits"] = 0
-        defaults["width"] = 12.0
-        defaults["widthUnits"] = 0
         
         calcYarnRequired()
     }

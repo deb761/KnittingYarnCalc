@@ -37,8 +37,6 @@ class Toque : Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         controller = HatController()
-        defaults["size"] = 23.0
-        defaults["sizeUnits"] = ShortLengthUnits.Inches.rawValue
         calcYarnRequired()
     }
     

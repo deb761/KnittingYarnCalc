@@ -40,12 +40,12 @@ class Socks: Project {
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
         
-        // socks normally use a finer yarn, so finer gauge
+    /*    // socks normally use a finer yarn, so finer gauge
         defaults["gauge"] = 32.0
         // longer balls for fingering
         defaults["ballSize"] = 200
         defaults["size"] = 8.0
-        defaults["sizeUnits"] = ShoeSizeUnits.Women.rawValue
+        defaults["sizeUnits"] = ShoeSizeUnits.Women.rawValue */
         // recalc yarn required with finer yarn
         calcYarnRequired()
         controller = SockController()

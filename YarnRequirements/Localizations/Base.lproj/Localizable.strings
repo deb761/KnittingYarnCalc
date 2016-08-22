@@ -5,3 +5,57 @@
   Created by Deborah Engelmeyer on 8/19/16.
   Copyright © 2016 The Inquisitive Introvert. All rights reserved.
 */
+
+/* Sweater project name */
+"sweater" = "Sweater";
+
+/* Tam project name */
+"tam" = "Tam";
+
+/* Toque project name */
+"toque" = "Toque";
+
+/* Socks project name */
+"socks" = "Socks";
+
+/* Scarf project name */
+"scarf" = "Scarf";
+
+/* Mittens project name */
+"mittens" = "Mittens";
+
+/* Gloves project name */
+"gloves" = "Gloves";
+
+/* Blanket project name */
+"blanket" = "Blanket";
+
+/* Vest project name */
+"vest" = "Vest";
+
+/* plist file containing default settings for a sweater */
+"sweater-plist" = "Sweater-im";
+
+/* Tam plist file */
+"tam-plist" = "Tam-im";
+
+/* Toque plist file */
+"toque-plist" = "Toque-im";
+
+/* Socks plist file */
+"socks-plist" = "Socks-im";
+
+/* Scarf plist file */
+"scarf-plist" = "Scarf-im";
+
+/* Mittens plist file */
+"mittens-plist" = "Mittens-im";
+
+/* Gloves plist file */
+"gloves-plist" = "Gloves-im";
+
+/* Blanket plist file */
+"blanket-plist" = "Blanket-im";
+
+/* Vest plist file */
+"vest-plist" = "Vest-im";

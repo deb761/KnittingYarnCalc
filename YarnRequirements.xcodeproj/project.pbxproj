@@ -263,9 +263,9 @@
 				8702D6831D10D09300286909 /* BallPicker.swift */,
 				87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */,
 				8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */,
-				8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */,
 				8763AA7E1CF2F6E800E1B003 /* InfoController.swift */,
 				875A90AF1CF6979C0084EC06 /* pickerView.swift */,
+				8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */,
 				87D078EB1D58EB0400DFBC11 /* Colors.swift */,
 				87EFFA3B1D67C8A100AAA422 /* Localizations */,
 			);

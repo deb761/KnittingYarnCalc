@@ -107,8 +107,9 @@ class Project {
     // Read the plist for this project and fill in the settings
     func readPlist() {
         var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
-        let root = name + "-im"
-        let plistPath:String? = NSBundle.mainBundle().pathForResource(NSLocalizedString(name + "-plist", value: root, comment: "Defaults for the project"), ofType: "plist")!
+        let code = name.lowercaseString + "-plist"
+        let root = NSLocalizedString(code, value: name + "-im", comment: "Defaults for the project")
+        let plistPath:String? = NSBundle.mainBundle().pathForResource(root, ofType: "plist")!
         let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)!
         do {
             defaults = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)
