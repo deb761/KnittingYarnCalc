@@ -80,14 +80,23 @@ class ScarfController: BaseProjectController {
     
     // Recalc and update units when ball size changes
     func changeLength(sender: AnyObject) {
-        scarf.length = Double(txtLength.text!)!
+        if let length = Double(txtLength.text!) {
+            scarf.length = length
+        } else {
+            txtLength.text = String(scarf.length)
+        }
         project.calcYarnRequired()
         UpdateText()
     }
     
     // Recalc and update units when ball size changes
     func changeWidth(sender: AnyObject) {
-        scarf.width = Double(txtWidth.text!)!
+        if let width = Double(txtWidth.text!) {
+            scarf.width = width
+        } else {
+            txtWidth.text = String(scarf.width)
+        }
+        
         project.calcYarnRequired()
         UpdateText()
     }

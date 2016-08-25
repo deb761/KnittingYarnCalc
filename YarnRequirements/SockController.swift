@@ -62,7 +62,11 @@ class SockController: BaseProjectController {
 
     // Recalc and update units when ball size changes
     func changeSize(sender: AnyObject) {
-        socks.size = Double(txtSize.text!)!
+        if let size = Double(txtSize.text!) {
+            socks.size = size
+        } else {
+            txtSize.text = String(socks.size)
+        }
         project.calcYarnRequired()
         UpdateText()
     }

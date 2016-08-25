@@ -62,7 +62,11 @@ class HatController: BaseProjectController {
 
     // Recalc and update units when ball size changes
     func changeSize(sender: AnyObject) {
-        hat.size = Double(txtSize.text!)!
+        if let size = Double(txtSize.text!) {
+            hat.size = size
+        } else {
+            txtSize.text = String(hat.size)
+        }
         project.calcYarnRequired()
         UpdateText()
     }

@@ -248,6 +248,8 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     func changeGauge(sender: UITextField!) {
         if let gauge = Double(txtGauge.text!) {
             project.gauge = gauge
+        } else {
+            txtGauge.text = String(project.gauge)
         }
         project.calcYarnRequired()
         UpdateText()
@@ -256,6 +258,8 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     @IBAction func changeBallSize(sender: AnyObject) {
         if let size = Int(txtBallSize.text!) {
             project.ballSize = size
+        } else {
+            txtBallSize.text = String(project.ballSize)
         }
         UpdateUnits()
         project.calcYarnRequired()

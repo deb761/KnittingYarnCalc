@@ -62,7 +62,11 @@ class HandController: BaseProjectController {
 
     // Recalc and update units when ball size changes
     func changeSize(sender: AnyObject) {
-        mittens.size = Double(txtSize.text!)!
+        if let size = Double(txtSize.text!) {
+            mittens.size = size
+        } else {
+            txtSize.text = String(mittens.size)
+        }
         project.calcYarnRequired()
         UpdateText()
     }
