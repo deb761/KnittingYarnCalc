@@ -16,19 +16,21 @@ class WeightsController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var txtWPI: UILabel!
     @IBOutlet weak var txtDensity: UILabel!
 
-    let yarnWeights: [YarnWeight] = [
-        YarnWeight(name: "Fingering", needles: "0-2 US, 2-3mm", gauge: "24-32 stitches/4\" or 10cm", wpi: "14", density: "211m per 50g ball"),
-        YarnWeight(name: "Sport", needles: "3-6 US, 3-4mm", gauge: "24-26 stitches/4\" or 10cm", wpi: "12", density: "125m per 50g ball"),
-        YarnWeight(name: "DK", needles: "3-6 US, 3-4mm", gauge: "22 stitches/4\" or 10cm", wpi: "11", density: "100m per 50g ball"),
-        YarnWeight(name: "Worsted", needles: "7-8 US, 4.5-5mm", gauge: "20 stitches/4\" or 10cm", wpi: "9", density: "200m per 100g ball"),
-        YarnWeight(name: "Aran", needles: "8-10 US, 5-6mm", gauge: "18 stitches/4\" or 10cm", wpi: "8", density: "150m per 100g ball"),
-        YarnWeight(name: "Bulky", needles: "10-13 US, 6-9mm", gauge: "14-15 stitches/4\" or 10cm", wpi: "7", density: "125m per 100g ball"),
-        YarnWeight(name: "Super Bulky", needles: "13+ US, 9+mm", gauge: "8-12 stitches/4\" or 10cm", wpi: "5-6", density: "40m per 100g ball")
-    ]
-
+    var yarnWeights:[AnyObject]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
+        let plistPath:String? = NSBundle.mainBundle().pathForResource("YarnWeight", ofType: "plist")!
+        let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)!
+        do {
+            yarnWeights = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)
+                as! [AnyObject]
+        }
+        catch {
+            print("Error reading plist: \(error), format: \(format)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,11 +55,63 @@ class WeightsController: UIViewController, UITableViewDelegate, UITableViewDataS
         let cell = tableView.dequeueReusableCellWithIdentifier("WeightCell", forIndexPath: indexPath) as! WeightCell
 
         let weight = yarnWeights[indexPath.row]
-        cell.lblName?.text = weight.name
-        cell.lblNeedles?.text = "Needle sizes: " + weight.needles
-        cell.lblGauge?.text = "Gauge: " + weight.gauge
-        cell.lblWpi?.text = weight.wpi + "wpi (windings/inch)"
-        cell.lblDensity?.text = weight.density
+        let name = weight["name"] as! String
+        cell.lblName?.text = NSLocalizedString(name + "-yarn", value: name.capitalizedString,
+                                               comment: "Label for yarn weight name")
+        var needles:[KnittingNeedle] = []
+        for size in weight["needles"] as! [NSNumber] {
+            needles.append(KnittingNeedle(size: size as Double))
+        }
+        let locale = NSLocale.currentLocale()
+        let country = locale.objectForKey(NSLocaleCountryCode) as? String
+        var sizes:String = ""
+
+        // If the user is in the US, show US needle sizes first
+        if country == "US" {
+            if (needles.count == 2) {
+                sizes = "\(needles[0].us)-\(needles[1].us) US, "
+            } else {
+                sizes = "\(needles[0].us)+ US, "
+            }
+        }
+        // Always show international needle sizes
+        if (needles.count == 2) {
+            sizes += "\(needles[0].mm)-\(needles[1].mm)mm"
+        } else {
+            sizes += "\(needles[0].mm)+ mm"
+        }
+        
+        cell.lblNeedles?.text = NSLocalizedString("needle-size", value: "Needle sizes",
+                                                  comment: "Label representing a range of knitting needle sizes") + ": " + sizes
+        // Show the gauge
+        let gauges = weight["gauge"] as! [NSNumber]
+        var gauge:String
+        if gauges.count == 2 {
+            gauge = "\(gauges[0])-\(gauges[1]) "
+        } else {
+            gauge = "\(gauges[0]) "
+        }
+        cell.lblGauge?.text = NSLocalizedString("gauge", value: "Gauge", comment: "Density of knitted stitches per 10cm") +
+            ": " + gauge + NSLocalizedString("gauge-length", value: "stitches/4\" or 10cm",
+                                                   comment: "Length over which gauge is counted, either 4\" or 10cm")
+        
+        // format windings string
+        var wpi:String
+        let windings = weight["windings"] as! [NSNumber]
+        if windings.count == 2 {
+            wpi = "\(windings[0])-\(windings[1])"
+        } else {
+            wpi = "\(windings[0])"
+        }
+        
+        let length = weight["length"] as! NSNumber
+        let ball = weight["weight"] as! NSNumber
+        
+        cell.lblWpi?.text = "\(wpi) " + NSLocalizedString("wpi", value: "wpi (windings/inch)", comment: "label for windings per inch")
+        cell.lblDensity?.text = "\(length)" + NSLocalizedString("m", value: "m", comment: "Abbreviation for meters") + " " +
+            NSLocalizedString("per", value: "per", comment: "indicate relationship between two things: 100m per 100g") +
+            " \(ball)" + NSLocalizedString("g", value: "g", comment: "Abbreviation for grams") + " " +
+            NSLocalizedString("yarn-ball", value: "ball", comment: "A ball of yarn")
         
         return cell
     }

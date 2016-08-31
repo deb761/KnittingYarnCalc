@@ -65,6 +65,19 @@ class SweaterTests: XCTestCase {
             PatternInfo(name: "Handy 50inch, gauge 7", gauge: 7, size: 50, yarn: 3201),
             PatternInfo(name: "Handy 52inch, gauge 7", gauge: 7, size: 52, yarn: 3431),
             //PatternInfo(name: "Handy 54inch, gauge 7", gauge: 7, size: 54, yarn: 3669), //others match, but this is higher than calculated
+            PatternInfo(name: "Gathered Pullover by Hana Jason, M", gauge: 5, size: 33, yarn: 1052),
+            PatternInfo(name: "Lemongrass by Joji Locatelli, M", gauge: 14.0 / 4.0, size: 47, yarn: 1071),
+            PatternInfo(name: "Baby Cables and Big Ones Too by Suvi Simola", gauge: 5.25, size: 34, yarn: 1134),
+            PatternInfo(name: "Cobblestone Pullover by Jared Flood", gauge: 5.5, size: 176 / 5.5, yarn: 960),
+            PatternInfo(name: "Carpino by Carol Feller, 33", gauge: 5.75, size: 33.25, yarn: 988),
+            PatternInfo(name: "Lily by Marnie MacLean, 33", gauge: 5, size: 35, yarn: 788),
+            PatternInfo(name: "Wisteria by Kate Gilbert", gauge: 4.5, size: 54.75, yarn: 1920),
+            PatternInfo(name: "#08 Cabled Yoke Pullover by Norah Gaughan", gauge: 4.5, size: 37, yarn: 1047),
+            PatternInfo(name: "il grande favorito by Isabell Kraemer, yarn held double", gauge: 3.5, size: 36, yarn: 902),
+            PatternInfo(name: "Such a Winter's Day by Heidi Kirrmaier", gauge: 4.75, size: 37, yarn: 980),
+            PatternInfo(name: "Relaxed Pullover by Vogue Knitting", gauge: 5, size: 38, yarn: 1000),
+            PatternInfo(name: "Beeline by Heidi Kirrmaier", gauge: 4.75, size: 34.5, yarn: 935),
+           
             PatternInfo(name: "Bloomsbury kids by Svetlana Volkova, 6months", gauge: 17.0 / 4, size: 17.9, yarn: 200),
             PatternInfo(name: "Greyson by Julia Stanfield, 18inch", gauge: 5, size: 21, yarn: 450),
             //PatternInfo(name: "Dunes by Justyna Lorkowska, 12 months", gauge: 26.0 / 4, size: 20, yarn: 390), // looks way low
@@ -79,7 +92,7 @@ class SweaterTests: XCTestCase {
             sweater.calcYarnRequired()
             
             XCTAssertGreaterThanOrEqual(sweater.yarnNeeded + Int(ceil(Double(test.yarn) * 0.05)), test.yarn, "\(test.name): Yarn calculated is less than expected")
-            //XCTAssertEqualWithAccuracy(Double(sweater.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.2, "\(test.name): yarn calculeted differs too much")
+            //XCTAssertEqualWithAccuracy(Double(sweater.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.1, "\(test.name): yarn calculeted differs too much")
         }
     }
     // Compare calculated number of balls to representative patterns

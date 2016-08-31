@@ -28,6 +28,8 @@
 		8763AA7B1CF2D29500E1B003 /* ShortLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */; };
 		8763AA7D1CF2D2DC00E1B003 /* LongLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */; };
 		8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7E1CF2F6E800E1B003 /* InfoController.swift */; };
+		87660B7D1D77424800975E3B /* YarnWeight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87660B7C1D77424800975E3B /* YarnWeight.plist */; };
+		87660B7F1D774AF000975E3B /* KnittingNeedles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87660B7E1D774AF000975E3B /* KnittingNeedles.swift */; };
 		87A198D81D56717D00A9046E /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A198D71D56717D00A9046E /* XCUIElement.swift */; };
 		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
@@ -71,6 +73,8 @@
 		87EFFA721D6B94C700AAA422 /* Socks-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */; };
 		87EFFA731D6B94C700AAA422 /* Toque-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA701D6B94C700AAA422 /* Toque-si.plist */; };
 		87EFFA741D6B94C700AAA422 /* Mittens-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA711D6B94C700AAA422 /* Mittens-im.plist */; };
+		87EFFB0D1D711BD600AAA422 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFB0F1D711BD600AAA422 /* InfoPlist.strings */; };
+		87EFFB121D711BD700AAA422 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFB141D711BD700AAA422 /* InfoPlist.strings */; };
 		87FC3F501CFB75C600416BE2 /* ScarfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +117,8 @@
 		8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortLengthPicker.swift; sourceTree = "<group>"; };
 		8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongLengthPicker.swift; sourceTree = "<group>"; };
 		8763AA7E1CF2F6E800E1B003 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		87660B7C1D77424800975E3B /* YarnWeight.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YarnWeight.plist; sourceTree = "<group>"; };
+		87660B7E1D774AF000975E3B /* KnittingNeedles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnittingNeedles.swift; sourceTree = "<group>"; };
 		87A198D71D56717D00A9046E /* XCUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
@@ -162,6 +168,12 @@
 		87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Socks-si.plist"; path = "Localizations/Socks-si.plist"; sourceTree = "<group>"; };
 		87EFFA701D6B94C700AAA422 /* Toque-si.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Toque-si.plist"; path = "Localizations/Toque-si.plist"; sourceTree = "<group>"; };
 		87EFFA711D6B94C700AAA422 /* Mittens-im.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Mittens-im.plist"; path = "Localizations/Mittens-im.plist"; sourceTree = "<group>"; };
+		87EFFB081D711BA800AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Main.strings; sourceTree = "<group>"; };
+		87EFFB091D711BA800AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87EFFB0A1D711BA800AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87EFFB0E1D711BD600AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87EFFB131D711BD700AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87EFFB151D711BD700AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScarfController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +222,7 @@
 				87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */,
 				87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */,
 				87DABAAC1CE7EBF4009DD3B1 /* Info.plist */,
+				87660B7C1D77424800975E3B /* YarnWeight.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -238,11 +251,12 @@
 			isa = PBXGroup;
 			children = (
 				87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */,
-				87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */,
 				87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */,
 				8791477E1D0CB5A400DE5B94 /* Resources */,
+				87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */,
 				87DABACE1CE7F7B1009DD3B1 /* WeightCell.swift */,
 				87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */,
+				87660B7E1D774AF000975E3B /* KnittingNeedles.swift */,
 				87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */,
 				87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */,
 				87E536DC1CFBFB4B00BE9735 /* Projects */,
@@ -263,6 +277,7 @@
 		87DABAB41CE7EBF4009DD3B1 /* YarnRequirementsTests */ = {
 			isa = PBXGroup;
 			children = (
+				87EFFB141D711BD700AAA422 /* InfoPlist.strings */,
 				871D78C31D1888D6005320A4 /* GlovesTests.swift */,
 				871D78C11D188435005320A4 /* MittensTests.swift */,
 				8702D6931D1866BC00286909 /* TamTests.swift */,
@@ -282,6 +297,7 @@
 		87DABABF1CE7EBF4009DD3B1 /* YarnRequirementsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				87EFFB0F1D711BD600AAA422 /* InfoPlist.strings */,
 				87DABAC01CE7EBF4009DD3B1 /* YarnRequirementsUITests.swift */,
 				87DABAC21CE7EBF4009DD3B1 /* Info.plist */,
 				87A198D71D56717D00A9046E /* XCUIElement.swift */,
@@ -418,6 +434,7 @@
 			knownRegions = (
 				en,
 				Base,
+				lv,
 			);
 			mainGroup = 87DABA921CE7EBF4009DD3B1;
 			productRefGroup = 87DABA9C1CE7EBF4009DD3B1 /* Products */;
@@ -448,6 +465,7 @@
 				87DABAA81CE7EBF4009DD3B1 /* Assets.xcassets in Resources */,
 				87EFFA5E1D6B8CE600AAA422 /* Sweater-im.plist in Resources */,
 				87EFFA6A1D6B8F9100AAA422 /* Tam-im.plist in Resources */,
+				87660B7D1D77424800975E3B /* YarnWeight.plist in Resources */,
 				87EFFA581D6B8A0700AAA422 /* Toque-im.plist in Resources */,
 				87EFFA5A1D6B8A0700AAA422 /* Blanket-im.plist in Resources */,
 				87EFFA5C1D6B8A0700AAA422 /* Sweater-si.plist in Resources */,
@@ -466,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87EFFB121D711BD700AAA422 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87EFFB0D1D711BD600AAA422 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +519,7 @@
 				87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */,
 				87DABAD11CE821D1009DD3B1 /* YarnWeight.swift in Sources */,
 				87DABACF1CE7F7B1009DD3B1 /* WeightCell.swift in Sources */,
+				87660B7F1D774AF000975E3B /* KnittingNeedles.swift in Sources */,
 				8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */,
 				87E536D31CFBECA100BE9735 /* Scarf.swift in Sources */,
 				8763AA791CF2C90300E1B003 /* GaugePicker.swift in Sources */,
@@ -562,6 +583,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				87DABAA51CE7EBF4009DD3B1 /* Base */,
+				87EFFB081D711BA800AAA422 /* lv */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -570,6 +592,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				87DABAAA1CE7EBF4009DD3B1 /* Base */,
+				87EFFB151D711BD700AAA422 /* lv */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -578,6 +601,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				87EFFA3D1D67C8FC00AAA422 /* Base */,
+				87EFFB091D711BA800AAA422 /* lv */,
 			);
 			name = Localizable.strings;
 			path = Localizations;
@@ -587,9 +611,26 @@
 			isa = PBXVariantGroup;
 			children = (
 				87EFFA471D67C9B800AAA422 /* Base */,
+				87EFFB0A1D711BA800AAA422 /* lv */,
 			);
 			name = InfoPlist.strings;
 			path = Localizations;
+			sourceTree = "<group>";
+		};
+		87EFFB0F1D711BD600AAA422 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87EFFB0E1D711BD600AAA422 /* lv */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		87EFFB141D711BD700AAA422 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87EFFB131D711BD700AAA422 /* lv */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

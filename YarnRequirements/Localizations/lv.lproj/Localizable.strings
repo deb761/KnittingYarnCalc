@@ -7,148 +7,154 @@
 */
 
 /* Sweater project name */
-"sweater" = "Sweater";
+"sweater" = "Džemperi";
 
 /* Tam project name */
-"tam" = "Tam";
+"tam" = "Beretes";
 
 /* Toque project name */
-"toque" = "Toque";
+"toque" = "Cepures";
 
 /* Socks project name */
-"socks" = "Socks";
+"socks" = "Zeķes";
 
 /* Scarf project name */
-"scarf" = "Scarf";
+"scarf" = "Šalles";
 
 /* Mittens project name */
-"mittens" = "Mittens";
+"mittens" = "Dūraiņi";
 
 /* Gloves project name */
-"gloves" = "Gloves";
+"gloves" = "Pirkstaiņi";
 
 /* Blanket project name */
-"blanket" = "Blanket";
+"blanket" = "Segas";
 
 /* Vest project name */
-"vest" = "Vest";
+"vest" = "Vestes";
 
 /* plist file containing default settings for a sweater */
-"sweater-plist" = "Sweater-im";
+"sweater-plist" = "Sweater-si";
 
 /* Tam plist file */
-"tam-plist" = "Tam-im";
+"tam-plist" = "Tam-si";
 
 /* Toque plist file */
-"toque-plist" = "Toque-im";
+"toque-plist" = "Toque-si";
 
 /* Socks plist file */
-"socks-plist" = "Socks-im";
+"socks-plist" = "Socks-si";
 
 /* Scarf plist file */
-"scarf-plist" = "Scarf-im";
+"scarf-plist" = "Scarf-si";
 
 /* Mittens plist file */
-"mittens-plist" = "Mittens-im";
+"mittens-plist" = "Mittens-si";
 
 /* Gloves plist file */
-"gloves-plist" = "Gloves-im";
+"gloves-plist" = "Gloves-si";
 
 /* Blanket plist file */
-"blanket-plist" = "Blanket-im";
+"blanket-plist" = "Blanket-si";
 
 /* Vest plist file */
-"vest-plist" = "Vest-im";
+"vest-plist" = "Vest-si";
 
 /* Length of yarn in ball */
-"ball-size" = "Ball-Size";
+"ball-size" = "Garums";
 
 /* Measurement around a sweater at the wearer's chest */
-"chest-size" = "Chest Size";
+"chest-size" = "Krūšu apk";
 
 /* Short string for picker that indicates using cm for units */
 "cm" = "cm";
 
 /* Short string for picker indicating European shoe sizes */
-"euro" = "Euro";
+"euro" = "Eiropa";
 
 /* Density of knitted stitches per inch or cm */
-"gauge" = "Gauge";
+"gauge" = "Blīvums";
 
 /* Measurement around the palm */
-"hand-size" = "Hand Size";
+"hand-size" = "Plaukstas izm";
 
 /* Measurement around head for hat size */
-"head-size" = "Head Size";
+"head-size" = "Galvas apk";
 
 /* Short string for picker that indicates using inches for units */
-"inches" = "inches";
+"inches" = "collas";
 
 /* Label for length of an item */
-"length" = "Length";
+"length" = "Garums";
 
 /* Short string for picker that indicates using meters for inits of measure */
-"meters" = "meters";
+"meters" = "metri";
 
 /* Number of balls needed for a project; needs to be short */
-"num-balls" = "Num Balls";
+"num-balls" = "Kamoli";
 
 /* A partial ball of yarn */
-"partial" = "Partial";
+"partial" = "nepilni";
 
 /* Wearer shoe size */
-"shoe-size" = "Shoe Size";
+"shoe-size" = "Pēdas izm.";
 
 /* Stitches per 4 inches to determine yarn gauge */
-"sts/4inch" = "sts/4inch";
+"sts/4inch" = "v./4collās";
 
 /* Stitches per 10 cm to determine yarn gauge */
-"sts/10cm" = "sts/10cm";
+"sts/10cm" = "v./10cm";
 
 /* Stitches per inch to determine yarn gauge */
-"sts/inch" = "sts/inch";
+"sts/inch" = "v./collā";
 
 /* Short string for picker indicating US Child shoe sizes */
-"us-child" = "US Child";
+"us-child" = "ASV-b.";
 
 /* Short string for picker indicating US Men shoe sizes */
-"us-men" = "US Men";
+"us-men" = "ASV-vīr.";
 
 /* Short string for picker indicating US Women shoe sizes */
-"us-women" = "US Women";
+"us-women" = "ASV-siev.";
 
 /* Short string for picker indicating US Youth shoe sizes */
-"us-youth" = "US Youth";
+"us-youth" = "ASV-jaun.";
 
 /* A whole ball of yarn */
-"whole" = "Whole";
+"whole" = "pilni";
 
 /* Label for width of an item */
-"width" = "Width";
+"width" = "Platums";
 
 /* Short string for picker that indicates using yards for inits of measure */
-"yards" = "yards";
+"yards" = "jardi";
 
 /* Label next to field showing how much yarn is estimated for a project; needs to be short */
-"yarn-req-label" = "Yarn Req";
+"yarn-req-label" = "Daudzums";
 
 /* Term for weight/thickness of yarn used for socks */
-"fingering-yarn" = "Fingering";
+"fingering-yarn" = "Zeķu dzija";
 
 /* Term for weight/thickness of yarn used for lighter weight garments */
-"sport-yarn"= "Sport";
+"sport-yarn"= "Sporta dzija";
 
 /* Term for weight/thickness of yarn used for lighter weight garments */
-"dk-yarn" = "DK";
+"dk-yarn" = "Divkārtīga dzija"; //Short version (if you need to shorten all of them, you can write dz. instead of dzija): "Divk. dz."
 
 /* Term for weight/thickness of yarn used for sweaters */
-"worsted-yarn" = "Worsted";
+"worsted-yarn" = "Vidēja vērpuma dzija"; //Short version: "Vid. v. dz."
 
 /* Term for weight/thickness of yarn used for Aran sweaters */
-"aran-yarn" = "Aran";
+"aran-yarn" = "Aran dzija";
 
 /* Term for weight/thickness of yarn used for heavy sweaters */
-"bulky-yarn" = "Bulky";
+"bulky-yarn" = "Bieza dzija";
 
 /* Term for weight/thickness of yarn used for really bulky items */
-"super-bulky-yarn" = "Super Bulky";
+"super-bulky-yarn" = "Ļoti bieza dzija"; //Short version: "Ļ. bieza dz."
+
+/* Label representing a range of knitting needle sizes */
+"needle-size" = "Adatas izmērs:";
+
+/* label for windings per inch */
+"wpi" = "wpi (tinumi/colla)";

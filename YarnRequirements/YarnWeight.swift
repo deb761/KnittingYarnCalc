@@ -14,19 +14,26 @@ public class YarnWeight
     // suggested needle sizes in US and international units
     var needles: String
     // Stitches per 4" or 10cm
-    var gauge: String
+    var gauge: Int
+    var gaugeHigh: Int
     // Windings per inch
-    var wpi: String
+    var wpi: Int
+    var wpiHigh: Int
     // Density per 50 gm for wool
-    var density: String
+    var length: Int
+    // ball weight in grams
+    var weight: Int
     
     // initialize the yarn weight values
-    init(name: String, needles: String, gauge: String, wpi: String, density: String)
+    init(name: String, needles: String, gauge: Int, gaugeHigh: Int = 0, wpi: Int, wpiHigh: Int = 0, length: Int, weight: Int)
     {
-        self.name = name;
-        self.needles = needles;
-        self.gauge = gauge;
-        self.wpi = wpi;
-        self.density = density
+        self.name = name
+        self.needles = needles
+        self.gauge = gauge
+        self.gaugeHigh = gaugeHigh
+        self.wpi = wpi
+        self.wpiHigh = wpiHigh
+        self.length = length
+        self.weight = weight
     }
 }
