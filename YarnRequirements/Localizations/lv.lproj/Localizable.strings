@@ -153,8 +153,23 @@
 /* Term for weight/thickness of yarn used for really bulky items */
 "super-bulky-yarn" = "Ļoti bieza dzija"; //Short version: "Ļ. bieza dz."
 
+/* Term for weight/thickness of really super-thick yarn */
+"jumbo-yarn" = "Ļoti Ļoti bieza dzija";
+
 /* Label representing a range of knitting needle sizes */
 "needle-size" = "Adatas izmērs:";
 
 /* label for windings per inch */
 "wpi" = "wpi (tinumi/colla)";
+
+/* abbreviation for grams */
+"g" = "g";
+
+/* abbreviation for meters */
+"m" = "m";
+
+/* indicate relationship between two things: 100m per 100g */
+"per" = "vienu";
+
+/* a ball of yarn */
+"yarn-ball" = "kamoli";
