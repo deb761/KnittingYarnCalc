@@ -46,3 +46,11 @@
 /* Class = "UILabel"; text = "Density"; ObjectID = "vS7-IK-dM1"; */
 "vS7-IK-dM1.text" = "Biezums";
 
+/* Class = "UILabel"; text = "Sweater and vest size dimensions are finished size.  Sweaters and vests are straight hip-length garments.  Sweaters have drop shoulders and tapered sleeves.  Use less yarn for fitted garments and more yarn for longer garments."; ObjectID = "LNa-cP-9tC";*/
+"LNa-cP-9tC.text" = "Džemperu un vestu izmēri norādīti gataviem apģērbiem. Džemperu plecu daļa ir taisna, bet piedurknes - konusveida. Džemperi un vestes adīti taisni, līdz gurnu līnijai. Plecu daļa ir taisna, piedurknes - konusveida. Lietojiet mazāk dzijas pieguļošākiem apģērbiem, bet vairāk - garākiem adījumiem.";
+
+/* Class = "UILabel"; text = "Toque and Tam measurements are head size, not garment size."; ObjectID = "gyY-0J-GKh"; */
+"gyY-0J-GKh.text" = "Segu un šaļļu izmēri norādīti gataviem adījumiem. Veidojot pušķus vai bumbuļus, būs nepieciešams vairāk dzijas.";
+
+/* Class = "UILabel"; text = "Blanket and scarf measurements are finished size.  Add more yarn for tassels."; ObjectID = "kH9-Ix-nEQ"; */
+"kH9-Ix-nEQ.text" = "Sega un šalli mērījumi tiek pabeigta izmēru. Pievienot vairāk dzija pušķi.";
