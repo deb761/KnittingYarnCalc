@@ -71,10 +71,12 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
 
         // Create the stack with the yarn needed
-        yarnRow = DimensionRow(name: NSLocalizedString("yarn-req-label", value: "Yarn Req", comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"),
-                               picker: pkYarnUnits, delegate: self)
+        yarnRow = DimensionRow(name: NSLocalizedString("yarn-req-label", value: "Yarn Req",
+            comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"),
+            picker: pkYarnUnits, delegate: self)
         txtYarnNeeded = yarnRow!.txtVal
         txtYarnNeeded.userInteractionEnabled = false
+        txtYarnNeeded.textColor = Colors.inactive
         
         // Create the stack with the ball size
         ballRow = DimensionRow(name: NSLocalizedString("ball-size", value: "Ball Size", comment: "Length of yarn in ball"),
@@ -87,6 +89,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
                                  picker: pkBallPartial, delegate: self)
         txtBallsNeeded = nBallsRow!.txtVal
         txtBallsNeeded.userInteractionEnabled = false
+        txtBallsNeeded.textColor = Colors.inactive
         
         // Create the main stack
         mainStack = UIStackView(arrangedSubviews: [nameStack!, gaugeRow!.stack, yarnRow!.stack, ballRow!.stack, nBallsRow!.stack])
