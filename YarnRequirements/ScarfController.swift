@@ -32,22 +32,22 @@ class ScarfController: BaseProjectController {
         // Add the length row
         lengthRow = DimensionRow(name: NSLocalizedString("length", value: "Length", comment: "Label for length of an item"), picker: pkLengthUnits, delegate: self)
         txtLength = lengthRow?.txtVal        
-        mainStack?.insertArrangedSubview((lengthRow?.stack)!, atIndex: 2)
+        mainStack?.insertArrangedSubview((lengthRow?.stack)!, at: 2)
         
         // Add the width row
         widthRow = DimensionRow(name: NSLocalizedString("width", value: "Width", comment: "Label for width of an item"), picker: pkWidthUnits, delegate: self)
         txtWidth = widthRow?.txtVal
-        mainStack?.insertArrangedSubview((widthRow?.stack)!, atIndex: 3)
+        mainStack?.insertArrangedSubview((widthRow?.stack)!, at: 3)
         
         pkLengthUnits.loaded(self, tag: 5)
         pkWidthUnits.loaded(self, tag: 6)
         
         scarf = project as! Scarf
         txtLength.text = String(scarf.length)
-        txtLength.addTarget(self, action: #selector(ScarfController.changeLength(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        txtLength.addTarget(self, action: #selector(ScarfController.changeLength(_:)), for: UIControlEvents.editingDidEnd)
 
         txtWidth.text = String(scarf.width)
-        txtWidth.addTarget(self, action: #selector(ScarfController.changeWidth(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        txtWidth.addTarget(self, action: #selector(ScarfController.changeWidth(_:)), for: UIControlEvents.editingDidEnd)
 
         // Set initial value for pickers
         pkLengthUnits.selectRow(scarf.lengthUnits.rawValue, inComponent: 0, animated: false)
@@ -56,7 +56,7 @@ class ScarfController: BaseProjectController {
 
     
     // Update the units and recalculate the yarn needed
-    override func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {
         case 5:
@@ -79,7 +79,7 @@ class ScarfController: BaseProjectController {
     }
     
     // Recalc and update units when ball size changes
-    func changeLength(sender: AnyObject) {
+    func changeLength(_ sender: AnyObject) {
         if let length = Double(txtLength.text!) {
             scarf.length = length
         } else {
@@ -90,7 +90,7 @@ class ScarfController: BaseProjectController {
     }
     
     // Recalc and update units when ball size changes
-    func changeWidth(sender: AnyObject) {
+    func changeWidth(_ sender: AnyObject) {
         if let width = Double(txtWidth.text!) {
             scarf.width = width
         } else {

@@ -17,7 +17,7 @@ class Mittens : Project {
             return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
         }
         set {
-            defs.setDouble(newValue, forKey: "\(name)-size")
+            defs.set(newValue, forKey: "\(name)-size")
         }
     }
     // Units for hand size
@@ -27,7 +27,7 @@ class Mittens : Project {
                                               def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-sizeUnits")
         }
     }
     
@@ -44,7 +44,7 @@ class Mittens : Project {
     override func calcYarnRequired()
     {
         var width = size;
-        if (sizeUnits != ShortLengthUnits.CM)
+        if (sizeUnits != ShortLengthUnits.cm)
         {
             width *= Project.inches2cm
         }
@@ -60,7 +60,7 @@ class Gloves : Mittens {
     override func calcYarnRequired()
     {
         var width = size * 1.05 // add extra to go around fingers
-        if (sizeUnits != ShortLengthUnits.CM)
+        if (sizeUnits != ShortLengthUnits.cm)
         {
             width *= Project.inches2cm
         }

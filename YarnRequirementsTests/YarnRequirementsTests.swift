@@ -20,7 +20,7 @@ class ProjectTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // set project to defaults
-        project = Project(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Scarf")!)
+        project = Project(name: "Blanket", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Scarf")!)
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
     }
     
@@ -31,7 +31,7 @@ class ProjectTests: XCTestCase {
     
     func testProjectDescriptors() {
         // Verify the correct project name and images are returned
-        XCTAssertEqual("Base", project.name, "Project name does not match!")
+        XCTAssertEqual("Blanket", project.name, "Project name does not match!")
         XCTAssertEqual(UIImage(named:"Blanket")!, project.thumb, "Thumb image does not match!")
         XCTAssertEqual(UIImage(named:"Scarf")!, project.image, "Larger image does not match!")
     }
@@ -39,7 +39,7 @@ class ProjectTests: XCTestCase {
     func testCalcAreaGaugeInch() {
         // Verify changing the gauge units updates the yarn required
         let yarnReq10 = project.yarnNeeded
-        project.gaugeUnits = GaugeUnits.StsPerInch
+        project.gaugeUnits = GaugeUnits.stsPerInch
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -49,7 +49,7 @@ class ProjectTests: XCTestCase {
     func testCalcAreaGauge10cm() {
         // Verify changing the gauge units updates the yarn required
         let yarnReq4 = project.yarnNeeded
-        project.gaugeUnits = GaugeUnits.StsPer10cm
+        project.gaugeUnits = GaugeUnits.stsPer10cm
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -59,10 +59,10 @@ class ProjectTests: XCTestCase {
     func testCalcAreaGauge4in() {
         // Verify changing the gauge units updates the yarn required
         let yarnReq4 = project.yarnNeeded
-        project.gaugeUnits = GaugeUnits.StsPerInch
+        project.gaugeUnits = GaugeUnits.stsPerInch
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         
-        project.gaugeUnits = GaugeUnits.StsPer4inch
+        project.gaugeUnits = GaugeUnits.stsPer4inch
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -118,8 +118,10 @@ class ProjectTests: XCTestCase {
     
     func testCalcAreaYarnUnitsYards() {
         // Verify changing the required units updates the yarn required amount
+        project.yarnNeededUnits = .meters
+        project.calcYarnRequired(cmLength, siWidth: cmWidth)
         let yarnReqM = project.yarnNeeded
-        project.yarnNeededUnits = LongLengthUnits.Yards
+        project.yarnNeededUnits = LongLengthUnits.yards
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -128,16 +130,16 @@ class ProjectTests: XCTestCase {
     
     func testCalcAreaYarnUnitsMeters() {
         // Verify changing the yarn required units updates the yarn required amount
-        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.yarnNeededUnits = LongLengthUnits.meters
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         let yarnReqM = project.yarnNeeded
-        project.yarnNeededUnits = LongLengthUnits.Yards
+        project.yarnNeededUnits = LongLengthUnits.yards
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertNotEqual(project.yarnNeeded, yarnReqM, "Yarn Needed did not change when units changed to yards!")
 
-        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.yarnNeededUnits = LongLengthUnits.meters
         project.calcYarnRequired(cmLength, siWidth: cmWidth)
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -147,13 +149,13 @@ class ProjectTests: XCTestCase {
     func testCalcAreaBallUnitsYards() {
         // Verify changing the ball size units to yards updates the balls needed for a large project
         // length and width here are inches
-        project.ballSizeUnits = LongLengthUnits.Meters
+        project.ballSizeUnits = LongLengthUnits.meters
         let length = 60 * Project.inches2cm
         let width = 60 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqM = project.ballsNeeded
         
-        project.ballSizeUnits = LongLengthUnits.Yards
+        project.ballSizeUnits = LongLengthUnits.yards
         project.calcYarnRequired(length, siWidth: width)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertNotEqual(project.ballsNeeded, ballsReqM, "Balls Needed did not change when units changed to yards!")
@@ -162,13 +164,13 @@ class ProjectTests: XCTestCase {
     func testCalcAreaBallUnitsMeters() {
         // Verify changing the ball size units to meters updates the balls needed for a large project
         // length and width here are inches
-        project.ballSizeUnits = LongLengthUnits.Yards
+        project.ballSizeUnits = LongLengthUnits.yards
         let length = 60 * Project.inches2cm
         let width = 60 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqY = project.ballsNeeded
         
-        project.ballSizeUnits = LongLengthUnits.Meters
+        project.ballSizeUnits = LongLengthUnits.meters
         project.calcYarnRequired(length, siWidth: width)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertNotEqual(project.ballsNeeded, ballsReqY, "Balls Needed did not change when units changed to meters!")
@@ -177,13 +179,13 @@ class ProjectTests: XCTestCase {
     func testCalcAreaBallSize() {
         // Verify changing the ball size updates the balls needed for a large project
         // length and width here are inches
-        project.ballSizeUnits = LongLengthUnits.Yards
+        project.ballSizeUnits = LongLengthUnits.yards
         let length = 60 * Project.inches2cm
         let width = 60 * Project.inches2cm
         project.calcYarnRequired(length, siWidth: width)
         let ballsReqY = project.ballsNeeded
         
-        project.ballSizeUnits = LongLengthUnits.Meters
+        project.ballSizeUnits = LongLengthUnits.meters
         project.calcYarnRequired(length, siWidth: width)
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertNotEqual(project.ballsNeeded, ballsReqY, "Yarn Needed did not change when units changed to meters!")
@@ -191,10 +193,10 @@ class ProjectTests: XCTestCase {
     
     func testCalcYarnReqValuesSi() {
         // Verify calculations are correct using SI units
-        project.gaugeUnits = GaugeUnits.StsPer10cm
-        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.gaugeUnits = GaugeUnits.stsPer10cm
+        project.yarnNeededUnits = LongLengthUnits.meters
         project.ballSize = 100
-        project.ballSizeUnits = LongLengthUnits.Meters
+        project.ballSizeUnits = LongLengthUnits.meters
         project.partialBalls = true
         let tests = [
             CalcVar(gauge:1.0, length: 1.0, width: 1.0, yarn: 2, balls: 0.02),
@@ -221,10 +223,10 @@ class ProjectTests: XCTestCase {
     
     func testCalcYarnReqValuesImp() {
         // Verify calculations are correct using SI units
-        project.gaugeUnits = GaugeUnits.StsPer4inch
-        project.yarnNeededUnits = LongLengthUnits.Yards
+        project.gaugeUnits = GaugeUnits.stsPer4inch
+        project.yarnNeededUnits = LongLengthUnits.yards
         project.ballSize = 100
-        project.ballSizeUnits = LongLengthUnits.Yards
+        project.ballSizeUnits = LongLengthUnits.yards
         project.partialBalls = true
         let tests = [
             CalcVar(gauge:1.0, length: 1.0, width: 1.0, yarn: 2, balls: 0.02),
@@ -259,9 +261,9 @@ class ProjectTests: XCTestCase {
     
     // Verify that balls needed is calculated correctly when yarnNeeded and ballSize are both in meters
     func testBallsNeededMeters() {
-        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.yarnNeededUnits = LongLengthUnits.meters
         project.ballSize = 111
-        project.ballSizeUnits = LongLengthUnits.Meters
+        project.ballSizeUnits = LongLengthUnits.meters
        
         let tests = [0, 1234, 2345, 3456, 7890]
         
@@ -283,9 +285,9 @@ class ProjectTests: XCTestCase {
     }
     // Verify that balls needed is calculated correctly when yarnNeeded and ballSize are both in yards
     func testBallsNeededYards() {
-        project.yarnNeededUnits = LongLengthUnits.Yards
+        project.yarnNeededUnits = LongLengthUnits.yards
         project.ballSize = 111
-        project.ballSizeUnits = LongLengthUnits.Yards
+        project.ballSizeUnits = LongLengthUnits.yards
         
         let tests = [0, 1234, 2345, 3456, 7890]
         
@@ -307,9 +309,9 @@ class ProjectTests: XCTestCase {
     }
     // Verify that balls needed is calculated correctly when yarnNeeded is in yards and ballSize is in meters
     func testBallsNeededMixed() {
-        project.yarnNeededUnits = LongLengthUnits.Yards
+        project.yarnNeededUnits = LongLengthUnits.yards
         project.ballSize = 111
-        project.ballSizeUnits = LongLengthUnits.Meters
+        project.ballSizeUnits = LongLengthUnits.meters
         
         let tests = [0, 1234, 2345, 3456, 7890]
         
@@ -331,9 +333,9 @@ class ProjectTests: XCTestCase {
     }
     // Verify that balls needed is calculated correctly when yarnNeeded is in meters and ballSize is in yards
     func testBallsNeededMixed2() {
-        project.yarnNeededUnits = LongLengthUnits.Meters
+        project.yarnNeededUnits = LongLengthUnits.meters
         project.ballSize = 123
-        project.ballSizeUnits = LongLengthUnits.Yards
+        project.ballSizeUnits = LongLengthUnits.yards
         
         let tests = [0, 1234, 2345, 3456, 7890]
         
@@ -357,7 +359,7 @@ class ProjectTests: XCTestCase {
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

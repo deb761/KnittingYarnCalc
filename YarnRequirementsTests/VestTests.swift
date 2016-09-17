@@ -25,9 +25,9 @@ class VestTests: XCTestCase {
 
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        vest.gaugeUnits = .StsPerInch
-        vest.sizeUnits = .Inches
-        vest.yarnNeededUnits = .Yards
+        vest.gaugeUnits = .stsPerInch
+        vest.sizeUnits = .inches
+        vest.yarnNeededUnits = .yards
         
         let tests = [
             // The Handy Knitter's Guide to Yarn Requirements
@@ -79,9 +79,9 @@ class VestTests: XCTestCase {
 
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        vest.gaugeUnits = .StsPer4inch
-        vest.sizeUnits = .Inches
-        vest.yarnNeededUnits = .Yards
+        vest.gaugeUnits = .stsPer4inch
+        vest.sizeUnits = .inches
+        vest.yarnNeededUnits = .yards
         
         let tests = [
             // Alice Starmore Patterns for Men, Sand Rib Vest

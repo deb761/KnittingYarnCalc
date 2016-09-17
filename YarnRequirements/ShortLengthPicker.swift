@@ -11,7 +11,7 @@ import UIKit
 class ShortLengthPicker: PickerView {
 
     // Set the delegate and dataSource
-    override func loaded(del:UIPickerViewDelegate, tag:Int)
+    override func loaded(_ del:UIPickerViewDelegate, tag:Int)
     {
         super.loaded(del, tag:tag)
         text = [NSLocalizedString("inches", value: "inches", comment: "Short string for picker that indicates using inches for units"),

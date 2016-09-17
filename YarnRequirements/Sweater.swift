@@ -17,7 +17,7 @@ class Sweater : Project {
             return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
         }
         set {
-            defs.setDouble(newValue, forKey: "\(name)-size")
+            defs.set(newValue, forKey: "\(name)-size")
         }
     }
     // Units for chest size
@@ -26,7 +26,7 @@ class Sweater : Project {
             return defs.shortLengthUnitsForKey("\(name)-sizeUnits", def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-sizeUnits")
         }
     }
     
@@ -47,7 +47,7 @@ class Sweater : Project {
     override func calcYarnRequired()
     {
         var chest = size
-        if (sizeUnits == .Inches) {
+        if (sizeUnits == .inches) {
             chest *= Project.inches2cm
         }
         let intercept = -5559.8 // cm

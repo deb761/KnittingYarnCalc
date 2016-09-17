@@ -21,11 +21,11 @@ class WeightsController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
-        let plistPath:String? = NSBundle.mainBundle().pathForResource("YarnWeight", ofType: "plist")!
-        let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)!
+        var format = PropertyListSerialization.PropertyListFormat.xml //format of the property list
+        let plistPath:String? = Bundle.main.path(forResource: "YarnWeight", ofType: "plist")!
+        let plistXML = FileManager.default.contents(atPath: plistPath!)!
         do {
-            yarnWeights = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)
+            yarnWeights = try PropertyListSerialization.propertyList(from: plistXML, options: .mutableContainersAndLeaves, format: &format)
                 as! [AnyObject]
         }
         catch {
@@ -38,32 +38,32 @@ class WeightsController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Dispose of any resources that can be recreated.
     }
     // Return the number of items to display
-    func tableView(tableView : UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView : UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return yarnWeights.count
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("WeightCell", forIndexPath: indexPath) as! WeightCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WeightCell", for: indexPath) as! WeightCell
 
-        let weight = yarnWeights[indexPath.row]
+        let weight = yarnWeights[(indexPath as NSIndexPath).row]
         let name = weight["name"] as! String
-        cell.lblName?.text = NSLocalizedString(name + "-yarn", value: name.capitalizedString,
+        cell.lblName?.text = NSLocalizedString(name + "-yarn", value: name.capitalized,
                                                comment: "Label for yarn weight name")
         var needles:[KnittingNeedle] = []
         for size in weight["needles"] as! [NSNumber] {
             needles.append(KnittingNeedle(size: size as Double))
         }
-        let locale = NSLocale.currentLocale()
-        let country = locale.objectForKey(NSLocaleCountryCode) as? String
+        let locale = Locale.current
+        let country = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as? String
         var sizes:String = ""
 
         // If the user is in the US, show US needle sizes first

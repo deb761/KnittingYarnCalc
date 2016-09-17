@@ -17,7 +17,7 @@ class Scarf: Project {
             return defs.doubleForKey("\(name)-length", def: defaults["length"] as! Double)
         }
         set {
-            defs.setObject(newValue, forKey: "\(name)-length")
+            defs.set(newValue, forKey: "\(name)-length")
         }
     }
     // Units for length
@@ -27,7 +27,7 @@ class Scarf: Project {
             return defs.shortLengthUnitsForKey("\(name)-lengthUnits", def: ShortLengthUnits(rawValue: defaults["lengthUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-lengthUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-lengthUnits")
         }
     }
     
@@ -37,7 +37,7 @@ class Scarf: Project {
             return defs.doubleForKey("\(name)-width", def: defaults["width"] as! Double)
         }
         set {
-            defs.setObject(newValue, forKey: "\(name)-width")
+            defs.set(newValue, forKey: "\(name)-width")
         }
     }
     // Units for length
@@ -46,7 +46,7 @@ class Scarf: Project {
             return defs.shortLengthUnitsForKey("\(name)-widthUnits", def: ShortLengthUnits(rawValue: defaults["widthUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-widthUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-widthUnits")
         }
     }
 
@@ -64,12 +64,12 @@ class Scarf: Project {
     override func calcYarnRequired()
     {
         var siLength = length
-        if (lengthUnits != ShortLengthUnits.CM)
+        if (lengthUnits != ShortLengthUnits.cm)
         {
             siLength = length * Project.inches2cm
         }
         var siWidth = width
-        if (widthUnits != ShortLengthUnits.CM)
+        if (widthUnits != ShortLengthUnits.cm)
         {
             siWidth = width * Project.inches2cm
         }
@@ -83,7 +83,7 @@ class Blanket : Scarf {
     // provide a means of defining a project name and image
     override init(name:String, thumb:UIImage, image:UIImage) {
         super.init(name: name, thumb: thumb, image: image)
-        defaults["width"] = 60.0
+        defaults["width"] = 60.0 as AnyObject?
         calcYarnRequired()
     }
     // Blankets consistently need more yarn

@@ -21,37 +21,37 @@ class DimensionRow {
         lblName = UILabel()
         lblName.text = name + ":"
         lblName.textColor = Colors.lblColor
-        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 90))
+        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 90))
         
         // Define the txtField with a defined width
-        txtVal = UITextField(frame: CGRectMake(10, 10, 50, 20))
-        txtVal.font = UIFont.systemFontOfSize(17)
-        txtVal.borderStyle = UITextBorderStyle.RoundedRect
-        txtVal.autocorrectionType = UITextAutocorrectionType.No
-        txtVal.keyboardType = UIKeyboardType.DecimalPad
-        txtVal.returnKeyType = UIReturnKeyType.Done
-        txtVal.clearButtonMode = UITextFieldViewMode.WhileEditing;
-        txtVal.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
+        txtVal = UITextField(frame: CGRect(x: 10, y: 10, width: 50, height: 20))
+        txtVal.font = UIFont.systemFont(ofSize: 17)
+        txtVal.borderStyle = UITextBorderStyle.roundedRect
+        txtVal.autocorrectionType = UITextAutocorrectionType.no
+        txtVal.keyboardType = UIKeyboardType.decimalPad
+        txtVal.returnKeyType = UIReturnKeyType.done
+        txtVal.clearButtonMode = UITextFieldViewMode.whileEditing;
+        txtVal.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         txtVal.delegate = delegate
         // Set the text field to really wide and set it's comprossion resistance to low so it will shrink to fit on the smaller phones
-        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .Width, relatedBy: .GreaterThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 150))
-        txtVal.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: .Horizontal)
-        txtVal.setContentCompressionResistancePriority(UILayoutPriorityDefaultLow, forAxis: .Horizontal)
+        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150))
+        txtVal.setContentHuggingPriority(UILayoutPriorityDefaultLow, for: .horizontal)
+        txtVal.setContentCompressionResistancePriority(UILayoutPriorityDefaultLow, for: .horizontal)
         
         // Set up the picker
         self.picker = picker
         // Set the height and width of the picker so that it will not compress on smaller phones nor get much wider on large phones
-        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 50))
-        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 130))
-        picker.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: .Horizontal)
-        picker.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: .Horizontal)
+        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
+        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 130))
+        picker.setContentHuggingPriority(UILayoutPriorityDefaultLow, for: .horizontal)
+        picker.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .horizontal)
         // Create the stackView and add the label, textField, and picker to it
         stack = UIStackView(arrangedSubviews: [lblName, txtVal, self.picker])
         
         // Set the stackview as horizontal and define how its elements are arranged
-        stack.axis = .Horizontal
-        stack.distribution = .FillProportionally
-        stack.alignment = .Center
+        stack.axis = .horizontal
+        stack.distribution = .fillProportionally
+        stack.alignment = .center
         stack.spacing = 7
         stack.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -59,7 +59,7 @@ class DimensionRow {
     func viewDidLoad() {
         // Make the txtVal like a textField
         txtVal.layer.cornerRadius = 5
-        txtVal.layer.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.5).CGColor
+        txtVal.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
         txtVal.layer.borderWidth = 0.5
         txtVal.clipsToBounds = true        
     }

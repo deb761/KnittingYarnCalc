@@ -10,7 +10,7 @@ import UIKit
 
 // Define an enumeration for all the shoe size units out there
 enum ShoeSizeUnits : Int {
-    case Child=0, Youth, Women, Men, Euro
+    case child=0, youth, women, men, euro
 }
 
 // For now, treat socks as a rectangle wrapped around the foot
@@ -22,7 +22,7 @@ class Socks: Project {
             return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
         }
         set {
-            defs.setDouble(newValue, forKey: "\(name)-size")
+            defs.set(newValue, forKey: "\(name)-size")
         }
     }
     // Units for chest size
@@ -32,7 +32,7 @@ class Socks: Project {
                                                def: ShoeSizeUnits(rawValue: defaults["sizeUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-sizeUnits")
         }
     }
     
@@ -59,15 +59,15 @@ class Socks: Project {
         var length = 0.0
         switch sizeUnits
         {
-        case .Child:
+        case .child:
             length = getLength(usChild, size: size)!
-        case .Youth:
+        case .youth:
             length = getLength(usYouth, size: size)!
-        case .Women:
+        case .women:
             length = getLength(usWomen, size: size)!
-        case .Men:
+        case .men:
             length = getLength(usMen, size: size)!
-        case .Euro:
+        case .euro:
             length = getLength(eu, size: size)!
         }
         // I calculated a least-squares fit of foot length to circumference,
@@ -114,7 +114,7 @@ class Socks: Project {
     
     // Perform a linear interpolation between the input size and the next
     // highest to get foot length in cm
-    func getLength(table:[Int:Double], size:Double) -> Double?
+    func getLength(_ table:[Int:Double], size:Double) -> Double?
     {
         let lowSized = floor(size)
         let lowSize = Int(lowSized)
@@ -125,7 +125,7 @@ class Socks: Project {
         }
         var highSize = lowSize + 1
         // Check for the US youth size rollover from 13 to 1
-        if ((sizeUnits == .Youth) && (lowSize == 13))
+        if ((sizeUnits == .youth) && (lowSize == 13))
         {
             highSize = 1;
         }

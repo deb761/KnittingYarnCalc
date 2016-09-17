@@ -25,9 +25,9 @@ class GlovesTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        gloves.gaugeUnits = .StsPerInch
-        gloves.sizeUnits = .Inches
-        gloves.yarnNeededUnits = .Yards
+        gloves.gaugeUnits = .stsPerInch
+        gloves.sizeUnits = .inches
+        gloves.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Handy 4-6 years, gauge 5", gauge: 5, size: 6, yarn: 78),
@@ -66,9 +66,9 @@ class GlovesTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        gloves.gaugeUnits = .StsPer4inch
-        gloves.sizeUnits = .Inches
-        gloves.yarnNeededUnits = .Yards
+        gloves.gaugeUnits = .stsPer4inch
+        gloves.sizeUnits = .inches
+        gloves.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Kid's Gloves by Sarah E. White", gauge: 29, size: 7, ballSize: 200, balls: 1),

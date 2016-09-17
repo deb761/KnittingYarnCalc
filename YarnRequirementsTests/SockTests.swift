@@ -25,9 +25,9 @@ class SockTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        socks.gaugeUnits = .StsPerInch
-        socks.sizeUnits = .Euro
-        socks.yarnNeededUnits = .Yards
+        socks.gaugeUnits = .stsPerInch
+        socks.sizeUnits = .euro
+        socks.yarnNeededUnits = .yards
         
         let tests = [
             //
@@ -72,9 +72,9 @@ class SockTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        socks.gaugeUnits = .StsPer4inch
-        socks.sizeUnits = .Euro
-        socks.yarnNeededUnits = .Yards
+        socks.gaugeUnits = .stsPer4inch
+        socks.sizeUnits = .euro
+        socks.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Test 1", gauge: 32, size: 38, ballSize: 200, balls: 2),

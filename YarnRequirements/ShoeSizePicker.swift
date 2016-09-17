@@ -11,7 +11,7 @@ import UIKit
 class ShoeSizePicker: PickerView {
 
     // Set the delegate and dataSource
-    override func loaded(del:UIPickerViewDelegate, tag:Int)
+    override func loaded(_ del:UIPickerViewDelegate, tag:Int)
     {
         super.loaded(del, tag:tag)
         text = [NSLocalizedString("us-child", value: "US Child", comment: "Short string for picker indicating US Child shoe sizes"),

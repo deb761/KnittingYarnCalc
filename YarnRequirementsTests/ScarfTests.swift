@@ -18,7 +18,7 @@ class ScarfTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        scarf = Scarf(name: "Base", thumb:UIImage(named:"Scarf")!, image:UIImage(named:"Scarf")!)
+        scarf = Scarf(name: "Scarf", thumb:UIImage(named:"Scarf")!, image:UIImage(named:"Scarf")!)
     }
     
     override func tearDown() {
@@ -28,10 +28,10 @@ class ScarfTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        scarf.gaugeUnits = .StsPerInch
-        scarf.lengthUnits = .Inches
-        scarf.widthUnits = .Inches
-        scarf.yarnNeededUnits = .Yards
+        scarf.gaugeUnits = .stsPerInch
+        scarf.lengthUnits = .inches
+        scarf.widthUnits = .inches
+        scarf.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Handy 1", gauge: 3, width: 6, length: 40, yarn: 114),
@@ -62,11 +62,11 @@ class ScarfTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        scarf.gaugeUnits = .StsPer4inch
-        scarf.lengthUnits = .Inches
-        scarf.widthUnits = .Inches
-        scarf.yarnNeededUnits = .Yards
-        scarf.ballSizeUnits = .Yards
+        scarf.gaugeUnits = .stsPer4inch
+        scarf.lengthUnits = .inches
+        scarf.widthUnits = .inches
+        scarf.yarnNeededUnits = .yards
+        scarf.ballSizeUnits = .yards
         
         let tests = [
             PatternInfo(name: "Stitch Mountain, reversible cable scarf", gauge: 12, width: 13.3, length: 51, ballSize: 151, balls: 2),

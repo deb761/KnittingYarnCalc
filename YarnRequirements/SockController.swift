@@ -27,13 +27,13 @@ class SockController: BaseProjectController {
                                picker: pkSizeUnits, delegate: self)
         txtSize = sizeRow?.txtVal
         
-        mainStack?.insertArrangedSubview((sizeRow?.stack)!, atIndex: 2)
+        mainStack?.insertArrangedSubview((sizeRow?.stack)!, at: 2)
         
         pkSizeUnits.loaded(self, tag: 5)
         
         socks = project as! Socks
         txtSize.text = String(socks.size)
-        txtSize.addTarget(self, action: #selector(SockController.changeSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        txtSize.addTarget(self, action: #selector(SockController.changeSize(_:)), for: UIControlEvents.editingDidEnd)
 
         // Set initial value for pickers
         pkSizeUnits.selectRow(socks.sizeUnits.rawValue, inComponent: 0, animated: false)
@@ -45,7 +45,7 @@ class SockController: BaseProjectController {
     }
     
     // Update the units and recalculate the yarn needed
-    override func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {
         case 5:
@@ -61,7 +61,7 @@ class SockController: BaseProjectController {
     }
 
     // Recalc and update units when ball size changes
-    func changeSize(sender: AnyObject) {
+    func changeSize(_ sender: AnyObject) {
         if let size = Double(txtSize.text!) {
             socks.size = size
         } else {

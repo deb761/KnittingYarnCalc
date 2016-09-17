@@ -9,52 +9,52 @@
 import Foundation
 import UIKit
 
-extension NSUserDefaults {
-    func gaugeUnitsForKey(key: String, def: GaugeUnits) -> GaugeUnits {
-        if let value = objectForKey(key) as? Int {
+extension UserDefaults {
+    func gaugeUnitsForKey(_ key: String, def: GaugeUnits) -> GaugeUnits {
+        if let value = object(forKey: key) as? Int {
             return GaugeUnits(rawValue: value)!
         } else {
-            setObject(def.rawValue, forKey: key)
+            set(def.rawValue, forKey: key)
             return def
         }
     }
-    func longLengthUnitsForKey(key: String, def: LongLengthUnits) -> LongLengthUnits {
-        if let value = objectForKey(key) as? Int {
+    func longLengthUnitsForKey(_ key: String, def: LongLengthUnits) -> LongLengthUnits {
+        if let value = object(forKey: key) as? Int {
             return LongLengthUnits(rawValue: value)!
         } else {
-            setObject(def.rawValue, forKey: key)
+            set(def.rawValue, forKey: key)
             return def
         }
     }
-    func shortLengthUnitsForKey(key: String, def: ShortLengthUnits) -> ShortLengthUnits {
-        if let value = objectForKey(key) as? Int {
+    func shortLengthUnitsForKey(_ key: String, def: ShortLengthUnits) -> ShortLengthUnits {
+        if let value = object(forKey: key) as? Int {
             return ShortLengthUnits(rawValue: value)!
         } else {
-            setObject(def.rawValue, forKey: key)
+            set(def.rawValue, forKey: key)
             return def
         }
     }
-    func shoeSizeUnitsForKey(key: String, def: ShoeSizeUnits) -> ShoeSizeUnits {
-        if let value = objectForKey(key) as? Int {
+    func shoeSizeUnitsForKey(_ key: String, def: ShoeSizeUnits) -> ShoeSizeUnits {
+        if let value = object(forKey: key) as? Int {
             return ShoeSizeUnits(rawValue: value)!
         } else {
-            setObject(def.rawValue, forKey: key)
+            set(def.rawValue, forKey: key)
             return def
         }
     }
-    func doubleForKey(key: String, def: Double) -> Double {
-        if let value = objectForKey(key) as? Double {
+    func doubleForKey(_ key: String, def: Double) -> Double {
+        if let value = object(forKey: key) as? Double {
             return value
         } else {
-            setObject(def, forKey: key)
+            set(def, forKey: key)
             return def
         }
     }
-    func integerForKey(key: String, def: Int) -> Int {
-        if let value = objectForKey(key) as? Int {
+    func integerForKey(_ key: String, def: Int) -> Int {
+        if let value = object(forKey: key) as? Int {
             return value
         } else {
-            setObject(def, forKey: key)
+            set(def, forKey: key)
             return def
         }
     }

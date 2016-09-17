@@ -13,19 +13,19 @@ class PickerView: UIPickerView, UIPickerViewDataSource {
     var text = ["inches", "cm"]
     
     // Set the delegate and dataSource
-    func loaded(del:UIPickerViewDelegate, tag:Int)
+    func loaded(_ del:UIPickerViewDelegate, tag:Int)
     {
         self.dataSource = self
         self.delegate = del
         self.tag = tag
     }
     // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return text.count
     }
 

@@ -20,7 +20,7 @@ class Toque : Project {
             return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
         }
         set {
-            defs.setDouble(newValue, forKey: "\(name)-size")
+            defs.set(newValue, forKey: "\(name)-size")
         }
     }
     // Units for head size
@@ -29,7 +29,7 @@ class Toque : Project {
             return defs.shortLengthUnitsForKey("\(name)-sizeUnits", def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-sizeUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-sizeUnits")
         }
     }
     
@@ -51,7 +51,7 @@ class Toque : Project {
         let lengthCylF = 0.15
         let coneheightF = 0.5
         var width = size
-        if (sizeUnits != ShortLengthUnits.CM)
+        if (sizeUnits != ShortLengthUnits.cm)
         {
             width *= Project.inches2cm
         }
@@ -82,7 +82,7 @@ class Tam : Toque {
     override func calcYarnRequired()
     {
         var width = size * 1.3
-        if (sizeUnits != ShortLengthUnits.CM)
+        if (sizeUnits != ShortLengthUnits.cm)
         {
             width *= Project.inches2cm
         }

@@ -25,9 +25,9 @@ class TamTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        tam.gaugeUnits = .StsPerInch
-        tam.sizeUnits = .Inches
-        tam.yarnNeededUnits = .Yards
+        tam.gaugeUnits = .stsPerInch
+        tam.sizeUnits = .inches
+        tam.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Handy 0-6 months, gauge 4", gauge: 4, size: 16.5, yarn: 71),
@@ -56,9 +56,9 @@ class TamTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        tam.gaugeUnits = .StsPer4inch
-        tam.sizeUnits = .Inches
-        tam.yarnNeededUnits = .Yards
+        tam.gaugeUnits = .stsPer4inch
+        tam.sizeUnits = .inches
+        tam.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Interweave Knits, Holiday 2012, Eze Beret", gauge: 20, size: 21, ballSize: 210, balls: 1),

@@ -25,9 +25,9 @@ class MittensTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        mittens.gaugeUnits = .StsPerInch
-        mittens.sizeUnits = .Inches
-        mittens.yarnNeededUnits = .Yards
+        mittens.gaugeUnits = .stsPerInch
+        mittens.sizeUnits = .inches
+        mittens.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Handy 2-4 years, gauge 4", gauge: 4, size: 5.5, yarn: 47),
@@ -60,9 +60,9 @@ class MittensTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        mittens.gaugeUnits = .StsPer4inch
-        mittens.sizeUnits = .Inches
-        mittens.yarnNeededUnits = .Yards
+        mittens.gaugeUnits = .stsPer4inch
+        mittens.sizeUnits = .inches
+        mittens.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Interweave Knits, Holiday 2012, Eze Beret", gauge: 20, size: 21, ballSize: 210, balls: 1),

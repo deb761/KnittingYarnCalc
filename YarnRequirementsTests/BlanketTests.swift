@@ -18,7 +18,7 @@ class BlanketTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        blanket = Blanket(name: "Base", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Blanket")!)
+        blanket = Blanket(name: "Blanket", thumb:UIImage(named:"Blanket")!, image:UIImage(named:"Blanket")!)
     }
     
     override func tearDown() {
@@ -28,10 +28,10 @@ class BlanketTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        blanket.gaugeUnits = .StsPer4inch
-        blanket.lengthUnits = .Inches
-        blanket.widthUnits = .Inches
-        blanket.yarnNeededUnits = .Yards
+        blanket.gaugeUnits = .stsPer4inch
+        blanket.lengthUnits = .inches
+        blanket.widthUnits = .inches
+        blanket.yarnNeededUnits = .yards
         
         let tests = [
             // Lion Brand site yardage estimates
@@ -68,10 +68,10 @@ class BlanketTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        blanket.gaugeUnits = .StsPer4inch
-        blanket.lengthUnits = .Inches
-        blanket.widthUnits = .Inches
-        blanket.yarnNeededUnits = .Yards
+        blanket.gaugeUnits = .stsPer4inch
+        blanket.lengthUnits = .inches
+        blanket.widthUnits = .inches
+        blanket.yarnNeededUnits = .yards
         
         let tests = [
             // 2 strands held thoughout, so 1/2 the ballSize

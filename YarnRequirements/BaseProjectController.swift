@@ -17,7 +17,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     // First row in the stack, the project name and image
     var nameStack: UIStackView?
     var lblName: UILabel! = UILabel()
-    var projectImg: UIImageView! = UIImageView(frame: CGRectMake(0, 0, 178, 193))
+    var projectImg: UIImageView! = UIImageView(frame: CGRect(x: 0, y: 0, width: 178, height: 193))
 
     // second row in the stack, the gauge and units
     var gaugeRow: DimensionRow?
@@ -50,53 +50,53 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         
         // Create the nameStack
         nameStack = UIStackView(arrangedSubviews: [lblName, projectImg])
-        nameStack!.axis = .Horizontal
-        nameStack!.distribution = .EqualSpacing
-        nameStack!.alignment = .Fill
+        nameStack!.axis = .horizontal
+        nameStack!.distribution = .equalSpacing
+        nameStack!.alignment = .fill
         nameStack!.spacing = 10
         nameStack!.translatesAutoresizingMaskIntoConstraints = false
-        lblName.text = NSLocalizedString(project.name.lowercaseString, value: project.name, comment: "Project name")
-        lblName.widthAnchor.constraintEqualToConstant(50)
+        lblName.text = NSLocalizedString(project.name.lowercased(), value: project.name, comment: "Project name")
+        lblName.widthAnchor.constraint(equalToConstant: 50)
         lblName.textColor = Colors.lblColor
-        lblName.font = lblName.font.fontWithSize(20)
+        lblName.font = lblName.font.withSize(20)
 
         projectImg.image = project.image
-        projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 178))
-        projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 193))
+        projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 178))
+        projectImg.addConstraint(NSLayoutConstraint(item: projectImg, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 193))
         
         // Create the stack with the Gauge
         gaugeRow = DimensionRow(name: NSLocalizedString("gauge", value: "Gauge", comment: "Density of knitted stitches per inch or cm"),
                                 picker: pkGauge, delegate: self)
         txtGauge = gaugeRow!.txtVal
-        txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        txtGauge.addTarget(self, action: #selector(BaseProjectController.changeGauge(_:)), for: UIControlEvents.editingDidEnd)
 
         // Create the stack with the yarn needed
         yarnRow = DimensionRow(name: NSLocalizedString("yarn-req-label", value: "Yarn Req",
             comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"),
             picker: pkYarnUnits, delegate: self)
         txtYarnNeeded = yarnRow!.txtVal
-        txtYarnNeeded.userInteractionEnabled = false
+        txtYarnNeeded.isUserInteractionEnabled = false
         txtYarnNeeded.textColor = Colors.inactive
         
         // Create the stack with the ball size
         ballRow = DimensionRow(name: NSLocalizedString("ball-size", value: "Ball Size", comment: "Length of yarn in ball"),
                                picker: pkBallUnits, delegate: self)
         txtBallSize = ballRow!.txtVal
-        txtBallSize.addTarget(self, action: #selector(BaseProjectController.changeBallSize(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
+        txtBallSize.addTarget(self, action: #selector(BaseProjectController.changeBallSize(_:)), for: UIControlEvents.editingDidEnd)
         
         // Create the stack with the balls needed
         nBallsRow = DimensionRow(name: NSLocalizedString("num-balls", value: "Num Balls", comment: "Number of balls needed for a project; needs to be short"),
                                  picker: pkBallPartial, delegate: self)
         txtBallsNeeded = nBallsRow!.txtVal
-        txtBallsNeeded.userInteractionEnabled = false
+        txtBallsNeeded.isUserInteractionEnabled = false
         txtBallsNeeded.textColor = Colors.inactive
         
         // Create the main stack
         mainStack = UIStackView(arrangedSubviews: [nameStack!, gaugeRow!.stack, yarnRow!.stack, ballRow!.stack, nBallsRow!.stack])
-        mainStack!.axis = .Vertical
-        mainStack!.distribution = .EqualSpacing
+        mainStack!.axis = .vertical
+        mainStack!.distribution = .equalSpacing
         mainStack!.spacing = 10
-        mainStack!.alignment = .Fill
+        mainStack!.alignment = .fill
         mainStack!.translatesAutoresizingMaskIntoConstraints = false
 
         let height = view.bounds.height + 200
@@ -108,20 +108,20 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         
         // Configure the scrollView
         scrollView.frame = view.bounds
-        scrollView.scrollEnabled = true
-        scrollView.autoresizingMask = UIViewAutoresizing.FlexibleHeight
+        scrollView.isScrollEnabled = true
+        scrollView.autoresizingMask = UIViewAutoresizing.flexibleHeight
         view.addSubview(scrollView)
         view.backgroundColor = Colors.background
 
         //autolayout the scroll view - pin 30 up 20 left 20 right 30 down
         let viewsDictionary = ["scrollView":scrollView]
-        let scrollView_H = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-20-[scrollView]-20-|",  //horizontal constraint 20 points from left and right side
+        let scrollView_H = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-20-[scrollView]-20-|",  //horizontal constraint 20 points from left and right side
             options: NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views: viewsDictionary)
-        let scrollView_V = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-80-[scrollView]-50-|", //vertical constraint 30 points from top and bottom
+        let scrollView_V = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|-80-[scrollView]-50-|", //vertical constraint 30 points from top and bottom
             options: NSLayoutFormatOptions(rawValue:0),
             metrics: nil,
             views: viewsDictionary)
@@ -137,9 +137,9 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         
         // Pin the leading edge of myView to the margin's leading edge
         
-        mainStack!.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
-        mainStack!.topAnchor.constraintEqualToAnchor(margins.topAnchor).active = true
-        mainStack!.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
+        mainStack!.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        mainStack!.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
+        mainStack!.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
 
         pkGauge.loaded(self, tag: 1)
         pkYarnUnits.loaded(self, tag: 2)
@@ -150,7 +150,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         pkGauge.selectRow(project.gaugeUnits.rawValue, inComponent: 0, animated: false)
         pkYarnUnits.selectRow(project.yarnNeededUnits.rawValue, inComponent: 0, animated: false)
         pkBallUnits.selectRow(project.ballSizeUnits.rawValue, inComponent: 0, animated: false)
-        pkBallPartial.selectRow(Int(project.partialBalls), inComponent: 0, animated: false)
+        pkBallPartial.selectRow((project.partialBalls) ? 1 : 0, inComponent: 0, animated: false)
 
         // Set initial values for text fields
         UpdateText()
@@ -171,28 +171,28 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     func registerForKeyboardNotifications()
     {
         //Adding notifies on keyboard appearing
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BaseProjectController.keyboardWasShown(_:)),
-                                                         name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BaseProjectController.keyboardWillBeHidden(_:)),
-                                                         name: UIKeyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BaseProjectController.keyboardWasShown(_:)),
+                                                         name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BaseProjectController.keyboardWillBeHidden(_:)),
+                                                         name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     
     func deregisterFromKeyboardNotifications()
     {
         //Removing notifies on keyboard appearing
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     // Hold on to the contentInset of the scrollView before adjusting for the keyboard
     var insets:UIEdgeInsets!
     // Move the scrollView content up to account for the keyboard
-    func keyboardWasShown(notification: NSNotification)
+    func keyboardWasShown(_ notification: Notification)
     {
         //Need to calculate keyboard exact size due to Apple suggestions
-        self.scrollView.scrollEnabled = true
-        let info : NSDictionary = notification.userInfo!
-        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue().size
+        self.scrollView.isScrollEnabled = true
+        let info : NSDictionary = (notification as NSNotification).userInfo! as NSDictionary
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
         insets = scrollView.contentInset
         let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
         
@@ -203,7 +203,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         aRect.size.height -= keyboardSize!.height
         if activeField != nil
         {
-            if (!CGRectContainsPoint(aRect, activeField!.frame.origin))
+            if (!aRect.contains(activeField!.frame.origin))
             {
                 self.scrollView.scrollRectToVisible(activeField!.frame, animated: true)
             }
@@ -211,18 +211,18 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     }
     
     // Restore the contentInsets
-    func keyboardWillBeHidden(notification: NSNotification)
+    func keyboardWillBeHidden(_ notification: Notification)
     {
         self.scrollView.contentInset = insets//contentInsets
         self.view.endEditing(true)
     }
     
-    func textFieldDidBeginEditing(textField: UITextField)
+    func textFieldDidBeginEditing(_ textField: UITextField)
     {
         activeField = textField
     }
     
-    func textFieldDidEndEditing(textField: UITextField)
+    func textFieldDidEndEditing(_ textField: UITextField)
     {
         activeField = nil
     }
@@ -238,9 +238,9 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     // Update all the units on change
     func UpdateUnits()
     {
-        project.gaugeUnits = GaugeUnits(rawValue: pkGauge.selectedRowInComponent(0))!
-        project.yarnNeededUnits = LongLengthUnits(rawValue: pkYarnUnits.selectedRowInComponent(0))!
-        project.ballSizeUnits = LongLengthUnits(rawValue: pkBallUnits.selectedRowInComponent(0))!
+        project.gaugeUnits = GaugeUnits(rawValue: pkGauge.selectedRow(inComponent: 0))!
+        project.yarnNeededUnits = LongLengthUnits(rawValue: pkYarnUnits.selectedRow(inComponent: 0))!
+        project.ballSizeUnits = LongLengthUnits(rawValue: pkBallUnits.selectedRow(inComponent: 0))!
     }
 
     override func didReceiveMemoryWarning() {
@@ -248,7 +248,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         // Dispose of any resources that can be recreated.
     }
     // Recalc when gauge changes
-    func changeGauge(sender: UITextField!) {
+    func changeGauge(_ sender: UITextField!) {
         if let gauge = Double(txtGauge.text!) {
             project.gauge = gauge
         } else {
@@ -258,7 +258,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         UpdateText()
     }
     // Recalc and update units when ball size changes
-    @IBAction func changeBallSize(sender: AnyObject) {
+    @IBAction func changeBallSize(_ sender: AnyObject) {
         if let size = Int(txtBallSize.text!) {
             project.ballSize = size
         } else {
@@ -270,11 +270,11 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
     }
 
     // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return (pickerView as! PickerView).text[row]
     }
     // Update the units and recalculate the yarn needed
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         switch pickerView.tag {
         case 1:
@@ -284,7 +284,7 @@ class BaseProjectController: UIViewController, UIPickerViewDelegate, UITextField
         case 3:
             project.ballSizeUnits = LongLengthUnits(rawValue: row)!
         case 4:
-            project.partialBalls = Bool(row)
+            project.partialBalls = Bool(row == 1)
         default: break
         }
         txtGauge.endEditing(true)

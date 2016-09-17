@@ -25,9 +25,9 @@ class SweaterTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        sweater.gaugeUnits = .StsPerInch
-        sweater.sizeUnits = .Inches
-        sweater.yarnNeededUnits = .Yards
+        sweater.gaugeUnits = .stsPerInch
+        sweater.sizeUnits = .inches
+        sweater.yarnNeededUnits = .yards
         
         let tests = [
             // The Handy Knitter's Guide to Yarn Requirements
@@ -97,9 +97,9 @@ class SweaterTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        sweater.gaugeUnits = .StsPer4inch
-        sweater.sizeUnits = .Inches
-        sweater.yarnNeededUnits = .Yards
+        sweater.gaugeUnits = .stsPer4inch
+        sweater.sizeUnits = .inches
+        sweater.yarnNeededUnits = .yards
         
         let tests = [
             PatternInfo(name: "Alice Starmore Patterns for Men, Gansey style sweater 1", gauge: 22, size: 45, ballSize: 104, balls: 19),

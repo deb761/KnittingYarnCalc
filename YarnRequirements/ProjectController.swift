@@ -37,49 +37,49 @@ class ProjectController: UICollectionViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let svc = segue.destinationViewController as! BaseProjectController;
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let svc = segue.destination as! BaseProjectController;
         svc.project = project
     }
 
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return projects.count
     }
     
-    private var project:Project?
+    fileprivate var project:Project?
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ProjectCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProjectCell
 
         // Configure the cell
-        project = projects[indexPath.row]
+        project = projects[(indexPath as NSIndexPath).row]
         cell.image.image = project!.thumb
-        cell.backgroundColor = UIColor.clearColor()
-        cell.lblName.text = NSLocalizedString(project!.name.lowercaseString, value: project!.name, comment: "Project name")
+        cell.backgroundColor = UIColor.clear
+        cell.lblName.text = NSLocalizedString(project!.name.lowercased(), value: project!.name, comment: "Project name")
     
         return cell
     }
 
-    func collectionView(collectionView : UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
+    func collectionView(_ collectionView : UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:IndexPath) -> CGSize
     {
-        let cellSize:CGSize = CGSizeMake(108, 126)
+        let cellSize:CGSize = CGSize(width: 108, height: 126)
         return cellSize
     }
 
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
-        project = projects[indexPath.row]
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        project = projects[(indexPath as NSIndexPath).row]
         project!.controller.project = project
         _ = project?.controller.view
-        showViewController(project!.controller, sender: self)
+        show(project!.controller, sender: self)
     }
     
     // MARK: UICollectionViewDelegate

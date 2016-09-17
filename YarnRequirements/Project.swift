@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 enum GaugeUnits : Int {
-    case StsPerInch = 0, StsPer4inch, StsPer10cm
+    case stsPerInch = 0, stsPer4inch, stsPer10cm
 }
 enum ShortLengthUnits: Int {
-    case Inches = 0, CM
+    case inches = 0, cm
 }
 enum LongLengthUnits: Int {
-    case Yards = 0, Meters
+    case yards = 0, meters
 }
 // Base class for a project
 class Project {
@@ -30,7 +30,7 @@ class Project {
     var image:UIImage = UIImage(named:"SweaterImg")!
     var controller:BaseProjectController!
     
-    let defs = NSUserDefaults.standardUserDefaults()
+    let defs = UserDefaults.standard
 
     // guage of the project
     var gauge:Double {
@@ -38,7 +38,7 @@ class Project {
             return defs.doubleForKey("\(name)-gauge", def: defaults["gauge"] as! Double)
         }
         set {
-            defs.setDouble(newValue, forKey: "\(name)-gauge")
+            defs.set(newValue, forKey: "\(name)-gauge")
         }
     }
     // units for the gauge
@@ -47,7 +47,7 @@ class Project {
             return defs.gaugeUnitsForKey("\(name)-gaugeUnits", def: GaugeUnits(rawValue: defaults["gaugeUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-gaugeUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-gaugeUnits")
         }
     }
     // The units for yarn needed
@@ -57,7 +57,7 @@ class Project {
                                               def: LongLengthUnits(rawValue: defaults["yarnNeededUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-yarnNeededUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-yarnNeededUnits")
         }
     }
     // The ball size in ballSizeUnits
@@ -66,7 +66,7 @@ class Project {
             return defs.integerForKey("\(name)-ballSize", def: defaults["ballSize"] as! Int)
         }
         set {
-            defs.setInteger(newValue, forKey: "\(name)-ballSize")
+            defs.set(newValue, forKey: "\(name)-ballSize")
         }
     }
     // The units for ball size
@@ -76,16 +76,16 @@ class Project {
                                               def: LongLengthUnits(rawValue: defaults["ballSizeUnits"] as! Int)!)
         }
         set {
-            defs.setObject(newValue.rawValue, forKey: "\(name)-ballSizeUnits")
+            defs.set(newValue.rawValue, forKey: "\(name)-ballSizeUnits")
         }
     }
     // True when the user wants to see whole and partial balls needed
     var partialBalls:Bool {
         get {
-            return defs.boolForKey("\(name)-partialBalls")
+            return defs.bool(forKey: "\(name)-partialBalls")
         }
         set {
-            defs.setBool(newValue, forKey: "\(name)-partialBalls")
+            defs.set(newValue, forKey: "\(name)-partialBalls")
         }
     }
     
@@ -106,13 +106,13 @@ class Project {
     }
     // Read the plist for this project and fill in the settings
     func readPlist() {
-        var format = NSPropertyListFormat.XMLFormat_v1_0 //format of the property list
-        let code = name.lowercaseString + "-plist"
+        var format = PropertyListSerialization.PropertyListFormat.xml //format of the property list
+        let code = name.lowercased() + "-plist"
         let root = NSLocalizedString(code, value: name + "-im", comment: "Defaults for the project")
-        let plistPath:String? = NSBundle.mainBundle().pathForResource(root, ofType: "plist")!
-        let plistXML = NSFileManager.defaultManager().contentsAtPath(plistPath!)!
+        let plistPath:String? = Bundle.main.path(forResource: root, ofType: "plist")!
+        let plistXML = FileManager.default.contents(atPath: plistPath!)!
         do {
-            defaults = try NSPropertyListSerialization.propertyListWithData(plistXML, options: .MutableContainersAndLeaves, format: &format)
+            defaults = try PropertyListSerialization.propertyList(from: plistXML, options: .mutableContainersAndLeaves, format: &format)
                 as! [String:AnyObject]
         }
         catch {
@@ -126,7 +126,7 @@ class Project {
     func calcYarnRequired() {}
     
     // Calculate the yarn required for a piece of knitted fabric with length and width in cm
-    func calcYarnRequired(siLength:Double, siWidth:Double) {
+    func calcYarnRequired(_ siLength:Double, siWidth:Double) {
         
         guard gauge > 0 else {
             yarnNeeded = 0
@@ -136,7 +136,7 @@ class Project {
         var siGauge:Double = gauge
         
         // First, put values into SI units
-        if (gaugeUnits == GaugeUnits.StsPerInch) {
+        if (gaugeUnits == GaugeUnits.stsPerInch) {
             siGauge *= 4;
         }
         
@@ -144,7 +144,7 @@ class Project {
         siGauge /= 10
         
         var siballSize:Double = Double(ballSize)
-        if (ballSizeUnits == LongLengthUnits.Yards) {
+        if (ballSizeUnits == LongLengthUnits.yards) {
             siballSize *= Project.yards2meters;
         }
         let stitches:Int = Int(ceil(siGauge * siWidth));
@@ -157,7 +157,7 @@ class Project {
         let meters = getStitchLength(siGauge, cmWidth: siWidth, cmLength: siLength) * Double(totalStitches) * 1.2
         
         // Now convert the yarn required into the desired units
-        if (yarnNeededUnits != LongLengthUnits.Meters) {
+        if (yarnNeededUnits != LongLengthUnits.meters) {
             yarnNeeded = Int(ceil(meters / Project.yards2meters));
         }
         else {
@@ -171,7 +171,7 @@ class Project {
         }
     }
     // Compute the length of a stitch in m, treating the row of stitches as a helix
-    private func getStitchLength(cmGauge:Double, cmWidth:Double, cmLength:Double) -> Double {
+    fileprivate func getStitchLength(_ cmGauge:Double, cmWidth:Double, cmLength:Double) -> Double {
         let stitchWidth = 1.0 / cmGauge
         let stitchCir = M_PI * stitchWidth
         // The stitch actually goes halfway into the neighboring stitch on each side
@@ -187,9 +187,9 @@ class Project {
             ballsNeeded = Double(yarnNeeded) / Double(ballSize)
         }
         else {
-            let yarn:Double = (yarnNeededUnits == LongLengthUnits.Meters) ? Double(yarnNeeded) :
+            let yarn:Double = (yarnNeededUnits == LongLengthUnits.meters) ? Double(yarnNeeded) :
                 Double(yarnNeeded) * Project.yards2meters
-            let ballMeters:Double = (ballSizeUnits == LongLengthUnits.Meters) ? Double(ballSize) :
+            let ballMeters:Double = (ballSizeUnits == LongLengthUnits.meters) ? Double(ballSize) :
                 Double(ballSize) * Project.yards2meters
             ballsNeeded = yarn / ballMeters
         }

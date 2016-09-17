@@ -11,7 +11,7 @@ import UIKit
 class GaugePicker: PickerView {
 
     // Set the delegate and dataSource
-    override func loaded(del:UIPickerViewDelegate, tag:Int)
+    override func loaded(_ del:UIPickerViewDelegate, tag:Int)
     {
         super.loaded(del, tag:tag)
         text = [NSLocalizedString("sts/inch", value: "sts/inch", comment: "Stitches per inch to determine yarn gauge"),

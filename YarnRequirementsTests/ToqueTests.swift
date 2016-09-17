@@ -25,9 +25,9 @@ class ToqueTests: XCTestCase {
     
     func testYarn() {
         // Verify yarn needed is in the ballpark based on The Handy Knitter's Guide
-        toque.gaugeUnits = .StsPerInch
-        toque.sizeUnits = .Inches
-        toque.yarnNeededUnits = .Yards
+        toque.gaugeUnits = .stsPerInch
+        toque.sizeUnits = .inches
+        toque.yarnNeededUnits = .yards
         
         let tests = [
             // Lion Brand site yardage estimates
@@ -59,9 +59,9 @@ class ToqueTests: XCTestCase {
     }
     // Compare calculated number of balls to representative patterns
     func testBalls() {
-        toque.gaugeUnits = .StsPer4inch
-        toque.sizeUnits = .Inches
-        toque.yarnNeededUnits = .Yards
+        toque.gaugeUnits = .stsPer4inch
+        toque.sizeUnits = .inches
+        toque.yarnNeededUnits = .yards
         
         let tests = [
             // I knitted this one myself, and only needed about about 100 yds (I did not make the pom-pom, but that is < 50 yds

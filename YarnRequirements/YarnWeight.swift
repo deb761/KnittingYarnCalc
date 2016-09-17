@@ -8,7 +8,7 @@
 
 import Foundation
 // Define a class for yarn weight data
-public class YarnWeight
+open class YarnWeight
 {
     var name: String
     // suggested needle sizes in US and international units

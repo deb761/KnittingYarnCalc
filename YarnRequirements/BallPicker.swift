@@ -13,7 +13,7 @@ import UIKit
 class BallPicker: PickerView {
 
     // Set the delegate and dataSource
-    override func loaded(del:UIPickerViewDelegate, tag:Int)
+    override func loaded(_ del:UIPickerViewDelegate, tag:Int)
     {
         super.loaded(del, tag:tag)
         text = [NSLocalizedString("whole", value: "Whole", comment: "A whole ball of yarn"),
