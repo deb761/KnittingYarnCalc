@@ -31,9 +31,9 @@ class HandController: BaseProjectController {
         
         pkSizeUnits.loaded(self, tag: 5)
         
-        mittens = project as! Mittens
+        mittens = project as? Mittens
         txtSize.text = String(mittens.size)
-        txtSize.addTarget(self, action: #selector(HandController.changeSize(_:)), for: UIControlEvents.editingDidEnd)
+        txtSize.addTarget(self, action: #selector(HandController.changeSize(_:)), for: UIControl.Event.editingDidEnd)
         
         // Set initial value for pickers
         pkSizeUnits.selectRow(mittens.sizeUnits.rawValue, inComponent: 0, animated: false)
@@ -61,7 +61,7 @@ class HandController: BaseProjectController {
     }
 
     // Recalc and update units when ball size changes
-    func changeSize(_ sender: AnyObject) {
+    @objc func changeSize(_ sender: AnyObject) {
         if let size = Double(txtSize.text!) {
             mittens.size = size
         } else {

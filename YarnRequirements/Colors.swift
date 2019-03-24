@@ -26,7 +26,7 @@ class Colors {
     
 
     // 020459
-    static let lblColor = UIColor(colorLiteralRed: 2.0/255.0,
+    static let lblColor = UIColor(red: 2.0/255.0,
                                   green: 4.0/255.0,
-                                  blue: Float(0x59)/255.0, alpha: 1.0)
+                                  blue: CGFloat(0x59)/255.0, alpha: 1.0)
 }

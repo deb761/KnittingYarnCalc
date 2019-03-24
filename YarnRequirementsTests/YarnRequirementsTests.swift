@@ -217,7 +217,7 @@ class ProjectTests: XCTestCase {
             // Use XCTAssert and related functions to verify your tests produce the correct results.
             XCTAssertEqual(project.yarnNeeded, test.yarn, "Yarn Needed does not match!")
 
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, test.balls, accuracy: 0.01, "Balls Needed does not match!")
+            XCTAssertEqual(project.ballsNeeded, test.balls, accuracy: 0.01, "Balls Needed does not match!")
         }
    }
     
@@ -247,7 +247,7 @@ class ProjectTests: XCTestCase {
             // Use XCTAssert and related functions to verify your tests produce the correct results.
             XCTAssertEqual(project.yarnNeeded, test.yarn, "Yarn Needed does not match!")
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, test.balls, accuracy: 0.01, "Balls Needed does not match!")
+            XCTAssertEqual(project.ballsNeeded, test.balls, accuracy: 0.01, "Balls Needed does not match!")
         }
     }
     // Verify that balls needed is infinity when ball size is 0
@@ -273,13 +273,13 @@ class ProjectTests: XCTestCase {
             let balls = Double(test) / Double(project.ballSize)
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, balls, accuracy: 0.01,
                                        "Balls needed does not match expected")
             // retest with whole balls
             project.partialBalls = false
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, ceil(balls), accuracy: 0.01,
                                        "Balls needed does not match expected")
         }
     }
@@ -297,13 +297,13 @@ class ProjectTests: XCTestCase {
             let balls = Double(test) / Double(project.ballSize)
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, balls, accuracy: 0.01,
                                        "Balls needed does not match expected")
             // retest with whole balls
             project.partialBalls = false
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, ceil(balls), accuracy: 0.01,
                                        "Balls needed does not match expected")
         }
     }
@@ -321,13 +321,13 @@ class ProjectTests: XCTestCase {
             let balls = Double(test) * Project.yards2meters / Double(project.ballSize)
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, balls, accuracy: 0.01,
                                        "Balls needed does not match expected")
             // retest with whole balls
             project.partialBalls = false
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, ceil(balls), accuracy: 0.01,
                                        "Balls needed does not match expected")
         }
     }
@@ -345,13 +345,13 @@ class ProjectTests: XCTestCase {
             let balls = Double(test) / (Double(project.ballSize) * Project.yards2meters)
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, balls, accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, balls, accuracy: 0.01,
                                        "Balls needed does not match expected")
             // retest with whole balls
             project.partialBalls = false
             project.calcballsNeeded()
             
-            XCTAssertEqualWithAccuracy(project.ballsNeeded, ceil(balls), accuracy: 0.01,
+            XCTAssertEqual(project.ballsNeeded, ceil(balls), accuracy: 0.01,
                                        "Balls needed does not match expected")
         }
     }

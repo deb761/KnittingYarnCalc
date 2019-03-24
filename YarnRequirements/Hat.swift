@@ -58,10 +58,10 @@ class Toque : Project {
         let lengthCyl = width * lengthCylF
         // apply tightness factor
         width *= tightness
-        let rad = width / M_PI / 2.0
+        let rad = width / Double.pi / 2.0
         let coneHeight = coneheightF * width
         // calculate cone area
-        let coneArea = M_PI * rad * (rad + sqrt(coneHeight * coneHeight + rad * rad))
+        let coneArea = Double.pi * rad * (rad + sqrt(coneHeight * coneHeight + rad * rad))
         // calculate cylinder area
         let cylinderArea = lengthCyl * width
         // calculate relative length
@@ -89,8 +89,8 @@ class Tam : Toque {
         let length = width * 0.25
         // A tam has a disk top, so add the area of a circle to the top
         // A = πr^2;  πr = 1/2 width
-        let rad = 0.5 / M_PI
-        let diskArea = M_PI * rad * rad
+        let rad = 0.5 / Double.pi
+        let diskArea = Double.pi * rad * rad
         let diskLen = diskArea / width
         calcYarnRequired(length + diskLen, siWidth: width)
     }

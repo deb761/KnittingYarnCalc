@@ -42,12 +42,12 @@ class ScarfController: BaseProjectController {
         pkLengthUnits.loaded(self, tag: 5)
         pkWidthUnits.loaded(self, tag: 6)
         
-        scarf = project as! Scarf
+        scarf = project as? Scarf
         txtLength.text = String(scarf.length)
-        txtLength.addTarget(self, action: #selector(ScarfController.changeLength(_:)), for: UIControlEvents.editingDidEnd)
+        txtLength.addTarget(self, action: #selector(ScarfController.changeLength(_:)), for: UIControl.Event.editingDidEnd)
 
         txtWidth.text = String(scarf.width)
-        txtWidth.addTarget(self, action: #selector(ScarfController.changeWidth(_:)), for: UIControlEvents.editingDidEnd)
+        txtWidth.addTarget(self, action: #selector(ScarfController.changeWidth(_:)), for: UIControl.Event.editingDidEnd)
 
         // Set initial value for pickers
         pkLengthUnits.selectRow(scarf.lengthUnits.rawValue, inComponent: 0, animated: false)
@@ -79,7 +79,7 @@ class ScarfController: BaseProjectController {
     }
     
     // Recalc and update units when ball size changes
-    func changeLength(_ sender: AnyObject) {
+    @objc func changeLength(_ sender: AnyObject) {
         if let length = Double(txtLength.text!) {
             scarf.length = length
         } else {
@@ -90,7 +90,7 @@ class ScarfController: BaseProjectController {
     }
     
     // Recalc and update units when ball size changes
-    func changeWidth(_ sender: AnyObject) {
+    @objc func changeWidth(_ sender: AnyObject) {
         if let width = Double(txtWidth.text!) {
             scarf.width = width
         } else {

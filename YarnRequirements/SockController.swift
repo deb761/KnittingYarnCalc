@@ -31,9 +31,9 @@ class SockController: BaseProjectController {
         
         pkSizeUnits.loaded(self, tag: 5)
         
-        socks = project as! Socks
+        socks = (project as! Socks)
         txtSize.text = String(socks.size)
-        txtSize.addTarget(self, action: #selector(SockController.changeSize(_:)), for: UIControlEvents.editingDidEnd)
+        txtSize.addTarget(self, action: #selector(SockController.changeSize(_:)), for: UIControl.Event.editingDidEnd)
 
         // Set initial value for pickers
         pkSizeUnits.selectRow(socks.sizeUnits.rawValue, inComponent: 0, animated: false)
@@ -61,7 +61,7 @@ class SockController: BaseProjectController {
     }
 
     // Recalc and update units when ball size changes
-    func changeSize(_ sender: AnyObject) {
+    @objc func changeSize(_ sender: AnyObject) {
         if let size = Double(txtSize.text!) {
             socks.size = size
         } else {

@@ -14,7 +14,7 @@ class LongLengthPicker: PickerView {
     override func loaded(_ del:UIPickerViewDelegate, tag:Int)
     {
         super.loaded(del, tag:tag)
-        text = [NSLocalizedString("yards", value: "yards", comment: "Short string for picker that indicates using yards for inits of measure"),
-                NSLocalizedString("meters", value: "meters", comment: "Short string for picker that indicates using meters for inits of measure")]
+        text = [NSLocalizedString("yards", value: "yards", comment: "Short string for picker that indicates using yards for units of measure"),
+                NSLocalizedString("meters", value: "meters", comment: "Short string for picker that indicates using meters for units of measure")]
     }
 }

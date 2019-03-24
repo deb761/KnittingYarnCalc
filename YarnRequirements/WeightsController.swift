@@ -26,7 +26,7 @@ class WeightsController: UIViewController, UITableViewDelegate, UITableViewDataS
         let plistXML = FileManager.default.contents(atPath: plistPath!)!
         do {
             yarnWeights = try PropertyListSerialization.propertyList(from: plistXML, options: .mutableContainersAndLeaves, format: &format)
-                as! [AnyObject]
+                as? [AnyObject]
         }
         catch {
             print("Error reading plist: \(error), format: \(format)")
@@ -60,7 +60,7 @@ class WeightsController: UIViewController, UITableViewDelegate, UITableViewDataS
                                                comment: "Label for yarn weight name")
         var needles:[KnittingNeedle] = []
         for size in weight["needles"] as! [NSNumber] {
-            needles.append(KnittingNeedle(size: size as Double))
+            needles.append(KnittingNeedle(size: size as! Double))
         }
         let locale = Locale.current
         let country = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as? String

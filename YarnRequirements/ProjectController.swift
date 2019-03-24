@@ -68,7 +68,7 @@ class ProjectController: UICollectionViewController {
     
         return cell
     }
-
+    
     func collectionView(_ collectionView : UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:IndexPath) -> CGSize
     {
         let cellSize:CGSize = CGSize(width: 108, height: 126)

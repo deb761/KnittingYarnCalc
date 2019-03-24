@@ -21,7 +21,7 @@ extension XCUIElement {
         
         self.tap()
         
-        let deleteString = stringValue.characters.map { _ in "\u{8}" }.joined(separator: "")
+        let deleteString = stringValue.map { _ in "\u{8}" }.joined(separator: "")
         self.typeText(deleteString)
         
         self.typeText(text)

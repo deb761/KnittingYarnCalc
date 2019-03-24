@@ -644,8 +644,8 @@ class YarnRequirementsUITests: XCTestCase {
         let app = XCUIApplication()
         app.tabBars.buttons["Info"].tap()
         app.buttons["Icon8"].tap()
-        XCUIDevice.shared().orientation = .portrait
-        XCUIDevice.shared().orientation = .portrait
+        XCUIDevice.shared.orientation = .portrait
+        XCUIDevice.shared.orientation = .portrait
         
         let url = app.otherElements["URL"]
         let exists = NSPredicate(format: "exists == true")
@@ -656,7 +656,7 @@ class YarnRequirementsUITests: XCTestCase {
         XCTAssertEqual(url.value as? String, "ww12.icons8.com", "Wrong URL")
 
         app.statusBars.buttons["Back to Yarn Reqmts"].tap()
-        XCUIDevice.shared().orientation = .portrait
+        XCUIDevice.shared.orientation = .portrait
 
         let copyright = app.staticTexts["© Deborah Engelmeyer, The Inquisitive Introvert, 2016"]
         XCTAssertNotNil(copyright)

@@ -53,7 +53,8 @@ class ToqueTests: XCTestCase {
             toque.calcYarnRequired()
             
             XCTAssertGreaterThanOrEqual(toque.yarnNeeded, test.yarn, "\(test.name): Yarn calculated is less than expected")
-            XCTAssertEqualWithAccuracy(Double(toque.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.1, "\(test.name): Yarn calculated is more than 10% off from expected")
+            XCTAssertEqual(Double(toque.yarnNeeded), Double(test.yarn), accuracy: Double(test.yarn) * 0.1,
+                           "\(test.name): Yarn calculated is more than 10% off from expected")
             
         }
     }

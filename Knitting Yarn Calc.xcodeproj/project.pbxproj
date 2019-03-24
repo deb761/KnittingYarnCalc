@@ -16,10 +16,65 @@
 		8702D6901D146BF600286909 /* VestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D68F1D146BF600286909 /* VestTests.swift */; };
 		8702D6921D14B8A800286909 /* ToqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6911D14B8A800286909 /* ToqueTests.swift */; };
 		8702D6941D1866BC00286909 /* TamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6931D1866BC00286909 /* TamTests.swift */; };
+		87082A4B224730B600D0E93C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A8CE01D46876800B3B287 /* UserDefaults.swift */; };
+		87082A4C224730B600D0E93C /* DimensionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90B11CF69E820084EC06 /* DimensionRow.swift */; };
+		87082A4D224730B600D0E93C /* WeightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */; };
+		87082A4E224730B600D0E93C /* LongLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */; };
+		87082A4F224730B600D0E93C /* BallPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6831D10D09300286909 /* BallPicker.swift */; };
+		87082A50224730B600D0E93C /* BaseProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536CE1CFBA0BA00BE9735 /* BaseProjectController.swift */; };
+		87082A51224730B600D0E93C /* SockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536E11CFC014300BE9735 /* SockController.swift */; };
+		87082A52224730B600D0E93C /* SweaterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D01CFBE43E00BE9735 /* SweaterController.swift */; };
+		87082A53224730B600D0E93C /* ShortLengthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */; };
+		87082A54224730B600D0E93C /* ScarfController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC3F4F1CFB75C600416BE2 /* ScarfController.swift */; };
+		87082A55224730B600D0E93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
+		87082A56224730B600D0E93C /* Socks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DD1CFBFB6E00BE9735 /* Socks.swift */; };
+		87082A57224730B600D0E93C /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DA1CFBF9EE00BE9735 /* Hat.swift */; };
+		87082A58224730B600D0E93C /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
+		87082A59224730B600D0E93C /* YarnWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */; };
+		87082A5A224730B600D0E93C /* WeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABACE1CE7F7B1009DD3B1 /* WeightCell.swift */; };
+		87082A5B224730B600D0E93C /* KnittingNeedles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87660B7E1D774AF000975E3B /* KnittingNeedles.swift */; };
+		87082A5C224730B600D0E93C /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
+		87082A5D224730B600D0E93C /* Scarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D21CFBECA100BE9735 /* Scarf.swift */; };
+		87082A5E224730B600D0E93C /* GaugePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA781CF2C90300E1B003 /* GaugePicker.swift */; };
+		87082A5F224730B600D0E93C /* ShoeSizePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */; };
+		87082A60224730B600D0E93C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D078EB1D58EB0400DFBC11 /* Colors.swift */; };
+		87082A61224730B600D0E93C /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
+		87082A62224730B600D0E93C /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
+		87082A63224730B600D0E93C /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AF1CF6979C0084EC06 /* PickerView.swift */; };
+		87082A64224730B600D0E93C /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
+		87082A65224730B600D0E93C /* HandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D41CFBF2BC00BE9735 /* HandController.swift */; };
+		87082A66224730B600D0E93C /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7E1CF2F6E800E1B003 /* InfoController.swift */; };
+		87082A67224730B600D0E93C /* HatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D81CFBF96D00BE9735 /* HatController.swift */; };
+		87082A68224730B600D0E93C /* Vest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D61CFBF79E00BE9735 /* Vest.swift */; };
+		87082A6B224730B600D0E93C /* Scarf-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA6D1D6B901300AAA422 /* Scarf-si.plist */; };
+		87082A6C224730B600D0E93C /* Mittens-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4B1D6B8A0700AAA422 /* Mittens-si.plist */; };
+		87082A6D224730B600D0E93C /* Blanket-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA631D6B8E4200AAA422 /* Blanket-si.plist */; };
+		87082A6E224730B600D0E93C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */; };
+		87082A6F224730B600D0E93C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA481D67C9B800AAA422 /* InfoPlist.strings */; };
+		87082A70224730B600D0E93C /* Gloves-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA611D6B8DAA00AAA422 /* Gloves-si.plist */; };
+		87082A71224730B600D0E93C /* Scarf-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4C1D6B8A0700AAA422 /* Scarf-im.plist */; };
+		87082A72224730B600D0E93C /* Socks-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4D1D6B8A0700AAA422 /* Socks-im.plist */; };
+		87082A73224730B600D0E93C /* Vest-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA501D6B8A0700AAA422 /* Vest-si.plist */; };
+		87082A74224730B600D0E93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */; };
+		87082A75224730B600D0E93C /* Sweater-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA5D1D6B8CE600AAA422 /* Sweater-im.plist */; };
+		87082A76224730B600D0E93C /* Tam-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA691D6B8F9100AAA422 /* Tam-im.plist */; };
+		87082A77224730B600D0E93C /* YarnWeight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87660B7C1D77424800975E3B /* YarnWeight.plist */; };
+		87082A78224730B600D0E93C /* Toque-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4F1D6B8A0700AAA422 /* Toque-im.plist */; };
+		87082A79224730B600D0E93C /* Blanket-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA511D6B8A0700AAA422 /* Blanket-im.plist */; };
+		87082A7A224730B600D0E93C /* Sweater-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA531D6B8A0700AAA422 /* Sweater-si.plist */; };
+		87082A7B224730B600D0E93C /* Vest-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA651D6B8EDE00AAA422 /* Vest-im.plist */; };
+		87082A7D224730B600D0E93C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA3E1D67C8FC00AAA422 /* Localizable.strings */; };
+		87082A7E224730B600D0E93C /* Socks-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */; };
+		87082A7F224730B600D0E93C /* Tam-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4E1D6B8A0700AAA422 /* Tam-si.plist */; };
+		87082A80224730B600D0E93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */; };
+		87082A81224730B600D0E93C /* Toque-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA701D6B94C700AAA422 /* Toque-si.plist */; };
+		87082A82224730B600D0E93C /* Gloves-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA521D6B8A0700AAA422 /* Gloves-im.plist */; };
+		87082A83224730B600D0E93C /* Mittens-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA711D6B94C700AAA422 /* Mittens-im.plist */; };
+		87082A8C224734BF00D0E93C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87082A8B224734BF00D0E93C /* Default-568h@2x.png */; };
 		871D78C21D188435005320A4 /* MittensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D78C11D188435005320A4 /* MittensTests.swift */; };
 		871D78C41D1888D6005320A4 /* GlovesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D78C31D1888D6005320A4 /* GlovesTests.swift */; };
 		873A8CE11D46876800B3B287 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A8CE01D46876800B3B287 /* UserDefaults.swift */; };
-		875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AF1CF6979C0084EC06 /* pickerView.swift */; };
+		875A90B01CF6979C0084EC06 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90AF1CF6979C0084EC06 /* PickerView.swift */; };
 		875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90B11CF69E820084EC06 /* DimensionRow.swift */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
 		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
@@ -105,10 +160,13 @@
 		8702D68F1D146BF600286909 /* VestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VestTests.swift; sourceTree = "<group>"; };
 		8702D6911D14B8A800286909 /* ToqueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToqueTests.swift; sourceTree = "<group>"; };
 		8702D6931D1866BC00286909 /* TamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TamTests.swift; sourceTree = "<group>"; };
+		87082A89224730B600D0E93C /* Knitting Yarn Calc Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Knitting Yarn Calc Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87082A8A224730B700D0E93C /* YarnRequirements Free-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "YarnRequirements Free-Info.plist"; path = "/Users/deb/inqint/YarnRequirements/YarnRequirements Free-Info.plist"; sourceTree = "<absolute>"; };
+		87082A8B224734BF00D0E93C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		871D78C11D188435005320A4 /* MittensTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MittensTests.swift; sourceTree = "<group>"; };
 		871D78C31D1888D6005320A4 /* GlovesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlovesTests.swift; sourceTree = "<group>"; };
 		873A8CE01D46876800B3B287 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		875A90AF1CF6979C0084EC06 /* pickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerView.swift; sourceTree = "<group>"; };
+		875A90AF1CF6979C0084EC06 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		875A90B11CF69E820084EC06 /* DimensionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionRow.swift; sourceTree = "<group>"; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		8763AA721CF2AF3300E1B003 /* Mittens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mittens.swift; sourceTree = "<group>"; };
@@ -178,6 +236,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		87082A69224730B600D0E93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87DABA981CE7EBF4009DD3B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,10 +295,12 @@
 		87DABA921CE7EBF4009DD3B1 = {
 			isa = PBXGroup;
 			children = (
+				87082A8B224734BF00D0E93C /* Default-568h@2x.png */,
 				87DABA9D1CE7EBF4009DD3B1 /* YarnRequirements */,
 				87DABAB41CE7EBF4009DD3B1 /* YarnRequirementsTests */,
 				87DABABF1CE7EBF4009DD3B1 /* YarnRequirementsUITests */,
 				87DABA9C1CE7EBF4009DD3B1 /* Products */,
+				87082A8A224730B700D0E93C /* YarnRequirements Free-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,6 +310,7 @@
 				87DABA9B1CE7EBF4009DD3B1 /* YarnRequirements.app */,
 				87DABAB11CE7EBF4009DD3B1 /* YarnRequirementsTests.xctest */,
 				87DABABC1CE7EBF4009DD3B1 /* YarnRequirementsUITests.xctest */,
+				87082A89224730B600D0E93C /* Knitting Yarn Calc Free.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,7 +334,7 @@
 				87E536DF1CFBFC4100BE9735 /* ShoeSizePicker.swift */,
 				8763AA7A1CF2D29500E1B003 /* ShortLengthPicker.swift */,
 				8763AA7E1CF2F6E800E1B003 /* InfoController.swift */,
-				875A90AF1CF6979C0084EC06 /* pickerView.swift */,
+				875A90AF1CF6979C0084EC06 /* PickerView.swift */,
 				8763AA7C1CF2D2DC00E1B003 /* LongLengthPicker.swift */,
 				87D078EB1D58EB0400DFBC11 /* Colors.swift */,
 				87EFFA3B1D67C8A100AAA422 /* Localizations */,
@@ -323,24 +391,24 @@
 		87EFFA3B1D67C8A100AAA422 /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
-				87EFFA4B1D6B8A0700AAA422 /* Mittens-si.plist */,
-				87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */,
-				87EFFA701D6B94C700AAA422 /* Toque-si.plist */,
-				87EFFA711D6B94C700AAA422 /* Mittens-im.plist */,
-				87EFFA4C1D6B8A0700AAA422 /* Scarf-im.plist */,
-				87EFFA6D1D6B901300AAA422 /* Scarf-si.plist */,
-				87EFFA4D1D6B8A0700AAA422 /* Socks-im.plist */,
-				87EFFA4E1D6B8A0700AAA422 /* Tam-si.plist */,
-				87EFFA691D6B8F9100AAA422 /* Tam-im.plist */,
-				87EFFA4F1D6B8A0700AAA422 /* Toque-im.plist */,
-				87EFFA501D6B8A0700AAA422 /* Vest-si.plist */,
-				87EFFA651D6B8EDE00AAA422 /* Vest-im.plist */,
 				87EFFA511D6B8A0700AAA422 /* Blanket-im.plist */,
 				87EFFA631D6B8E4200AAA422 /* Blanket-si.plist */,
 				87EFFA521D6B8A0700AAA422 /* Gloves-im.plist */,
 				87EFFA611D6B8DAA00AAA422 /* Gloves-si.plist */,
-				87EFFA531D6B8A0700AAA422 /* Sweater-si.plist */,
+				87EFFA711D6B94C700AAA422 /* Mittens-im.plist */,
+				87EFFA4B1D6B8A0700AAA422 /* Mittens-si.plist */,
+				87EFFA4C1D6B8A0700AAA422 /* Scarf-im.plist */,
+				87EFFA6D1D6B901300AAA422 /* Scarf-si.plist */,
+				87EFFA4D1D6B8A0700AAA422 /* Socks-im.plist */,
+				87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */,
 				87EFFA5D1D6B8CE600AAA422 /* Sweater-im.plist */,
+				87EFFA531D6B8A0700AAA422 /* Sweater-si.plist */,
+				87EFFA691D6B8F9100AAA422 /* Tam-im.plist */,
+				87EFFA4E1D6B8A0700AAA422 /* Tam-si.plist */,
+				87EFFA4F1D6B8A0700AAA422 /* Toque-im.plist */,
+				87EFFA701D6B94C700AAA422 /* Toque-si.plist */,
+				87EFFA651D6B8EDE00AAA422 /* Vest-im.plist */,
+				87EFFA501D6B8A0700AAA422 /* Vest-si.plist */,
 				87EFFA3E1D67C8FC00AAA422 /* Localizable.strings */,
 				87EFFA481D67C9B800AAA422 /* InfoPlist.strings */,
 			);
@@ -350,9 +418,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		87DABA9A1CE7EBF4009DD3B1 /* YarnRequirements */ = {
+		87082A49224730B600D0E93C /* Knitting Yarn Calc Free */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87DABAC51CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirements" */;
+			buildConfigurationList = 87082A84224730B600D0E93C /* Build configuration list for PBXNativeTarget "Knitting Yarn Calc Free" */;
+			buildPhases = (
+				87082A4A224730B600D0E93C /* Sources */,
+				87082A69224730B600D0E93C /* Frameworks */,
+				87082A6A224730B600D0E93C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Knitting Yarn Calc Free";
+			productName = YarnRequirements;
+			productReference = 87082A89224730B600D0E93C /* Knitting Yarn Calc Free.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87DABA9A1CE7EBF4009DD3B1 /* Knitting Yarn Calc Full */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87DABAC51CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "Knitting Yarn Calc Full" */;
 			buildPhases = (
 				87DABA971CE7EBF4009DD3B1 /* Sources */,
 				87DABA981CE7EBF4009DD3B1 /* Frameworks */,
@@ -362,7 +447,7 @@
 			);
 			dependencies = (
 			);
-			name = YarnRequirements;
+			name = "Knitting Yarn Calc Full";
 			productName = YarnRequirements;
 			productReference = 87DABA9B1CE7EBF4009DD3B1 /* YarnRequirements.app */;
 			productType = "com.apple.product-type.application";
@@ -410,27 +495,30 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "The Inquisitive Introvert";
 				TargetAttributes = {
+					87082A49224730B600D0E93C = {
+						DevelopmentTeam = XZ8NRDZGBL;
+					};
 					87DABA9A1CE7EBF4009DD3B1 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = XZ8NRDZGBL;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 					87DABAB01CE7EBF4009DD3B1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 						TestTargetID = 87DABA9A1CE7EBF4009DD3B1;
 					};
 					87DABABB1CE7EBF4009DD3B1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 						TestTargetID = 87DABA9A1CE7EBF4009DD3B1;
 					};
 				};
 			};
-			buildConfigurationList = 87DABA961CE7EBF4009DD3B1 /* Build configuration list for PBXProject "YarnRequirements" */;
+			buildConfigurationList = 87DABA961CE7EBF4009DD3B1 /* Build configuration list for PBXProject "Knitting Yarn Calc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -444,14 +532,47 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87DABA9A1CE7EBF4009DD3B1 /* YarnRequirements */,
+				87DABA9A1CE7EBF4009DD3B1 /* Knitting Yarn Calc Full */,
 				87DABAB01CE7EBF4009DD3B1 /* YarnRequirementsTests */,
 				87DABABB1CE7EBF4009DD3B1 /* YarnRequirementsUITests */,
+				87082A49224730B600D0E93C /* Knitting Yarn Calc Free */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		87082A6A224730B600D0E93C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87082A6B224730B600D0E93C /* Scarf-si.plist in Resources */,
+				87082A6C224730B600D0E93C /* Mittens-si.plist in Resources */,
+				87082A6D224730B600D0E93C /* Blanket-si.plist in Resources */,
+				87082A6E224730B600D0E93C /* LaunchScreen.storyboard in Resources */,
+				87082A6F224730B600D0E93C /* InfoPlist.strings in Resources */,
+				87082A70224730B600D0E93C /* Gloves-si.plist in Resources */,
+				87082A71224730B600D0E93C /* Scarf-im.plist in Resources */,
+				87082A72224730B600D0E93C /* Socks-im.plist in Resources */,
+				87082A73224730B600D0E93C /* Vest-si.plist in Resources */,
+				87082A74224730B600D0E93C /* Assets.xcassets in Resources */,
+				87082A75224730B600D0E93C /* Sweater-im.plist in Resources */,
+				87082A76224730B600D0E93C /* Tam-im.plist in Resources */,
+				87082A77224730B600D0E93C /* YarnWeight.plist in Resources */,
+				87082A78224730B600D0E93C /* Toque-im.plist in Resources */,
+				87082A79224730B600D0E93C /* Blanket-im.plist in Resources */,
+				87082A7A224730B600D0E93C /* Sweater-si.plist in Resources */,
+				87082A7B224730B600D0E93C /* Vest-im.plist in Resources */,
+				87082A7D224730B600D0E93C /* Localizable.strings in Resources */,
+				87082A7E224730B600D0E93C /* Socks-si.plist in Resources */,
+				87082A7F224730B600D0E93C /* Tam-si.plist in Resources */,
+				87082A80224730B600D0E93C /* Main.storyboard in Resources */,
+				87082A81224730B600D0E93C /* Toque-si.plist in Resources */,
+				87082A82224730B600D0E93C /* Gloves-im.plist in Resources */,
+				87082A8C224734BF00D0E93C /* Default-568h@2x.png in Resources */,
+				87082A83224730B600D0E93C /* Mittens-im.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87DABA991CE7EBF4009DD3B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,6 +623,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		87082A4A224730B600D0E93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87082A4B224730B600D0E93C /* UserDefaults.swift in Sources */,
+				87082A4C224730B600D0E93C /* DimensionRow.swift in Sources */,
+				87082A4D224730B600D0E93C /* WeightsController.swift in Sources */,
+				87082A4E224730B600D0E93C /* LongLengthPicker.swift in Sources */,
+				87082A4F224730B600D0E93C /* BallPicker.swift in Sources */,
+				87082A50224730B600D0E93C /* BaseProjectController.swift in Sources */,
+				87082A51224730B600D0E93C /* SockController.swift in Sources */,
+				87082A52224730B600D0E93C /* SweaterController.swift in Sources */,
+				87082A53224730B600D0E93C /* ShortLengthPicker.swift in Sources */,
+				87082A54224730B600D0E93C /* ScarfController.swift in Sources */,
+				87082A55224730B600D0E93C /* AppDelegate.swift in Sources */,
+				87082A56224730B600D0E93C /* Socks.swift in Sources */,
+				87082A57224730B600D0E93C /* Hat.swift in Sources */,
+				87082A58224730B600D0E93C /* ProjectCell.swift in Sources */,
+				87082A59224730B600D0E93C /* YarnWeight.swift in Sources */,
+				87082A5A224730B600D0E93C /* WeightCell.swift in Sources */,
+				87082A5B224730B600D0E93C /* KnittingNeedles.swift in Sources */,
+				87082A5C224730B600D0E93C /* Mittens.swift in Sources */,
+				87082A5D224730B600D0E93C /* Scarf.swift in Sources */,
+				87082A5E224730B600D0E93C /* GaugePicker.swift in Sources */,
+				87082A5F224730B600D0E93C /* ShoeSizePicker.swift in Sources */,
+				87082A60224730B600D0E93C /* Colors.swift in Sources */,
+				87082A61224730B600D0E93C /* Sweater.swift in Sources */,
+				87082A62224730B600D0E93C /* ProjectController.swift in Sources */,
+				87082A63224730B600D0E93C /* PickerView.swift in Sources */,
+				87082A64224730B600D0E93C /* Project.swift in Sources */,
+				87082A65224730B600D0E93C /* HandController.swift in Sources */,
+				87082A66224730B600D0E93C /* InfoController.swift in Sources */,
+				87082A67224730B600D0E93C /* HatController.swift in Sources */,
+				87082A68224730B600D0E93C /* Vest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87DABA971CE7EBF4009DD3B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,7 +688,7 @@
 				87D078EC1D58EB0400DFBC11 /* Colors.swift in Sources */,
 				8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */,
 				87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */,
-				875A90B01CF6979C0084EC06 /* pickerView.swift in Sources */,
+				875A90B01CF6979C0084EC06 /* PickerView.swift in Sources */,
 				8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */,
 				87E536D51CFBF2BC00BE9735 /* HandController.swift in Sources */,
 				8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */,
@@ -571,12 +729,12 @@
 /* Begin PBXTargetDependency section */
 		87DABAB31CE7EBF4009DD3B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87DABA9A1CE7EBF4009DD3B1 /* YarnRequirements */;
+			target = 87DABA9A1CE7EBF4009DD3B1 /* Knitting Yarn Calc Full */;
 			targetProxy = 87DABAB21CE7EBF4009DD3B1 /* PBXContainerItemProxy */;
 		};
 		87DABABE1CE7EBF4009DD3B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87DABA9A1CE7EBF4009DD3B1 /* YarnRequirements */;
+			target = 87DABA9A1CE7EBF4009DD3B1 /* Knitting Yarn Calc Full */;
 			targetProxy = 87DABABD1CE7EBF4009DD3B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -639,7 +797,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		87DABAC31CE7EBF4009DD3B1 /* Debug */ = {
+		87082A3D22472A1F00D0E93C /* Debug Free */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -649,14 +807,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -685,9 +851,54 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug Free";
 		};
-		87DABAC41CE7EBF4009DD3B1 /* Release */ = {
+		87082A3E22472A1F00D0E93C /* Debug Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = YarnRequirements/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug Free";
+		};
+		87082A3F22472A1F00D0E93C /* Debug Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YarnRequirementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
+			};
+			name = "Debug Free";
+		};
+		87082A4022472A1F00D0E93C /* Debug Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = YarnRequirements;
+			};
+			name = "Debug Free";
+		};
+		87082A4122472A3C00D0E93C /* Release Free */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -697,14 +908,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -727,9 +946,235 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release Free";
 		};
-		87DABAC61CE7EBF4009DD3B1 /* Debug */ = {
+		87082A4222472A3C00D0E93C /* Release Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = YarnRequirements/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release Free";
+		};
+		87082A4322472A3C00D0E93C /* Release Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YarnRequirementsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
+			};
+			name = "Release Free";
+		};
+		87082A4422472A3C00D0E93C /* Release Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = YarnRequirements;
+			};
+			name = "Release Free";
+		};
+		87082A85224730B600D0E93C /* Debug Paid */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
+				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug Paid";
+		};
+		87082A86224730B600D0E93C /* Debug Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
+				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug Free";
+		};
+		87082A87224730B600D0E93C /* Release Paid */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
+				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release Paid";
+		};
+		87082A88224730B600D0E93C /* Release Free */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
+				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release Free";
+		};
+		87DABAC31CE7EBF4009DD3B1 /* Debug Paid */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug Paid";
+		};
+		87DABAC41CE7EBF4009DD3B1 /* Release Paid */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Paid";
+		};
+		87DABAC61CE7EBF4009DD3B1 /* Debug Paid */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -741,12 +1186,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = "Debug Paid";
 		};
-		87DABAC71CE7EBF4009DD3B1 /* Release */ = {
+		87DABAC71CE7EBF4009DD3B1 /* Release Paid */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -756,14 +1202,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = "Release Paid";
 		};
-		87DABAC91CE7EBF4009DD3B1 /* Debug */ = {
+		87DABAC91CE7EBF4009DD3B1 /* Debug Paid */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -771,12 +1217,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
 			};
-			name = Debug;
+			name = "Debug Paid";
 		};
-		87DABACA1CE7EBF4009DD3B1 /* Release */ = {
+		87DABACA1CE7EBF4009DD3B1 /* Release Paid */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -784,73 +1231,95 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
 			};
-			name = Release;
+			name = "Release Paid";
 		};
-		87DABACC1CE7EBF4009DD3B1 /* Debug */ = {
+		87DABACC1CE7EBF4009DD3B1 /* Debug Paid */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = YarnRequirements;
 			};
-			name = Debug;
+			name = "Debug Paid";
 		};
-		87DABACD1CE7EBF4009DD3B1 /* Release */ = {
+		87DABACD1CE7EBF4009DD3B1 /* Release Paid */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = YarnRequirements;
 			};
-			name = Release;
+			name = "Release Paid";
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		87DABA961CE7EBF4009DD3B1 /* Build configuration list for PBXProject "YarnRequirements" */ = {
+		87082A84224730B600D0E93C /* Build configuration list for PBXNativeTarget "Knitting Yarn Calc Free" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABAC31CE7EBF4009DD3B1 /* Debug */,
-				87DABAC41CE7EBF4009DD3B1 /* Release */,
+				87082A85224730B600D0E93C /* Debug Paid */,
+				87082A86224730B600D0E93C /* Debug Free */,
+				87082A87224730B600D0E93C /* Release Paid */,
+				87082A88224730B600D0E93C /* Release Free */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Paid";
 		};
-		87DABAC51CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirements" */ = {
+		87DABA961CE7EBF4009DD3B1 /* Build configuration list for PBXProject "Knitting Yarn Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABAC61CE7EBF4009DD3B1 /* Debug */,
-				87DABAC71CE7EBF4009DD3B1 /* Release */,
+				87DABAC31CE7EBF4009DD3B1 /* Debug Paid */,
+				87082A3D22472A1F00D0E93C /* Debug Free */,
+				87DABAC41CE7EBF4009DD3B1 /* Release Paid */,
+				87082A4122472A3C00D0E93C /* Release Free */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Paid";
+		};
+		87DABAC51CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "Knitting Yarn Calc Full" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87DABAC61CE7EBF4009DD3B1 /* Debug Paid */,
+				87082A3E22472A1F00D0E93C /* Debug Free */,
+				87DABAC71CE7EBF4009DD3B1 /* Release Paid */,
+				87082A4222472A3C00D0E93C /* Release Free */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release Paid";
 		};
 		87DABAC81CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirementsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABAC91CE7EBF4009DD3B1 /* Debug */,
-				87DABACA1CE7EBF4009DD3B1 /* Release */,
+				87DABAC91CE7EBF4009DD3B1 /* Debug Paid */,
+				87082A3F22472A1F00D0E93C /* Debug Free */,
+				87DABACA1CE7EBF4009DD3B1 /* Release Paid */,
+				87082A4322472A3C00D0E93C /* Release Free */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Paid";
 		};
 		87DABACB1CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirementsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABACC1CE7EBF4009DD3B1 /* Debug */,
-				87DABACD1CE7EBF4009DD3B1 /* Release */,
+				87DABACC1CE7EBF4009DD3B1 /* Debug Paid */,
+				87082A4022472A1F00D0E93C /* Debug Free */,
+				87DABACD1CE7EBF4009DD3B1 /* Release Paid */,
+				87082A4422472A3C00D0E93C /* Release Free */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Paid";
 		};
 /* End XCConfigurationList section */
 	};

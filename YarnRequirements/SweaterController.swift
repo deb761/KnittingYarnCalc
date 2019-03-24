@@ -31,9 +31,9 @@ class SweaterController: BaseProjectController {
         
         pkSizeUnits.loaded(self, tag: 5)
         
-        sweater = project as! Sweater
+        sweater = project as? Sweater
         txtSize.text = String(sweater.size)
-        txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), for: UIControlEvents.editingDidEnd)
+        txtSize.addTarget(self, action: #selector(SweaterController.changeSize(_:)), for: UIControl.Event.editingDidEnd)
 
         // Set initial value for pickers
         pkSizeUnits.selectRow(sweater.sizeUnits.rawValue, inComponent: 0, animated: false)

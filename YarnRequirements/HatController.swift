@@ -31,9 +31,9 @@ class HatController: BaseProjectController {
         
         pkSizeUnits.loaded(self, tag: 5)
         
-        hat = project as! Toque
+        hat = project as? Toque
         txtSize.text = String(hat.size)
-        txtSize.addTarget(self, action: #selector(HatController.changeSize(_:)), for: UIControlEvents.editingDidEnd)
+        txtSize.addTarget(self, action: #selector(HatController.changeSize(_:)), for: UIControl.Event.editingDidEnd)
         
         // Set initial value for pickers
         pkSizeUnits.selectRow(hat.sizeUnits.rawValue, inComponent: 0, animated: false)
@@ -61,7 +61,7 @@ class HatController: BaseProjectController {
     }
 
     // Recalc and update units when ball size changes
-    func changeSize(_ sender: AnyObject) {
+    @objc func changeSize(_ sender: AnyObject) {
         if let size = Double(txtSize.text!) {
             hat.size = size
         } else {

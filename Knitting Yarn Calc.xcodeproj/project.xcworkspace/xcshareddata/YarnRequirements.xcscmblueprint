@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1CB2326D85663D52A97C2019F642D5C835C84F5D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E952CA194707F8AF36A8138D067BA9AC74C119EB" : 0,
+    "1CB2326D85663D52A97C2019F642D5C835C84F5D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C8DBCE7D-EC00-45A0-878D-ACC956D970C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E952CA194707F8AF36A8138D067BA9AC74C119EB" : "..",
+    "1CB2326D85663D52A97C2019F642D5C835C84F5D" : "YarnRequirements\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YarnRequirements",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YarnRequirements.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/deb761\/YarnRequirements.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1CB2326D85663D52A97C2019F642D5C835C84F5D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/deb761\/YarnEstimator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E952CA194707F8AF36A8138D067BA9AC74C119EB"
+    }
+  ]
+}

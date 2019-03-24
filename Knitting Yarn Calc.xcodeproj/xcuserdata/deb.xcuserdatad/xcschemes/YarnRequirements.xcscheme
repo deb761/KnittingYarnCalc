@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,19 +15,19 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87DABA9A1CE7EBF4009DD3B1"
-               BuildableName = "YarnRequirements.app"
-               BlueprintName = "YarnRequirements"
-               ReferencedContainer = "container:YarnRequirements.xcodeproj">
+               BuildableName = ".app"
+               BlueprintName = "Knitting Yarn Calc Full"
+               ReferencedContainer = "container:Knitting Yarn Calc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Debug Paid"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      codeCoverageEnabled = "YES"
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -36,7 +36,7 @@
                BlueprintIdentifier = "87DABAB01CE7EBF4009DD3B1"
                BuildableName = "YarnRequirementsTests.xctest"
                BlueprintName = "YarnRequirementsTests"
-               ReferencedContainer = "container:YarnRequirements.xcodeproj">
+               ReferencedContainer = "container:Knitting Yarn Calc.xcodeproj">
             </BuildableReference>
             <SkippedTests>
                <Test
@@ -51,7 +51,7 @@
                BlueprintIdentifier = "87DABABB1CE7EBF4009DD3B1"
                BuildableName = "YarnRequirementsUITests.xctest"
                BlueprintName = "YarnRequirementsUITests"
-               ReferencedContainer = "container:YarnRequirements.xcodeproj">
+               ReferencedContainer = "container:Knitting Yarn Calc.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,16 +59,16 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87DABA9A1CE7EBF4009DD3B1"
-            BuildableName = "YarnRequirements.app"
-            BlueprintName = "YarnRequirements"
-            ReferencedContainer = "container:YarnRequirements.xcodeproj">
+            BuildableName = ".app"
+            BlueprintName = "Knitting Yarn Calc Full"
+            ReferencedContainer = "container:Knitting Yarn Calc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Debug Paid"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -82,16 +82,23 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87DABA9A1CE7EBF4009DD3B1"
-            BuildableName = "YarnRequirements.app"
-            BlueprintName = "YarnRequirements"
-            ReferencedContainer = "container:YarnRequirements.xcodeproj">
+            BuildableName = ".app"
+            BlueprintName = "Knitting Yarn Calc Full"
+            ReferencedContainer = "container:Knitting Yarn Calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Release Paid"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -101,17 +108,17 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "87DABA9A1CE7EBF4009DD3B1"
-            BuildableName = "YarnRequirements.app"
-            BlueprintName = "YarnRequirements"
-            ReferencedContainer = "container:YarnRequirements.xcodeproj">
+            BuildableName = ".app"
+            BlueprintName = "Knitting Yarn Calc Full"
+            ReferencedContainer = "container:Knitting Yarn Calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Debug Paid">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Release Paid"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

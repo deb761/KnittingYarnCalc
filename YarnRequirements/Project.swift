@@ -173,7 +173,7 @@ class Project {
     // Compute the length of a stitch in m, treating the row of stitches as a helix
     fileprivate func getStitchLength(_ cmGauge:Double, cmWidth:Double, cmLength:Double) -> Double {
         let stitchWidth = 1.0 / cmGauge
-        let stitchCir = M_PI * stitchWidth
+        let stitchCir = Double.pi * stitchWidth
         // The stitch actually goes halfway into the neighboring stitch on each side
         let span = 2 * stitchWidth
         // use equation to calculate helical length, where the diameter is the stitchWidth and the
