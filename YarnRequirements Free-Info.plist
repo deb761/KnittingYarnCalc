@@ -28,6 +28,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>5</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3658144280100378~8797816374</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>

@@ -91,6 +91,7 @@
 		87A198D81D56717D00A9046E /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A198D71D56717D00A9046E /* XCUIElement.swift */; };
 		87A23A6B1CED1A4A00E03F1F /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
+		87CF40A022A4B17A005C38D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */; };
 		87D078EC1D58EB0400DFBC11 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D078EB1D58EB0400DFBC11 /* Colors.swift */; };
 		87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
 		87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */; };
@@ -612,6 +613,7 @@
 				87082A6E224730B600D0E93C /* LaunchScreen.storyboard in Resources */,
 				87082A6F224730B600D0E93C /* InfoPlist.strings in Resources */,
 				87082A70224730B600D0E93C /* Gloves-si.plist in Resources */,
+				87CF40A022A4B17A005C38D9 /* Main.storyboard in Resources */,
 				87082A71224730B600D0E93C /* Scarf-im.plist in Resources */,
 				87082A72224730B600D0E93C /* Socks-im.plist in Resources */,
 				87082A73224730B600D0E93C /* Vest-si.plist in Resources */,

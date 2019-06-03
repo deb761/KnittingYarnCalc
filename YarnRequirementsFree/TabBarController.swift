@@ -1,101 +1,82 @@
-// Copyright 2012-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// Licensed under the Apache License, Version 2.0 (the "License").
-// You may not use this file except in compliance with the License.
-// A copy of the License is located at http://aws.amazon.com/apache2.0/
-// or in the "license" file accompanying this file.
-// This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-// CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
 
 import UIKit
+import GoogleMobileAds
 
-class TabBarController: UITabBarController, AmazonAdViewDelegate {
 
-    @IBOutlet var amazonAdView: AmazonAdView!
-    static var tabbarHeight:CGFloat = 100
+class AdController: UIViewController, GADBannerViewDelegate {
 
+    @IBOutlet weak var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadAmazonAd()
+        // TODO: replace with actual adUnitId
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.load(GADRequest())
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        // Add banner to view and add constraints as above.
+        addBannerViewToView(bannerView)
+    }
+
+    func addBannerViewToView(_ bannerView: UIView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        /*if #available(iOS 11.0, *) {
+            positionBannerAtBottomOfSafeArea(bannerView)
+        }
+        else {
+            positionBannerAtBottomOfView(bannerView)
+        }*/
+    }
+    
+    @available (iOS 11, *)
+    func positionBannerAtBottomOfSafeArea(_ bannerView: UIView) {
+        // Position the banner. Stick it to the bottom of the Safe Area.
+        // Centered horizontally.
+        let guide: UILayoutGuide = view.safeAreaLayoutGuide
+        
+        NSLayoutConstraint.activate(
+            [bannerView.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
+             bannerView.bottomAnchor.constraint(equalTo: guide.bottomAnchor)]
+        )
+        
+       // bottomConstraint.constant = -bannerView.sizeThatFits(bannerView.frame.size).height
+    }
+    
+    func positionBannerAtBottomOfView(_ bannerView: UIView) {
+        // Center the banner horizontally.
+        view.addConstraint(NSLayoutConstraint(item: bannerView,
+                                              attribute: .centerX,
+                                              relatedBy: .equal,
+                                              toItem: view,
+                                              attribute: .centerX,
+                                              multiplier: 1,
+                                              constant: 0))
+        // Lock the banner to the top of the bottom layout guide.
+        view.addConstraint(NSLayoutConstraint(item: bannerView,
+                                              attribute: .bottom,
+                                              relatedBy: .equal,
+                                              toItem: self.bottomLayoutGuide,
+                                              attribute: .top,
+                                              multiplier: 1,
+                                              constant: 0))
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        coordinator.animate(alongsideTransition: nil, completion: { (context) -> Void in
-            // Reload Amazon Ad upon rotation.
-            // Important: Amazon expandable rich media ads target landscape and portrait mode separately.
-            // If your app supports device rotation events, your app must reload the ad when rotating between portrait and landscape mode.
-            self.loadAmazonAd();
-        });
-    }
-    /*
     override func viewWillLayoutSubviews() {
-        if !didStyleTabBar {
-            self.tabBar.invalidateIntrinsicContentSize()
-            var tabFrame = self.tabBar.frame
-            
-            tabFrame.size.height = tabBarHeight
-            tabFrame.origin.y = tabFrame.origin.y - 44
-            self.tabBar.frame = tabFrame
-            
-            didStyleTabBar = true
-        }
-    }*/
-    @IBAction func loadAmazonAd(){
-        if ((amazonAdView) != nil) {
-            amazonAdView.removeFromSuperview()
-            amazonAdView = nil
-        }
+        super.viewWillLayoutSubviews()
         
-        // Initialize Auto Ad Size View
-        let adFrame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 90);
-        amazonAdView = AmazonAdView.init(frame: adFrame)
-        amazonAdView.autoresizingMask = [.flexibleWidth, .flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin]
-        amazonAdView.setHorizontalAlignment(.center)
-        amazonAdView.setVerticalAlignment(.fitToContent)
-        
-        // Register the ViewController with the delegate to receive callbacks.
-        amazonAdView.delegate = self
-       
-        // Set Ad Loading Options & Load Ad
-        let options = AmazonAdOptions()
-        options.isTestRequest = true
-        amazonAdView.loadAd(options)
+        //tabBar.frame = CGRect(x: 0, y: bannerView.frame.origin.y - tabBar.frame.size.height, width: tabBar.frame.size.width, height: tabBar.frame.size.height)
+        //view.frame.size.height = originalContainerHeight - bannerView.frame.size.height
     }
-    
-    // MARK: AmazonAdViewDelegate
-    func viewControllerForPresentingModalView() -> UIViewController {
-        return self
-    }
-    
-    func adViewDidLoad(_ view: AmazonAdView!) -> Void {
-        // Add the newly created Amazon Ad view to our view.
-        self.view.addSubview(amazonAdView)
-        amazonAdView.bottomAnchor.constraint(equalTo: self.tabBar.topAnchor, constant: 0).isActive = true
-        TabBarController.tabbarHeight = self.tabBar.frame.height + amazonAdView.frame.height
-    }
-    
-    func adViewDidFail(toLoad view: AmazonAdView!, withError: AmazonAdError!) -> Void {
-        Swift.print("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription ?? "There was an unknown error")")
-        TabBarController.tabbarHeight = self.tabBar.frame.height
-    }
-    
-    func adViewWillExpand(_ view: AmazonAdView!) -> Void {
-        Swift.print("Ad will expand")
-    }
-    
-    func adViewDidCollapse(_ view: AmazonAdView!) -> Void {
-        Swift.print("Ad has collapsed")
-    }
-    
 }
-
+/*
 extension UITabBar {
     
     open override func sizeThatFits(_ size: CGSize) -> CGSize {
@@ -103,4 +84,4 @@ extension UITabBar {
         sizeThatFits.height = TabBarController.tabbarHeight
         return sizeThatFits
     }
-}
+}*/

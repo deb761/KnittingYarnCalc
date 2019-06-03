@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +14,6 @@
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="WeightsController" customModule="Knitting_Yarn_Calc_Full" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,11 +106,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="TkM-CO-Ots" secondAttribute="bottom" constant="67" id="CIG-WP-3AP"/>
+                            <constraint firstItem="Qmx-GF-Fev" firstAttribute="bottom" secondItem="TkM-CO-Ots" secondAttribute="bottom" constant="67" id="CIG-WP-3AP"/>
                             <constraint firstItem="TkM-CO-Ots" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="Mmh-0l-fC8"/>
-                            <constraint firstAttribute="trailing" secondItem="TkM-CO-Ots" secondAttribute="trailing" id="Pz9-CN-y6d"/>
-                            <constraint firstItem="TkM-CO-Ots" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="pob-Rx-sSV"/>
+                            <constraint firstItem="Qmx-GF-Fev" firstAttribute="trailing" secondItem="TkM-CO-Ots" secondAttribute="trailing" id="Pz9-CN-y6d"/>
+                            <constraint firstItem="TkM-CO-Ots" firstAttribute="leading" secondItem="Qmx-GF-Fev" secondAttribute="leading" id="pob-Rx-sSV"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qmx-GF-Fev"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weights" image="Weights" id="cPa-gy-q4n">
                         <attributedString key="userComments">
@@ -134,10 +132,6 @@
         <scene sceneID="0Bl-uW-ePi">
             <objects>
                 <viewController id="oIM-QC-YfU" customClass="InfoController" customModule="Knitting_Yarn_Calc_Full" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7wu-z0-spm"/>
-                        <viewControllerLayoutGuide type="bottom" id="GYB-Hz-Djl"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5V8-pK-erj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,11 +251,12 @@
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mol-1Y-idk" secondAttribute="trailing" constant="-197" id="G3g-dL-Geg"/>
-                            <constraint firstItem="mol-1Y-idk" firstAttribute="top" secondItem="7wu-z0-spm" secondAttribute="bottom" constant="-40" id="el7-1t-WDH"/>
-                            <constraint firstItem="GYB-Hz-Djl" firstAttribute="top" secondItem="mol-1Y-idk" secondAttribute="bottom" constant="153" id="h4O-cK-975"/>
+                            <constraint firstItem="mol-1Y-idk" firstAttribute="top" secondItem="nMf-dV-llK" secondAttribute="top" constant="-40" id="el7-1t-WDH"/>
+                            <constraint firstItem="nMf-dV-llK" firstAttribute="bottom" secondItem="mol-1Y-idk" secondAttribute="bottom" constant="153" id="h4O-cK-975"/>
                             <constraint firstItem="YmR-rU-tCZ" firstAttribute="width" secondItem="5V8-pK-erj" secondAttribute="width" constant="-40" id="jGK-Ua-dfA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mol-1Y-idk" secondAttribute="leading" constant="20" id="y14-C3-hld"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="nMf-dV-llK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="Info" selectedImage="Info" id="QTh-kq-zsb">
                         <attributedString key="userComments">
@@ -281,7 +276,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController storyboardIdentifier="tab-bar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="tab-bar" storyboardIdentifier="TabBarController" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
