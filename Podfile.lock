@@ -56,10 +56,12 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PersonalizedAdConsent (1.0.3)
 
 DEPENDENCIES:
   - Firebase/AdMob
   - Firebase/Analytics
+  - PersonalizedAdConsent
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -71,6 +73,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - nanopb
+    - PersonalizedAdConsent
 
 SPEC CHECKSUMS:
   Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
@@ -81,7 +84,8 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
   GoogleUtilities: 996e0db07153674fd1b54b220fda3a3dc3547cba
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PersonalizedAdConsent: b50a8a5d6065b6db23121e8fcc0dce2ae983f6ea
 
-PODFILE CHECKSUM: 88d2704d18e5f8d9c17f62bd8a2bcc7e8ec0c285
+PODFILE CHECKSUM: 2f96464f1357c1cecb1653157266049a0dee03bf
 
 COCOAPODS: 1.6.1

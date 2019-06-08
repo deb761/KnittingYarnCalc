@@ -8,6 +8,7 @@ target 'Knitting Yarn Calc Free' do
   # Pods for Knitting Yarn Calc Free
   pod 'Firebase/Analytics'
   pod 'Firebase/AdMob'
+  pod 'PersonalizedAdConsent'
 end
 
 target 'Knitting Yarn Calc Full' do

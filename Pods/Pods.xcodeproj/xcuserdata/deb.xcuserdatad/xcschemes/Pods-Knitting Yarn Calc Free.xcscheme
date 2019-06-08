@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7241AB9A1F72F7D63644A2B669BD436F"
+               BlueprintIdentifier = "212C441A8BED7DD0F777290CDF323E59"
                BuildableName = "Pods_Knitting_Yarn_Calc_Free.framework"
                BlueprintName = "Pods-Knitting Yarn Calc Free"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7241AB9A1F72F7D63644A2B669BD436F"
+            BlueprintIdentifier = "212C441A8BED7DD0F777290CDF323E59"
             BuildableName = "Pods_Knitting_Yarn_Calc_Free.framework"
             BlueprintName = "Pods-Knitting Yarn Calc Free"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -3,7 +3,7 @@
   YarnRequirements
 
   Created by Deborah Engelmeyer on 8/19/16.
-  Copyright © 2016 The Inquisitive Introvert. All rights reserved.
+  Copyright © 2019 The Inquisitive Introvert. All rights reserved.
 */
 /* App Name */
-"CFBundleDisplayName" ="Yarn Reqmts";
+"CFBundleDisplayName" = "Knitting Yarn Calc Free";
