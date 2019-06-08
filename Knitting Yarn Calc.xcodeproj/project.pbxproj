@@ -176,7 +176,6 @@
 		873A8CE01D46876800B3B287 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		873F64082247CC4A0090D727 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		873F640A2247D5D90090D727 /* AdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdController.swift; sourceTree = "<group>"; };
-		873F640E2247DADD0090D727 /* Knitting_Yarn_Calc_Free-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Knitting_Yarn_Calc_Free-header.h"; sourceTree = "<group>"; };
 		875A90AF1CF6979C0084EC06 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		875A90B11CF69E820084EC06 /* DimensionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionRow.swift; sourceTree = "<group>"; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -302,7 +301,6 @@
 				8765E6B522519DDA003CC672 /* Free.storyboard */,
 				873F640A2247D5D90090D727 /* AdController.swift */,
 				873F64082247CC4A0090D727 /* AppDelegate.swift */,
-				873F640E2247DADD0090D727 /* Knitting_Yarn_Calc_Free-header.h */,
 			);
 			path = YarnRequirementsFree;
 			sourceTree = "<group>";
@@ -1141,7 +1139,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
@@ -1162,7 +1160,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
@@ -1183,7 +1181,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
@@ -1204,7 +1202,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
