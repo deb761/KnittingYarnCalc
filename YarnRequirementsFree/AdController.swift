@@ -3,6 +3,7 @@ import UIKit
 import GoogleMobileAds
 import PersonalizedAdConsent
 import StoreKit
+import AdSupport
 
 class AdController: UIViewController, GADBannerViewDelegate, SKStoreProductViewControllerDelegate {
 
@@ -11,6 +12,8 @@ class AdController: UIViewController, GADBannerViewDelegate, SKStoreProductViewC
     fileprivate func requestPermission() {
         // Geography appears as in EEA for debug devices.
         PACConsentInformation.sharedInstance.debugGeography = PACDebugGeography.EEA;
+        // Add test devices for EEA
+        PACConsentInformation.sharedInstance.debugIdentifiers = ["CD7989B1-A729-4F74-97B7-EE3D5A910407"]
         
         //Update consent status
         PACConsentInformation.sharedInstance.requestConsentInfoUpdate(
@@ -85,8 +88,14 @@ class AdController: UIViewController, GADBannerViewDelegate, SKStoreProductViewC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: replace with actual adUnitId
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        
+        print("Advertising ID: \(ASIdentifierManager.shared().advertisingIdentifier.uuidString)")
+        // Load test ads for debug
+        if _isDebugAssertConfiguration() {
+            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        } else {
+            bannerView.adUnitID = "ca-app-pub-3658144280100378/8901580541"
+        }
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.load(GADRequest())
