@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SweaterController: BaseProjectController {
+class SweaterController: OldProjectController {
     
     // fourth row in the stack, chest size and units
     var sizeRow : DimensionRow?

@@ -28,7 +28,7 @@ class Project {
     var name:String = "Project"
     var thumb:UIImage = UIImage(named:"Sweater")!
     var image:UIImage = UIImage(named:"SweaterImg")!
-    var controller:BaseProjectController!
+    var controller:OldProjectController!
     
     let defs = UserDefaults.standard
 
@@ -99,7 +99,7 @@ class Project {
         self.name = name
         self.image = image
         self.thumb = thumb
-        self.controller = BaseProjectController()
+        self.controller = OldProjectController()
         /*defaults = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
                      "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]*/
         readPlist()

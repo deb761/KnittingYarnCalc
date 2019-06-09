@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SockController: BaseProjectController {
+class SockController: OldProjectController {
     
     // fourth row in the stack, chest size and units
     var sizeRow : DimensionRow?

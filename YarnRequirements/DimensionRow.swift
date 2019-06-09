@@ -21,7 +21,7 @@ class DimensionRow {
         lblName = UILabel()
         lblName.text = name + ":"
         lblName.textColor = Colors.lblColor
-        lblName.addConstraint(NSLayoutConstraint(item: lblName, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 90))
+        lblName.addConstraint(NSLayoutConstraint(item: lblName!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 90))
         
         // Define the txtField with a defined width
         txtVal = UITextField(frame: CGRect(x: 10, y: 10, width: 50, height: 20))
@@ -34,15 +34,15 @@ class DimensionRow {
         txtVal.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         txtVal.delegate = delegate
         // Set the text field to really wide and set it's comprossion resistance to low so it will shrink to fit on the smaller phones
-        txtVal.addConstraint(NSLayoutConstraint(item: txtVal, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150))
+        txtVal.addConstraint(NSLayoutConstraint(item: txtVal!, attribute: .width, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150))
         txtVal.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
         txtVal.setContentCompressionResistancePriority(UILayoutPriority.defaultLow, for: .horizontal)
         
         // Set up the picker
         self.picker = picker
         // Set the height and width of the picker so that it will not compress on smaller phones nor get much wider on large phones
-        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
-        self.picker.addConstraint(NSLayoutConstraint(item: self.picker, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 130))
+        self.picker.addConstraint(NSLayoutConstraint(item: self.picker!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
+        self.picker.addConstraint(NSLayoutConstraint(item: self.picker!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 130))
         picker.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
         picker.setContentCompressionResistancePriority(UILayoutPriority.required, for: .horizontal)
         // Create the stackView and add the label, textField, and picker to it

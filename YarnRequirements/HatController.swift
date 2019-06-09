@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HatController: BaseProjectController {
+class HatController: OldProjectController {
     
     // fourth row in the stack, chest size and units
     var sizeRow : DimensionRow?

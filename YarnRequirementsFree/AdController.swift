@@ -11,7 +11,7 @@ class AdController: UIViewController, GADBannerViewDelegate, SKStoreProductViewC
 
     fileprivate func requestPermission() {
         // Geography appears as in EEA for debug devices.
-        PACConsentInformation.sharedInstance.debugGeography = PACDebugGeography.EEA;
+        //PACConsentInformation.sharedInstance.debugGeography = PACDebugGeography.EEA;
         // Add test devices for EEA
         PACConsentInformation.sharedInstance.debugIdentifiers = ["CD7989B1-A729-4F74-97B7-EE3D5A910407"]
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScarfController: BaseProjectController {
+class ScarfController: OldProjectController {
 
     // fourth row in the stack, length and units
     var lengthRow : DimensionRow?

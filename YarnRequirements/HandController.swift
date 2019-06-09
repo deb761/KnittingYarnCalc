@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HandController: BaseProjectController {
+class HandController: OldProjectController {
     
     // fourth row in the stack, chest size and units
     var sizeRow : DimensionRow?

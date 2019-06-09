@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "projectCell"
 
-class ProjectController: UICollectionViewController {
+class ProjectListController: UICollectionViewController {
     
     // Projects to choose from
     let projects = [
@@ -38,8 +38,9 @@ class ProjectController: UICollectionViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! ProjectCell
         let svc = segue.destination as! BaseProjectController;
-        svc.project = project
+        svc.project = cell.project
     }
 
 
@@ -60,7 +61,8 @@ class ProjectController: UICollectionViewController {
 
         // Configure the cell
         project = projects[(indexPath as NSIndexPath).row]
-        cell.image.image = project!.thumb
+        cell.project = project
+        cell.image.image = project!.image
         cell.backgroundColor = UIColor.clear
         cell.lblName.text = NSLocalizedString(project!.name.lowercased(), value: project!.name, comment: "Project name")
     
@@ -69,15 +71,16 @@ class ProjectController: UICollectionViewController {
     
     func collectionView(_ collectionView : UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:IndexPath) -> CGSize
     {
-        let cellSize:CGSize = CGSize(width: 108, height: 126)
+        let cellSize:CGSize = CGSize(width: 108, height: 156)
         return cellSize
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         project = projects[(indexPath as NSIndexPath).row]
         project!.controller.project = project
+      /*  performSegue(withIdentifier: "ShowProject", sender: nil)
         _ = project?.controller.view
-        show(project!.controller, sender: self)
+        show(project!.controller, sender: self)*/
     }
     
     // MARK: UICollectionViewDelegate
