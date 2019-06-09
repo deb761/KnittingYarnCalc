@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TkM-CO-Ots">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,12 +107,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qmx-GF-Fev" firstAttribute="bottom" secondItem="TkM-CO-Ots" secondAttribute="bottom" constant="67" id="CIG-WP-3AP"/>
+                            <constraint firstItem="V6Z-Ch-H2Q" firstAttribute="bottom" secondItem="TkM-CO-Ots" secondAttribute="bottom" id="CIG-WP-3AP"/>
                             <constraint firstItem="TkM-CO-Ots" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="Mmh-0l-fC8"/>
-                            <constraint firstItem="Qmx-GF-Fev" firstAttribute="trailing" secondItem="TkM-CO-Ots" secondAttribute="trailing" id="Pz9-CN-y6d"/>
-                            <constraint firstItem="TkM-CO-Ots" firstAttribute="leading" secondItem="Qmx-GF-Fev" secondAttribute="leading" id="pob-Rx-sSV"/>
+                            <constraint firstItem="V6Z-Ch-H2Q" firstAttribute="trailing" secondItem="TkM-CO-Ots" secondAttribute="trailing" id="Pz9-CN-y6d"/>
+                            <constraint firstItem="TkM-CO-Ots" firstAttribute="leading" secondItem="V6Z-Ch-H2Q" secondAttribute="leading" id="pob-Rx-sSV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Qmx-GF-Fev"/>
+                        <viewLayoutGuide key="safeArea" id="V6Z-Ch-H2Q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weights" image="Weights" id="cPa-gy-q4n">
                         <attributedString key="userComments">
@@ -137,14 +137,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mol-1Y-idk">
-                                <rect key="frame" x="-4" y="-20" width="560" height="485"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mol-1Y-idk">
+                                <rect key="frame" x="16" y="28" width="343" height="540"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-rU-tCZ">
-                                        <rect key="frame" x="8" y="-18" width="335" height="437"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="477.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2016" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -158,7 +158,7 @@
                                                 </attributedString>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweater and vest sizing based on Standard Body Measurements published by Craft Yarn Council." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0c-Ke-06I" userLabel="sweater credit">
-                                                <rect key="frame" x="0.0" y="51" width="335" height="61"/>
+                                                <rect key="frame" x="0.0" y="51" width="300" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -172,26 +172,26 @@
                                                 </attributedString>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNa-cP-9tC">
-                                                <rect key="frame" x="0.0" y="122" width="335" height="122"/>
+                                                <rect key="frame" x="0.0" y="122" width="300" height="142.5"/>
                                                 <string key="text">Sweater and vest size dimensions are finished size.  Sweaters and vests are straight hip-length garments.  Sweaters have drop shoulders and tapered sleeves.  Use less yarn for fitted garments and more yarn for longer garments.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blanket and scarf measurements are finished size.  Add more yarn for tassels." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-Ix-nEQ">
-                                                <rect key="frame" x="0.0" y="254" width="335" height="41"/>
+                                                <rect key="frame" x="0.0" y="274.5" width="300" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toque and Tam measurements are head size, not garment size." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-0J-GKh">
-                                                <rect key="frame" x="0.0" y="305" width="335" height="41"/>
+                                                <rect key="frame" x="0.0" y="345.5" width="300" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yarn estimates based on calculations by The Inquisitive Introvert." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-77-ggg" userLabel="estimate credit">
-                                                <rect key="frame" x="0.0" y="356" width="335" height="41"/>
+                                                <rect key="frame" x="0.0" y="396.5" width="300" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -205,10 +205,10 @@
                                                 </attributedString>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KmY-ML-HMB" userLabel="Icon Stack">
-                                                <rect key="frame" x="0.0" y="407" width="335" height="30"/>
+                                                <rect key="frame" x="0.0" y="447.5" width="300" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-sh-cFH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="145.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -222,7 +222,7 @@
                                                         </attributedString>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqS-kz-kIU">
-                                                        <rect key="frame" x="172" y="0.0" width="163" height="30"/>
+                                                        <rect key="frame" x="155.5" y="0.0" width="144.5" height="30"/>
                                                         <state key="normal" title="Icon8"/>
                                                         <attributedString key="userComments">
                                                             <fragment content="link to icon8 web site">
@@ -239,25 +239,26 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="RMo-sC-Iun" userLabel="width = 320"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="YmR-rU-tCZ" secondAttribute="trailing" constant="217" id="7EC-2r-EwY"/>
-                                    <constraint firstAttribute="bottom" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="66" id="7Xd-mX-egq"/>
-                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="mol-1Y-idk" secondAttribute="top" constant="-18" id="Z48-HO-scr"/>
-                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="mol-1Y-idk" secondAttribute="leading" constant="8" id="fXs-qi-r34"/>
+                                    <constraint firstAttribute="trailing" secondItem="YmR-rU-tCZ" secondAttribute="trailing" id="17u-mP-JVO"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="mol-1Y-idk" secondAttribute="top" id="Z48-HO-scr"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="mol-1Y-idk" secondAttribute="leading" id="fXs-qi-r34"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="mol-1Y-idk" secondAttribute="trailing" constant="-197" id="G3g-dL-Geg"/>
-                            <constraint firstItem="mol-1Y-idk" firstAttribute="top" secondItem="nMf-dV-llK" secondAttribute="top" constant="-40" id="el7-1t-WDH"/>
-                            <constraint firstItem="nMf-dV-llK" firstAttribute="bottom" secondItem="mol-1Y-idk" secondAttribute="bottom" constant="153" id="h4O-cK-975"/>
-                            <constraint firstItem="YmR-rU-tCZ" firstAttribute="width" secondItem="5V8-pK-erj" secondAttribute="width" constant="-40" id="jGK-Ua-dfA"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="mol-1Y-idk" secondAttribute="leading" constant="20" id="y14-C3-hld"/>
+                            <constraint firstItem="Tuq-rX-dOu" firstAttribute="bottom" secondItem="mol-1Y-idk" secondAttribute="bottom" id="2Zg-XR-TK7"/>
+                            <constraint firstItem="mol-1Y-idk" firstAttribute="leading" secondItem="Tuq-rX-dOu" secondAttribute="leading" constant="16" id="4ie-gc-4Rm"/>
+                            <constraint firstItem="mol-1Y-idk" firstAttribute="top" secondItem="Tuq-rX-dOu" secondAttribute="top" constant="16" id="mRg-Lt-bxe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mol-1Y-idk" secondAttribute="trailing" id="zJz-H6-OlQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nMf-dV-llK"/>
+                        <viewLayoutGuide key="safeArea" id="Tuq-rX-dOu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="Info" selectedImage="Info" id="QTh-kq-zsb">
                         <attributedString key="userComments">
@@ -272,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5h7-kl-mYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="1048"/>
+            <point key="canvasLocation" x="356" y="1047.5262368815593"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
