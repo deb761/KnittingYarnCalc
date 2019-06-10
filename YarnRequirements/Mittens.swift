@@ -12,30 +12,31 @@ import Foundation
 // For now, treat mittens as a rectangle wrapped around the hand
 class Mittens : Project {
     // hand size around palm
+    var sizeDimension: Dimension<Double, ShortLengthUnits>?
     var size:Double {
         get {
-            return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
+            return sizeDimension!.value
         }
         set {
-            defs.set(newValue, forKey: "\(name)-size")
+            sizeDimension!.value = newValue
         }
     }
-    // Units for hand size
+    // Units for chest size
     var sizeUnits:ShortLengthUnits {
         get {
-            return defs.shortLengthUnitsForKey("\(name)-sizeUnits",
-                                              def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
+            return sizeDimension!.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-sizeUnits")
+            sizeDimension!.unit = newValue
         }
     }
-    
+
     // provide a means of defining a project name and image
     override init(name:String, image:UIImage) {
         super.init(name: name, image: image)
-        defaults["size"] = defaults["size"]
-        defaults["sizeUnits"] = defaults["sizeUnits"]
+        sizeDimension = Dimension<Double, ShortLengthUnits>(key: "size", projectName: name, name: NSLocalizedString("hand-size", value: "Hand Size", comment: "Measurement around the palm"), unitNames: shortText, defaults: defaults)
+        dimensions["size"] = sizeDimension! as DimensionProtocol
+        dimensionOrder.insert("size", at: 1)
         calcYarnRequired()
     }
     // Calculate the yarn required for a pair of mittens, where the length is

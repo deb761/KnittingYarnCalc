@@ -12,41 +12,43 @@ import UIKit
 class Scarf: Project {
 
     // length of the scarf
+    var lengthDimension: Dimension<Double, ShortLengthUnits>?
     var length:Double {
         get {
-            return defs.doubleForKey("\(name)-length", def: defaults["length"] as! Double)
+            return lengthDimension!.value
         }
         set {
-            defs.set(newValue, forKey: "\(name)-length")
+            lengthDimension!.value = newValue
         }
     }
     // Units for length
     //var lengthUnits:ShortLengthUnits = ShortLengthUnits.Inches;
     var lengthUnits:ShortLengthUnits {
         get {
-            return defs.shortLengthUnitsForKey("\(name)-lengthUnits", def: ShortLengthUnits(rawValue: defaults["lengthUnits"] as! Int)!)
+            return lengthDimension!.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-lengthUnits")
+            lengthDimension!.unit = newValue
         }
     }
     
     // width of the scarf
+    var widthDimension: Dimension<Double, ShortLengthUnits>?
     var width:Double {
         get {
-            return defs.doubleForKey("\(name)-width", def: defaults["width"] as! Double)
+            return widthDimension!.value
         }
         set {
-            defs.set(newValue, forKey: "\(name)-width")
+            widthDimension!.value = newValue
         }
     }
     // Units for length
     var widthUnits:ShortLengthUnits {
         get {
-            return defs.shortLengthUnitsForKey("\(name)-widthUnits", def: ShortLengthUnits(rawValue: defaults["widthUnits"] as! Int)!)
+            return widthDimension!.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-widthUnits")
+            widthDimension!.unit = newValue
         }
     }
 
@@ -57,7 +59,13 @@ class Scarf: Project {
     override init(name:String, image:UIImage) {
         super.init(name: name, image: image)
         
-        calcYarnRequired()
+        lengthDimension = Dimension<Double, ShortLengthUnits>(key: "length", projectName: name, name: NSLocalizedString("length", value: "Length", comment: "Label for length of an item"), unitNames: shortText, defaults: defaults)
+        widthDimension = Dimension<Double, ShortLengthUnits>(key: "width", projectName: name, name: NSLocalizedString("width", value: "Width", comment: "Label for width of an item"), unitNames: shortText, defaults: defaults)
+        dimensions["length"] = lengthDimension as! DimensionProtocol
+        dimensions["width"] = widthDimension as! DimensionProtocol
+        dimensionOrder.insert("length", at: 1)
+        dimensionOrder.insert("width", at: 2)
+        //calcYarnRequired()
     }
     // A blanket is a rectangle, so calculate yarn required using length and width
     override func calcYarnRequired()

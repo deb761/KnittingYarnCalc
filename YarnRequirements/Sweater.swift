@@ -15,19 +15,19 @@ class Sweater : Project {
     var sizeDimension: Dimension<Double, ShortLengthUnits>?
     var size:Double {
         get {
-            return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
+            return sizeDimension!.value
         }
         set {
-            defs.set(newValue, forKey: "\(name)-size")
+            sizeDimension!.value = newValue
         }
     }
     // Units for chest size
     var sizeUnits:ShortLengthUnits {
         get {
-            return defs.shortLengthUnitsForKey("\(name)-sizeUnits", def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
+            return sizeDimension!.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-sizeUnits")
+            sizeDimension!.unit = newValue
         }
     }
     
@@ -35,7 +35,7 @@ class Sweater : Project {
     override init(name:String, image:UIImage) {
         super.init(name: name, image: image)
         sizeDimension = Dimension<Double, ShortLengthUnits>(key: "size", projectName: name, name: NSLocalizedString("chest-size", value: "Chest Size", comment: "Measurement around a sweater at the wearer's chest"), unitNames: shortText, defaults: defaults)
-        dimensions["size"] = sizeDimension as! DimensionProtocol
+        dimensions["size"] = sizeDimension! as DimensionProtocol
         dimensionOrder.insert("size", at: 1)
 
         calcYarnRequired()

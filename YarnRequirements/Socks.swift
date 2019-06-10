@@ -16,6 +16,7 @@ enum ShoeSizeUnits : Int {
 // For now, treat socks as a rectangle wrapped around the foot
 class Socks: Project {
    
+    var sizeDimension: Dimension<Double, ShoeSizeUnits>?
     // Shoe size
     var size:Double {
         get {
@@ -36,16 +37,20 @@ class Socks: Project {
         }
     }
     
+    let unitText = [NSLocalizedString("us-child", value: "US Child", comment: "Short string for picker indicating US Child shoe sizes"),
+                    NSLocalizedString("us-youth", value: "US Youth", comment: "Short string for picker indicating US Youth shoe sizes"),
+                    NSLocalizedString("us-women", value: "US Women", comment: "Short string for picker indicating US Women shoe sizes"),
+                    NSLocalizedString("us-men", value: "US Men", comment: "Short string for picker indicating US Men shoe sizes"),
+                    NSLocalizedString("euro", value: "Euro", comment: "Short string for picker indicating European shoe sizes")]
+
+    
     // provide a means of defining a project name and image
     override init(name:String, image:UIImage) {
         super.init(name: name, image: image)
         
-    /*    // socks normally use a finer yarn, so finer gauge
-        defaults["gauge"] = 32.0
-        // longer balls for fingering
-        defaults["ballSize"] = 200
-        defaults["size"] = 8.0
-        defaults["sizeUnits"] = ShoeSizeUnits.Women.rawValue */
+        sizeDimension = Dimension<Double, ShoeSizeUnits>(key: "size", projectName: name, name: NSLocalizedString("shoe-size", value: "Shoe Size", comment: "Wearer shoe size"), unitNames: unitText, defaults: defaults)
+        dimensions["size"] = sizeDimension as! DimensionProtocol
+        dimensionOrder.insert("size", at: 1)
         // recalc yarn required with finer yarn
         calcYarnRequired()
 

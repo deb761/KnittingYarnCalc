@@ -15,27 +15,31 @@ import Foundation
 //
 class Toque : Project {
     // head size around brow
+    var sizeDimension: Dimension<Double, ShortLengthUnits>?
     var size:Double {
         get {
-            return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
+            return sizeDimension!.value
         }
         set {
-            defs.set(newValue, forKey: "\(name)-size")
+            sizeDimension!.value = newValue
         }
     }
-    // Units for head size
+    // Units for chest size
     var sizeUnits:ShortLengthUnits {
         get {
-            return defs.shortLengthUnitsForKey("\(name)-sizeUnits", def: ShortLengthUnits(rawValue: defaults["sizeUnits"] as! Int)!)
+            return sizeDimension!.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-sizeUnits")
+            sizeDimension!.unit = newValue
         }
     }
-    
+
     // provide a means of defining a project name and image
     override init(name:String, image:UIImage) {
         super.init(name: name, image: image)
+        sizeDimension = Dimension<Double, ShortLengthUnits>(key: "size", projectName: name, name: NSLocalizedString("head-size", value: "Head Size", comment: "Measurement around head for hat size"), unitNames: shortText, defaults: defaults)
+        dimensions["size"] = sizeDimension as! DimensionProtocol
+        dimensionOrder.insert("size", at: 1)
         calcYarnRequired()
     }
     
