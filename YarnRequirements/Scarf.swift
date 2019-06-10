@@ -54,9 +54,8 @@ class Scarf: Project {
     var scarf:Scarf?
     
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage) {
-        super.init(name: name, thumb: thumb, image: image)
-        controller = ScarfController()
+    override init(name:String, image:UIImage) {
+        super.init(name: name, image: image)
         
         calcYarnRequired()
     }
@@ -81,8 +80,8 @@ class Scarf: Project {
 class Blanket : Scarf {
 
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage) {
-        super.init(name: name, thumb: thumb, image: image)
+    override init(name:String, image:UIImage) {
+        super.init(name: name, image: image)
         defaults["width"] = 60.0 as AnyObject?
         calcYarnRequired()
     }

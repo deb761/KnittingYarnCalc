@@ -18,6 +18,9 @@ enum ShortLengthUnits: Int {
 enum LongLengthUnits: Int {
     case yards = 0, meters
 }
+enum WholePartial: Int {
+    case whole = 0, partial
+}
 // Base class for a project
 class Project {
     // name of the plist for this project
@@ -26,84 +29,127 @@ class Project {
     var defaults:[String:AnyObject] = [:]  //our data
     // name of the project type shown to the user
     var name:String = "Project"
-    var thumb:UIImage = UIImage(named:"Sweater")!
     var image:UIImage = UIImage(named:"SweaterImg")!
-    var controller:OldProjectController!
+    var controller:BaseProjectController!
     
     let defs = UserDefaults.standard
 
+    var gaugeDimension: Dimension<Double, GaugeUnits>!
+    var ballSizeDimension: Dimension<Int, LongLengthUnits>!
+    var yarnDimension: Dimension<Int, LongLengthUnits>!
+    var ballsDimension: Dimension<Double, WholePartial>!
+    
     // guage of the project
     var gauge:Double {
         get {
-            return defs.doubleForKey("\(name)-gauge", def: defaults["gauge"] as! Double)
+            return gaugeDimension.value
         }
         set {
-            defs.set(newValue, forKey: "\(name)-gauge")
+            gaugeDimension.value = newValue
         }
     }
     // units for the gauge
     var gaugeUnits:GaugeUnits {
         get {
-            return defs.gaugeUnitsForKey("\(name)-gaugeUnits", def: GaugeUnits(rawValue: defaults["gaugeUnits"] as! Int)!)
+            return gaugeDimension.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-gaugeUnits")
+            gaugeDimension.unit = newValue
         }
     }
     // The units for yarn needed
     var yarnNeededUnits:LongLengthUnits {
         get {
-            return defs.longLengthUnitsForKey("\(name)-yarnNeededUnits",
-                                              def: LongLengthUnits(rawValue: defaults["yarnNeededUnits"] as! Int)!)
+            return yarnDimension.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-yarnNeededUnits")
+            yarnDimension.unit = newValue
         }
     }
     // The ball size in ballSizeUnits
     var ballSize:Int {
         get {
-            return defs.integerForKey("\(name)-ballSize", def: defaults["ballSize"] as! Int)
+            return ballSizeDimension.value
         }
         set {
-            defs.set(newValue, forKey: "\(name)-ballSize")
+            ballSizeDimension.value = newValue
         }
     }
     // The units for ball size
     var ballSizeUnits:LongLengthUnits {
         get {
-            return defs.longLengthUnitsForKey("\(name)-ballSizeUnits",
-                                              def: LongLengthUnits(rawValue: defaults["ballSizeUnits"] as! Int)!)
+            return ballSizeDimension.unit
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(name)-ballSizeUnits")
+            ballSizeDimension.unit = newValue
         }
     }
     // True when the user wants to see whole and partial balls needed
-    var partialBalls:Bool {
+    var partialBalls:WholePartial {
         get {
-            return defs.bool(forKey: "\(name)-partialBalls")
+            return ballsDimension.unit
         }
         set {
-            defs.set(newValue, forKey: "\(name)-partialBalls")
+            ballsDimension.unit = newValue
         }
     }
     
     // The yarn needed using yarnNeededUnits for the project
-    var yarnNeeded:Int = 1000
+    var yarnNeeded:Int {
+        get {
+            return yarnDimension.value
+        }
+        set {
+            yarnDimension.value = newValue
+        }
+    }
     // The number of balls needed
-    var ballsNeeded:Double = 4
+    var ballsNeeded:Double {
+        get {
+            return ballsDimension.value
+        }
+        set {
+            ballsDimension.value = newValue
+        }
+    }
+
+    let guageText = [NSLocalizedString("sts/inch", value: "sts/inch", comment: "Stitches per inch to determine yarn gauge"),
+                     NSLocalizedString("sts/4inch", value: "sts/4inch", comment: "Stitches per 4 inches to determine yarn gauge"),
+                     NSLocalizedString("sts/10cm", value: "sts/10cm", comment: "Stitches per 10 cm to determine yarn gauge")]
+    
+    let ballText = [NSLocalizedString("whole", value: "Whole", comment: "A whole ball of yarn"),
+                    NSLocalizedString("partial", value: "Partial", comment: "A partial ball of yarn")]
+    
+    let longText = [NSLocalizedString("yards", value: "yards", comment: "Short string for picker that indicates using yards for units of measure"),
+                    NSLocalizedString("meters", value: "meters", comment: "Short string for picker that indicates using meters for units of measure")]
+    
+    let shortText = [NSLocalizedString("inches", value: "inches", comment: "Short string for picker that indicates using inches for units"),
+                     NSLocalizedString("cm", value: "cm", comment: "Short string for picker that indicates using cm for units")]
+
+    var dimensions:[String : DimensionProtocol]!
+    var dimensionOrder:[String] = ["gauge", "yarn", "ballSize", "balls"]
 
     // provide a means of defining a project name and image
-    init(name:String, thumb:UIImage, image:UIImage) {
+    init(name:String, image:UIImage) {
         self.name = name
         self.image = image
-        self.thumb = thumb
-        self.controller = OldProjectController()
-        /*defaults = [ "gauge" : 20.0, "gaugeUnits" : GaugeUnits.StsPer4inch.rawValue, "yarnNeededUnits" : LongLengthUnits.Meters.rawValue,
-                     "ballSize" : 150, "ballSizeUnits" : LongLengthUnits.Meters.rawValue, "partialBalls" : false ]*/
+        self.controller = BaseProjectController()
+
         readPlist()
+
+        // set dimensions
+        gaugeDimension = Dimension<Double, GaugeUnits>(key: "gauge", projectName: name, name: NSLocalizedString("gauge", value: "Gauge", comment: "Density of knitted stitches per inch or cm"), unitNames: guageText, defaults: defaults)
+        yarnDimension = Dimension<Int, LongLengthUnits>(key: "yarn", projectName: name, name: NSLocalizedString("yarn-req-label", value: "Yarn Req",
+                                                                                                                comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"), unitNames: longText, defaults: defaults)
+        ballSizeDimension = Dimension<Int, LongLengthUnits>(key: "ballSize", projectName: name, name: NSLocalizedString("ball-size", value: "Ball Size", comment: "Length of yarn in ball"), unitNames: longText, defaults: defaults)
+        ballsDimension = Dimension<Double, WholePartial>(key: "balls", projectName: name, name: NSLocalizedString("num-balls", value: "Num Balls", comment: "Number of balls needed for a project; needs to be short"), unitNames: ballText, defaults: defaults)
+        dimensions = [
+            "gauge" : gaugeDimension as DimensionProtocol,
+            "yarn" : yarnDimension as DimensionProtocol,
+            "ballSize" : ballSizeDimension as DimensionProtocol,
+            "balls" : ballsDimension as DimensionProtocol]
     }
+    
     // Read the plist for this project and fill in the settings
     func readPlist() {
         var format = PropertyListSerialization.PropertyListFormat.xml //format of the property list
@@ -166,7 +212,7 @@ class Project {
         
         ballsNeeded = meters / siballSize
         
-        if !partialBalls {
+        if partialBalls == WholePartial.whole {
             ballsNeeded = ceil(ballsNeeded)
         }
     }
@@ -194,7 +240,7 @@ class Project {
             ballsNeeded = yarn / ballMeters
         }
 
-        if !partialBalls {
+        if partialBalls == .whole {
             ballsNeeded = ceil(ballsNeeded)
         }
     }

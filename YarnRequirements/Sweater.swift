@@ -12,6 +12,7 @@ import UIKit
 // This class defines the parameters and performs the calculations for a sweater project
 class Sweater : Project {
     // chest size
+    var sizeDimension: Dimension<Double, ShortLengthUnits>?
     var size:Double {
         get {
             return defs.doubleForKey("\(name)-size", def: defaults["size"] as! Double)
@@ -31,9 +32,12 @@ class Sweater : Project {
     }
     
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage) {
-        super.init(name: name, thumb: thumb, image: image)
-        controller = SweaterController()
+    override init(name:String, image:UIImage) {
+        super.init(name: name, image: image)
+        sizeDimension = Dimension<Double, ShortLengthUnits>(key: "size", projectName: name, name: NSLocalizedString("chest-size", value: "Chest Size", comment: "Measurement around a sweater at the wearer's chest"), unitNames: shortText, defaults: defaults)
+        dimensions["size"] = sizeDimension as! DimensionProtocol
+        dimensionOrder.insert("size", at: 1)
+
         calcYarnRequired()
     }
 

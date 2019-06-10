@@ -145,7 +145,7 @@ class OldProjectController: UIViewController, UIPickerViewDelegate, UITextFieldD
         pkGauge.selectRow(project.gaugeUnits.rawValue, inComponent: 0, animated: false)
         pkYarnUnits.selectRow(project.yarnNeededUnits.rawValue, inComponent: 0, animated: false)
         pkBallUnits.selectRow(project.ballSizeUnits.rawValue, inComponent: 0, animated: false)
-        pkBallPartial.selectRow((project.partialBalls) ? 1 : 0, inComponent: 0, animated: false)
+        pkBallPartial.selectRow(project.partialBalls.rawValue, inComponent: 0, animated: false)
 
         // Set initial values for text fields
         UpdateText()
@@ -227,7 +227,7 @@ class OldProjectController: UIViewController, UIPickerViewDelegate, UITextFieldD
         txtGauge.text = String(project.gauge)
         txtYarnNeeded.text = String(project.yarnNeeded)
         txtBallSize.text = String(project.ballSize)
-        txtBallsNeeded.text = String(format: project.partialBalls ? "%.1f" : "%.0f", project.ballsNeeded)
+        txtBallsNeeded.text = String(format: project.partialBalls == .partial ? "%.1f" : "%.0f", project.ballsNeeded)
         
     }
     // Update all the units on change
@@ -279,7 +279,7 @@ class OldProjectController: UIViewController, UIPickerViewDelegate, UITextFieldD
         case 3:
             project.ballSizeUnits = LongLengthUnits(rawValue: row)!
         case 4:
-            project.partialBalls = Bool(row == 1)
+            project.partialBalls = WholePartial(rawValue: row)!
         default: break
         }
         txtGauge.endEditing(true)

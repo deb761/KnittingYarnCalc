@@ -37,8 +37,8 @@ class Socks: Project {
     }
     
     // provide a means of defining a project name and image
-    override init(name:String, thumb:UIImage, image:UIImage) {
-        super.init(name: name, thumb: thumb, image: image)
+    override init(name:String, image:UIImage) {
+        super.init(name: name, image: image)
         
     /*    // socks normally use a finer yarn, so finer gauge
         defaults["gauge"] = 32.0
@@ -48,7 +48,7 @@ class Socks: Project {
         defaults["sizeUnits"] = ShoeSizeUnits.Women.rawValue */
         // recalc yarn required with finer yarn
         calcYarnRequired()
-        controller = SockController()
+
     }
     
     // Calculate the yarn required for a pair of socks, where the length is

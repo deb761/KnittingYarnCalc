@@ -14,15 +14,15 @@ class ProjectListController: UICollectionViewController {
     
     // Projects to choose from
     let projects = [
-        Mittens(name: "Mittens", thumb:UIImage(named:"Mittens")!, image: UIImage(named:"Mittens")!),
-        Gloves(name: "Gloves", thumb: UIImage(named:"Gloves")!, image: UIImage(named:"Gloves")!),
-        Socks(name: "Socks", thumb: UIImage(named:"Socks")!, image: UIImage(named:"Socks")!),
-        Tam(name: "Tam", thumb: UIImage(named:"Tam")!, image: UIImage(named:"TamImg")!),
-        Scarf(name: "Scarf", thumb: UIImage(named:"Scarf")!, image: UIImage(named:"ScarfImg")!),
-        Toque(name: "Toque", thumb: UIImage(named:"Toque")!, image: UIImage(named:"Toque")!),
-        Sweater(name: "Sweater", thumb: UIImage(named:"Sweater")!, image: UIImage(named:"SweaterImg")!),
-        Vest(name: "Vest", thumb: UIImage(named:"Vest")!, image: UIImage(named:"VestImg")!),
-        Blanket(name: "Blanket", thumb: UIImage(named:"Blanket")!, image: UIImage(named:"Blanket")!)
+        Mittens(name: "Mittens", image: UIImage(named:"Mittens")!),
+        Gloves(name: "Gloves", image: UIImage(named:"Gloves")!),
+        Socks(name: "Socks", image: UIImage(named:"Socks")!),
+        Tam(name: "Tam", image: UIImage(named:"TamImg")!),
+        Scarf(name: "Scarf", image: UIImage(named:"ScarfImg")!),
+        Toque(name: "Toque", image: UIImage(named:"Toque")!),
+        Sweater(name: "Sweater", image: UIImage(named:"SweaterImg")!),
+        Vest(name: "Vest", image: UIImage(named:"VestImg")!),
+        Blanket(name: "Blanket", image: UIImage(named:"Blanket")!)
     ]
 
     override func viewDidLoad() {

@@ -17,12 +17,15 @@ class DimensionCell: UITableViewCell, UIPickerViewDataSource {
     @IBOutlet weak var picker: UIPickerView!
     
     var units:[String]!
+    var dimension:DimensionProtocol?
     
-    func didCreate(controller: BaseProjectController, tag:Int) {
+    func didCreate(controller: BaseProjectController, dimension:DimensionProtocol, tag:Int) {
         valueField.delegate = controller
+        self.dimension = dimension
         picker.delegate = controller
         picker.dataSource = self
         picker.tag = tag
+        setValues()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,8 +40,9 @@ class DimensionCell: UITableViewCell, UIPickerViewDataSource {
         return units.count
     }
 
-    func setUnits(_ index: Int) {
-        unitsField.text = units?[index]
-        picker.selectRow(index, inComponent: 0, animated: false)
+    func setValues() {
+        unitsField.text = units?[dimension!.unitIndex]
+        valueField.text = dimension!.valueString
+        picker.selectRow(dimension!.unitIndex, inComponent: 0, animated: false)
     }
 }
