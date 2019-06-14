@@ -24,19 +24,34 @@ class DimensionCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSour
     var dimension:DimensionProtocol?
     var delegate:DimensionCellDelegate!
     
-    func didCreate(controller: BaseProjectController, dimension:DimensionProtocol, tag:Int) {
-        valueField.delegate = self
+    func didCreate(controller: ProjectController, dimension:DimensionProtocol) {
         self.delegate = controller
         self.dimension = dimension
+        valueField.delegate = self
         picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
-        picker.tag = tag
+        picker.backgroundColor = Colors.background
+ 
+        //init toolbar
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: frame.size.width, height: 30))
+        //create left side empty space so that done button set on right side
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(doneButtonAction))
+        toolbar.setItems([flexSpace, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        //setting toolbar as inputAccessoryView
+        unitsField.inputAccessoryView = toolbar
+
         unitsField.inputView = picker
         unitsField.delegate = self
         setValues()
     }
-    
+
+    @objc
+    func doneButtonAction() {
+        unitsField.endEditing(true)
+    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -58,13 +73,12 @@ class DimensionCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         unitsField.text = units[row]
-        picker.isHidden = true
+        unitsField.endEditing(true)
     }
     
     // MARK: Text Field Delegate
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        picker.isHidden = false
         return true
     }
     

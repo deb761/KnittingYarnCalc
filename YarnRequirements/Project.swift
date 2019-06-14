@@ -30,7 +30,7 @@ class Project {
     // name of the project type shown to the user
     var name:String = "Project"
     var image:UIImage = UIImage(named:"SweaterImg")!
-    var controller:BaseProjectController!
+    var controller:ProjectController!
     
     let defs = UserDefaults.standard
 
@@ -133,7 +133,7 @@ class Project {
     init(name:String, image:UIImage) {
         self.name = name
         self.image = image
-        self.controller = BaseProjectController()
+        self.controller = ProjectController()
 
         readPlist()
 

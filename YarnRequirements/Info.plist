@@ -19,11 +19,11 @@
 		<string>de</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>Yarn Reqmts</string>
+	<string>Knit Yarn Calc</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>

@@ -39,7 +39,7 @@ class ProjectListController: UICollectionViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! ProjectCell
-        let svc = segue.destination as! BaseProjectController;
+        let svc = segue.destination as! ProjectController;
         svc.project = cell.project
     }
 

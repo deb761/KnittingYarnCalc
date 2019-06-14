@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseProjectController: UITableViewController, DimensionCellDelegate {
+class ProjectController: UITableViewController, DimensionCellDelegate {
 
     var project:Project!
     var dimensionCells:[String : DimensionCell] = [:]
@@ -17,9 +17,8 @@ class BaseProjectController: UITableViewController, DimensionCellDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        self.clearsSelectionOnViewWillAppear = false
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
 
     // MARK: Dimension Cell Delegate
@@ -52,7 +51,7 @@ class BaseProjectController: UITableViewController, DimensionCellDelegate {
         // Configure the cell...
         cell.units = dimension?.units
         cell.textLabel?.text = dimension?.name
-        cell.didCreate(controller: self, dimension: dimension!, tag: indexPath.row)
+        cell.didCreate(controller: self, dimension: dimension!)
         dimensionCells[name] = cell
         tagCells[indexPath.row] = cell
         
