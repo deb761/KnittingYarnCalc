@@ -17,11 +17,11 @@ class ProjectListController: UICollectionViewController {
         Mittens(name: "Mittens", image: UIImage(named:"Mittens")!),
         Gloves(name: "Gloves", image: UIImage(named:"Gloves")!),
         Socks(name: "Socks", image: UIImage(named:"Socks")!),
-        Tam(name: "Tam", image: UIImage(named:"TamImg")!),
-        Scarf(name: "Scarf", image: UIImage(named:"ScarfImg")!),
+        Tam(name: "Tam", image: UIImage(named:"Tam")!),
+        Scarf(name: "Scarf", image: UIImage(named:"Scarf")!),
         Toque(name: "Toque", image: UIImage(named:"Toque")!),
-        Sweater(name: "Sweater", image: UIImage(named:"SweaterImg")!),
-        Vest(name: "Vest", image: UIImage(named:"VestImg")!),
+        Sweater(name: "Sweater", image: UIImage(named:"Sweater")!),
+        Vest(name: "Vest", image: UIImage(named:"Vest")!),
         Blanket(name: "Blanket", image: UIImage(named:"Blanket")!)
     ]
 

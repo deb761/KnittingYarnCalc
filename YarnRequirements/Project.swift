@@ -29,7 +29,7 @@ class Project {
     var defaults:[String:AnyObject] = [:]  //our data
     // name of the project type shown to the user
     var name:String = "Project"
-    var image:UIImage = UIImage(named:"SweaterImg")!
+    var image:UIImage = UIImage(named:"Sweater")!
     var controller:ProjectController!
     
     let defs = UserDefaults.standard

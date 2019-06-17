@@ -343,7 +343,7 @@
                                             <color key="textColor" red="0.0065608080476522446" green="0.0" blue="0.27760022878646851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MJg-Rc-BTR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MJg-Rc-BTR">
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="94"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="94" placeholder="YES" id="NAE-fu-wgg"/>
@@ -415,6 +415,9 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EjG-OF-2dP">
                                                     <rect key="frame" x="54" y="0.0" width="289" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="qks-v8-64b"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
