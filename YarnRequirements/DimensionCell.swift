@@ -27,7 +27,13 @@ class DimensionCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSour
     func didCreate(controller: ProjectController, dimension:DimensionProtocol) {
         self.delegate = controller
         self.dimension = dimension
-        valueField.delegate = self
+        if (dimension.readOnly) {
+            valueField.borderStyle = UITextField.BorderStyle.none
+            valueField.isEnabled = false
+        }
+        else {
+            valueField.delegate = self
+        }
         picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self

@@ -14,15 +14,15 @@ class ProjectListController: UICollectionViewController {
     
     // Projects to choose from
     let projects = [
-        Mittens(name: "Mittens", image: UIImage(named:"Mittens")!),
-        Gloves(name: "Gloves", image: UIImage(named:"Gloves")!),
-        Socks(name: "Socks", image: UIImage(named:"Socks")!),
-        Tam(name: "Tam", image: UIImage(named:"Tam")!),
-        Scarf(name: "Scarf", image: UIImage(named:"Scarf")!),
-        Toque(name: "Toque", image: UIImage(named:"Toque")!),
-        Sweater(name: "Sweater", image: UIImage(named:"Sweater")!),
-        Vest(name: "Vest", image: UIImage(named:"Vest")!),
-        Blanket(name: "Blanket", image: UIImage(named:"Blanket")!)
+        Mittens(name: "Mittens"),
+        Gloves(name: "Gloves"),
+        Socks(name: "Socks"),
+        Tam(name: "Tam"),
+        Scarf(name: "Scarf"),
+        Toque(name: "Toque"),
+        Sweater(name: "Sweater"),
+        Vest(name: "Vest"),
+        Blanket(name: "Blanket")
     ]
 
     override func viewDidLoad() {
@@ -62,7 +62,7 @@ class ProjectListController: UICollectionViewController {
         // Configure the cell
         project = projects[(indexPath as NSIndexPath).row]
         cell.project = project
-        cell.image.image = project!.image
+        cell.image.image = project!.thumbnail
         cell.backgroundColor = UIColor.clear
         cell.lblName.text = NSLocalizedString(project!.name.lowercased(), value: project!.name, comment: "Project name")
     

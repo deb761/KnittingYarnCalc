@@ -29,6 +29,7 @@ class Project {
     var defaults:[String:AnyObject] = [:]  //our data
     // name of the project type shown to the user
     var name:String = "Project"
+    var thumbnail:UIImage = UIImage(named:"Sweater-thumb")!
     var image:UIImage = UIImage(named:"Sweater")!
     var controller:ProjectController!
     
@@ -130,9 +131,10 @@ class Project {
     var dimensionOrder:[String] = ["gauge", "yarn", "ballSize", "balls"]
 
     // provide a means of defining a project name and image
-    init(name:String, image:UIImage) {
+    init(name:String) {
         self.name = name
-        self.image = image
+        self.image = UIImage(named:name)!
+        thumbnail = UIImage(named:name+"-thumb")!
         self.controller = ProjectController()
 
         readPlist()
@@ -140,7 +142,7 @@ class Project {
         // set dimensions
         gaugeDimension = Dimension<Double, GaugeUnits>(key: "gauge", projectName: name, name: NSLocalizedString("gauge", value: "Gauge", comment: "Density of knitted stitches per inch or cm"), unitNames: guageText, defaults: defaults)
         yarnDimension = Dimension<Int, LongLengthUnits>(key: "yarn", projectName: name, name: NSLocalizedString("yarn-req-label", value: "Yarn Req",
-                                                                                                                comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"), unitNames: longText, defaults: defaults)
+                                                                                                                comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"), unitNames: longText, defaults: defaults, readOnly: true)
         ballSizeDimension = Dimension<Int, LongLengthUnits>(key: "ballSize", projectName: name, name: NSLocalizedString("ball-size", value: "Ball Size", comment: "Length of yarn in ball"), unitNames: longText, defaults: defaults)
         ballsDimension = Dimension<Double, WholePartial>(key: "balls", projectName: name, name: NSLocalizedString("num-balls", value: "Num Balls", comment: "Number of balls needed for a project; needs to be short"), unitNames: ballText, defaults: defaults)
         dimensions = [

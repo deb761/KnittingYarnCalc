@@ -13,6 +13,7 @@ protocol DimensionProtocol {
     var units:[String] { get }
     var unitIndex:Int { get }
     var valueString:String { get }
+    var readOnly:Bool { get }
 }
 
 class Dimension<T: Numeric, E:RawRepresentable> : DimensionProtocol where E.RawValue == Int {
@@ -23,13 +24,15 @@ class Dimension<T: Numeric, E:RawRepresentable> : DimensionProtocol where E.RawV
     let projectName:String!
     let defaults:[String:AnyObject]!
     let defs = UserDefaults.standard
+    let readOnly:Bool
 
-    init (key:String, projectName:String, name:String, unitNames:[String], defaults:[String:AnyObject] = [:]) {
+    init (key:String, projectName:String, name:String, unitNames:[String], defaults:[String:AnyObject] = [:], readOnly:Bool = false) {
         self.key = key
         self.projectName = projectName
         self.name = name
         self.units = unitNames
         self.defaults = defaults
+        self.readOnly = readOnly
     }
     
     // guage of the project

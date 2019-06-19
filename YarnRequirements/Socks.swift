@@ -45,8 +45,8 @@ class Socks: Project {
 
     
     // provide a means of defining a project name and image
-    override init(name:String, image:UIImage) {
-        super.init(name: name, image: image)
+    override init(name:String) {
+        super.init(name: name)
         
         sizeDimension = Dimension<Double, ShoeSizeUnits>(key: "size", projectName: name, name: NSLocalizedString("shoe-size", value: "Shoe Size", comment: "Wearer shoe size"), unitNames: unitText, defaults: defaults)
         dimensions["size"] = sizeDimension as! DimensionProtocol

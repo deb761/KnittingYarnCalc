@@ -56,8 +56,8 @@ class Scarf: Project {
     var scarf:Scarf?
     
     // provide a means of defining a project name and image
-    override init(name:String, image:UIImage) {
-        super.init(name: name, image: image)
+    override init(name:String) {
+        super.init(name: name)
         
         lengthDimension = Dimension<Double, ShortLengthUnits>(key: "length", projectName: name, name: NSLocalizedString("length", value: "Length", comment: "Label for length of an item"), unitNames: shortText, defaults: defaults)
         widthDimension = Dimension<Double, ShortLengthUnits>(key: "width", projectName: name, name: NSLocalizedString("width", value: "Width", comment: "Label for width of an item"), unitNames: shortText, defaults: defaults)
@@ -88,8 +88,8 @@ class Scarf: Project {
 class Blanket : Scarf {
 
     // provide a means of defining a project name and image
-    override init(name:String, image:UIImage) {
-        super.init(name: name, image: image)
+    override init(name:String) {
+        super.init(name: name)
         defaults["width"] = 60.0 as AnyObject?
         calcYarnRequired()
     }
