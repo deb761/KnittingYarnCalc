@@ -144,7 +144,7 @@ class Project {
         yarnDimension = Dimension<Int, LongLengthUnits>(key: "yarn", projectName: name, name: NSLocalizedString("yarn-req-label", value: "Yarn Req",
                                                                                                                 comment: "Label next to field showing how much yarn is estimated for a project; needs to be short"), unitNames: longText, defaults: defaults, readOnly: true)
         ballSizeDimension = Dimension<Int, LongLengthUnits>(key: "ballSize", projectName: name, name: NSLocalizedString("ball-size", value: "Ball Size", comment: "Length of yarn in ball"), unitNames: longText, defaults: defaults)
-        ballsDimension = Dimension<Double, WholePartial>(key: "balls", projectName: name, name: NSLocalizedString("num-balls", value: "Num Balls", comment: "Number of balls needed for a project; needs to be short"), unitNames: ballText, defaults: defaults)
+        ballsDimension = BallsDimension(key: "balls", projectName: name, name: NSLocalizedString("num-balls", value: "Num Balls", comment: "Number of balls needed for a project; needs to be short"), unitNames: ballText, defaults: defaults)
         dimensions = [
             "gauge" : gaugeDimension as DimensionProtocol,
             "yarn" : yarnDimension as DimensionProtocol,

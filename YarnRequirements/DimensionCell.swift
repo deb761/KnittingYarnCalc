@@ -38,7 +38,7 @@ class DimensionCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSour
         picker.delegate = self
         picker.dataSource = self
         picker.backgroundColor = Colors.background
- 
+
         //init toolbar
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: frame.size.width, height: 30))
         //create left side empty space so that done button set on right side
@@ -80,6 +80,8 @@ class DimensionCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSour
     {
         unitsField.text = units[row]
         unitsField.endEditing(true)
+        dimension!.unitIndex = row
+        delegate.didChangeDimension()
     }
     
     // MARK: Text Field Delegate
@@ -88,9 +90,17 @@ class DimensionCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSour
         return true
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        dimension?.valueString = valueField.text!
+        // the value might not change, update the text if it didn't
+        valueField.text = dimension!.valueString
+        delegate.didChangeDimension()
+    }
+    
     func setValues() {
         unitsField.text = units?[dimension!.unitIndex]
         valueField.text = dimension!.valueString
         picker.selectRow(dimension!.unitIndex, inComponent: 0, animated: false)
+        delegate.didChangeDimension()
     }
 }

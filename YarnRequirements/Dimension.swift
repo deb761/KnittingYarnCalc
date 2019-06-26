@@ -11,8 +11,8 @@ import Foundation
 protocol DimensionProtocol {
     var name:String { get }
     var units:[String] { get }
-    var unitIndex:Int { get }
-    var valueString:String { get }
+    var unitIndex:Int { get set }
+    var valueString:String { get set }
     var readOnly:Bool { get }
 }
 
@@ -35,27 +35,27 @@ class Dimension<T: Numeric, E:RawRepresentable> : DimensionProtocol where E.RawV
         self.readOnly = readOnly
     }
     
-    // guage of the project
+    // value of the dimension
     var value:T {
         get {
-            if let current = defs.value(forKey: ("\(projectName)-\(key)")) as? T {
+            if let current = defs.value(forKey: ("\(projectName ?? "")-\(key ?? "")")) as? T {
                 return current
             }
             return defaults[key] as! T
         }
         set {
-            defs.set(newValue, forKey: "\(projectName)-\(key)")
+            defs.set(newValue, forKey: "\(projectName ?? "")-\(key ?? "")")
         }
     }
-    // units for the gauge
+    // units for the dimension
     var unit:E {
         get {
-            let defaultValue:Int = defaults["\(key)Units"] as? Int ?? 0
-            let current = defs.integerForKey("\(projectName)-\(key)Units", def: defaultValue)
+            let defaultValue:Int = defaults["\(key ?? "")Units"] as? Int ?? 0
+            let current = defs.integerForKey("\(projectName ?? "")-\(key ?? "")Units", def: defaultValue)
             return E(rawValue: current)!
         }
         set {
-            defs.set(newValue.rawValue, forKey: "\(projectName)-\(key)Units")
+            defs.set(newValue.rawValue, forKey: "\(projectName ?? "")-\(key ?? "")Units")
         }
     }
 
@@ -63,11 +63,20 @@ class Dimension<T: Numeric, E:RawRepresentable> : DimensionProtocol where E.RawV
         get {
             return unit.rawValue
         }
+        set {
+            unit = E(rawValue: newValue)!
+        }
     }
     
     var valueString: String {
         get {
             return String("\(self.value)")
+        }
+        set {
+            //let start = self.value
+            if let testValue = self.value is Int ? Int(newValue) as? T : Double(newValue) as? T {
+                self.value = testValue
+            }
         }
     }
 }

@@ -24,6 +24,12 @@ class ProjectController: UITableViewController, DimensionCellDelegate {
     // MARK: Dimension Cell Delegate
     func didChangeDimension() {
         project.calcYarnRequired()
+        if let yarnDimension = dimensionCells["yarn"] {
+            yarnDimension.valueField.text = yarnDimension.dimension?.valueString
+        }
+        if let ballDimension = dimensionCells["balls"] {
+            ballDimension.valueField.text = ballDimension.dimension?.valueString
+        }
     }
     
     // MARK: - Table view data source

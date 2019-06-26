@@ -18,7 +18,6 @@
 		8702D6921D14B8A800286909 /* ToqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6911D14B8A800286909 /* ToqueTests.swift */; };
 		8702D6941D1866BC00286909 /* TamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702D6931D1866BC00286909 /* TamTests.swift */; };
 		87082A4B224730B600D0E93C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A8CE01D46876800B3B287 /* UserDefaults.swift */; };
-		87082A4C224730B600D0E93C /* DimensionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90B11CF69E820084EC06 /* DimensionRow.swift */; };
 		87082A4D224730B600D0E93C /* WeightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */; };
 		87082A56224730B600D0E93C /* Socks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DD1CFBFB6E00BE9735 /* Socks.swift */; };
 		87082A57224730B600D0E93C /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DA1CFBF9EE00BE9735 /* Hat.swift */; };
@@ -62,7 +61,6 @@
 		873A8CE11D46876800B3B287 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A8CE01D46876800B3B287 /* UserDefaults.swift */; };
 		873F64092247CC4A0090D727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F64082247CC4A0090D727 /* AppDelegate.swift */; };
 		873F640B2247D5D90090D727 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F640A2247D5D90090D727 /* AdController.swift */; };
-		875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A90B11CF69E820084EC06 /* DimensionRow.swift */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
 		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
 		8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
@@ -81,6 +79,8 @@
 		87C8D8BA22AD692E0074C673 /* NameImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8B822AD692E0074C673 /* NameImageCell.swift */; };
 		87C8D8BF22AD91950074C673 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8BE22AD91950074C673 /* Dimension.swift */; };
 		87C8D8C022AD91950074C673 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8BE22AD91950074C673 /* Dimension.swift */; };
+		87C8D8C222C2F24F0074C673 /* BallsDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8C122C2F24F0074C673 /* BallsDimension.swift */; };
+		87C8D8C322C2F24F0074C673 /* BallsDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8C122C2F24F0074C673 /* BallsDimension.swift */; };
 		87CF40A022A4B17A005C38D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */; };
 		87D078EC1D58EB0400DFBC11 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D078EB1D58EB0400DFBC11 /* Colors.swift */; };
 		87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
@@ -157,7 +157,6 @@
 		873A8CE01D46876800B3B287 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		873F64082247CC4A0090D727 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		873F640A2247D5D90090D727 /* AdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdController.swift; sourceTree = "<group>"; };
-		875A90B11CF69E820084EC06 /* DimensionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionRow.swift; sourceTree = "<group>"; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		8763AA721CF2AF3300E1B003 /* Mittens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mittens.swift; sourceTree = "<group>"; };
 		8763AA741CF2B90000E1B003 /* Sweater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sweater.swift; sourceTree = "<group>"; };
@@ -172,6 +171,7 @@
 		87C8D8B522AD69080074C673 /* DimensionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionCell.swift; sourceTree = "<group>"; };
 		87C8D8B822AD692E0074C673 /* NameImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameImageCell.swift; sourceTree = "<group>"; };
 		87C8D8BE22AD91950074C673 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		87C8D8C122C2F24F0074C673 /* BallsDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallsDimension.swift; sourceTree = "<group>"; };
 		87D078EB1D58EB0400DFBC11 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		87DABA9B1CE7EBF4009DD3B1 /* Knitting Yarn Calc Full.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Knitting Yarn Calc Full.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -282,11 +282,11 @@
 		8788D2E61CFF8D4100432759 /* Project Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				875A90B11CF69E820084EC06 /* DimensionRow.swift */,
 				87C8D8B222AD5E7F0074C673 /* ProjectController.swift */,
 				87C8D8B522AD69080074C673 /* DimensionCell.swift */,
 				87C8D8B822AD692E0074C673 /* NameImageCell.swift */,
 				87C8D8BE22AD91950074C673 /* Dimension.swift */,
+				87C8D8C122C2F24F0074C673 /* BallsDimension.swift */,
 			);
 			name = "Project Controllers";
 			sourceTree = "<group>";
@@ -726,7 +726,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				87082A4B224730B600D0E93C /* UserDefaults.swift in Sources */,
-				87082A4C224730B600D0E93C /* DimensionRow.swift in Sources */,
 				87082A4D224730B600D0E93C /* WeightsController.swift in Sources */,
 				87C8D8B722AD69080074C673 /* DimensionCell.swift in Sources */,
 				87082A56224730B600D0E93C /* Socks.swift in Sources */,
@@ -742,6 +741,7 @@
 				87082A5D224730B600D0E93C /* Scarf.swift in Sources */,
 				87082A60224730B600D0E93C /* Colors.swift in Sources */,
 				873F64092247CC4A0090D727 /* AppDelegate.swift in Sources */,
+				87C8D8C322C2F24F0074C673 /* BallsDimension.swift in Sources */,
 				87082A61224730B600D0E93C /* Sweater.swift in Sources */,
 				87082A62224730B600D0E93C /* ProjectListController.swift in Sources */,
 				87C8D8BA22AD692E0074C673 /* NameImageCell.swift in Sources */,
@@ -756,7 +756,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				873A8CE11D46876800B3B287 /* UserDefaults.swift in Sources */,
-				875A90B21CF69E820084EC06 /* DimensionRow.swift in Sources */,
 				87DABAA31CE7EBF4009DD3B1 /* WeightsController.swift in Sources */,
 				87C8D8BF22AD91950074C673 /* Dimension.swift in Sources */,
 				87DABA9F1CE7EBF4009DD3B1 /* AppDelegate.swift in Sources */,
@@ -767,6 +766,7 @@
 				87DABAD11CE821D1009DD3B1 /* YarnWeight.swift in Sources */,
 				87DABACF1CE7F7B1009DD3B1 /* WeightCell.swift in Sources */,
 				87660B7F1D774AF000975E3B /* KnittingNeedles.swift in Sources */,
+				87C8D8C222C2F24F0074C673 /* BallsDimension.swift in Sources */,
 				8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */,
 				87E536D31CFBECA100BE9735 /* Scarf.swift in Sources */,
 				87C8D8B622AD69080074C673 /* DimensionCell.swift in Sources */,
