@@ -61,6 +61,8 @@
 		873A8CE11D46876800B3B287 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A8CE01D46876800B3B287 /* UserDefaults.swift */; };
 		873F64092247CC4A0090D727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F64082247CC4A0090D727 /* AppDelegate.swift */; };
 		873F640B2247D5D90090D727 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F640A2247D5D90090D727 /* AdController.swift */; };
+		87621DF122C45E3000DF9AF2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAAC1CE7EBF4009DD3B1 /* Info.plist */; };
+		87621DF222C45E3100DF9AF2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAAC1CE7EBF4009DD3B1 /* Info.plist */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
 		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
 		8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
@@ -138,10 +140,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B0F5A531D2EDA8DB0765B95 /* Pods-Knitting Yarn Calc Full.release paid.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Full.release paid.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Full/Pods-Knitting Yarn Calc Full.release paid.xcconfig"; sourceTree = "<group>"; };
-		49D1BE4AEBC96BA634146971 /* Pods-Knitting Yarn Calc Free.debug paid.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Free.debug paid.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Free/Pods-Knitting Yarn Calc Free.debug paid.xcconfig"; sourceTree = "<group>"; };
-		70ACA6DF3FC71BC9021027D6 /* Pods-Knitting Yarn Calc Full.release free.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Full.release free.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Full/Pods-Knitting Yarn Calc Full.release free.xcconfig"; sourceTree = "<group>"; };
-		843E86880A5133B84401D07E /* Pods-Knitting Yarn Calc Free.release paid.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Free.release paid.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Free/Pods-Knitting Yarn Calc Free.release paid.xcconfig"; sourceTree = "<group>"; };
+		3B0F5A531D2EDA8DB0765B95 /* Pods-Knitting Yarn Calc Full.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Full.release.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Full/Pods-Knitting Yarn Calc Full.release.xcconfig"; sourceTree = "<group>"; };
+		49D1BE4AEBC96BA634146971 /* Pods-Knitting Yarn Calc Free.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Free.debug.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Free/Pods-Knitting Yarn Calc Free.debug.xcconfig"; sourceTree = "<group>"; };
+		843E86880A5133B84401D07E /* Pods-Knitting Yarn Calc Free.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Free.release.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Free/Pods-Knitting Yarn Calc Free.release.xcconfig"; sourceTree = "<group>"; };
 		8702D6851D124A6700286909 /* ScarfTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScarfTests.swift; sourceTree = "<group>"; };
 		8702D6871D13355C00286909 /* BlanketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlanketTests.swift; sourceTree = "<group>"; };
 		8702D6891D1336D800286909 /* PatternInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternInfo.swift; sourceTree = "<group>"; };
@@ -218,12 +219,9 @@
 		87EFFB0E1D711BD600AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87EFFB131D711BD700AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87EFFB151D711BD700AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		C891B6AD6EA5335AD6FE43F2 /* Pods-Knitting Yarn Calc Full.debug free.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Full.debug free.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Full/Pods-Knitting Yarn Calc Full.debug free.xcconfig"; sourceTree = "<group>"; };
 		D7233A1B19ACC3C8F4838894 /* Pods_Knitting_Yarn_Calc_Free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Knitting_Yarn_Calc_Free.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC6F1F8DFC680EF45779CD50 /* Pods-Knitting Yarn Calc Free.release free.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Free.release free.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Free/Pods-Knitting Yarn Calc Free.release free.xcconfig"; sourceTree = "<group>"; };
-		E42A2E6FF04DD3202D81B28B /* Pods-Knitting Yarn Calc Full.debug paid.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Full.debug paid.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Full/Pods-Knitting Yarn Calc Full.debug paid.xcconfig"; sourceTree = "<group>"; };
+		E42A2E6FF04DD3202D81B28B /* Pods-Knitting Yarn Calc Full.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Full.debug.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Full/Pods-Knitting Yarn Calc Full.debug.xcconfig"; sourceTree = "<group>"; };
 		ECCFC29E66FE0B6CA25614E1 /* Pods_Knitting_Yarn_Calc_Full.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Knitting_Yarn_Calc_Full.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC1DC4DD48B81ADBBA933251 /* Pods-Knitting Yarn Calc Free.debug free.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knitting Yarn Calc Free.debug free.xcconfig"; path = "Target Support Files/Pods-Knitting Yarn Calc Free/Pods-Knitting Yarn Calc Free.debug free.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,14 +422,10 @@
 		EEE4B5BBF66A6FDFF6282E0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				49D1BE4AEBC96BA634146971 /* Pods-Knitting Yarn Calc Free.debug paid.xcconfig */,
-				FC1DC4DD48B81ADBBA933251 /* Pods-Knitting Yarn Calc Free.debug free.xcconfig */,
-				843E86880A5133B84401D07E /* Pods-Knitting Yarn Calc Free.release paid.xcconfig */,
-				DC6F1F8DFC680EF45779CD50 /* Pods-Knitting Yarn Calc Free.release free.xcconfig */,
-				E42A2E6FF04DD3202D81B28B /* Pods-Knitting Yarn Calc Full.debug paid.xcconfig */,
-				C891B6AD6EA5335AD6FE43F2 /* Pods-Knitting Yarn Calc Full.debug free.xcconfig */,
-				3B0F5A531D2EDA8DB0765B95 /* Pods-Knitting Yarn Calc Full.release paid.xcconfig */,
-				70ACA6DF3FC71BC9021027D6 /* Pods-Knitting Yarn Calc Full.release free.xcconfig */,
+				49D1BE4AEBC96BA634146971 /* Pods-Knitting Yarn Calc Free.debug.xcconfig */,
+				843E86880A5133B84401D07E /* Pods-Knitting Yarn Calc Free.release.xcconfig */,
+				E42A2E6FF04DD3202D81B28B /* Pods-Knitting Yarn Calc Full.debug.xcconfig */,
+				3B0F5A531D2EDA8DB0765B95 /* Pods-Knitting Yarn Calc Full.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -582,6 +576,7 @@
 				87082A72224730B600D0E93C /* Socks-im.plist in Resources */,
 				87082A73224730B600D0E93C /* Vest-si.plist in Resources */,
 				87082A74224730B600D0E93C /* Assets.xcassets in Resources */,
+				87621DF222C45E3100DF9AF2 /* Info.plist in Resources */,
 				87082A75224730B600D0E93C /* Sweater-im.plist in Resources */,
 				87082A76224730B600D0E93C /* Tam-im.plist in Resources */,
 				87082A77224730B600D0E93C /* YarnWeight.plist in Resources */,
@@ -625,6 +620,7 @@
 				87DABAA61CE7EBF4009DD3B1 /* Main.storyboard in Resources */,
 				87EFFA731D6B94C700AAA422 /* Toque-si.plist in Resources */,
 				87EFFA5B1D6B8A0700AAA422 /* Gloves-im.plist in Resources */,
+				87621DF122C45E3000DF9AF2 /* Info.plist in Resources */,
 				87EFFA741D6B94C700AAA422 /* Mittens-im.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -880,7 +876,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		87082A3D22472A1F00D0E93C /* Debug Free */ = {
+		87082A85224730B600D0E93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49D1BE4AEBC96BA634146971 /* Pods-Knitting Yarn Calc Free.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
+				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		87082A87224730B600D0E93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 843E86880A5133B84401D07E /* Pods-Knitting Yarn Calc Free.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
+				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		87DABAC31CE7EBF4009DD3B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -934,55 +970,9 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = "Debug Free";
+			name = Debug;
 		};
-		87082A3E22472A1F00D0E93C /* Debug Free */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C891B6AD6EA5335AD6FE43F2 /* Pods-Knitting Yarn Calc Full.debug free.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = YarnRequirements/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Debug Free";
-		};
-		87082A3F22472A1F00D0E93C /* Debug Free */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YarnRequirementsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
-			};
-			name = "Debug Free";
-		};
-		87082A4022472A1F00D0E93C /* Debug Free */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
-				TEST_TARGET_NAME = YarnRequirements;
-			};
-			name = "Debug Free";
-		};
-		87082A4122472A3C00D0E93C /* Release Free */ = {
+		87DABAC41CE7EBF4009DD3B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1030,27 +1020,49 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = "Release Free";
+			name = Release;
 		};
-		87082A4222472A3C00D0E93C /* Release Free */ = {
+		87DABAC61CE7EBF4009DD3B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70ACA6DF3FC71BC9021027D6 /* Pods-Knitting Yarn Calc Full.release free.xcconfig */;
+			baseConfigurationReference = E42A2E6FF04DD3202D81B28B /* Pods-Knitting Yarn Calc Full.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				INFOPLIST_FILE = YarnRequirements/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = "Release Free";
+			name = Debug;
 		};
-		87082A4322472A3C00D0E93C /* Release Free */ = {
+		87DABAC71CE7EBF4009DD3B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B0F5A531D2EDA8DB0765B95 /* Pods-Knitting Yarn Calc Full.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XZ8NRDZGBL;
+				INFOPLIST_FILE = YarnRequirements/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
+				PRODUCT_NAME = "Knitting Yarn Calc Full";
+				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		87DABAC91CE7EBF4009DD3B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1062,245 +1074,9 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
 			};
-			name = "Release Free";
+			name = Debug;
 		};
-		87082A4422472A3C00D0E93C /* Release Free */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
-				TEST_TARGET_NAME = YarnRequirements;
-			};
-			name = "Release Free";
-		};
-		87082A85224730B600D0E93C /* Debug Paid */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49D1BE4AEBC96BA634146971 /* Pods-Knitting Yarn Calc Free.debug paid.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8NRDZGBL;
-				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Debug Paid";
-		};
-		87082A86224730B600D0E93C /* Debug Free */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC1DC4DD48B81ADBBA933251 /* Pods-Knitting Yarn Calc Free.debug free.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8NRDZGBL;
-				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Debug Free";
-		};
-		87082A87224730B600D0E93C /* Release Paid */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 843E86880A5133B84401D07E /* Pods-Knitting Yarn Calc Free.release paid.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8NRDZGBL;
-				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Release Paid";
-		};
-		87082A88224730B600D0E93C /* Release Free */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC6F1F8DFC680EF45779CD50 /* Pods-Knitting Yarn Calc Free.release free.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8NRDZGBL;
-				INFOPLIST_FILE = "$(SRCROOT)/YarnRequirements Free-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "YarnRequirementsFree/Knitting_Yarn_Calc_Free-header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Release Free";
-		};
-		87DABAC31CE7EBF4009DD3B1 /* Debug Paid */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = "Debug Paid";
-		};
-		87DABAC41CE7EBF4009DD3B1 /* Release Paid */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = "Release Paid";
-		};
-		87DABAC61CE7EBF4009DD3B1 /* Debug Paid */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E42A2E6FF04DD3202D81B28B /* Pods-Knitting Yarn Calc Full.debug paid.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = YarnRequirements/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Debug Paid";
-		};
-		87DABAC71CE7EBF4009DD3B1 /* Release Paid */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B0F5A531D2EDA8DB0765B95 /* Pods-Knitting Yarn Calc Full.release paid.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = YarnRequirements/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
-				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = "Release Paid";
-		};
-		87DABAC91CE7EBF4009DD3B1 /* Debug Paid */ = {
+		87DABACA1CE7EBF4009DD3B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1312,23 +1088,9 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
 			};
-			name = "Debug Paid";
+			name = Release;
 		};
-		87DABACA1CE7EBF4009DD3B1 /* Release Paid */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YarnRequirementsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inq.YarnRequirementsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YarnRequirements.app/YarnRequirements";
-			};
-			name = "Release Paid";
-		};
-		87DABACC1CE7EBF4009DD3B1 /* Debug Paid */ = {
+		87DABACC1CE7EBF4009DD3B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
@@ -1339,9 +1101,9 @@
 				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = YarnRequirements;
 			};
-			name = "Debug Paid";
+			name = Debug;
 		};
-		87DABACD1CE7EBF4009DD3B1 /* Release Paid */ = {
+		87DABACD1CE7EBF4009DD3B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = YarnRequirementsUITests/Info.plist;
@@ -1352,7 +1114,7 @@
 				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = YarnRequirements;
 			};
-			name = "Release Paid";
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1360,57 +1122,47 @@
 		87082A84224730B600D0E93C /* Build configuration list for PBXNativeTarget "Knitting Yarn Calc Free" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87082A85224730B600D0E93C /* Debug Paid */,
-				87082A86224730B600D0E93C /* Debug Free */,
-				87082A87224730B600D0E93C /* Release Paid */,
-				87082A88224730B600D0E93C /* Release Free */,
+				87082A85224730B600D0E93C /* Debug */,
+				87082A87224730B600D0E93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Paid";
+			defaultConfigurationName = Release;
 		};
 		87DABA961CE7EBF4009DD3B1 /* Build configuration list for PBXProject "Knitting Yarn Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABAC31CE7EBF4009DD3B1 /* Debug Paid */,
-				87082A3D22472A1F00D0E93C /* Debug Free */,
-				87DABAC41CE7EBF4009DD3B1 /* Release Paid */,
-				87082A4122472A3C00D0E93C /* Release Free */,
+				87DABAC31CE7EBF4009DD3B1 /* Debug */,
+				87DABAC41CE7EBF4009DD3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Paid";
+			defaultConfigurationName = Release;
 		};
 		87DABAC51CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "Knitting Yarn Calc Full" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABAC61CE7EBF4009DD3B1 /* Debug Paid */,
-				87082A3E22472A1F00D0E93C /* Debug Free */,
-				87DABAC71CE7EBF4009DD3B1 /* Release Paid */,
-				87082A4222472A3C00D0E93C /* Release Free */,
+				87DABAC61CE7EBF4009DD3B1 /* Debug */,
+				87DABAC71CE7EBF4009DD3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Paid";
+			defaultConfigurationName = Release;
 		};
 		87DABAC81CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirementsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABAC91CE7EBF4009DD3B1 /* Debug Paid */,
-				87082A3F22472A1F00D0E93C /* Debug Free */,
-				87DABACA1CE7EBF4009DD3B1 /* Release Paid */,
-				87082A4322472A3C00D0E93C /* Release Free */,
+				87DABAC91CE7EBF4009DD3B1 /* Debug */,
+				87DABACA1CE7EBF4009DD3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Paid";
+			defaultConfigurationName = Release;
 		};
 		87DABACB1CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "YarnRequirementsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87DABACC1CE7EBF4009DD3B1 /* Debug Paid */,
-				87082A4022472A1F00D0E93C /* Debug Free */,
-				87DABACD1CE7EBF4009DD3B1 /* Release Paid */,
-				87082A4422472A3C00D0E93C /* Release Free */,
+				87DABACC1CE7EBF4009DD3B1 /* Debug */,
+				87DABACD1CE7EBF4009DD3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Paid";
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
