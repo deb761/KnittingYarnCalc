@@ -49,12 +49,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Knitting Yarn Calc Free.xcscheme</key>
+		<key>Pods-KnittingYarnCalc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Knitting Yarn Calc Full.xcscheme</key>
+		<key>Pods-KnittingYarnCalcPro.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

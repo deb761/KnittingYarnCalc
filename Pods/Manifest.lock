@@ -61,6 +61,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/AdMob
   - Firebase/Analytics
+  - Firebase/Core
   - PersonalizedAdConsent
 
 SPEC REPOS:
@@ -86,6 +87,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   PersonalizedAdConsent: b50a8a5d6065b6db23121e8fcc0dce2ae983f6ea
 
-PODFILE CHECKSUM: 2f96464f1357c1cecb1653157266049a0dee03bf
+PODFILE CHECKSUM: 49b5c6b97a8a61b9daa2afd0647ada91f51b36ff
 
 COCOAPODS: 1.6.1
