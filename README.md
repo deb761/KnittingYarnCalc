@@ -1,4 +1,4 @@
-# YarnRequirements
+# Knitting Yarn Calc
 
 Quickly estimate the amount of yarn you need for a project when you are out shopping for yarn or gazing at your stash and trying to figure out if you have enough of that wool to make a sweater for your niece.  The Yarn estimator handles both Imperial and metric units, and a mixture of the two, as well.
 The full version calculates estimates for the following projects:
