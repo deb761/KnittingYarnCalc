@@ -45,12 +45,21 @@
 		87082A81224730B600D0E93C /* Toque-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA701D6B94C700AAA422 /* Toque-si.plist */; };
 		87082A82224730B600D0E93C /* Gloves-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA521D6B8A0700AAA422 /* Gloves-im.plist */; };
 		87082A83224730B600D0E93C /* Mittens-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA711D6B94C700AAA422 /* Mittens-im.plist */; };
+		8726BB3122C92F1B00C79210 /* BlanketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2D22C92F0500C79210 /* BlanketTests.swift */; };
+		8726BB3222C92F1F00C79210 /* GlovesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2B22C92F0400C79210 /* GlovesTests.swift */; };
+		8726BB3B22C92F2800C79210 /* MittensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2222C92F0400C79210 /* MittensTests.swift */; };
+		8726BB3C22C92F2800C79210 /* PatternInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2C22C92F0400C79210 /* PatternInfo.swift */; };
+		8726BB3D22C92F2800C79210 /* ScarfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2422C92F0400C79210 /* ScarfTests.swift */; };
+		8726BB3E22C92F2800C79210 /* SockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2122C92F0400C79210 /* SockTests.swift */; };
+		8726BB3F22C92F2800C79210 /* SweaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2722C92F0400C79210 /* SweaterTests.swift */; };
+		8726BB4022C92F2800C79210 /* TamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2622C92F0400C79210 /* TamTests.swift */; };
+		8726BB4122C92F2800C79210 /* ToqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2322C92F0400C79210 /* ToqueTests.swift */; };
+		8726BB4222C92F2800C79210 /* VestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8726BB2022C92F0400C79210 /* VestTests.swift */; };
 		873A8CE11D46876800B3B287 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A8CE01D46876800B3B287 /* UserDefaults.swift */; };
 		873E23E722C7E91F006345E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 873E23E622C7E91F006345E6 /* GoogleService-Info.plist */; };
 		873E23E822C7E91F006345E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 873E23E622C7E91F006345E6 /* GoogleService-Info.plist */; };
 		873F64092247CC4A0090D727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F64082247CC4A0090D727 /* AppDelegate.swift */; };
 		873F640B2247D5D90090D727 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F640A2247D5D90090D727 /* AdController.swift */; };
-		87489AB022C8050B0027A9D5 /* KnitYarnCalcProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87489AAF22C8050B0027A9D5 /* KnitYarnCalcProTests.swift */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
 		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
 		8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
@@ -113,12 +122,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87489AB222C8050B0027A9D5 /* PBXContainerItemProxy */ = {
+		8726BAF722C92D4200C79210 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 87DABA931CE7EBF4009DD3B1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 87DABA9A1CE7EBF4009DD3B1;
-			remoteInfo = "Knitting Yarn Calc Pro";
+			remoteInfo = KnittingYarnCalcPro;
 		};
 		87F4CCFD22C7F3DC0066B7C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -147,28 +156,28 @@
 		0CCC4ACF64168D5DF3900037 /* Pods-KnittingYarnCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnittingYarnCalc.debug.xcconfig"; path = "Target Support Files/Pods-KnittingYarnCalc/Pods-KnittingYarnCalc.debug.xcconfig"; sourceTree = "<group>"; };
 		6609EDCEC29DC2F42E99BFA1 /* Pods-KnittingYarnCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnittingYarnCalc.release.xcconfig"; path = "Target Support Files/Pods-KnittingYarnCalc/Pods-KnittingYarnCalc.release.xcconfig"; sourceTree = "<group>"; };
 		71BDC47DEBB59F424AD04A55 /* Pods-KnittingYarnCalcPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnittingYarnCalcPro.debug.xcconfig"; path = "Target Support Files/Pods-KnittingYarnCalcPro/Pods-KnittingYarnCalcPro.debug.xcconfig"; sourceTree = "<group>"; };
-		8702D6851D124A6700286909 /* ScarfTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScarfTests.swift; sourceTree = "<group>"; };
-		8702D6871D13355C00286909 /* BlanketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlanketTests.swift; sourceTree = "<group>"; };
-		8702D6891D1336D800286909 /* PatternInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternInfo.swift; sourceTree = "<group>"; };
-		8702D68B1D14510400286909 /* SockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SockTests.swift; sourceTree = "<group>"; };
-		8702D68D1D1465FD00286909 /* SweaterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweaterTests.swift; sourceTree = "<group>"; };
-		8702D68F1D146BF600286909 /* VestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VestTests.swift; sourceTree = "<group>"; };
-		8702D6911D14B8A800286909 /* ToqueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToqueTests.swift; sourceTree = "<group>"; };
-		8702D6931D1866BC00286909 /* TamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TamTests.swift; sourceTree = "<group>"; };
 		87082A89224730B600D0E93C /* KnittingYarnCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnittingYarnCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87082A8A224730B700D0E93C /* KnittingYarnCalcFree-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KnittingYarnCalcFree-Info.plist"; path = "/Users/deb/inqint/YarnRequirements/KnittingYarnCalcFree-Info.plist"; sourceTree = "<absolute>"; };
-		871D78C11D188435005320A4 /* MittensTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MittensTests.swift; sourceTree = "<group>"; };
-		871D78C31D1888D6005320A4 /* GlovesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlovesTests.swift; sourceTree = "<group>"; };
 		871FA46E22C8431F002BCF44 /* PersonalizedAdConsent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PersonalizedAdConsent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8726BAF222C92D4200C79210 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8726BAF622C92D4200C79210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8726BB2022C92F0400C79210 /* VestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VestTests.swift; sourceTree = "<group>"; };
+		8726BB2122C92F0400C79210 /* SockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SockTests.swift; sourceTree = "<group>"; };
+		8726BB2222C92F0400C79210 /* MittensTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MittensTests.swift; sourceTree = "<group>"; };
+		8726BB2322C92F0400C79210 /* ToqueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToqueTests.swift; sourceTree = "<group>"; };
+		8726BB2422C92F0400C79210 /* ScarfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScarfTests.swift; sourceTree = "<group>"; };
+		8726BB2522C92F0400C79210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../KnittingYarnCalc/YarnRequirementsTests/Info.plist; sourceTree = "<group>"; };
+		8726BB2622C92F0400C79210 /* TamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamTests.swift; sourceTree = "<group>"; };
+		8726BB2722C92F0400C79210 /* SweaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweaterTests.swift; sourceTree = "<group>"; };
+		8726BB2A22C92F0400C79210 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = InfoPlist.strings; sourceTree = "<group>"; };
+		8726BB2B22C92F0400C79210 /* GlovesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovesTests.swift; sourceTree = "<group>"; };
+		8726BB2C22C92F0400C79210 /* PatternInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternInfo.swift; sourceTree = "<group>"; };
+		8726BB2D22C92F0500C79210 /* BlanketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanketTests.swift; sourceTree = "<group>"; };
+		8726BB3022C92F0500C79210 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = InfoPlist.strings; sourceTree = "<group>"; };
 		873A8CE01D46876800B3B287 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		873E23E622C7E91F006345E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		873F64082247CC4A0090D727 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		873F640A2247D5D90090D727 /* AdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdController.swift; sourceTree = "<group>"; };
-		87489A9722C7FF950027A9D5 /* Knit_Yarn_Calc_ProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knit_Yarn_Calc_ProTests.swift; sourceTree = "<group>"; };
-		87489A9922C7FF950027A9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87489AAD22C8050B0027A9D5 /* KnitYarnCalcProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnitYarnCalcProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87489AAF22C8050B0027A9D5 /* KnitYarnCalcProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnitYarnCalcProTests.swift; sourceTree = "<group>"; };
-		87489AB122C8050B0027A9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8750135922C832410092D8DF /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750135B22C832990092D8DF /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750135D22C832990092D8DF /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,10 +237,8 @@
 		87EFFB091D711BA800AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87EFFB0A1D711BA800AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87EFFB0E1D711BD600AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		87EFFB131D711BD700AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87EFFB151D711BD700AAA422 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		87F4CCDA22C7EF750066B7C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		87F4CCE422C7F2D80066B7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87F4CCF822C7F3DC0066B7C3 /* KnittingYarnCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnittingYarnCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F4CCFC22C7F3DC0066B7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1F29C01A8143A0B8C6618C6 /* Pods_KnittingYarnCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KnittingYarnCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,7 +260,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87489AAA22C8050B0027A9D5 /* Frameworks */ = {
+		8726BAEF22C92D4200C79210 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,6 +302,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8726BAF322C92D4200C79210 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				8726BB2D22C92F0500C79210 /* BlanketTests.swift */,
+				8726BB2E22C92F0500C79210 /* fr.lproj */,
+				8726BB2B22C92F0400C79210 /* GlovesTests.swift */,
+				8726BB2522C92F0400C79210 /* Info.plist */,
+				8726BB2822C92F0400C79210 /* lv.lproj */,
+				8726BB2222C92F0400C79210 /* MittensTests.swift */,
+				8726BB2C22C92F0400C79210 /* PatternInfo.swift */,
+				8726BB2422C92F0400C79210 /* ScarfTests.swift */,
+				8726BB2122C92F0400C79210 /* SockTests.swift */,
+				8726BB2722C92F0400C79210 /* SweaterTests.swift */,
+				8726BB2622C92F0400C79210 /* TamTests.swift */,
+				8726BB2322C92F0400C79210 /* ToqueTests.swift */,
+				8726BB2022C92F0400C79210 /* VestTests.swift */,
+				8726BAF622C92D4200C79210 /* Info.plist */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		8726BB2822C92F0400C79210 /* lv.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8726BB2922C92F0400C79210 /* InfoPlist.strings */,
+			);
+			path = lv.lproj;
+			sourceTree = "<group>";
+		};
+		8726BB2E22C92F0500C79210 /* fr.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8726BB2F22C92F0500C79210 /* InfoPlist.strings */,
+			);
+			path = fr.lproj;
+			sourceTree = "<group>";
+		};
 		873F64072247CC020090D727 /* KnittingYarnCalcFree */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,34 +348,6 @@
 				873F64082247CC4A0090D727 /* AppDelegate.swift */,
 			);
 			path = KnittingYarnCalcFree;
-			sourceTree = "<group>";
-		};
-		87489A9622C7FF950027A9D5 /* Knit Yarn Calc ProTests */ = {
-			isa = PBXGroup;
-			children = (
-				871D78C31D1888D6005320A4 /* GlovesTests.swift */,
-				871D78C11D188435005320A4 /* MittensTests.swift */,
-				8702D6931D1866BC00286909 /* TamTests.swift */,
-				8702D6911D14B8A800286909 /* ToqueTests.swift */,
-				8702D68F1D146BF600286909 /* VestTests.swift */,
-				8702D68B1D14510400286909 /* SockTests.swift */,
-				8702D68D1D1465FD00286909 /* SweaterTests.swift */,
-				8702D6851D124A6700286909 /* ScarfTests.swift */,
-				8702D6871D13355C00286909 /* BlanketTests.swift */,
-				8702D6891D1336D800286909 /* PatternInfo.swift */,
-				87489A9722C7FF950027A9D5 /* Knit_Yarn_Calc_ProTests.swift */,
-				87489A9922C7FF950027A9D5 /* Info.plist */,
-			);
-			path = "Knit Yarn Calc ProTests";
-			sourceTree = "<group>";
-		};
-		87489AAE22C8050B0027A9D5 /* KnitYarnCalcProTests */ = {
-			isa = PBXGroup;
-			children = (
-				87489AAF22C8050B0027A9D5 /* KnitYarnCalcProTests.swift */,
-				87489AB122C8050B0027A9D5 /* Info.plist */,
-			);
-			path = KnitYarnCalcProTests;
 			sourceTree = "<group>";
 		};
 		8788D2E61CFF8D4100432759 /* Project Controllers */ = {
@@ -363,10 +379,8 @@
 				87F4CCDA22C7EF750066B7C3 /* Default-568h@2x.png */,
 				87DABA9D1CE7EBF4009DD3B1 /* KnittingYarnCalcPro */,
 				873F64072247CC020090D727 /* KnittingYarnCalcFree */,
-				87F4CCE122C7F2D80066B7C3 /* KnittingYarnCalcTests */,
 				87F4CCF922C7F3DC0066B7C3 /* KnittingYarnCalcUITests */,
-				87489A9622C7FF950027A9D5 /* Knit Yarn Calc ProTests */,
-				87489AAE22C8050B0027A9D5 /* KnitYarnCalcProTests */,
+				8726BAF322C92D4200C79210 /* UnitTests */,
 				87DABA9C1CE7EBF4009DD3B1 /* Products */,
 				87082A8A224730B700D0E93C /* KnittingYarnCalcFree-Info.plist */,
 				EEE4B5BBF66A6FDFF6282E0F /* Pods */,
@@ -380,7 +394,7 @@
 				87DABA9B1CE7EBF4009DD3B1 /* KnittingYarnCalcPro.app */,
 				87082A89224730B600D0E93C /* KnittingYarnCalc.app */,
 				87F4CCF822C7F3DC0066B7C3 /* KnittingYarnCalcUITests.xctest */,
-				87489AAD22C8050B0027A9D5 /* KnitYarnCalcProTests.xctest */,
+				8726BAF222C92D4200C79210 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -448,15 +462,6 @@
 			name = Localizations;
 			sourceTree = "<group>";
 		};
-		87F4CCE122C7F2D80066B7C3 /* KnittingYarnCalcTests */ = {
-			isa = PBXGroup;
-			children = (
-				87EFFB141D711BD700AAA422 /* InfoPlist.strings */,
-				87F4CCE422C7F2D80066B7C3 /* Info.plist */,
-			);
-			path = KnittingYarnCalcTests;
-			sourceTree = "<group>";
-		};
 		87F4CCF922C7F3DC0066B7C3 /* KnittingYarnCalcUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,22 +508,22 @@
 			productReference = 87082A89224730B600D0E93C /* KnittingYarnCalc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		87489AAC22C8050B0027A9D5 /* KnitYarnCalcProTests */ = {
+		8726BAF122C92D4200C79210 /* UnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87489AB422C8050B0027A9D5 /* Build configuration list for PBXNativeTarget "KnitYarnCalcProTests" */;
+			buildConfigurationList = 8726BAFB22C92D4200C79210 /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
-				87489AA922C8050B0027A9D5 /* Sources */,
-				87489AAA22C8050B0027A9D5 /* Frameworks */,
-				87489AAB22C8050B0027A9D5 /* Resources */,
+				8726BAEE22C92D4200C79210 /* Sources */,
+				8726BAEF22C92D4200C79210 /* Frameworks */,
+				8726BAF022C92D4200C79210 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87489AB322C8050B0027A9D5 /* PBXTargetDependency */,
+				8726BAF822C92D4200C79210 /* PBXTargetDependency */,
 			);
-			name = KnitYarnCalcProTests;
-			productName = KnitYarnCalcProTests;
-			productReference = 87489AAD22C8050B0027A9D5 /* KnitYarnCalcProTests.xctest */;
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 8726BAF222C92D4200C79210 /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		87DABA9A1CE7EBF4009DD3B1 /* KnittingYarnCalcPro */ = {
@@ -572,7 +577,7 @@
 						DevelopmentTeam = XZ8NRDZGBL;
 						LastSwiftMigration = 1020;
 					};
-					87489AAC22C8050B0027A9D5 = {
+					8726BAF122C92D4200C79210 = {
 						CreatedOnToolsVersion = 10.2.1;
 						DevelopmentTeam = XZ8NRDZGBL;
 						ProvisioningStyle = Automatic;
@@ -599,6 +604,7 @@
 				en,
 				Base,
 				lv,
+				fr,
 			);
 			mainGroup = 87DABA921CE7EBF4009DD3B1;
 			productRefGroup = 87DABA9C1CE7EBF4009DD3B1 /* Products */;
@@ -608,7 +614,7 @@
 				87DABA9A1CE7EBF4009DD3B1 /* KnittingYarnCalcPro */,
 				87082A49224730B600D0E93C /* KnittingYarnCalc */,
 				87F4CCF722C7F3DC0066B7C3 /* KnittingYarnCalcUITests */,
-				87489AAC22C8050B0027A9D5 /* KnitYarnCalcProTests */,
+				8726BAF122C92D4200C79210 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -647,7 +653,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87489AAB22C8050B0027A9D5 /* Resources */ = {
+		8726BAF022C92D4200C79210 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -800,11 +806,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87489AA922C8050B0027A9D5 /* Sources */ = {
+		8726BAEE22C92D4200C79210 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87489AB022C8050B0027A9D5 /* KnitYarnCalcProTests.swift in Sources */,
+				8726BB3C22C92F2800C79210 /* PatternInfo.swift in Sources */,
+				8726BB3122C92F1B00C79210 /* BlanketTests.swift in Sources */,
+				8726BB4222C92F2800C79210 /* VestTests.swift in Sources */,
+				8726BB3222C92F1F00C79210 /* GlovesTests.swift in Sources */,
+				8726BB3E22C92F2800C79210 /* SockTests.swift in Sources */,
+				8726BB4122C92F2800C79210 /* ToqueTests.swift in Sources */,
+				8726BB3F22C92F2800C79210 /* SweaterTests.swift in Sources */,
+				8726BB3D22C92F2800C79210 /* ScarfTests.swift in Sources */,
+				8726BB4022C92F2800C79210 /* TamTests.swift in Sources */,
+				8726BB3B22C92F2800C79210 /* MittensTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,10 +864,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87489AB322C8050B0027A9D5 /* PBXTargetDependency */ = {
+		8726BAF822C92D4200C79210 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 87DABA9A1CE7EBF4009DD3B1 /* KnittingYarnCalcPro */;
-			targetProxy = 87489AB222C8050B0027A9D5 /* PBXContainerItemProxy */;
+			targetProxy = 8726BAF722C92D4200C79210 /* PBXContainerItemProxy */;
 		};
 		87F4CCFE22C7F3DC0066B7C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -862,6 +877,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8726BB2922C92F0400C79210 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8726BB2A22C92F0400C79210 /* lv */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8726BB2F22C92F0500C79210 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8726BB3022C92F0500C79210 /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -904,14 +935,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				87EFFB0E1D711BD600AAA422 /* lv */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		87EFFB141D711BD700AAA422 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				87EFFB131D711BD700AAA422 /* lv */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -959,7 +982,7 @@
 			};
 			name = Release;
 		};
-		87489AB522C8050B0027A9D5 /* Debug */ = {
+		8726BAF922C92D4200C79210 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -972,21 +995,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = KnitYarnCalcProTests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inq.KnitYarnCalcProTests;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inq.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnittingYarnCalc Pro.app/KnittingYarnCalc Pro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnittingYarnCalcPro.app/KnittingYarnCalcPro";
 			};
 			name = Debug;
 		};
-		87489AB622C8050B0027A9D5 /* Release */ = {
+		8726BAFA22C92D4200C79210 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -999,15 +1023,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = KnitYarnCalcProTests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inq.KnitYarnCalcProTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inq.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnittingYarnCalc Pro.app/KnittingYarnCalc Pro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnittingYarnCalcPro.app/KnittingYarnCalcPro";
 			};
 			name = Release;
 		};
@@ -1220,11 +1244,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		87489AB422C8050B0027A9D5 /* Build configuration list for PBXNativeTarget "KnitYarnCalcProTests" */ = {
+		8726BAFB22C92D4200C79210 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87489AB522C8050B0027A9D5 /* Debug */,
-				87489AB622C8050B0027A9D5 /* Release */,
+				8726BAF922C92D4200C79210 /* Debug */,
+				8726BAFA22C92D4200C79210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

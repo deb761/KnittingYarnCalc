@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87489AAC22C8050B0027A9D5"
-               BuildableName = "KnitYarnCalcProTests.xctest"
-               BlueprintName = "KnitYarnCalcProTests"
+               BuildableName = "KnittingYarnCalcProTests.xctest"
+               BlueprintName = "KnittingYarnCalcProTests"
                ReferencedContainer = "container:KnittingYarnCalc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,6 +57,46 @@
       codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "87F4CCF722C7F3DC0066B7C3"
+               BuildableName = "KnittingYarnCalcUITests.xctest"
+               BlueprintName = "KnittingYarnCalcUITests"
+               ReferencedContainer = "container:KnittingYarnCalc.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "87489AAC22C8050B0027A9D5"
+               BuildableName = "KnittingYarnCalcProTests.xctest"
+               BlueprintName = "KnittingYarnCalcProTests"
+               ReferencedContainer = "container:KnittingYarnCalc.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8726BAF122C92D4200C79210"
+               BuildableName = "UnitTests.xctest"
+               BlueprintName = "UnitTests"
+               ReferencedContainer = "container:KnittingYarnCalc.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "87DD14D522C92CC2004C4CC8"
+               BuildableName = "KnittingYarnCalcTests.xctest"
+               BlueprintName = "KnittingYarnCalcTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

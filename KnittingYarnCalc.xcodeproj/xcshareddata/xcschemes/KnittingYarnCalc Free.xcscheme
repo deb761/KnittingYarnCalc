@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "87489AAC22C8050B0027A9D5"
-               BuildableName = "KnitYarnCalcProTests.xctest"
-               BlueprintName = "KnitYarnCalcProTests"
+               BuildableName = "KnittingYarnCalcProTests.xctest"
+               BlueprintName = "KnittingYarnCalcProTests"
                ReferencedContainer = "container:KnittingYarnCalc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
