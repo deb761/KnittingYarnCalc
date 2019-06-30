@@ -1,6 +1,0 @@
-framework module Pods_Knitting_Yarn_Calc_Free {
-  umbrella header "Pods-Knitting Yarn Calc Free-umbrella.h"
-
-  export *
-  module * { export * }
-}
