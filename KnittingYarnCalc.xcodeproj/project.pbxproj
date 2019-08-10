@@ -89,8 +89,6 @@
 		87DABAAB1CE7EBF4009DD3B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */; };
 		87DABACF1CE7F7B1009DD3B1 /* WeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABACE1CE7F7B1009DD3B1 /* WeightCell.swift */; };
 		87DABAD11CE821D1009DD3B1 /* YarnWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */; };
-		87DD14BB22C92578004C4CC8 /* PersonalizedAdConsent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DD14B922C92516004C4CC8 /* PersonalizedAdConsent.framework */; };
-		87DD14BC22C92578004C4CC8 /* PersonalizedAdConsent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87DD14B922C92516004C4CC8 /* PersonalizedAdConsent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		87E536D31CFBECA100BE9735 /* Scarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D21CFBECA100BE9735 /* Scarf.swift */; };
 		87E536D71CFBF79E00BE9735 /* Vest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D61CFBF79E00BE9735 /* Vest.swift */; };
 		87E536DB1CFBF9EE00BE9735 /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DA1CFBF9EE00BE9735 /* Hat.swift */; };
@@ -118,7 +116,8 @@
 		87F4CCDB22C7EF750066B7C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87F4CCDA22C7EF750066B7C3 /* Default-568h@2x.png */; };
 		87F4CD0222C7F4080066B7C3 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A198D71D56717D00A9046E /* XCUIElement.swift */; };
 		87F4CD0322C7F4080066B7C3 /* KnittingYarnCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAC01CE7EBF4009DD3B1 /* KnittingYarnCalcUITests.swift */; };
-		EF978DE68F084985A54CD3FB /* Pods_KnittingYarnCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F29C01A8143A0B8C6618C6 /* Pods_KnittingYarnCalc.framework */; };
+		B87A2F0D9BF897C90EA2BCBD /* Pods_KnittingYarnCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F29C01A8143A0B8C6618C6 /* Pods_KnittingYarnCalc.framework */; };
+		F8ADFD0077F861492EB58DDC /* Pods_KnittingYarnCalcPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66CA17CBFB21C0DEFEF0395 /* Pods_KnittingYarnCalcPro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,20 +136,6 @@
 			remoteInfo = "Knitting Yarn Calc Pro";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		87DD14BD22C92578004C4CC8 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				87DD14BC22C92578004C4CC8 /* PersonalizedAdConsent.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0CCC4ACF64168D5DF3900037 /* Pods-KnittingYarnCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnittingYarnCalc.debug.xcconfig"; path = "Target Support Files/Pods-KnittingYarnCalc/Pods-KnittingYarnCalc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +166,7 @@
 		8750135922C832410092D8DF /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750135B22C832990092D8DF /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750135D22C832990092D8DF /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8751890022DA512D00DB8E99 /* PersonalizedAdConsent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PersonalizedAdConsent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		8763AA721CF2AF3300E1B003 /* Mittens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mittens.swift; sourceTree = "<group>"; };
 		8763AA741CF2B90000E1B003 /* Sweater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sweater.swift; sourceTree = "<group>"; };
@@ -255,8 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87DD14BB22C92578004C4CC8 /* PersonalizedAdConsent.framework in Frameworks */,
-				EF978DE68F084985A54CD3FB /* Pods_KnittingYarnCalc.framework in Frameworks */,
+				B87A2F0D9BF897C90EA2BCBD /* Pods_KnittingYarnCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8ADFD0077F861492EB58DDC /* Pods_KnittingYarnCalcPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +273,7 @@
 		18F31DD68DD659B225540344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8751890022DA512D00DB8E99 /* PersonalizedAdConsent.framework */,
 				87DD14B922C92516004C4CC8 /* PersonalizedAdConsent.framework */,
 				871FA46E22C8431F002BCF44 /* PersonalizedAdConsent.framework */,
 				8750135B22C832990092D8DF /* GoogleUtilities.framework */,
@@ -497,7 +484,6 @@
 				87082A69224730B600D0E93C /* Frameworks */,
 				87082A6A224730B600D0E93C /* Resources */,
 				3A1A155A8DD7F77E00C98406 /* [CP] Embed Pods Frameworks */,
-				87DD14BD22C92578004C4CC8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
