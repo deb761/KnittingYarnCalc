@@ -61,8 +61,8 @@ class Scarf: Project {
         
         lengthDimension = Dimension<Double, ShortLengthUnits>(key: "length", projectName: name, name: NSLocalizedString("length", value: "Length", comment: "Label for length of an item"), unitNames: shortText, defaults: defaults)
         widthDimension = Dimension<Double, ShortLengthUnits>(key: "width", projectName: name, name: NSLocalizedString("width", value: "Width", comment: "Label for width of an item"), unitNames: shortText, defaults: defaults)
-        dimensions["length"] = lengthDimension as! DimensionProtocol
-        dimensions["width"] = widthDimension as! DimensionProtocol
+        dimensions["length"] = lengthDimension!
+        dimensions["width"] = widthDimension!
         dimensionOrder.insert("length", at: 1)
         dimensionOrder.insert("width", at: 2)
         //calcYarnRequired()

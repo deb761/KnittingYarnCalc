@@ -22,7 +22,7 @@ class InfoController: UIViewController {
     }
     
     @IBAction func touchedIcon8(_ sender: AnyObject) {
-        UIApplication.shared.openURL(URL(string:"http://www.icon8.com/")!)
+        UIApplication.shared.open(URL(string:"http://www.icon8.com/")!)
     }
 
     /*

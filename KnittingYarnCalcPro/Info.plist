@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Knitting Yarn Calc Pro</string>
+	<string>Knit Yarn Calc Pro</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleGetInfoString</key>
@@ -19,7 +19,7 @@
 		<string>de</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>KnittingYarnCalcPro</string>
+	<string>Knit Yarn Calc Pro</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

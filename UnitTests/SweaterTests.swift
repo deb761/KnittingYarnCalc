@@ -30,6 +30,7 @@ class SweaterTests: XCTestCase {
         sweater.yarnNeededUnits = .yards
         
         let tests = [
+            PatternInfo(name: "Infant, 3 months", gauge: 6, size: 16, yarn: 325),
             // The Handy Knitter's Guide to Yarn Requirements
             PatternInfo(name: "Handy 2 years, gauge 3", gauge: 3, size: 26, yarn: 325),
             // 4 years

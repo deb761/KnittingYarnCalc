@@ -49,7 +49,7 @@ class Socks: Project {
         super.init(name: name)
         
         sizeDimension = Dimension<Double, ShoeSizeUnits>(key: "size", projectName: name, name: NSLocalizedString("shoe-size", value: "Shoe Size", comment: "Wearer shoe size"), unitNames: unitText, defaults: defaults)
-        dimensions["size"] = sizeDimension as! DimensionProtocol
+        dimensions["size"] = sizeDimension!
         dimensionOrder.insert("size", at: 1)
         // recalc yarn required with finer yarn
         calcYarnRequired()
