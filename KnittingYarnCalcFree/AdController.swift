@@ -145,8 +145,8 @@ class AdController: UIViewController, GADBannerViewDelegate, SKStoreProductViewC
         view.addConstraint(NSLayoutConstraint(item: bannerView,
                                               attribute: .bottom,
                                               relatedBy: .equal,
-                                              toItem: self.bottomLayoutGuide,
-                                              attribute: .top,
+                                              toItem: view.safeAreaLayoutGuide,
+                                              attribute: .bottom,
                                               multiplier: 1,
                                               constant: 0))
     }
