@@ -60,52 +60,6 @@
 		873E23E822C7E91F006345E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 873E23E622C7E91F006345E6 /* GoogleService-Info.plist */; };
 		873F64092247CC4A0090D727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F64082247CC4A0090D727 /* AppDelegate.swift */; };
 		873F640B2247D5D90090D727 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873F640A2247D5D90090D727 /* AdController.swift */; };
-		8752C6A3239447F000666A24 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A8CE01D46876800B3B287 /* UserDefaults.swift */; };
-		8752C6A4239447F000666A24 /* WeightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAA21CE7EBF4009DD3B1 /* WeightsController.swift */; };
-		8752C6A5239447F000666A24 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8BE22AD91950074C673 /* Dimension.swift */; };
-		8752C6A6239447F000666A24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABA9E1CE7EBF4009DD3B1 /* AppDelegate.swift */; };
-		8752C6A7239447F000666A24 /* Socks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DD1CFBFB6E00BE9735 /* Socks.swift */; };
-		8752C6A8239447F000666A24 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8B222AD5E7F0074C673 /* ProjectController.swift */; };
-		8752C6A9239447F000666A24 /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536DA1CFBF9EE00BE9735 /* Hat.swift */; };
-		8752C6AA239447F000666A24 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
-		8752C6AB239447F000666A24 /* YarnWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABAD01CE821D1009DD3B1 /* YarnWeight.swift */; };
-		8752C6AC239447F000666A24 /* WeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DABACE1CE7F7B1009DD3B1 /* WeightCell.swift */; };
-		8752C6AD239447F000666A24 /* KnittingNeedles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87660B7E1D774AF000975E3B /* KnittingNeedles.swift */; };
-		8752C6AE239447F000666A24 /* BallsDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8C122C2F24F0074C673 /* BallsDimension.swift */; };
-		8752C6AF239447F000666A24 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
-		8752C6B0239447F000666A24 /* Scarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D21CFBECA100BE9735 /* Scarf.swift */; };
-		8752C6B1239447F000666A24 /* DimensionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8B522AD69080074C673 /* DimensionCell.swift */; };
-		8752C6B2239447F000666A24 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D078EB1D58EB0400DFBC11 /* Colors.swift */; };
-		8752C6B3239447F000666A24 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
-		8752C6B4239447F000666A24 /* ProjectListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectListController.swift */; };
-		8752C6B5239447F000666A24 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
-		8752C6B6239447F000666A24 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7E1CF2F6E800E1B003 /* InfoController.swift */; };
-		8752C6B7239447F000666A24 /* NameImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C8D8B822AD692E0074C673 /* NameImageCell.swift */; };
-		8752C6B8239447F000666A24 /* Vest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E536D61CFBF79E00BE9735 /* Vest.swift */; };
-		8752C6BB239447F000666A24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */; };
-		8752C6BC239447F000666A24 /* YarnWeight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87660B7C1D77424800975E3B /* YarnWeight.plist */; };
-		8752C6BD239447F000666A24 /* Blanket-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA511D6B8A0700AAA422 /* Blanket-im.plist */; };
-		8752C6BE239447F000666A24 /* Blanket-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA631D6B8E4200AAA422 /* Blanket-si.plist */; };
-		8752C6BF239447F000666A24 /* Gloves-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA521D6B8A0700AAA422 /* Gloves-im.plist */; };
-		8752C6C0239447F000666A24 /* Gloves-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA611D6B8DAA00AAA422 /* Gloves-si.plist */; };
-		8752C6C1239447F000666A24 /* Mittens-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA711D6B94C700AAA422 /* Mittens-im.plist */; };
-		8752C6C2239447F000666A24 /* Mittens-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4B1D6B8A0700AAA422 /* Mittens-si.plist */; };
-		8752C6C3239447F000666A24 /* Scarf-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4C1D6B8A0700AAA422 /* Scarf-im.plist */; };
-		8752C6C4239447F000666A24 /* Scarf-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA6D1D6B901300AAA422 /* Scarf-si.plist */; };
-		8752C6C5239447F000666A24 /* Socks-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4D1D6B8A0700AAA422 /* Socks-im.plist */; };
-		8752C6C6239447F000666A24 /* Socks-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA6F1D6B94C700AAA422 /* Socks-si.plist */; };
-		8752C6C7239447F000666A24 /* Sweater-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA5D1D6B8CE600AAA422 /* Sweater-im.plist */; };
-		8752C6C8239447F000666A24 /* Sweater-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA531D6B8A0700AAA422 /* Sweater-si.plist */; };
-		8752C6C9239447F000666A24 /* Tam-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA691D6B8F9100AAA422 /* Tam-im.plist */; };
-		8752C6CA239447F000666A24 /* Tam-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4E1D6B8A0700AAA422 /* Tam-si.plist */; };
-		8752C6CB239447F000666A24 /* Toque-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA4F1D6B8A0700AAA422 /* Toque-im.plist */; };
-		8752C6CC239447F000666A24 /* Toque-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA701D6B94C700AAA422 /* Toque-si.plist */; };
-		8752C6CD239447F000666A24 /* Vest-im.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA651D6B8EDE00AAA422 /* Vest-im.plist */; };
-		8752C6CE239447F000666A24 /* Vest-si.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA501D6B8A0700AAA422 /* Vest-si.plist */; };
-		8752C6CF239447F000666A24 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA3E1D67C8FC00AAA422 /* Localizable.strings */; };
-		8752C6D0239447F000666A24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87EFFA481D67C9B800AAA422 /* InfoPlist.strings */; };
-		8752C6D1239447F000666A24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */; };
-		8752C6D2239447F000666A24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA91CE7EBF4009DD3B1 /* LaunchScreen.storyboard */; };
 		8763AA711CF2A8DD00E1B003 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA701CF2A8DD00E1B003 /* Project.swift */; };
 		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
 		8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
@@ -222,8 +176,8 @@
 		8750135922C832410092D8DF /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750135B22C832990092D8DF /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750135D22C832990092D8DF /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8750A763243B8F3600885D97 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8751890022DA512D00DB8E99 /* PersonalizedAdConsent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PersonalizedAdConsent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8752C6D6239447F000666A24 /* KnittingYarnCalc Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KnittingYarnCalc Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8752C6D7239447F000666A24 /* KnittingYarnCalcPro copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KnittingYarnCalcPro copy-Info.plist"; path = "/Users/deb/inqint/YarnRequirements/KnittingYarnCalcPro copy-Info.plist"; sourceTree = "<absolute>"; };
 		8752C6DB23944C6600666A24 /* Pods_KnittingYarnCalcPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KnittingYarnCalcPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8763AA701CF2A8DD00E1B003 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -301,13 +255,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8726BAEF22C92D4200C79210 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8752C6B9239447F000666A24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -421,6 +368,7 @@
 		87DABA921CE7EBF4009DD3B1 = {
 			isa = PBXGroup;
 			children = (
+				8750A763243B8F3600885D97 /* Default-568h@2x.png */,
 				87DABA9D1CE7EBF4009DD3B1 /* KnittingYarnCalcPro */,
 				873F64072247CC020090D727 /* KnittingYarnCalcFree */,
 				87F4CCF922C7F3DC0066B7C3 /* KnittingYarnCalcUITests */,
@@ -441,7 +389,6 @@
 				87082A89224730B600D0E93C /* KnittingYarnCalc.app */,
 				87F4CCF822C7F3DC0066B7C3 /* KnittingYarnCalcUITests.xctest */,
 				8726BAF222C92D4200C79210 /* UnitTests.xctest */,
-				8752C6D6239447F000666A24 /* KnittingYarnCalc Pro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -581,24 +528,6 @@
 			productReference = 8726BAF222C92D4200C79210 /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8752C6A0239447F000666A24 /* KnittingYarnCalc Pro */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8752C6D3239447F000666A24 /* Build configuration list for PBXNativeTarget "KnittingYarnCalc Pro" */;
-			buildPhases = (
-				8752C6A1239447F000666A24 /* [CP] Check Pods Manifest.lock */,
-				8752C6A2239447F000666A24 /* Sources */,
-				8752C6B9239447F000666A24 /* Frameworks */,
-				8752C6BA239447F000666A24 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "KnittingYarnCalc Pro";
-			productName = YarnRequirements;
-			productReference = 8752C6D6239447F000666A24 /* KnittingYarnCalc Pro.app */;
-			productType = "com.apple.product-type.application";
-		};
 		87DABA9A1CE7EBF4009DD3B1 /* KnittingYarnCalcPro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87DABAC51CE7EBF4009DD3B1 /* Build configuration list for PBXNativeTarget "KnittingYarnCalcPro" */;
@@ -656,9 +585,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 87DABA9A1CE7EBF4009DD3B1;
 					};
-					8752C6A0239447F000666A24 = {
-						DevelopmentTeam = XZ8NRDZGBL;
-					};
 					87DABA9A1CE7EBF4009DD3B1 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = XZ8NRDZGBL;
@@ -691,7 +617,6 @@
 				87082A49224730B600D0E93C /* KnittingYarnCalc */,
 				87F4CCF722C7F3DC0066B7C3 /* KnittingYarnCalcUITests */,
 				8726BAF122C92D4200C79210 /* UnitTests */,
-				8752C6A0239447F000666A24 /* KnittingYarnCalc Pro */,
 			);
 		};
 /* End PBXProject section */
@@ -734,37 +659,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8752C6BA239447F000666A24 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8752C6BB239447F000666A24 /* Main.storyboard in Resources */,
-				8752C6BC239447F000666A24 /* YarnWeight.plist in Resources */,
-				8752C6BD239447F000666A24 /* Blanket-im.plist in Resources */,
-				8752C6BE239447F000666A24 /* Blanket-si.plist in Resources */,
-				8752C6BF239447F000666A24 /* Gloves-im.plist in Resources */,
-				8752C6C0239447F000666A24 /* Gloves-si.plist in Resources */,
-				8752C6C1239447F000666A24 /* Mittens-im.plist in Resources */,
-				8752C6C2239447F000666A24 /* Mittens-si.plist in Resources */,
-				8752C6C3239447F000666A24 /* Scarf-im.plist in Resources */,
-				8752C6C4239447F000666A24 /* Scarf-si.plist in Resources */,
-				8752C6C5239447F000666A24 /* Socks-im.plist in Resources */,
-				8752C6C6239447F000666A24 /* Socks-si.plist in Resources */,
-				8752C6C7239447F000666A24 /* Sweater-im.plist in Resources */,
-				8752C6C8239447F000666A24 /* Sweater-si.plist in Resources */,
-				8752C6C9239447F000666A24 /* Tam-im.plist in Resources */,
-				8752C6CA239447F000666A24 /* Tam-si.plist in Resources */,
-				8752C6CB239447F000666A24 /* Toque-im.plist in Resources */,
-				8752C6CC239447F000666A24 /* Toque-si.plist in Resources */,
-				8752C6CD239447F000666A24 /* Vest-im.plist in Resources */,
-				8752C6CE239447F000666A24 /* Vest-si.plist in Resources */,
-				8752C6CF239447F000666A24 /* Localizable.strings in Resources */,
-				8752C6D0239447F000666A24 /* InfoPlist.strings in Resources */,
-				8752C6D1239447F000666A24 /* Assets.xcassets in Resources */,
-				8752C6D2239447F000666A24 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,28 +749,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KnittingYarnCalc/Pods-KnittingYarnCalc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8752C6A1239447F000666A24 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KnittingYarnCalcPro-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A8E626BE4786128ACD47457F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -946,35 +818,6 @@
 				8726BB3D22C92F2800C79210 /* ScarfTests.swift in Sources */,
 				8726BB4022C92F2800C79210 /* TamTests.swift in Sources */,
 				8726BB3B22C92F2800C79210 /* MittensTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8752C6A2239447F000666A24 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8752C6A3239447F000666A24 /* UserDefaults.swift in Sources */,
-				8752C6A4239447F000666A24 /* WeightsController.swift in Sources */,
-				8752C6A5239447F000666A24 /* Dimension.swift in Sources */,
-				8752C6A6239447F000666A24 /* AppDelegate.swift in Sources */,
-				8752C6A7239447F000666A24 /* Socks.swift in Sources */,
-				8752C6A8239447F000666A24 /* ProjectController.swift in Sources */,
-				8752C6A9239447F000666A24 /* Hat.swift in Sources */,
-				8752C6AA239447F000666A24 /* ProjectCell.swift in Sources */,
-				8752C6AB239447F000666A24 /* YarnWeight.swift in Sources */,
-				8752C6AC239447F000666A24 /* WeightCell.swift in Sources */,
-				8752C6AD239447F000666A24 /* KnittingNeedles.swift in Sources */,
-				8752C6AE239447F000666A24 /* BallsDimension.swift in Sources */,
-				8752C6AF239447F000666A24 /* Mittens.swift in Sources */,
-				8752C6B0239447F000666A24 /* Scarf.swift in Sources */,
-				8752C6B1239447F000666A24 /* DimensionCell.swift in Sources */,
-				8752C6B2239447F000666A24 /* Colors.swift in Sources */,
-				8752C6B3239447F000666A24 /* Sweater.swift in Sources */,
-				8752C6B4239447F000666A24 /* ProjectListController.swift in Sources */,
-				8752C6B5239447F000666A24 /* Project.swift in Sources */,
-				8752C6B6239447F000666A24 /* InfoController.swift in Sources */,
-				8752C6B7239447F000666A24 /* NameImageCell.swift in Sources */,
-				8752C6B8239447F000666A24 /* Vest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,10 +947,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-free";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				INFOPLIST_FILE = "$(SRCROOT)/KnittingYarnCalcFree-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1124,10 +969,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-free";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				INFOPLIST_FILE = "$(SRCROOT)/KnittingYarnCalcFree-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.yarncalcfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1187,49 +1034,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnittingYarnCalcPro.app/KnittingYarnCalcPro";
-			};
-			name = Release;
-		};
-		8752C6D4239447F000666A24 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46AE4BBCA9F5EF511EB39F5D /* Pods-KnittingYarnCalcPro.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-pro";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8NRDZGBL;
-				INFOPLIST_FILE = "KnittingYarnCalcPro copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.2;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		8752C6D5239447F000666A24 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7729DF31C0C76AAB2A1E091 /* Pods-KnittingYarnCalcPro.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-pro";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XZ8NRDZGBL;
-				INFOPLIST_FILE = "KnittingYarnCalcPro copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1347,11 +1151,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-pro";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				INFOPLIST_FILE = "$(SRCROOT)/KnittingYarnCalcPro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1369,11 +1174,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-pro";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				INFOPLIST_FILE = "$(SRCROOT)/KnittingYarnCalcPro/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inqint.YarnRequirements;
 				PRODUCT_NAME = "KnittingYarnCalc Pro";
 				PROVISIONING_PROFILE = "";
@@ -1450,15 +1256,6 @@
 			buildConfigurations = (
 				8726BAF922C92D4200C79210 /* Debug */,
 				8726BAFA22C92D4200C79210 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		8752C6D3239447F000666A24 /* Build configuration list for PBXNativeTarget "KnittingYarnCalc Pro" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8752C6D4239447F000666A24 /* Debug */,
-				8752C6D5239447F000666A24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

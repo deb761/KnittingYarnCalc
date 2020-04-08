@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -15,7 +12,7 @@
         <!--Weights-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController storyboardIdentifier="Weights" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8rJ-Kc-sve" customClass="WeightsController" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Weights" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8rJ-Kc-sve" customClass="WeightsController" customModule="KnittingYarnCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,11 +23,11 @@
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WeightCell" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WeightCell" rowHeight="150" id="QX1-pl-hut" customClass="WeightCell" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WeightCell" layoutMarginsFollowReadableWidth="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WeightCell" rowHeight="150" id="QX1-pl-hut" customClass="WeightCell" customModule="KnittingYarnCalc" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QX1-pl-hut" id="JLv-RC-Isz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S3g-j2-SxZ">
@@ -119,7 +116,7 @@
                         <attributedString key="userComments">
                             <fragment content="Table of yarn weights">
                                 <attributes>
-                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -133,102 +130,102 @@
         <!--Info-->
         <scene sceneID="0Bl-uW-ePi">
             <objects>
-                <viewController storyboardIdentifier="Info" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oIM-QC-YfU" customClass="InfoController" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Info" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oIM-QC-YfU" customClass="InfoController" customModule="KnittingYarnCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5V8-pK-erj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mol-1Y-idk">
-                                <rect key="frame" x="16" y="28" width="343" height="540"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgE-f7-iGm">
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-rU-tCZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="477.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="437"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2016" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2020" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <attributedString key="userComments">
                                                     <fragment content="copyright line">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="smallSystem"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweater and vest sizing based on Standard Body Measurements published by Craft Yarn Council." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0c-Ke-06I" userLabel="sweater credit">
-                                                <rect key="frame" x="0.0" y="51" width="300" height="61"/>
+                                                <rect key="frame" x="0.0" y="51" width="343" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <attributedString key="userComments">
                                                     <fragment content="Credit for sweaters">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="smallSystem"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNa-cP-9tC">
-                                                <rect key="frame" x="0.0" y="122" width="300" height="142.5"/>
+                                                <rect key="frame" x="0.0" y="122" width="343" height="122"/>
                                                 <string key="text">Sweater and vest size dimensions are finished size.  Sweaters and vests are straight hip-length garments.  Sweaters have drop shoulders and tapered sleeves.  Use less yarn for fitted garments and more yarn for longer garments.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blanket and scarf measurements are finished size.  Add more yarn for tassels." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-Ix-nEQ">
-                                                <rect key="frame" x="0.0" y="274.5" width="300" height="61"/>
+                                                <rect key="frame" x="0.0" y="254" width="343" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toque and Tam measurements are head size, not garment size." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-0J-GKh">
-                                                <rect key="frame" x="0.0" y="345.5" width="300" height="41"/>
+                                                <rect key="frame" x="0.0" y="305" width="343" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yarn estimates based on calculations by The Inquisitive Introvert." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-77-ggg" userLabel="estimate credit">
-                                                <rect key="frame" x="0.0" y="396.5" width="300" height="41"/>
+                                                <rect key="frame" x="0.0" y="356" width="343" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <attributedString key="userComments">
                                                     <fragment content="Yarn estimate credits">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="smallSystem"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KmY-ML-HMB" userLabel="Icon Stack">
-                                                <rect key="frame" x="0.0" y="447.5" width="300" height="30"/>
+                                                <rect key="frame" x="0.0" y="407" width="343" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-sh-cFH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="145.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <attributedString key="userComments">
                                                             <fragment content="credit for icons">
                                                                 <attributes>
-                                                                    <font key="NSFont" metaFont="smallSystem"/>
+                                                                    <font key="NSFont" metaFont="message" size="11"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqS-kz-kIU">
-                                                        <rect key="frame" x="155.5" y="0.0" width="144.5" height="30"/>
+                                                        <rect key="frame" x="176" y="0.0" width="167" height="30"/>
                                                         <state key="normal" title="Icon8"/>
                                                         <attributedString key="userComments">
                                                             <fragment content="link to icon8 web site">
                                                                 <attributes>
-                                                                    <font key="NSFont" metaFont="smallSystem"/>
+                                                                    <font key="NSFont" metaFont="message" size="11"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -241,23 +238,27 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="RMo-sC-Iun" userLabel="width = 320"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" placeholder="YES" id="RMo-sC-Iun" userLabel="width = 320"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="YmR-rU-tCZ" secondAttribute="trailing" id="17u-mP-JVO"/>
-                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="mol-1Y-idk" secondAttribute="top" id="Z48-HO-scr"/>
-                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="mol-1Y-idk" secondAttribute="leading" id="fXs-qi-r34"/>
+                                    <constraint firstAttribute="bottom" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="-309" id="8K0-8Z-c4Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="YmR-rU-tCZ" secondAttribute="trailing" id="E8s-AO-AKe"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="mgE-f7-iGm" secondAttribute="leading" id="VCU-BQ-J3j"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="width" secondItem="mgE-f7-iGm" secondAttribute="width" id="fNm-Nk-FGZ"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="mgE-f7-iGm" secondAttribute="top" id="jgD-QY-nvX"/>
                                 </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="BFp-sJ-a10"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="LYA-by-U7h"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Tuq-rX-dOu" firstAttribute="bottom" secondItem="mol-1Y-idk" secondAttribute="bottom" id="2Zg-XR-TK7"/>
-                            <constraint firstItem="mol-1Y-idk" firstAttribute="leading" secondItem="Tuq-rX-dOu" secondAttribute="leading" constant="16" id="4ie-gc-4Rm"/>
-                            <constraint firstItem="mol-1Y-idk" firstAttribute="top" secondItem="Tuq-rX-dOu" secondAttribute="top" constant="16" id="mRg-Lt-bxe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mol-1Y-idk" secondAttribute="trailing" id="zJz-H6-OlQ"/>
+                            <constraint firstItem="mgE-f7-iGm" firstAttribute="top" secondItem="Tuq-rX-dOu" secondAttribute="top" constant="16" id="fAI-co-4AU"/>
+                            <constraint firstItem="mgE-f7-iGm" firstAttribute="leading" secondItem="5V8-pK-erj" secondAttribute="leadingMargin" id="stn-05-eOZ"/>
+                            <constraint firstItem="mgE-f7-iGm" firstAttribute="centerY" secondItem="5V8-pK-erj" secondAttribute="centerY" id="wUm-cH-lUJ"/>
+                            <constraint firstItem="mgE-f7-iGm" firstAttribute="width" secondItem="Tuq-rX-dOu" secondAttribute="width" multiplier="0.914667" id="zZn-Dm-xwt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tuq-rX-dOu"/>
                     </view>
@@ -265,7 +266,7 @@
                         <attributedString key="userComments">
                             <fragment content="application info">
                                 <attributes>
-                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -303,7 +304,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aya-ZE-Lgc">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -318,7 +319,7 @@
         <!--Projects-->
         <scene sceneID="Zx2-eo-Pan">
             <objects>
-                <collectionViewController id="XRx-ne-SZy" customClass="ProjectListController" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="XRx-ne-SZy" customClass="ProjectListController" customModule="KnittingYarnCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="TyR-xG-n76">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,7 +331,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="projectCell" id="nOf-rx-b6r" customClass="ProjectCell" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="projectCell" id="nOf-rx-b6r" customClass="ProjectCell" customModule="KnittingYarnCalc" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="105" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -377,7 +378,7 @@
                         <attributedString key="userComments">
                             <fragment content="Group of project types to estimate yarn requirements for">
                                 <attributes>
-                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -391,30 +392,30 @@
         <!--Project-->
         <scene sceneID="alo-aK-yN7">
             <objects>
-                <tableViewController storyboardIdentifier="Project" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jrX-Iw-lb4" userLabel="Project" customClass="ProjectController" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Project" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jrX-Iw-lb4" userLabel="Project" customClass="ProjectController" customModule="KnittingYarnCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qxV-Vz-jFx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Background"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameImage" id="R4m-Dv-L3l" customClass="NameImageCell" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameImage" id="R4m-Dv-L3l" customClass="NameImageCell" customModule="KnittingYarnCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="222"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R4m-Dv-L3l" id="YAg-jG-kWL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-LQ-6Fg">
-                                            <rect key="frame" x="16" y="11" width="343" height="22"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="200"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgi-MG-sMm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="51.5" height="22"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="51.5" height="200"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.0078431372550000003" green="0.015686274510000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EjG-OF-2dP">
-                                                    <rect key="frame" x="143" y="0.0" width="200" height="22"/>
+                                                    <rect key="frame" x="143" y="0.0" width="200" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="P2g-eq-mCI"/>
                                                         <constraint firstAttribute="height" constant="200" id="qks-v8-64b"/>
@@ -439,8 +440,8 @@
                                     <outlet property="projectImage" destination="EjG-OF-2dP" id="0Xm-wa-5hY"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DimensionRow" id="ry4-BO-ZAG" customClass="DimensionCell" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DimensionRow" id="ry4-BO-ZAG" customClass="DimensionCell" customModule="KnittingYarnCalc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="250" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ry4-BO-ZAG" id="T9u-Fx-Jep">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

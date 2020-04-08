@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uzy-8u-gYp">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uzy-8u-gYp">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,18 +11,18 @@
         <!--Privacy-->
         <scene sceneID="0Bl-uW-ePi">
             <objects>
-                <viewController storyboardIdentifier="Privacy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oIM-QC-YfU" userLabel="Privacy" customClass="InfoController" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Privacy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oIM-QC-YfU" userLabel="Privacy" customClass="InfoController" customModule="KnittingYarnCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5V8-pK-erj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="609"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mol-1Y-idk">
-                                <rect key="frame" x="26" y="60" width="339" height="529"/>
+                                <rect key="frame" x="26" y="40" width="329" height="569"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-rU-tCZ">
-                                        <rect key="frame" x="8" y="0.0" width="335" height="325"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="609"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2019" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Deborah Engelmeyer, The Inquisitive Introvert, 2020" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1H-lQ-QjL" userLabel="copyright">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,7 +30,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="copyright line">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="smallSystem"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -46,7 +44,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="Credit for sweaters">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="smallSystem"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -58,15 +56,21 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-Ix-nEQ">
-                                                <rect key="frame" x="0.0" y="193" width="335" height="61"/>
-                                                <string key="text">We use targeted advertising to provide more appropriate ads for you. You may opt out of target ads. To do this, open the \'Google Settings app\' from your app drawer, tap on \'Google &gt; Services &gt; Ads\', and select \'Opt-out of Interest-based ads\' (http://developer.android.com/google/play-services/id.html) Please note that this will block your phone from receiving tailored ad recommendations across your device.</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-Ix-nEQ">
+                                                <rect key="frame" x="0.0" y="193" width="335" height="345"/>
+                                                <string key="text">We use targeted advertising to provide more appropriate ads for you. You may opt out of targeted ads. To do this, Go to Settings  &gt; Privacy &gt; Advertising (at the bottom of the screen), then do any of the following:
+
+Opt out of targeted advertising: Turn on Limit Ad Tracking.
+
+Reset the identifier that helps determine which ads might be relevant to you: Tap Reset Advertising Identifier.
+
+Note: When you choose either option, you may still receive the same number of ads, but they may be less relevant to you.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can view the full privacy statement at deb761.github.io/documentation/privacy_policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-0J-GKh">
-                                                <rect key="frame" x="0.0" y="264" width="335" height="61"/>
+                                                <rect key="frame" x="0.0" y="548" width="335" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -75,20 +79,20 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="mol-1Y-idk" secondAttribute="leadingMargin" id="Dff-Xg-jj4"/>
-                                    <constraint firstAttribute="bottom" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="187" id="JjH-QC-lXT"/>
-                                    <constraint firstAttribute="trailing" secondItem="YmR-rU-tCZ" secondAttribute="trailing" id="W7l-BZ-7rS"/>
-                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="mol-1Y-idk" secondAttribute="top" id="ZbD-ed-vs2"/>
+                                    <constraint firstAttribute="trailing" secondItem="YmR-rU-tCZ" secondAttribute="trailing" id="3K2-iD-bw0"/>
+                                    <constraint firstAttribute="bottom" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="-40" id="7fQ-fh-5bd"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="mol-1Y-idk" secondAttribute="leading" id="92s-oJ-Cs7"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="width" secondItem="mol-1Y-idk" secondAttribute="width" multiplier="1.01824" id="Ue4-Xe-CWU"/>
+                                    <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="mol-1Y-idk" secondAttribute="top" id="lAp-aK-7y3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="mol-1Y-idk" secondAttribute="bottom" id="8gn-Wq-KDb"/>
-                            <constraint firstAttribute="trailing" secondItem="mol-1Y-idk" secondAttribute="trailing" constant="10" id="BfP-tO-2pH"/>
-                            <constraint firstItem="mol-1Y-idk" firstAttribute="top" secondItem="5V8-pK-erj" secondAttribute="topMargin" constant="40" id="Uo7-Gy-IbA"/>
-                            <constraint firstItem="mol-1Y-idk" firstAttribute="leading" secondItem="5V8-pK-erj" secondAttribute="leadingMargin" constant="10" id="ZnA-Dd-mou"/>
-                            <constraint firstItem="YmR-rU-tCZ" firstAttribute="width" secondItem="5V8-pK-erj" secondAttribute="width" constant="-40" id="jGK-Ua-dfA"/>
+                            <constraint firstAttribute="bottom" secondItem="mol-1Y-idk" secondAttribute="bottom" id="36e-kb-h7R"/>
+                            <constraint firstItem="mol-1Y-idk" firstAttribute="leading" secondItem="6Qh-Vk-oBE" secondAttribute="leading" constant="26" id="6jm-eU-kkC"/>
+                            <constraint firstItem="6Qh-Vk-oBE" firstAttribute="trailing" secondItem="mol-1Y-idk" secondAttribute="trailing" constant="20" id="nKA-le-rQk"/>
+                            <constraint firstItem="mol-1Y-idk" firstAttribute="top" secondItem="6Qh-Vk-oBE" secondAttribute="top" constant="40" id="of2-1K-TmN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Qh-Vk-oBE"/>
                     </view>
@@ -96,7 +100,7 @@
                         <attributedString key="userComments">
                             <fragment content="application info">
                                 <attributes>
-                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -110,13 +114,13 @@
         <!--Ad Controller-->
         <scene sceneID="p5Z-Io-Niw">
             <objects>
-                <viewController id="uzy-8u-gYp" customClass="AdController" customModule="Knitting_Yarn_Calc_Free" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uzy-8u-gYp" customClass="AdController" customModule="KnittingYarnCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jl6-BU-w7D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5PC-Ou-RXc">
-                                <rect key="frame" x="0.0" y="20" width="375" height="589"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="609"/>
                                 <connections>
                                     <segue destination="9do-H5-3vT" kind="embed" id="akT-fP-VoB"/>
                                 </connections>
@@ -152,7 +156,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="X4C-G4-iuk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqz-Cl-5Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="9do-H5-3vT" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ztf-bq-En3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -166,6 +169,7 @@
                         <segue destination="oIM-QC-YfU" kind="relationship" relationship="viewControllers" id="py2-ma-ONg"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqz-Cl-5Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="169" y="-340"/>
         </scene>
