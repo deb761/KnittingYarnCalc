@@ -37,7 +37,7 @@ class DimensionCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSour
         picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
-        picker.backgroundColor = Colors.background
+        picker.backgroundColor = UIColor(named: "Background")
 
         //init toolbar
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: frame.size.width, height: 30))
