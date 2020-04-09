@@ -31,7 +31,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="copyright line">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="message" size="11"/>
+                                                            <font key="NSFont" metaFont="menu" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -45,7 +45,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="Credit for sweaters">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="message" size="11"/>
+                                                            <font key="NSFont" metaFont="menu" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -101,7 +101,7 @@ Note: When you choose either option, you may still receive the same number of ad
                         <attributedString key="userComments">
                             <fragment content="application info">
                                 <attributes>
-                                    <font key="NSFont" metaFont="message" size="11"/>
+                                    <font key="NSFont" metaFont="menu" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
