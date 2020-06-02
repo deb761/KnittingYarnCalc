@@ -107,11 +107,8 @@ class WeightsController: UIViewController, UITableViewDelegate, UITableViewDataS
         let length = weight["length"] as! NSNumber
         let ball = weight["weight"] as! NSNumber
         
-        cell.lblWpi?.text = "\(wpi) " + NSLocalizedString("wpi", value: "wpi (windings/inch)", comment: "label for windings per inch")
-        cell.lblDensity?.text = "\(length)" + NSLocalizedString("m", value: "m", comment: "Abbreviation for meters") + " " +
-            NSLocalizedString("per", value: "per", comment: "indicate relationship between two things: 100m per 100g") +
-            " \(ball)" + NSLocalizedString("g", value: "g", comment: "Abbreviation for grams") + " " +
-            NSLocalizedString("yarn-ball", value: "ball", comment: "A ball of yarn")
+        cell.lblWpi?.text = String(format: NSLocalizedString("wpi", value: "%s wpi (windings/inch)", comment: "label for windings per inch"), wpi)
+        cell.lblDensity?.text = String(format: NSLocalizedString("density-phrase", value: "\(length)m per \(ball)g ball", comment: "Show length yarn per weight of yarn"), locale: Locale.current, length, ball)
         
         return cell
     }

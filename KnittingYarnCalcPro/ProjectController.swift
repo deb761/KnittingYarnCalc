@@ -46,7 +46,7 @@ class ProjectController: UITableViewController, DimensionCellDelegate {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameImage", for: indexPath) as! NameImageCell
             // Configure the cell...
-            cell.nameLabel.text = project.name
+            cell.nameLabel.text = NSLocalizedString(project.name.lowercased(), value: project.name, comment: project.name + " project name")
             cell.projectImage.image = project.image
             return cell
         }

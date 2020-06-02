@@ -64,9 +64,9 @@
 		8763AA731CF2AF3300E1B003 /* Mittens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA721CF2AF3300E1B003 /* Mittens.swift */; };
 		8763AA751CF2B90000E1B003 /* Sweater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA741CF2B90000E1B003 /* Sweater.swift */; };
 		8763AA7F1CF2F6E800E1B003 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763AA7E1CF2F6E800E1B003 /* InfoController.swift */; };
-		8765E6B622519DDA003CC672 /* Free.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8765E6B522519DDA003CC672 /* Free.storyboard */; };
 		87660B7F1D774AF000975E3B /* KnittingNeedles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87660B7E1D774AF000975E3B /* KnittingNeedles.swift */; };
 		8769C0CB22C7AF6D000C2BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */; };
+		879F0CED248250BE00515AEE /* Free.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879F0CEF248250BE00515AEE /* Free.storyboard */; };
 		87A23A6B1CED1A4A00E03F1F /* ProjectListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6A1CED1A4A00E03F1F /* ProjectListController.swift */; };
 		87A23A6D1CED3E2200E03F1F /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */; };
 		87A902022393372900399A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DABAA71CE7EBF4009DD3B1 /* Assets.xcassets */; };
@@ -168,7 +168,6 @@
 		8726BB2B22C92F0400C79210 /* GlovesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovesTests.swift; sourceTree = "<group>"; };
 		8726BB2C22C92F0400C79210 /* PatternInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternInfo.swift; sourceTree = "<group>"; };
 		8726BB2D22C92F0500C79210 /* BlanketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanketTests.swift; sourceTree = "<group>"; };
-		8726BB3022C92F0500C79210 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = InfoPlist.strings; sourceTree = "<group>"; };
 		873A8CE01D46876800B3B287 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		873E23E622C7E91F006345E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		873F64082247CC4A0090D727 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,9 +183,16 @@
 		8763AA721CF2AF3300E1B003 /* Mittens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mittens.swift; sourceTree = "<group>"; };
 		8763AA741CF2B90000E1B003 /* Sweater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sweater.swift; sourceTree = "<group>"; };
 		8763AA7E1CF2F6E800E1B003 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
-		8765E6B522519DDA003CC672 /* Free.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Free.storyboard; sourceTree = "<group>"; };
 		87660B7C1D77424800975E3B /* YarnWeight.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YarnWeight.plist; sourceTree = "<group>"; };
 		87660B7E1D774AF000975E3B /* KnittingNeedles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnittingNeedles.swift; sourceTree = "<group>"; };
+		879F0CE92482449300515AEE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		879F0CEA2482449300515AEE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		879F0CEB2482449300515AEE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		879F0CEC2482449300515AEE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		879F0CEE248250BE00515AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Free.storyboard; sourceTree = "<group>"; };
+		879F0CF1248250CD00515AEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Free.strings; sourceTree = "<group>"; };
+		879F0CF3248250D600515AEE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Free.strings; sourceTree = "<group>"; };
+		879F0CF5248250D700515AEE /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Free.strings; sourceTree = "<group>"; };
 		87A198D71D56717D00A9046E /* XCUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		87A23A6A1CED1A4A00E03F1F /* ProjectListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListController.swift; sourceTree = "<group>"; };
 		87A23A6C1CED3E2200E03F1F /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
@@ -326,7 +332,6 @@
 		8726BB2E22C92F0500C79210 /* fr.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				8726BB2F22C92F0500C79210 /* InfoPlist.strings */,
 			);
 			path = fr.lproj;
 			sourceTree = "<group>";
@@ -335,7 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				873E23E622C7E91F006345E6 /* GoogleService-Info.plist */,
-				8765E6B522519DDA003CC672 /* Free.storyboard */,
+				879F0CEF248250BE00515AEE /* Free.storyboard */,
 				873F640A2247D5D90090D727 /* AdController.swift */,
 				873F64082247CC4A0090D727 /* AppDelegate.swift */,
 			);
@@ -606,7 +611,7 @@
 				en,
 				Base,
 				lv,
-				fr,
+				ru,
 			);
 			mainGroup = 87DABA921CE7EBF4009DD3B1;
 			productRefGroup = 87DABA9C1CE7EBF4009DD3B1 /* Products */;
@@ -628,7 +633,7 @@
 			files = (
 				87082A6B224730B600D0E93C /* Scarf-si.plist in Resources */,
 				87082A6C224730B600D0E93C /* Mittens-si.plist in Resources */,
-				8765E6B622519DDA003CC672 /* Free.storyboard in Resources */,
+				879F0CED248250BE00515AEE /* Free.storyboard in Resources */,
 				87082A6D224730B600D0E93C /* Blanket-si.plist in Resources */,
 				87082A6E224730B600D0E93C /* LaunchScreen.storyboard in Resources */,
 				87082A6F224730B600D0E93C /* InfoPlist.strings in Resources */,
@@ -885,12 +890,15 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8726BB2F22C92F0500C79210 /* InfoPlist.strings */ = {
+		879F0CEF248250BE00515AEE /* Free.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8726BB3022C92F0500C79210 /* fr */,
+				879F0CEE248250BE00515AEE /* Base */,
+				879F0CF1248250CD00515AEE /* en */,
+				879F0CF3248250D600515AEE /* ru */,
+				879F0CF5248250D700515AEE /* lv */,
 			);
-			name = InfoPlist.strings;
+			name = Free.storyboard;
 			sourceTree = "<group>";
 		};
 		87DABAA41CE7EBF4009DD3B1 /* Main.storyboard */ = {
@@ -898,6 +906,7 @@
 			children = (
 				87DABAA51CE7EBF4009DD3B1 /* Base */,
 				87EFFB081D711BA800AAA422 /* lv */,
+				879F0CE92482449300515AEE /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -907,6 +916,7 @@
 			children = (
 				87DABAAA1CE7EBF4009DD3B1 /* Base */,
 				87EFFB151D711BD700AAA422 /* lv */,
+				879F0CEA2482449300515AEE /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -916,6 +926,7 @@
 			children = (
 				87EFFA3D1D67C8FC00AAA422 /* Base */,
 				87EFFB091D711BA800AAA422 /* lv */,
+				879F0CEB2482449300515AEE /* ru */,
 			);
 			name = Localizable.strings;
 			path = Localizations;
@@ -926,6 +937,7 @@
 			children = (
 				87EFFA471D67C9B800AAA422 /* Base */,
 				87EFFB0A1D711BA800AAA422 /* lv */,
+				879F0CEC2482449300515AEE /* ru */,
 			);
 			name = InfoPlist.strings;
 			path = Localizations;
@@ -1000,7 +1012,7 @@
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = UnitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1028,7 +1040,7 @@
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = UnitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inq.UnitTests;
@@ -1204,7 +1216,7 @@
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = KnittingYarnCalcUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1230,7 +1242,7 @@
 				DEVELOPMENT_TEAM = XZ8NRDZGBL;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = KnittingYarnCalcUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.inq.KnittingYarnCalcUITests;

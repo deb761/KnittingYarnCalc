@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -116,7 +116,7 @@
                         <attributedString key="userComments">
                             <fragment content="Table of yarn weights">
                                 <attributes>
-                                    <font key="NSFont" metaFont="label" size="11"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -149,7 +149,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="copyright line">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="label" size="11"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -163,7 +163,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="Credit for sweaters">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="label" size="11"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -196,7 +196,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="Yarn estimate credits">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="label" size="11"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -213,7 +213,7 @@
                                                         <attributedString key="userComments">
                                                             <fragment content="credit for icons">
                                                                 <attributes>
-                                                                    <font key="NSFont" metaFont="label" size="11"/>
+                                                                    <font key="NSFont" metaFont="message" size="11"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -225,7 +225,7 @@
                                                         <attributedString key="userComments">
                                                             <fragment content="link to icon8 web site">
                                                                 <attributes>
-                                                                    <font key="NSFont" metaFont="label" size="11"/>
+                                                                    <font key="NSFont" metaFont="message" size="11"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -266,7 +266,7 @@
                         <attributedString key="userComments">
                             <fragment content="application info">
                                 <attributes>
-                                    <font key="NSFont" metaFont="label" size="11"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -378,7 +378,7 @@
                         <attributedString key="userComments">
                             <fragment content="Group of project types to estimate yarn requirements for">
                                 <attributes>
-                                    <font key="NSFont" metaFont="label" size="11"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>

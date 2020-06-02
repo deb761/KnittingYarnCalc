@@ -1,0 +1,154 @@
+/* 
+  Localizable.strings
+  YarnRequirements
+
+  Created by Deborah Engelmeyer on 8/19/16.
+  Copyright © 2016 The Inquisitive Introvert. All rights reserved.
+*/
+
+/* Sweater project name */
+"sweater" = "Sweater";
+
+/* Tam project name */
+"tam" = "Tam";
+
+/* Toque project name */
+"toque" = "Toque";
+
+/* Socks project name */
+"socks" = "Socks";
+
+/* Scarf project name */
+"scarf" = "Scarf";
+
+/* Mittens project name */
+"mittens" = "Mittens";
+
+/* Gloves project name */
+"gloves" = "Gloves";
+
+/* Blanket project name */
+"blanket" = "Blanket";
+
+/* Vest project name */
+"vest" = "Vest";
+
+/* plist file containing default settings for a sweater */
+"sweater-plist" = "Sweater-im";
+
+/* Tam plist file */
+"tam-plist" = "Tam-im";
+
+/* Toque plist file */
+"toque-plist" = "Toque-im";
+
+/* Socks plist file */
+"socks-plist" = "Socks-im";
+
+/* Scarf plist file */
+"scarf-plist" = "Scarf-im";
+
+/* Mittens plist file */
+"mittens-plist" = "Mittens-im";
+
+/* Gloves plist file */
+"gloves-plist" = "Gloves-im";
+
+/* Blanket plist file */
+"blanket-plist" = "Blanket-im";
+
+/* Vest plist file */
+"vest-plist" = "Vest-im";
+
+/* Length of yarn in ball */
+"ball-size" = "Ball-Size";
+
+/* Measurement around a sweater at the wearer's chest */
+"chest-size" = "Chest Size";
+
+/* Short string for picker that indicates using cm for units */
+"cm" = "cm";
+
+/* Short string for picker indicating European shoe sizes */
+"euro" = "Euro";
+
+/* Density of knitted stitches per inch or cm */
+"gauge" = "Gauge";
+
+/* Measurement around the palm */
+"hand-size" = "Hand Size";
+
+/* Measurement around head for hat size */
+"head-size" = "Head Size";
+
+/* Short string for picker that indicates using inches for units */
+"inches" = "inches";
+
+/* Label for length of an item */
+"length" = "Length";
+
+/* Short string for picker that indicates using meters for inits of measure */
+"meters" = "meters";
+
+/* Number of balls needed for a project; needs to be short */
+"num-balls" = "Num Balls";
+
+/* A partial ball of yarn */
+"partial" = "Partial";
+
+/* Wearer shoe size */
+"shoe-size" = "Shoe Size";
+
+/* Stitches per 4 inches to determine yarn gauge */
+"sts/4inch" = "sts/4inch";
+
+/* Stitches per 10 cm to determine yarn gauge */
+"sts/10cm" = "sts/10cm";
+
+/* Stitches per inch to determine yarn gauge */
+"sts/inch" = "sts/inch";
+
+/* Short string for picker indicating US Child shoe sizes */
+"us-child" = "US Child";
+
+/* Short string for picker indicating US Men shoe sizes */
+"us-men" = "US Men";
+
+/* Short string for picker indicating US Women shoe sizes */
+"us-women" = "US Women";
+
+/* Short string for picker indicating US Youth shoe sizes */
+"us-youth" = "US Youth";
+
+/* A whole ball of yarn */
+"whole" = "Whole";
+
+/* Label for width of an item */
+"width" = "Width";
+
+/* Short string for picker that indicates using yards for inits of measure */
+"yards" = "yards";
+
+/* Label next to field showing how much yarn is estimated for a project; needs to be short */
+"yarn-req-label" = "Yarn Req";
+
+/* Term for weight/thickness of yarn used for socks */
+"fingering-yarn" = "Fingering";
+
+/* Term for weight/thickness of yarn used for lighter weight garments */
+"sport-yarn"= "Sport";
+
+/* Term for weight/thickness of yarn used for lighter weight garments */
+"dk-yarn" = "DK";
+
+/* Term for weight/thickness of yarn used for sweaters */
+"worsted-yarn" = "Worsted";
+
+/* Term for weight/thickness of yarn used for Aran sweaters */
+"aran-yarn" = "Aran";
+
+/* Term for weight/thickness of yarn used for heavy sweaters */
+"bulky-yarn" = "Bulky";
+
+/* Term for weight/thickness of yarn used for really bulky items */
+"super-bulky-yarn" = "Super Bulky";
