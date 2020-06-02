@@ -1,0 +1,27 @@
+
+/* Class = "UITabBarItem"; title = "Info"; ObjectID = "D2a-o5-fMA"; */
+"D2a-o5-fMA.title" = "Инфо";
+
+/* Class = "UILabel"; text = "While the Knitting Yarn Calculator itself does not use any data from you, the advertising service we use does."; ObjectID = "LNa-cP-9tC"; */
+"LNa-cP-9tC.text" = "Хотя калькулятор вязальной пряжи сам по себе не использует никаких данных от вас, рекламный сервис, который мы используем, может их использовать";
+
+/* Class = "UITabBarItem"; title = "Privacy"; ObjectID = "QTh-kq-zsb"; Note = "application info"; */
+"QTh-kq-zsb.title" = "Конфиденциальность";
+
+/* Class = "UITabBarItem"; title = "Weights"; ObjectID = "SN9-Pt-4dn"; */
+"SN9-Pt-4dn.title" = "Вес";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "V9W-cA-rBF"; */
+"V9W-cA-rBF.title" = "Главная";
+
+/* Class = "UILabel"; text = "© Deborah Engelmeyer, The Inquisitive Introvert, 2020"; ObjectID = "X1H-lQ-QjL"; Note = "copyright line"; */
+"X1H-lQ-QjL.text" = "© Deborah Engelmeyer, The Inquisitive Introvert, 2020";
+
+/* Class = "UILabel"; text = "You can view the full privacy statement at deb761.github.io/documentation/privacy_policy"; ObjectID = "gyY-0J-GKh"; */
+"gyY-0J-GKh.text" = "Вы можете просмотреть полное заявление о конфиденциальности на deb761.github.io/documentation/privacy_policy";
+
+/* Class = "UILabel"; text = "We use targeted advertising to provide more appropriate ads for you. You may opt out of targeted ads. To do this, Go to Settings  > Privacy > Advertising (at the bottom of the screen), then do any of the following:\n\nOpt out of targeted advertising: Turn on Limit Ad Tracking.\n\nReset the identifier that helps determine which ads might be relevant to you: Tap Reset Advertising Identifier.\n\nNote: When you choose either option, you may still receive the same number of ads, but they may be less relevant to you."; ObjectID = "kH9-Ix-nEQ"; */
+"kH9-Ix-nEQ.text" = "Мы используем целевую рекламу, чтобы предоставить вам более подходящую рекламу. Вы можете отказаться от таргетированной рекламы. Для этого перейдите в «Настройки» > «Конфиденциальность» > «Реклама» (внизу экрана) и выполните одно из следующих действий: \ n \ nВыключите целевую рекламу: включите «Ограничить отслеживание рекламы». \ N \ nСбросьте идентификатор, который помогает Определите, какие объявления могут иметь отношение к вам. Нажмите «Сбросить рекламный идентификатор». \ n \ nПримечание. Если вы выберете любой из этих вариантов, вы все равно можете получить такое же количество объявлений, но они могут быть менее релевантными для вас.";
+
+/* Class = "UILabel"; text = "Your privacy is important to us.  This app is provided free of charge and uses ads to support it."; ObjectID = "v0c-Ke-06I"; Note = "Credit for sweaters"; */
+"v0c-Ke-06I.text" = "Ваша конфиденциальность важна для нас. Это приложение предоставляется бесплатно и использует рекламу для его поддержки.";
