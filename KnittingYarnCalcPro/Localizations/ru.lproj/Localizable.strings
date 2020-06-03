@@ -154,5 +154,8 @@
 /* label for windings per inch */
 "wpi" = "%@ wpi (витки на дюйм)";
 
-/* Show length yarn per weight of yarn */
+/* Show length yarn per weight of yarn in a ball */
 "density-phrase" = "%@ м на %@g г мяча";
+
+/* Term for weight/thickness of yarn used for thickest yarn */
+"jumbo-yarn" = "Jumbo"

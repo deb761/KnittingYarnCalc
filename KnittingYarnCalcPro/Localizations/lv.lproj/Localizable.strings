@@ -87,7 +87,7 @@
 /* Label for length of an item */
 "length" = "Garums";
 
-/* Short string for picker that indicates using meters for inits of measure */
+/* Short string for picker that indicates using meters for units of measure */
 "meters" = "metri";
 
 /* Number of balls needed for a project; needs to be short */
@@ -168,8 +168,8 @@
 /* abbreviation for meters */
 "m" = "m";
 
-/* indicate relationship between two things: 100m per 100g */
-"per" = "vienā";
+/* Show length yarn per weight of yarn in a ball, %@ is format for a number */
+"density-phrase" = "%@m vienā %ag kamoli";
 
 /* a ball of yarn */
 "yarn-ball" = "kamoli";

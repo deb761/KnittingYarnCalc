@@ -25,3 +25,7 @@
 
 /* Class = "UILabel"; text = "Your privacy is important to us.  This app is provided free of charge and uses ads to support it."; ObjectID = "v0c-Ke-06I"; Note = "Credit for sweaters"; */
 "v0c-Ke-06I.text" = "Jūsu privātums mums ir svarīgs. Šī lietotne tiek nodrošināta bez maksas, un tās atbalstam tiek izmantotas reklāmas.";
+
+
+/* Show length yarn per weight of yarn in a ball, %@ is format for a number */
+"density-phrase" = "%@m vienā %ag kamoli";
