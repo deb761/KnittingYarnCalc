@@ -1,3 +1,11 @@
+/*
+  Localizable.strings
+  YarnRequirements
+
+  Created by Deborah Engelmeyer on 6/1/20.
+  Copyright © 2020 The Inquisitive Introvert. All rights reserved.
+*/
+
 /* Term for weight/thickness of yarn used for Aran sweaters */
 "aran-yarn" = "Аран";
 
@@ -155,7 +163,7 @@
 "wpi" = "%@ wpi (витки на дюйм)";
 
 /* Show length yarn per weight of yarn in a ball */
-"density-phrase" = "%@ м на %@g г мяча";
+"density-phrase" = "%@ м на %@ г мяча";
 
 /* Term for weight/thickness of yarn used for thickest yarn */
-"jumbo-yarn" = "Jumbo"
+"jumbo-yarn" = "Jumbo";
