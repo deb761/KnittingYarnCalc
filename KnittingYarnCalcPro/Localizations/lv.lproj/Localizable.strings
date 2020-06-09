@@ -169,7 +169,7 @@
 "m" = "m";
 
 /* Show length yarn per weight of yarn in a ball, %@ is format for a number */
-"density-phrase" = "%@m vienā %ag kamoli";
+"density-phrase" = "%@m vienā %@g kamoli";
 
 /* a ball of yarn */
 "yarn-ball" = "kamoli";
