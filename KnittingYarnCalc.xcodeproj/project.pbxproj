@@ -164,7 +164,6 @@
 		8726BB2522C92F0400C79210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../KnittingYarnCalc/YarnRequirementsTests/Info.plist; sourceTree = "<group>"; };
 		8726BB2622C92F0400C79210 /* TamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamTests.swift; sourceTree = "<group>"; };
 		8726BB2722C92F0400C79210 /* SweaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweaterTests.swift; sourceTree = "<group>"; };
-		8726BB2A22C92F0400C79210 /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = InfoPlist.strings; sourceTree = "<group>"; };
 		8726BB2B22C92F0400C79210 /* GlovesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovesTests.swift; sourceTree = "<group>"; };
 		8726BB2C22C92F0400C79210 /* PatternInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternInfo.swift; sourceTree = "<group>"; };
 		8726BB2D22C92F0500C79210 /* BlanketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlanketTests.swift; sourceTree = "<group>"; };
@@ -304,10 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				8726BB2D22C92F0500C79210 /* BlanketTests.swift */,
-				8726BB2E22C92F0500C79210 /* fr.lproj */,
 				8726BB2B22C92F0400C79210 /* GlovesTests.swift */,
 				8726BB2522C92F0400C79210 /* Info.plist */,
-				8726BB2822C92F0400C79210 /* lv.lproj */,
 				8726BB2222C92F0400C79210 /* MittensTests.swift */,
 				8726BB2C22C92F0400C79210 /* PatternInfo.swift */,
 				8726BB2422C92F0400C79210 /* ScarfTests.swift */,
@@ -319,21 +316,6 @@
 				8726BAF622C92D4200C79210 /* Info.plist */,
 			);
 			path = UnitTests;
-			sourceTree = "<group>";
-		};
-		8726BB2822C92F0400C79210 /* lv.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				8726BB2922C92F0400C79210 /* InfoPlist.strings */,
-			);
-			path = lv.lproj;
-			sourceTree = "<group>";
-		};
-		8726BB2E22C92F0500C79210 /* fr.lproj */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = fr.lproj;
 			sourceTree = "<group>";
 		};
 		873F64072247CC020090D727 /* KnittingYarnCalcFree */ = {
@@ -882,14 +864,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8726BB2922C92F0400C79210 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8726BB2A22C92F0400C79210 /* lv */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		879F0CEF248250BE00515AEE /* Free.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -30,7 +30,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="copyright line">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="menu" size="11"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -44,7 +44,7 @@
                                                 <attributedString key="userComments">
                                                     <fragment content="Credit for sweaters">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="menu" size="11"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -80,7 +80,7 @@ Note: When you choose either option, you may still receive the same number of ad
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="YmR-rU-tCZ" secondAttribute="trailing" id="3K2-iD-bw0"/>
-                                    <constraint firstAttribute="bottom" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="-40" id="7fQ-fh-5bd"/>
+                                    <constraint firstAttribute="bottom" secondItem="YmR-rU-tCZ" secondAttribute="bottom" constant="20" id="7fQ-fh-5bd"/>
                                     <constraint firstItem="YmR-rU-tCZ" firstAttribute="leading" secondItem="mol-1Y-idk" secondAttribute="leading" id="92s-oJ-Cs7"/>
                                     <constraint firstItem="YmR-rU-tCZ" firstAttribute="width" secondItem="mol-1Y-idk" secondAttribute="width" multiplier="1.01824" id="Ue4-Xe-CWU"/>
                                     <constraint firstItem="YmR-rU-tCZ" firstAttribute="top" secondItem="mol-1Y-idk" secondAttribute="top" id="lAp-aK-7y3"/>
@@ -100,7 +100,7 @@ Note: When you choose either option, you may still receive the same number of ad
                         <attributedString key="userComments">
                             <fragment content="application info">
                                 <attributes>
-                                    <font key="NSFont" metaFont="menu" size="11"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
